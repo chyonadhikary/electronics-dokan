@@ -1,0 +1,23 @@
+{
+  "storeName": "Electronics Dokan",
+  "tagline": "Components for curious builders",
+  "whatsapp": "01938640733",
+  "whatsappInternational": "8801938640733",
+  "address": "Phultala, Khulna, Bangladesh",
+  "siteUrl": "https://electronicsdokan.com",
+  "social": {
+    "facebook": "https://facebook.com/electronicsdokanin",
+    "tiktok": "https://tiktok.com/@electronicsdokan",
+    "youtube": "electronicsdokan"
+  },
+  "shipping": {
+    "insideDhaka": 60,
+    "outsideDhaka": 120,
+    "insideDhakaLabel": "Inside Dhaka",
+    "outsideDhakaLabel": "Outside Dhaka"
+  },
+  "support": {
+    "hours": "Every day · 9:00 AM–10:00 PM",
+    "email": "hello@electronicsdokan.com"
+  }
+}
