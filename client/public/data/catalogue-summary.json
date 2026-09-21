@@ -1,0 +1,98 @@
+{
+  "productCount": 168,
+  "variantCount": 152,
+  "variantStockTotal": 12260,
+  "duplicateWarnings": [
+    {
+      "productFamily": "ed-elcap",
+      "displayName": "100µF 16V",
+      "sourceRows": [
+        16,
+        20
+      ],
+      "prices": [
+        3,
+        5
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-qw",
+      "displayName": "1.8Ω",
+      "sourceRows": [
+        15,
+        21
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-qw",
+      "displayName": "5.6KΩ",
+      "sourceRows": [
+        46,
+        60
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-1p",
+      "displayName": "47KΩ",
+      "sourceRows": [
+        1,
+        23
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-1p",
+      "displayName": "30KΩ",
+      "sourceRows": [
+        2,
+        4
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-1p",
+      "displayName": "100Ω",
+      "sourceRows": [
+        7,
+        29
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-pwr",
+      "displayName": "100Ω 1/2W",
+      "sourceRows": [
+        7,
+        12
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    }
+  ]
+}

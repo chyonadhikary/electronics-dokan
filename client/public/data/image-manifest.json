@@ -1,0 +1,1095 @@
+{
+  "products": {
+    "sku-mkt-60001-344546": {
+      "default": "sku-mkt-60001-344546.webp",
+      "defaultPath": "/images/products/sku-mkt-60001-344546.webp",
+      "variants": {}
+    },
+    "sku-mkt-90001-prod-1081": {
+      "default": "sku-mkt-90001-prod-1081.webp",
+      "defaultPath": "/images/products/sku-mkt-90001-prod-1081.webp",
+      "variants": {}
+    },
+    "sku-prod-1072": {
+      "default": "sku-prod-1072.webp",
+      "defaultPath": "/images/products/sku-prod-1072.webp",
+      "variants": {}
+    },
+    "item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics": {
+      "default": "item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics.webp",
+      "defaultPath": "/images/products/item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics.webp",
+      "variants": {}
+    },
+    "sku-prod-1063": {
+      "default": "sku-prod-1063.webp",
+      "defaultPath": "/images/products/sku-prod-1063.webp",
+      "variants": {}
+    },
+    "item-precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making": {
+      "default": "item-precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making.webp",
+      "defaultPath": "/images/products/item-precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making.webp",
+      "variants": {}
+    },
+    "sku-prod-1086": {
+      "default": "sku-prod-1086.webp",
+      "defaultPath": "/images/products/sku-prod-1086.webp",
+      "variants": {}
+    },
+    "item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq": {
+      "default": "item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq.webp",
+      "defaultPath": "/images/products/item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq.webp",
+      "variants": {}
+    },
+    "sku-prod-1061": {
+      "default": "sku-prod-1061.webp",
+      "defaultPath": "/images/products/sku-prod-1061.webp",
+      "variants": {}
+    },
+    "item-jrc4558d-dual-operational-amplifier-ic-dip-8": {
+      "default": "item-jrc4558d-dual-operational-amplifier-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-jrc4558d-dual-operational-amplifier-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-la4440-dual-audio-power-amplifier-ic": {
+      "default": "item-la4440-dual-audio-power-amplifier-ic.webp",
+      "defaultPath": "/images/products/item-la4440-dual-audio-power-amplifier-ic.webp",
+      "variants": {}
+    },
+    "item-la4440-dual-audio-power-amplifier-ic-2": {
+      "default": "item-la4440-dual-audio-power-amplifier-ic-2.webp",
+      "defaultPath": "/images/products/item-la4440-dual-audio-power-amplifier-ic-2.webp",
+      "variants": {}
+    },
+    "item-lm386-audio-power-amplifier-ic-dip-8": {
+      "default": "item-lm386-audio-power-amplifier-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-lm386-audio-power-amplifier-ic-dip-8.webp",
+      "variants": {}
+    },
+    "sku-prod-1070": {
+      "default": "sku-prod-1070.webp",
+      "defaultPath": "/images/products/sku-prod-1070.webp",
+      "variants": {}
+    },
+    "item-pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module": {
+      "default": "item-pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module.webp",
+      "defaultPath": "/images/products/item-pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module.webp",
+      "variants": {}
+    },
+    "item-rotary-potentiometer-b100k-with-nut-and-washer": {
+      "default": "item-rotary-potentiometer-b100k-with-nut-and-washer.webp",
+      "defaultPath": "/images/products/item-rotary-potentiometer-b100k-with-nut-and-washer.webp",
+      "variants": {}
+    },
+    "item-rotary-potentiometer-b50k-with-nut-and-washer": {
+      "default": "item-rotary-potentiometer-b50k-with-nut-and-washer.webp",
+      "defaultPath": "/images/products/item-rotary-potentiometer-b50k-with-nut-and-washer.webp",
+      "variants": {}
+    },
+    "item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek": {
+      "default": "item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek.webp",
+      "defaultPath": "/images/products/item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek.webp",
+      "variants": {}
+    },
+    "item-tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module": {
+      "default": "item-tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module.webp",
+      "defaultPath": "/images/products/item-tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module.webp",
+      "variants": {}
+    },
+    "item-tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8": {
+      "default": "item-tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-tea2025b-dual-audio-power-amplifier-ic-dip-16": {
+      "default": "item-tea2025b-dual-audio-power-amplifier-ic-dip-16.webp",
+      "defaultPath": "/images/products/item-tea2025b-dual-audio-power-amplifier-ic-dip-16.webp",
+      "variants": {}
+    },
+    "sku-prod-1080": {
+      "default": "sku-prod-1080.webp",
+      "defaultPath": "/images/products/sku-prod-1080.webp",
+      "variants": {}
+    },
+    "item-wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy": {
+      "default": "item-wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy.webp",
+      "defaultPath": "/images/products/item-wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy.webp",
+      "variants": {}
+    },
+    "item-wp4-10-4-pin-speaker-terminal-push-connector": {
+      "default": "item-wp4-10-4-pin-speaker-terminal-push-connector.webp",
+      "defaultPath": "/images/products/item-wp4-10-4-pin-speaker-terminal-push-connector.webp",
+      "variants": {}
+    },
+    "sku-prod-1059": {
+      "default": "sku-prod-1059.webp",
+      "defaultPath": "/images/products/sku-prod-1059.webp",
+      "variants": {}
+    },
+    "sku-prod-1068": {
+      "default": "sku-prod-1068.webp",
+      "defaultPath": "/images/products/sku-prod-1068.webp",
+      "variants": {}
+    },
+    "item-2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module": {
+      "default": "item-2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module.webp",
+      "defaultPath": "/images/products/item-2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module.webp",
+      "variants": {}
+    },
+    "item-2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module": {
+      "default": "item-2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module.webp",
+      "defaultPath": "/images/products/item-2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module.webp",
+      "variants": {}
+    },
+    "item-3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board": {
+      "default": "item-3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board.webp",
+      "defaultPath": "/images/products/item-3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board.webp",
+      "variants": {}
+    },
+    "item-micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output": {
+      "default": "item-micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output.webp",
+      "defaultPath": "/images/products/item-micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output.webp",
+      "variants": {}
+    },
+    "sku-prod-1083": {
+      "default": "sku-prod-1083.webp",
+      "defaultPath": "/images/products/sku-prod-1083.webp",
+      "variants": {}
+    },
+    "item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display": {
+      "default": "item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display.webp",
+      "defaultPath": "/images/products/item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display.webp",
+      "variants": {}
+    },
+    "ed-cercap": {
+      "default": "ed-cercap.webp",
+      "defaultPath": "/images/products/ed-cercap.webp",
+      "variants": {
+        "ed-cercap-47": "ed-cercap-47.webp",
+        "ed-cercap-33": "ed-cercap-33.webp",
+        "ed-cercap-39": "ed-cercap-39.webp",
+        "ed-cercap-101": "ed-cercap-101.webp",
+        "ed-cercap-10": "ed-cercap-10.webp",
+        "ed-cercap-102": "ed-cercap-102.webp",
+        "ed-cercap-22": "ed-cercap-22.webp",
+        "ed-cercap-27": "ed-cercap-27.webp",
+        "ed-cercap-103": "ed-cercap-103.webp",
+        "ed-cercap-4-7": "ed-cercap-4-7.webp",
+        "ed-cercap-104": "ed-cercap-104.webp",
+        "ed-cercap-6": "ed-cercap-6.webp",
+        "ed-cercap-2-2": "ed-cercap-2-2.webp",
+        "ed-cercap-6-8": "ed-cercap-6-8.webp",
+        "ed-cercap-151": "ed-cercap-151.webp",
+        "ed-cercap-30": "ed-cercap-30.webp",
+        "ed-cercap-223": "ed-cercap-223.webp",
+        "ed-cercap-203": "ed-cercap-203.webp",
+        "ed-cercap-12": "ed-cercap-12.webp",
+        "ed-cercap-471": "ed-cercap-471.webp",
+        "ed-cercap-15": "ed-cercap-15.webp"
+      }
+    },
+    "ed-elcap": {
+      "default": "ed-elcap.webp",
+      "defaultPath": "/images/products/ed-elcap.webp",
+      "variants": {
+        "ed-elcap-470uf-63v": "ed-elcap-470uf-63v.webp",
+        "ed-elcap-1000uf-25v": "ed-elcap-1000uf-25v.webp",
+        "ed-elcap-3300uf-50v": "ed-elcap-3300uf-50v.webp",
+        "ed-elcap-1000uf-63v": "ed-elcap-1000uf-63v.webp",
+        "ed-elcap-2-2uf-50v": "ed-elcap-2-2uf-50v.webp",
+        "ed-elcap-10uf-25v": "ed-elcap-10uf-25v.webp",
+        "ed-elcap-220uf-25v": "ed-elcap-220uf-25v.webp",
+        "ed-elcap-220uf-63v": "ed-elcap-220uf-63v.webp",
+        "ed-elcap-470uf-25v": "ed-elcap-470uf-25v.webp",
+        "ed-elcap-1uf-50v": "ed-elcap-1uf-50v.webp",
+        "ed-elcap-2200uf-50v": "ed-elcap-2200uf-50v.webp",
+        "ed-elcap-3300uf-35v": "ed-elcap-3300uf-35v.webp",
+        "ed-elcap-4-7uf-50v": "ed-elcap-4-7uf-50v.webp",
+        "ed-elcap-10uf-50v": "ed-elcap-10uf-50v.webp",
+        "ed-elcap-330uf-25v": "ed-elcap-330uf-25v.webp",
+        "ed-elcap-100uf-16v-a": "ed-elcap-100uf-16v-a.webp",
+        "ed-elcap-22uf-50v": "ed-elcap-22uf-50v.webp",
+        "ed-elcap-470uf-16v": "ed-elcap-470uf-16v.webp",
+        "ed-elcap-4-7uf-400v": "ed-elcap-4-7uf-400v.webp",
+        "ed-elcap-100uf-16v-b": "ed-elcap-100uf-16v-b.webp",
+        "ed-elcap-3-3uf-400v": "ed-elcap-3-3uf-400v.webp"
+      }
+    },
+    "ed-high-voltage-ceramic-disc-bulk-pack-vanxy": {
+      "default": "ed-high-voltage-ceramic-disc-bulk-pack-vanxy.webp",
+      "defaultPath": "/images/products/ed-high-voltage-ceramic-disc-bulk-pack-vanxy.webp",
+      "variants": {}
+    },
+    "sku-prod-1057": {
+      "default": "sku-prod-1057.webp",
+      "defaultPath": "/images/products/sku-prod-1057.webp",
+      "variants": {}
+    },
+    "sku-prod-1058": {
+      "default": "sku-prod-1058.webp",
+      "defaultPath": "/images/products/sku-prod-1058.webp",
+      "variants": {}
+    },
+    "item-sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board": {
+      "default": "item-sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board.webp",
+      "defaultPath": "/images/products/item-sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board.webp",
+      "variants": {}
+    },
+    "sku-prod-1077": {
+      "default": "sku-prod-1077.webp",
+      "defaultPath": "/images/products/sku-prod-1077.webp",
+      "variants": {}
+    },
+    "item-0603-red-smd-led-620-625nm": {
+      "default": "item-0603-red-smd-led-620-625nm.webp",
+      "defaultPath": "/images/products/item-0603-red-smd-led-620-625nm.webp",
+      "variants": {}
+    },
+    "item-13001-npn-power-transistor-to-92": {
+      "default": "item-13001-npn-power-transistor-to-92.webp",
+      "defaultPath": "/images/products/item-13001-npn-power-transistor-to-92.webp",
+      "variants": {}
+    },
+    "item-16-pin-dip-ic-socket-base": {
+      "default": "item-16-pin-dip-ic-socket-base.webp",
+      "defaultPath": "/images/products/item-16-pin-dip-ic-socket-base.webp",
+      "variants": {}
+    },
+    "item-1n5399-rectifier-diode-1000v-1-5a-do-15": {
+      "default": "item-1n5399-rectifier-diode-1000v-1-5a-do-15.webp",
+      "defaultPath": "/images/products/item-1n5399-rectifier-diode-1000v-1-5a-do-15.webp",
+      "variants": {}
+    },
+    "sku-prod-1093": {
+      "default": "sku-prod-1093.webp",
+      "defaultPath": "/images/products/sku-prod-1093.webp",
+      "variants": {}
+    },
+    "sku-prod-1088": {
+      "default": "sku-prod-1088.webp",
+      "defaultPath": "/images/products/sku-prod-1088.webp",
+      "variants": {}
+    },
+    "sku-prod-1091": {
+      "default": "sku-prod-1091.webp",
+      "defaultPath": "/images/products/sku-prod-1091.webp",
+      "variants": {}
+    },
+    "item-30f124-igbt-transistor-to-3p": {
+      "default": "item-30f124-igbt-transistor-to-3p.webp",
+      "defaultPath": "/images/products/item-30f124-igbt-transistor-to-3p.webp",
+      "variants": {}
+    },
+    "item-40-pin-female-header-strip-2-54mm-single-row": {
+      "default": "item-40-pin-female-header-strip-2-54mm-single-row.webp",
+      "defaultPath": "/images/products/item-40-pin-female-header-strip-2-54mm-single-row.webp",
+      "variants": {}
+    },
+    "item-40-pin-male-header-strip-2-54mm-single-row": {
+      "default": "item-40-pin-male-header-strip-2-54mm-single-row.webp",
+      "defaultPath": "/images/products/item-40-pin-male-header-strip-2-54mm-single-row.webp",
+      "variants": {}
+    },
+    "item-60w-ceramic-cartridge-heater-65mm": {
+      "default": "item-60w-ceramic-cartridge-heater-65mm.webp",
+      "defaultPath": "/images/products/item-60w-ceramic-cartridge-heater-65mm.webp",
+      "variants": {}
+    },
+    "item-7n60-n-channel-power-mosfet-7a-600v-to-220": {
+      "default": "item-7n60-n-channel-power-mosfet-7a-600v-to-220.webp",
+      "defaultPath": "/images/products/item-7n60-n-channel-power-mosfet-7a-600v-to-220.webp",
+      "variants": {}
+    },
+    "item-8-pin-dip-ic-socket-base": {
+      "default": "item-8-pin-dip-ic-socket-base.webp",
+      "defaultPath": "/images/products/item-8-pin-dip-ic-socket-base.webp",
+      "variants": {}
+    },
+    "item-bd135-npn-power-transistor-to-126": {
+      "default": "item-bd135-npn-power-transistor-to-126.webp",
+      "defaultPath": "/images/products/item-bd135-npn-power-transistor-to-126.webp",
+      "variants": {}
+    },
+    "item-bd139-npn-power-transistor-to-126": {
+      "default": "item-bd139-npn-power-transistor-to-126.webp",
+      "defaultPath": "/images/products/item-bd139-npn-power-transistor-to-126.webp",
+      "variants": {}
+    },
+    "item-bd140-pnp-power-transistor-to-126": {
+      "default": "item-bd140-pnp-power-transistor-to-126.webp",
+      "defaultPath": "/images/products/item-bd140-pnp-power-transistor-to-126.webp",
+      "variants": {}
+    },
+    "sku-prod-1090": {
+      "default": "sku-prod-1090.webp",
+      "defaultPath": "/images/products/sku-prod-1090.webp",
+      "variants": {}
+    },
+    "item-bt136-triac-4a-600v-to-220": {
+      "default": "item-bt136-triac-4a-600v-to-220.webp",
+      "defaultPath": "/images/products/item-bt136-triac-4a-600v-to-220.webp",
+      "variants": {}
+    },
+    "item-bt137-triac-8a-600v-to-220": {
+      "default": "item-bt137-triac-8a-600v-to-220.webp",
+      "defaultPath": "/images/products/item-bt137-triac-8a-600v-to-220.webp",
+      "variants": {}
+    },
+    "sku-prod-1094": {
+      "default": "sku-prod-1094.webp",
+      "defaultPath": "/images/products/sku-prod-1094.webp",
+      "variants": {}
+    },
+    "item-d882-npn-power-transistor-to-126": {
+      "default": "item-d882-npn-power-transistor-to-126.webp",
+      "defaultPath": "/images/products/item-d882-npn-power-transistor-to-126.webp",
+      "variants": {}
+    },
+    "item-e13003-2-npn-power-transistor-to-126": {
+      "default": "item-e13003-2-npn-power-transistor-to-126.webp",
+      "defaultPath": "/images/products/item-e13003-2-npn-power-transistor-to-126.webp",
+      "variants": {}
+    },
+    "sku-prod-1087": {
+      "default": "sku-prod-1087.webp",
+      "defaultPath": "/images/products/sku-prod-1087.webp",
+      "variants": {}
+    },
+    "item-fqpf12n60c-n-channel-power-mosfet-to-220f": {
+      "default": "item-fqpf12n60c-n-channel-power-mosfet-to-220f.webp",
+      "defaultPath": "/images/products/item-fqpf12n60c-n-channel-power-mosfet-to-220f.webp",
+      "variants": {}
+    },
+    "item-fr607-fast-recovery-rectifier-diode-6a-1000v": {
+      "default": "item-fr607-fast-recovery-rectifier-diode-6a-1000v.webp",
+      "defaultPath": "/images/products/item-fr607-fast-recovery-rectifier-diode-6a-1000v.webp",
+      "variants": {}
+    },
+    "item-glass-reed-switch-magnetic-sensor": {
+      "default": "item-glass-reed-switch-magnetic-sensor.webp",
+      "defaultPath": "/images/products/item-glass-reed-switch-magnetic-sensor.webp",
+      "variants": {}
+    },
+    "item-i-shaped-dip-power-inductor-coil": {
+      "default": "item-i-shaped-dip-power-inductor-coil.webp",
+      "defaultPath": "/images/products/item-i-shaped-dip-power-inductor-coil.webp",
+      "variants": {}
+    },
+    "item-irf224-n-channel-power-mosfet-3-8a-250v-to-220": {
+      "default": "item-irf224-n-channel-power-mosfet-3-8a-250v-to-220.webp",
+      "defaultPath": "/images/products/item-irf224-n-channel-power-mosfet-3-8a-250v-to-220.webp",
+      "variants": {}
+    },
+    "item-irf770-n-channel-power-mosfet-8a-400v-to-220": {
+      "default": "item-irf770-n-channel-power-mosfet-8a-400v-to-220.webp",
+      "defaultPath": "/images/products/item-irf770-n-channel-power-mosfet-8a-400v-to-220.webp",
+      "variants": {}
+    },
+    "item-irfz44n-n-channel-power-mosfet-to-220": {
+      "default": "item-irfz44n-n-channel-power-mosfet-to-220.webp",
+      "defaultPath": "/images/products/item-irfz44n-n-channel-power-mosfet-to-220.webp",
+      "variants": {}
+    },
+    "item-kbpc5010-bridge-rectifier-50a-1000v-metal-case": {
+      "default": "item-kbpc5010-bridge-rectifier-50a-1000v-metal-case.webp",
+      "defaultPath": "/images/products/item-kbpc5010-bridge-rectifier-50a-1000v-metal-case.webp",
+      "variants": {}
+    },
+    "item-lm338t-adjustable-voltage-regulator-to-220": {
+      "default": "item-lm338t-adjustable-voltage-regulator-to-220.webp",
+      "defaultPath": "/images/products/item-lm338t-adjustable-voltage-regulator-to-220.webp",
+      "variants": {}
+    },
+    "item-mps2907-pnp-general-purpose-transistor-to-92": {
+      "default": "item-mps2907-pnp-general-purpose-transistor-to-92.webp",
+      "defaultPath": "/images/products/item-mps2907-pnp-general-purpose-transistor-to-92.webp",
+      "variants": {}
+    },
+    "item-piezo-contact-microphone-sensor-disc-with-wires": {
+      "default": "item-piezo-contact-microphone-sensor-disc-with-wires.webp",
+      "defaultPath": "/images/products/item-piezo-contact-microphone-sensor-disc-with-wires.webp",
+      "variants": {}
+    },
+    "item-tyn612-scr-thyristor-12a-600v-to-220": {
+      "default": "item-tyn612-scr-thyristor-12a-600v-to-220.webp",
+      "defaultPath": "/images/products/item-tyn612-scr-thyristor-12a-600v-to-220.webp",
+      "variants": {}
+    },
+    "item-vs1838b-infrared-ir-receiver-sensor": {
+      "default": "item-vs1838b-infrared-ir-receiver-sensor.webp",
+      "defaultPath": "/images/products/item-vs1838b-infrared-ir-receiver-sensor.webp",
+      "variants": {}
+    },
+    "sku-prod-1066": {
+      "default": "sku-prod-1066.webp",
+      "defaultPath": "/images/products/sku-prod-1066.webp",
+      "variants": {}
+    },
+    "sku-prod-1067": {
+      "default": "sku-prod-1067.webp",
+      "defaultPath": "/images/products/sku-prod-1067.webp",
+      "variants": {}
+    },
+    "sku-prod-1071": {
+      "default": "sku-prod-1071.webp",
+      "defaultPath": "/images/products/sku-prod-1071.webp",
+      "variants": {}
+    },
+    "item-esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb": {
+      "default": "item-esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb.webp",
+      "defaultPath": "/images/products/item-esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb.webp",
+      "variants": {}
+    },
+    "item-iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module": {
+      "default": "item-iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module.webp",
+      "defaultPath": "/images/products/item-iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module.webp",
+      "variants": {}
+    },
+    "item-szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board": {
+      "default": "item-szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board.webp",
+      "defaultPath": "/images/products/item-szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board.webp",
+      "variants": {}
+    },
+    "item-db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35": {
+      "default": "item-db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35.webp",
+      "defaultPath": "/images/products/item-db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35.webp",
+      "variants": {}
+    },
+    "item-stps2045ct-dual-schottky-rectifier-20a-45v-to-220": {
+      "default": "item-stps2045ct-dual-schottky-rectifier-20a-45v-to-220.webp",
+      "defaultPath": "/images/products/item-stps2045ct-dual-schottky-rectifier-20a-45v-to-220.webp",
+      "variants": {}
+    },
+    "item-8-8-red-led-dot-matrix-display-module": {
+      "default": "item-8-8-red-led-dot-matrix-display-module.webp",
+      "defaultPath": "/images/products/item-8-8-red-led-dot-matrix-display-module.webp",
+      "variants": {}
+    },
+    "item-max7219-4-in-1-dot-matrix-led-display-module": {
+      "default": "item-max7219-4-in-1-dot-matrix-led-display-module.webp",
+      "defaultPath": "/images/products/item-max7219-4-in-1-dot-matrix-led-display-module.webp",
+      "variants": {}
+    },
+    "item-10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led": {
+      "default": "item-10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led.webp",
+      "defaultPath": "/images/products/item-10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led.webp",
+      "variants": {}
+    },
+    "sku-prod-1078": {
+      "default": "sku-prod-1078.webp",
+      "defaultPath": "/images/products/sku-prod-1078.webp",
+      "variants": {}
+    },
+    "item-4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs": {
+      "default": "item-4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs.webp",
+      "defaultPath": "/images/products/item-4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs.webp",
+      "variants": {}
+    },
+    "sku-prod-1060": {
+      "default": "sku-prod-1060.webp",
+      "defaultPath": "/images/products/sku-prod-1060.webp",
+      "variants": {}
+    },
+    "sku-prod-1064": {
+      "default": "sku-prod-1064.webp",
+      "defaultPath": "/images/products/sku-prod-1064.webp",
+      "variants": {}
+    },
+    "item-czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb": {
+      "default": "item-czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb.webp",
+      "defaultPath": "/images/products/item-czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb.webp",
+      "variants": {}
+    },
+    "item-elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit": {
+      "default": "item-elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit.webp",
+      "defaultPath": "/images/products/item-elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit.webp",
+      "variants": {}
+    },
+    "sku-prod-1075": {
+      "default": "sku-prod-1075.webp",
+      "defaultPath": "/images/products/sku-prod-1075.webp",
+      "variants": {}
+    },
+    "item-hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit": {
+      "default": "item-hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit.webp",
+      "defaultPath": "/images/products/item-hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit.webp",
+      "variants": {}
+    },
+    "sku-prod-1074": {
+      "default": "sku-prod-1074.webp",
+      "defaultPath": "/images/products/sku-prod-1074.webp",
+      "variants": {}
+    },
+    "item-javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit": {
+      "default": "item-javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit.webp",
+      "defaultPath": "/images/products/item-javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit.webp",
+      "variants": {}
+    },
+    "item-keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit": {
+      "default": "item-keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit.webp",
+      "defaultPath": "/images/products/item-keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit.webp",
+      "variants": {}
+    },
+    "item-mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects": {
+      "default": "item-mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects.webp",
+      "defaultPath": "/images/products/item-mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects.webp",
+      "variants": {}
+    },
+    "item-mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board": {
+      "default": "item-mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board.webp",
+      "defaultPath": "/images/products/item-mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board.webp",
+      "variants": {}
+    },
+    "sku-prod-1073": {
+      "default": "sku-prod-1073.webp",
+      "defaultPath": "/images/products/sku-prod-1073.webp",
+      "variants": {}
+    },
+    "item-white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting": {
+      "default": "item-white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting.webp",
+      "defaultPath": "/images/products/item-white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting.webp",
+      "variants": {}
+    },
+    "sku-prod-1076": {
+      "default": "sku-prod-1076.webp",
+      "defaultPath": "/images/products/sku-prod-1076.webp",
+      "variants": {}
+    },
+    "item-l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring": {
+      "default": "item-l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring.webp",
+      "defaultPath": "/images/products/item-l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring.webp",
+      "variants": {}
+    },
+    "item-l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket": {
+      "default": "item-l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket.webp",
+      "defaultPath": "/images/products/item-l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket.webp",
+      "variants": {}
+    },
+    "item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor": {
+      "default": "item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor.webp",
+      "defaultPath": "/images/products/item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor.webp",
+      "variants": {}
+    },
+    "item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter": {
+      "default": "item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter.webp",
+      "defaultPath": "/images/products/item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter.webp",
+      "variants": {}
+    },
+    "item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter": {
+      "default": "item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp",
+      "defaultPath": "/images/products/item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp",
+      "variants": {}
+    },
+    "sku-prod-1081": {
+      "default": "sku-prod-1081.webp",
+      "defaultPath": "/images/products/sku-prod-1081.webp",
+      "variants": {}
+    },
+    "item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads": {
+      "default": "item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads.webp",
+      "defaultPath": "/images/products/item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads.webp",
+      "variants": {}
+    },
+    "item-usb-power-capacity-tester-voltage-current-meter-with-data-display": {
+      "default": "item-usb-power-capacity-tester-voltage-current-meter-with-data-display.webp",
+      "defaultPath": "/images/products/item-usb-power-capacity-tester-voltage-current-meter-with-data-display.webp",
+      "variants": {}
+    },
+    "item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob": {
+      "default": "item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob.webp",
+      "defaultPath": "/images/products/item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob.webp",
+      "variants": {}
+    },
+    "item-4n35-optocoupler-dip-6": {
+      "default": "item-4n35-optocoupler-dip-6.webp",
+      "defaultPath": "/images/products/item-4n35-optocoupler-dip-6.webp",
+      "variants": {}
+    },
+    "item-74hc14d-hex-schmitt-trigger-inverter-soic-14": {
+      "default": "item-74hc14d-hex-schmitt-trigger-inverter-soic-14.webp",
+      "defaultPath": "/images/products/item-74hc14d-hex-schmitt-trigger-inverter-soic-14.webp",
+      "variants": {}
+    },
+    "sku-prod-1065": {
+      "default": "sku-prod-1065.webp",
+      "defaultPath": "/images/products/sku-prod-1065.webp",
+      "variants": {}
+    },
+    "item-ap8012h-offline-switching-power-supply-pwm-ic-dip-8": {
+      "default": "item-ap8012h-offline-switching-power-supply-pwm-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-ap8012h-offline-switching-power-supply-pwm-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-bta12-600b-triac-12a-600v-to-220": {
+      "default": "item-bta12-600b-triac-12a-600v-to-220.webp",
+      "defaultPath": "/images/products/item-bta12-600b-triac-12a-600v-to-220.webp",
+      "variants": {}
+    },
+    "item-bta16-600b-triac-16a-600v-to-220": {
+      "default": "item-bta16-600b-triac-16a-600v-to-220.webp",
+      "defaultPath": "/images/products/item-bta16-600b-triac-16a-600v-to-220.webp",
+      "variants": {}
+    },
+    "item-bta41-800b-triac-40a-800v-to-3p": {
+      "default": "item-bta41-800b-triac-40a-800v-to-3p.webp",
+      "defaultPath": "/images/products/item-bta41-800b-triac-40a-800v-to-3p.webp",
+      "variants": {}
+    },
+    "item-ca-1235-adjustable-dc-dc-buck-converter-module-3a": {
+      "default": "item-ca-1235-adjustable-dc-dc-buck-converter-module-3a.webp",
+      "defaultPath": "/images/products/item-ca-1235-adjustable-dc-dc-buck-converter-module-3a.webp",
+      "variants": {}
+    },
+    "item-cd4011be-quad-2-input-nand-gate-ic-dip-14": {
+      "default": "item-cd4011be-quad-2-input-nand-gate-ic-dip-14.webp",
+      "defaultPath": "/images/products/item-cd4011be-quad-2-input-nand-gate-ic-dip-14.webp",
+      "variants": {}
+    },
+    "item-cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original": {
+      "default": "item-cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original.webp",
+      "defaultPath": "/images/products/item-cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original.webp",
+      "variants": {}
+    },
+    "item-cd4017be-decade-counter-divider-ic-dip-16": {
+      "default": "item-cd4017be-decade-counter-divider-ic-dip-16.webp",
+      "defaultPath": "/images/products/item-cd4017be-decade-counter-divider-ic-dip-16.webp",
+      "variants": {}
+    },
+    "item-compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board": {
+      "default": "item-compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board.webp",
+      "defaultPath": "/images/products/item-compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board.webp",
+      "variants": {}
+    },
+    "item-cs75n75-n-channel-power-mosfet-75a-75v-to-220": {
+      "default": "item-cs75n75-n-channel-power-mosfet-75a-75v-to-220.webp",
+      "defaultPath": "/images/products/item-cs75n75-n-channel-power-mosfet-75a-75v-to-220.webp",
+      "variants": {}
+    },
+    "item-cxd9883am-sop-ic": {
+      "default": "item-cxd9883am-sop-ic.webp",
+      "defaultPath": "/images/products/item-cxd9883am-sop-ic.webp",
+      "variants": {}
+    },
+    "sku-prod-1069": {
+      "default": "sku-prod-1069.webp",
+      "defaultPath": "/images/products/sku-prod-1069.webp",
+      "variants": {}
+    },
+    "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a": {
+      "default": "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+      "defaultPath": "/images/products/item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+      "variants": {}
+    },
+    "item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe": {
+      "default": "item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe.webp",
+      "defaultPath": "/images/products/item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe.webp",
+      "variants": {}
+    },
+    "item-dual-usb-dc-dc-step-down-converter-module": {
+      "default": "item-dual-usb-dc-dc-step-down-converter-module.webp",
+      "defaultPath": "/images/products/item-dual-usb-dc-dc-step-down-converter-module.webp",
+      "variants": {}
+    },
+    "item-ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb": {
+      "default": "item-ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb.webp",
+      "defaultPath": "/images/products/item-ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb.webp",
+      "variants": {}
+    },
+    "item-javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller": {
+      "default": "item-javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller.webp",
+      "defaultPath": "/images/products/item-javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller.webp",
+      "variants": {}
+    },
+    "item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a": {
+      "default": "item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a.webp",
+      "defaultPath": "/images/products/item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a.webp",
+      "variants": {}
+    },
+    "item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a": {
+      "default": "item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+      "defaultPath": "/images/products/item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+      "variants": {}
+    },
+    "item-lm324n-quad-operational-amplifier-ic-dip-14": {
+      "default": "item-lm324n-quad-operational-amplifier-ic-dip-14.webp",
+      "defaultPath": "/images/products/item-lm324n-quad-operational-amplifier-ic-dip-14.webp",
+      "variants": {}
+    },
+    "item-lm358p-dual-operational-amplifier-ic-dip-8": {
+      "default": "item-lm358p-dual-operational-amplifier-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-lm358p-dual-operational-amplifier-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-lm3914n-1-led-dot-bar-display-driver-ic-dip-18": {
+      "default": "item-lm3914n-1-led-dot-bar-display-driver-ic-dip-18.webp",
+      "defaultPath": "/images/products/item-lm3914n-1-led-dot-bar-display-driver-ic-dip-18.webp",
+      "variants": {}
+    },
+    "item-lm393-dual-voltage-comparator-ic-dip-8": {
+      "default": "item-lm393-dual-voltage-comparator-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-lm393-dual-voltage-comparator-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-mc-38-wired-door-window-magnetic-sensor-switch": {
+      "default": "item-mc-38-wired-door-window-magnetic-sensor-switch.webp",
+      "defaultPath": "/images/products/item-mc-38-wired-door-window-magnetic-sensor-switch.webp",
+      "variants": {}
+    },
+    "item-mcp602-mcp6002-dual-op-amp-ic-dip-8": {
+      "default": "item-mcp602-mcp6002-dual-op-amp-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-mcp602-mcp6002-dual-op-amp-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-mfrc-522-rfid-rc522-ic-card-reader-module-kit": {
+      "default": "item-mfrc-522-rfid-rc522-ic-card-reader-module-kit.webp",
+      "defaultPath": "/images/products/item-mfrc-522-rfid-rc522-ic-card-reader-module-kit.webp",
+      "variants": {}
+    },
+    "sku-prod-1082": {
+      "default": "sku-prod-1082.webp",
+      "defaultPath": "/images/products/sku-prod-1082.webp",
+      "variants": {}
+    },
+    "item-mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer": {
+      "default": "item-mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer.webp",
+      "defaultPath": "/images/products/item-mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer.webp",
+      "variants": {}
+    },
+    "item-moc3063-zero-cross-optoisolator-triac-driver-dip-6": {
+      "default": "item-moc3063-zero-cross-optoisolator-triac-driver-dip-6.webp",
+      "defaultPath": "/images/products/item-moc3063-zero-cross-optoisolator-triac-driver-dip-6.webp",
+      "variants": {}
+    },
+    "item-ne555p-precision-timer-ic-dip-8": {
+      "default": "item-ne555p-precision-timer-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-ne555p-precision-timer-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-ne555p-precision-timer-ic-dip-8-2": {
+      "default": "item-ne555p-precision-timer-ic-dip-8-2.webp",
+      "defaultPath": "/images/products/item-ne555p-precision-timer-ic-dip-8-2.webp",
+      "variants": {}
+    },
+    "item-ne556n-dual-precision-timer-ic-dip-14": {
+      "default": "item-ne556n-dual-precision-timer-ic-dip-14.webp",
+      "defaultPath": "/images/products/item-ne556n-dual-precision-timer-ic-dip-14.webp",
+      "variants": {}
+    },
+    "item-pc817-optocoupler-dip-4": {
+      "default": "item-pc817-optocoupler-dip-4.webp",
+      "defaultPath": "/images/products/item-pc817-optocoupler-dip-4.webp",
+      "variants": {}
+    },
+    "item-photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor": {
+      "default": "item-photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor.webp",
+      "defaultPath": "/images/products/item-photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor.webp",
+      "variants": {}
+    },
+    "item-pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob": {
+      "default": "item-pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob.webp",
+      "defaultPath": "/images/products/item-pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob.webp",
+      "variants": {}
+    },
+    "sku-prod-1079": {
+      "default": "sku-prod-1079.webp",
+      "defaultPath": "/images/products/sku-prod-1079.webp",
+      "variants": {}
+    },
+    "item-sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16": {
+      "default": "item-sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16.webp",
+      "defaultPath": "/images/products/item-sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16.webp",
+      "variants": {}
+    },
+    "item-sw-420-vibration-shock-sensor-module": {
+      "default": "item-sw-420-vibration-shock-sensor-module.webp",
+      "defaultPath": "/images/products/item-sw-420-vibration-shock-sensor-module.webp",
+      "variants": {}
+    },
+    "item-tny278pn-off-line-switcher-ic-dip-7": {
+      "default": "item-tny278pn-off-line-switcher-ic-dip-7.webp",
+      "defaultPath": "/images/products/item-tny278pn-off-line-switcher-ic-dip-7.webp",
+      "variants": {}
+    },
+    "item-tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board": {
+      "default": "item-tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board.webp",
+      "defaultPath": "/images/products/item-tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board.webp",
+      "variants": {}
+    },
+    "item-ua741cn-operational-amplifier-ic-dip-8": {
+      "default": "item-ua741cn-operational-amplifier-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-ua741cn-operational-amplifier-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-uc3842an-current-mode-pwm-controller-ic-dip-8": {
+      "default": "item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-uc3843an-current-mode-pwm-controller-ic-dip-8": {
+      "default": "item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp",
+      "defaultPath": "/images/products/item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp",
+      "variants": {}
+    },
+    "item-uln2003an-darlington-transistor-array-ic-dip-16": {
+      "default": "item-uln2003an-darlington-transistor-array-ic-dip-16.webp",
+      "defaultPath": "/images/products/item-uln2003an-darlington-transistor-array-ic-dip-16.webp",
+      "variants": {}
+    },
+    "item-usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection": {
+      "default": "item-usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection.webp",
+      "defaultPath": "/images/products/item-usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection.webp",
+      "variants": {}
+    },
+    "item-xh-m601-12v-battery-charging-control-board-with-voltmeter": {
+      "default": "item-xh-m601-12v-battery-charging-control-board-with-voltmeter.webp",
+      "defaultPath": "/images/products/item-xh-m601-12v-battery-charging-control-board-with-voltmeter.webp",
+      "variants": {}
+    },
+    "ed-res-1p": {
+      "default": "ed-res-1p.webp",
+      "defaultPath": "/images/products/ed-res-1p.webp",
+      "variants": {
+        "ed-res-1p-47k-a": "ed-res-1p-47k-a.webp",
+        "ed-res-1p-30k-a": "ed-res-1p-30k-a.webp",
+        "ed-res-1p-12k": "ed-res-1p-12k.webp",
+        "ed-res-1p-30k-b": "ed-res-1p-30k-b.webp",
+        "ed-res-1p-820k": "ed-res-1p-820k.webp",
+        "ed-res-1p-680k": "ed-res-1p-680k.webp",
+        "ed-res-1p-100-a": "ed-res-1p-100-a.webp",
+        "ed-res-1p-220": "ed-res-1p-220.webp",
+        "ed-res-1p-1-1k": "ed-res-1p-1-1k.webp",
+        "ed-res-1p-510": "ed-res-1p-510.webp",
+        "ed-res-1p-51k": "ed-res-1p-51k.webp",
+        "ed-res-1p-10k": "ed-res-1p-10k.webp",
+        "ed-res-1p-270": "ed-res-1p-270.webp",
+        "ed-res-1p-1k": "ed-res-1p-1k.webp",
+        "ed-res-1p-470k": "ed-res-1p-470k.webp",
+        "ed-res-1p-68k": "ed-res-1p-68k.webp",
+        "ed-res-1p-22": "ed-res-1p-22.webp",
+        "ed-res-1p-100k": "ed-res-1p-100k.webp",
+        "ed-res-1p-20k": "ed-res-1p-20k.webp",
+        "ed-res-1p-10": "ed-res-1p-10.webp",
+        "ed-res-1p-2k": "ed-res-1p-2k.webp",
+        "ed-res-1p-6-8k": "ed-res-1p-6-8k.webp",
+        "ed-res-1p-47k-b": "ed-res-1p-47k-b.webp",
+        "ed-res-1p-22k": "ed-res-1p-22k.webp",
+        "ed-res-1p-1m": "ed-res-1p-1m.webp",
+        "ed-res-1p-330k": "ed-res-1p-330k.webp",
+        "ed-res-1p-47": "ed-res-1p-47.webp",
+        "ed-res-1p-680": "ed-res-1p-680.webp",
+        "ed-res-1p-100-b": "ed-res-1p-100-b.webp",
+        "ed-res-1p-220k": "ed-res-1p-220k.webp",
+        "ed-res-1p-150": "ed-res-1p-150.webp",
+        "ed-res-1p-4-7k": "ed-res-1p-4-7k.webp",
+        "ed-res-1p-330": "ed-res-1p-330.webp",
+        "ed-res-1p-470": "ed-res-1p-470.webp"
+      }
+    },
+    "ed-res-pwr": {
+      "default": "ed-res-pwr.webp",
+      "defaultPath": "/images/products/ed-res-pwr.webp",
+      "variants": {
+        "ed-res-pwr-120-1w": "ed-res-pwr-120-1w.webp",
+        "ed-res-pwr-10-1w": "ed-res-pwr-10-1w.webp",
+        "ed-res-pwr-220-1w": "ed-res-pwr-220-1w.webp",
+        "ed-res-pwr-150-1w": "ed-res-pwr-150-1w.webp",
+        "ed-res-pwr-12k-1-2w": "ed-res-pwr-12k-1-2w.webp",
+        "ed-res-pwr-1k-1-2w": "ed-res-pwr-1k-1-2w.webp",
+        "ed-res-pwr-100-1-2w-a": "ed-res-pwr-100-1-2w-a.webp",
+        "ed-res-pwr-2-2k-1-2w": "ed-res-pwr-2-2k-1-2w.webp",
+        "ed-res-pwr-1-8k-1-2w": "ed-res-pwr-1-8k-1-2w.webp",
+        "ed-res-pwr-560-1-2w": "ed-res-pwr-560-1-2w.webp",
+        "ed-res-pwr-390-1-2w": "ed-res-pwr-390-1-2w.webp",
+        "ed-res-pwr-100-1-2w-b": "ed-res-pwr-100-1-2w-b.webp",
+        "ed-res-pwr-4-7k-1-2w": "ed-res-pwr-4-7k-1-2w.webp",
+        "ed-res-pwr-10k-1-2w": "ed-res-pwr-10k-1-2w.webp",
+        "ed-res-pwr-47-1-2w": "ed-res-pwr-47-1-2w.webp",
+        "ed-res-pwr-46-1-2w": "ed-res-pwr-46-1-2w.webp"
+      }
+    },
+    "ed-res-qw": {
+      "default": "ed-res-qw.webp",
+      "defaultPath": "/images/products/ed-res-qw.webp",
+      "variants": {
+        "ed-res-qw-150": "ed-res-qw-150.webp",
+        "ed-res-qw-1k": "ed-res-qw-1k.webp",
+        "ed-res-qw-56k": "ed-res-qw-56k.webp",
+        "ed-res-qw-8-2": "ed-res-qw-8-2.webp",
+        "ed-res-qw-3-9": "ed-res-qw-3-9.webp",
+        "ed-res-qw-4-7": "ed-res-qw-4-7.webp",
+        "ed-res-qw-39": "ed-res-qw-39.webp",
+        "ed-res-qw-680": "ed-res-qw-680.webp",
+        "ed-res-qw-1": "ed-res-qw-1.webp",
+        "ed-res-qw-6-8k": "ed-res-qw-6-8k.webp",
+        "ed-res-qw-22-1w": "ed-res-qw-22-1w.webp",
+        "ed-res-qw-820": "ed-res-qw-820.webp",
+        "ed-res-qw-33": "ed-res-qw-33.webp",
+        "ed-res-qw-100": "ed-res-qw-100.webp",
+        "ed-res-qw-1-8-a": "ed-res-qw-1-8-a.webp",
+        "ed-res-qw-15": "ed-res-qw-15.webp",
+        "ed-res-qw-2-2": "ed-res-qw-2-2.webp",
+        "ed-res-qw-210": "ed-res-qw-210.webp",
+        "ed-res-qw-3-3": "ed-res-qw-3-3.webp",
+        "ed-res-qw-180": "ed-res-qw-180.webp",
+        "ed-res-qw-1-8-b": "ed-res-qw-1-8-b.webp",
+        "ed-res-qw-47": "ed-res-qw-47.webp",
+        "ed-res-qw-56": "ed-res-qw-56.webp",
+        "ed-res-qw-6-8": "ed-res-qw-6-8.webp",
+        "ed-res-qw-10": "ed-res-qw-10.webp",
+        "ed-res-qw-22k": "ed-res-qw-22k.webp",
+        "ed-res-qw-470k": "ed-res-qw-470k.webp",
+        "ed-res-qw-150k": "ed-res-qw-150k.webp",
+        "ed-res-qw-1-8k": "ed-res-qw-1-8k.webp",
+        "ed-res-qw-560k": "ed-res-qw-560k.webp",
+        "ed-res-qw-4-7m": "ed-res-qw-4-7m.webp",
+        "ed-res-qw-100k": "ed-res-qw-100k.webp",
+        "ed-res-qw-330k": "ed-res-qw-330k.webp",
+        "ed-res-qw-3-9k": "ed-res-qw-3-9k.webp",
+        "ed-res-qw-220k": "ed-res-qw-220k.webp",
+        "ed-res-qw-15k": "ed-res-qw-15k.webp",
+        "ed-res-qw-10k": "ed-res-qw-10k.webp",
+        "ed-res-qw-27k": "ed-res-qw-27k.webp",
+        "ed-res-qw-680k": "ed-res-qw-680k.webp",
+        "ed-res-qw-2-2k": "ed-res-qw-2-2k.webp",
+        "ed-res-qw-7-5k": "ed-res-qw-7-5k.webp",
+        "ed-res-qw-82k": "ed-res-qw-82k.webp",
+        "ed-res-qw-47k": "ed-res-qw-47k.webp",
+        "ed-res-qw-120k": "ed-res-qw-120k.webp",
+        "ed-res-qw-4-6k": "ed-res-qw-4-6k.webp",
+        "ed-res-qw-5-6k-a": "ed-res-qw-5-6k-a.webp",
+        "ed-res-qw-3-3m": "ed-res-qw-3-3m.webp",
+        "ed-res-qw-2m": "ed-res-qw-2m.webp",
+        "ed-res-qw-1-5k": "ed-res-qw-1-5k.webp",
+        "ed-res-qw-390k": "ed-res-qw-390k.webp",
+        "ed-res-qw-2-2m": "ed-res-qw-2-2m.webp",
+        "ed-res-qw-3k": "ed-res-qw-3k.webp",
+        "ed-res-qw-33k": "ed-res-qw-33k.webp",
+        "ed-res-qw-12k": "ed-res-qw-12k.webp",
+        "ed-res-qw-18k": "ed-res-qw-18k.webp",
+        "ed-res-qw-4-7k": "ed-res-qw-4-7k.webp",
+        "ed-res-qw-180k": "ed-res-qw-180k.webp",
+        "ed-res-qw-3-3k": "ed-res-qw-3-3k.webp",
+        "ed-res-qw-2-7k": "ed-res-qw-2-7k.webp",
+        "ed-res-qw-5-6k-b": "ed-res-qw-5-6k-b.webp"
+      }
+    },
+    "item-cd4040be-cd4040-dip-16": {
+      "default": "item-cd4040be-cd4040-dip-16.webp",
+      "defaultPath": "/images/products/item-cd4040be-cd4040-dip-16.webp",
+      "variants": {}
+    },
+    "item-cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original": {
+      "default": "item-cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original.webp",
+      "defaultPath": "/images/products/item-cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original.webp",
+      "variants": {}
+    },
+    "sku-prod-1084": {
+      "default": "sku-prod-1084.webp",
+      "defaultPath": "/images/products/sku-prod-1084.webp",
+      "variants": {}
+    },
+    "item-baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste": {
+      "default": "item-baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste.webp",
+      "defaultPath": "/images/products/item-baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste.webp",
+      "variants": {}
+    },
+    "sku-prod-1062": {
+      "default": "sku-prod-1062.webp",
+      "defaultPath": "/images/products/sku-prod-1062.webp",
+      "variants": {}
+    }
+  },
+  "duplicateWarnings": [
+    {
+      "productFamily": "ed-elcap",
+      "displayName": "100µF 16V",
+      "sourceRows": [
+        16,
+        20
+      ],
+      "prices": [
+        3,
+        5
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-qw",
+      "displayName": "1.8Ω",
+      "sourceRows": [
+        15,
+        21
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-qw",
+      "displayName": "5.6KΩ",
+      "sourceRows": [
+        46,
+        60
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-1p",
+      "displayName": "47KΩ",
+      "sourceRows": [
+        1,
+        23
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-1p",
+      "displayName": "30KΩ",
+      "sourceRows": [
+        2,
+        4
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-1p",
+      "displayName": "100Ω",
+      "sourceRows": [
+        7,
+        29
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "ed-res-pwr",
+      "displayName": "100Ω 1/2W",
+      "sourceRows": [
+        7,
+        12
+      ],
+      "prices": [
+        1,
+        1
+      ],
+      "message": "Duplicate source value preserved as separate variants."
+    }
+  ],
+  "generatedAt": "2026-09-22"
+}
