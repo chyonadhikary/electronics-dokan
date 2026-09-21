@@ -11,10 +11,18 @@
     "youtube": "electronicsdokan"
   },
   "shipping": {
-    "insideDhaka": 60,
-    "outsideDhaka": 120,
-    "insideDhakaLabel": "Inside Dhaka",
-    "outsideDhakaLabel": "Outside Dhaka"
+    "couriers": [
+      {
+        "id": "bangladesh-post-office",
+        "name": "Bangladesh Post Office",
+        "deliveryCharge": 20
+      },
+      {
+        "id": "steadfast",
+        "name": "Steadfast Courier",
+        "deliveryCharge": 120
+      }
+    ]
   },
   "support": {
     "hours": "Every day · 9:00 AM–10:00 PM",
