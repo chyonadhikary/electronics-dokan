@@ -15,7 +15,7 @@
 
   <body>
     <div id="root"></div>
-    <script>(function(){var redirect=sessionStorage.redirect;if(redirect){delete sessionStorage.redirect;history.replaceState(null,null,redirect);}})();</script>
+    <script>(function(){var params=new URLSearchParams(location.search),route=params.get('__route');if(route){history.replaceState(null,null,route);}})();</script>
     <script type="module" src="/src/main.tsx"></script>
     <script
       defer
