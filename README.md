@@ -57,3 +57,21 @@ The Vite output is static and can be served by GitHub Pages or another static ho
 ## Order flow
 
 The checkout calculates subtotal, location-aware delivery and total in the browser, validates the guest form, then opens a URL-encoded WhatsApp message addressed to the number in `site.json`. Customer information is not written to localStorage or a database.
+
+## Complete catalogue and variant data
+
+The storefront now ships with the complete static catalogue from the supplied specification: **168 catalogue products**, **152 capacitor/resistor variants**, and **12,260 variant stock units**. Product and variant data live in `client/public/data/products.json`; image mappings live in `client/public/data/image-manifest.json`; a machine-readable count and duplicate warning summary lives in `client/public/data/catalogue-summary.json`.
+
+Matched families expose selectable variants on their product pages. The selector updates price, price unit, stock quantity, image fallback, cart line, and WhatsApp order text immediately. Quarter-watt resistors remain priced per two pieces. Duplicate source rows are retained with stable IDs and surfaced in the manifest duplicate warnings rather than silently merged.
+
+## Product images
+
+Upload images to `client/public/images/products/` using the exact filenames in [`IMAGE_UPLOAD_GUIDE.md`](./IMAGE_UPLOAD_GUIDE.md). Parent filenames use the stable product ID; variant filenames use the stable variant ID. The resolver tries the selected variant image, then the parent image, then `client/public/images/placeholders/product-placeholder.webp`. Missing files produce a browser-console warning and never show a broken-image icon.
+
+## Catalogue maintenance
+
+To add or update a catalogue record, edit the static JSON record and keep its stable `id`, `slug`, `sku`, `sourceOrder`, and image-manifest entry. To add a variant, append a unique `variantId`, preserve the original display string, set `priceUnit`, `stockQuantity`, and normalized fields where known, then add the exact filename to `image-manifest.json` and the upload guide. Do not merge duplicate values unless the source owner resolves the conflict.
+
+## Validation
+
+Run `pnpm check && pnpm build` before pushing. The catalogue summary can be checked with `cat client/public/data/catalogue-summary.json`. The GitHub Pages workflow in `.github/workflows/deploy-pages.yml` builds and publishes the static site on pushes to `main`.
