@@ -1,77 +1,5 @@
 [
   {
-    "id": "sku-mkt-60001-344546",
-    "slug": "chyon-adhikary",
-    "name": "Chyon Adhikary",
-    "category": "Imported",
-    "sourceCategory": "IMPORTED",
-    "sku": "MKT-60001-344546",
-    "price": 56,
-    "priceDisplay": "৳56",
-    "currency": "BDT",
-    "availability": "out_of_stock",
-    "stock": false,
-    "stockStatus": "Out of stock",
-    "preOrder": "—",
-    "description": "Not specified",
-    "shortDescription": "Not specified",
-    "brand": "Not specified",
-    "specifications": {},
-    "keywords": [
-      "Chyon Adhikary",
-      "MKT-60001-344546",
-      "IMPORTED"
-    ],
-    "sourceUrl": "Not specified",
-    "image": "sku-mkt-60001-344546.webp",
-    "images": [
-      "/images/products/sku-mkt-60001-344546.webp"
-    ],
-    "featured": true,
-    "newArrival": true,
-    "trending": true,
-    "deal": false,
-    "variants": [],
-    "variantCount": 0,
-    "sourceOrder": 1
-  },
-  {
-    "id": "sku-mkt-90001-prod-1081",
-    "slug": "sunwa-yx-360trn-analog-multimeter-pointer-ac-dc-voltage-current-tester-with-leads",
-    "name": "Sunwa YX-360TRn Analog Multimeter | Pointer AC/DC Voltage Current Tester with Leads",
-    "category": "Meters & Testers",
-    "sourceCategory": "METERS & TESTERS",
-    "sku": "MKT-90001-PROD-1081",
-    "price": 445,
-    "priceDisplay": "৳445",
-    "currency": "BDT",
-    "availability": "in_stock",
-    "stock": true,
-    "stockStatus": "Available to order",
-    "preOrder": "—",
-    "description": "Not specified",
-    "shortDescription": "Not specified",
-    "brand": "Not specified",
-    "specifications": {},
-    "keywords": [
-      "Sunwa YX-360TRn Analog Multimeter | Pointer AC/DC Voltage Current Tester with Leads",
-      "MKT-90001-PROD-1081",
-      "METERS & TESTERS"
-    ],
-    "sourceUrl": "Not specified",
-    "image": "sku-mkt-90001-prod-1081.webp",
-    "images": [
-      "/images/products/sku-mkt-90001-prod-1081.webp"
-    ],
-    "featured": true,
-    "newArrival": true,
-    "trending": true,
-    "deal": false,
-    "variants": [],
-    "variantCount": 0,
-    "sourceOrder": 2
-  },
-  {
     "id": "sku-prod-1072",
     "slug": "camel-gg-5-hot-melt-glue-gun-100-240v-electric-heat-glue-gun-for-craft-and-diy-repairs",
     "name": "CAMEL GG-5 Hot Melt Glue Gun 100-240V | Electric Heat Glue Gun for Craft & DIY Repairs",
@@ -4419,42 +4347,6 @@
     "variants": [],
     "variantCount": 0,
     "sourceOrder": 107
-  },
-  {
-    "id": "sku-prod-1081",
-    "slug": "sunwa-yx-360trn-analog-multimeter-pointer-ac-dc-voltage-current-tester-with-leads",
-    "name": "Sunwa YX-360TRn Analog Multimeter | Pointer AC/DC Voltage Current Tester with Leads",
-    "category": "Meters & Testers",
-    "sourceCategory": "METERS & TESTERS",
-    "sku": "PROD-1081",
-    "price": 450,
-    "priceDisplay": "৳450",
-    "currency": "BDT",
-    "availability": "in_stock",
-    "stock": true,
-    "stockStatus": "Available to order",
-    "preOrder": "—",
-    "description": "Not specified",
-    "shortDescription": "Not specified",
-    "brand": "Not specified",
-    "specifications": {},
-    "keywords": [
-      "Sunwa YX-360TRn Analog Multimeter | Pointer AC/DC Voltage Current Tester with Leads",
-      "PROD-1081",
-      "METERS & TESTERS"
-    ],
-    "sourceUrl": "Not specified",
-    "image": "sku-prod-1081.webp",
-    "images": [
-      "/images/products/sku-prod-1081.webp"
-    ],
-    "featured": false,
-    "newArrival": false,
-    "trending": false,
-    "deal": false,
-    "variants": [],
-    "variantCount": 0,
-    "sourceOrder": 108
   },
   {
     "id": "item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads",

@@ -1,15 +1,5 @@
 {
   "products": {
-    "sku-mkt-60001-344546": {
-      "default": "sku-mkt-60001-344546.webp",
-      "defaultPath": "/images/products/sku-mkt-60001-344546.webp",
-      "variants": {}
-    },
-    "sku-mkt-90001-prod-1081": {
-      "default": "sku-mkt-90001-prod-1081.webp",
-      "defaultPath": "/images/products/sku-mkt-90001-prod-1081.webp",
-      "variants": {}
-    },
     "sku-prod-1072": {
       "default": "sku-prod-1072.webp",
       "defaultPath": "/images/products/sku-prod-1072.webp",
@@ -577,11 +567,6 @@
     "item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter": {
       "default": "item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp",
       "defaultPath": "/images/products/item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp",
-      "variants": {}
-    },
-    "sku-prod-1081": {
-      "default": "sku-prod-1081.webp",
-      "defaultPath": "/images/products/sku-prod-1081.webp",
       "variants": {}
     },
     "item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads": {
