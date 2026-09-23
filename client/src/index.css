@@ -570,11 +570,9 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .payment-methods { margin-top: 22px; }
 .payment-methods h4 { margin-bottom: 10px; }
 .payment-badges { display: flex; flex-wrap: wrap; gap: 7px; }
-.payment-badges span { display: inline-flex; align-items: center; min-height: 26px; padding: 0 9px; border-radius: 5px; background: #fff; color: var(--navy); border: 1px solid #d5e6e6; font: 700 10px var(--mono); }
-.payment-badges span:first-child { color: #e2136e; }
-.payment-badges span:nth-child(2) { color: #f04b23; }
-.payment-badges span:nth-child(3) { color: #7d2a8d; }
-.payment-badges span:nth-child(4) { color: #1769aa; }
+.payment-badges span { display: inline-flex; align-items: center; gap: 5px; min-height: 32px; padding: 3px 7px; border-radius: 5px; background: #fff; color: var(--navy); border: 1px solid #d5e6e6; font: 700 10px var(--mono); }
+.payment-badges img { display: block; width: 28px; height: 22px; object-fit: contain; }
+.payment-badges b { font-weight: 700; }
 @media (max-width: 560px) {
   .announcement-inner { min-height: 38px; font-size: 10px; }
   .announcement-social { gap: 8px; }
