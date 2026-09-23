@@ -932,3 +932,76 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .focused-banner-stats::-webkit-scrollbar { display: none; }
   .focused-banner-stats span { flex: 0 0 auto; font-size: 8px; }
 }
+
+/* Compact header layout: keep the brand, search, and actions balanced at every width. */
+.header-main {
+  grid-template-columns: minmax(168px, 198px) minmax(0, 1fr) auto;
+  gap: 18px;
+  min-height: 72px;
+}
+.header-main > .brand { max-width: 198px; min-width: 0; gap: 8px; }
+.header-main > .brand > span:last-child { min-width: 0; }
+.header-main > .brand strong, .header-main > .brand b { font-size: 15px; }
+.header-main > .brand small { margin-top: 5px; font-size: 7px; }
+.custom-brand-logo { width: 104px; height: 36px; }
+.header-actions { gap: 5px; }
+.search-form { min-width: 0; }
+.mobile-menu-button { width: 34px; height: 34px; justify-content: center; padding: 0; }
+.mobile-menu-label { display: none !important; }
+
+@media (max-width: 980px) {
+  .header-main {
+    grid-template-columns: minmax(150px, 188px) minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: 66px;
+  }
+  .header-main > .brand { max-width: 188px; }
+  .header-main > .brand strong, .header-main > .brand b { font-size: 14px; }
+  .search-form kbd { display: none; }
+}
+
+@media (max-width: 700px) {
+  .site-header .header-main {
+    display: grid;
+    grid-template-columns: minmax(102px, 1fr) minmax(105px, 1.45fr) auto;
+    gap: 7px;
+    min-height: 58px;
+    padding: 6px 10px;
+  }
+  .site-header .header-main > .brand { max-width: 124px; gap: 5px; }
+  .site-header .header-main > .brand .brand-mark svg { width: 17px; height: 17px; }
+  .site-header .header-main > .brand > span:last-child strong,
+  .site-header .header-main > .brand > span:last-child b { font-size: 12px; }
+  .site-header .header-main > .brand > span:last-child small { display: none; }
+  .custom-brand-logo { width: 88px; height: 30px; }
+  .site-header .search-form,
+  .site-header .search-form.is-sticky {
+    width: 100%;
+    height: 36px;
+    gap: 6px;
+    padding-left: 9px;
+    padding-right: 4px;
+  }
+  .site-header .search-form > svg { width: 16px; height: 16px; }
+  .site-header .search-form input { font-size: 10px; }
+  .site-header .search-form input::placeholder { text-overflow: ellipsis; }
+  .site-header .search-form button { width: 27px; height: 27px; border-radius: 6px; }
+  .site-header .search-form button svg { width: 15px; height: 15px; }
+  .site-header .header-actions { gap: 2px; }
+  .site-header .header-actions > button,
+  .site-header .category-trigger { width: 30px; height: 32px; padding: 0; justify-content: center; }
+  .site-header .category-trigger svg:first-child,
+  .site-header .mobile-menu-button svg { width: 20px; height: 20px; }
+  .site-header .category-trigger svg:last-child { display: none; }
+  .site-header .cart-button svg { width: 19px; height: 19px; }
+  .site-header .cart-button b { top: 1px; right: 1px; }
+}
+
+@media (max-width: 390px) {
+  .site-header .header-main { grid-template-columns: minmax(92px, 1fr) minmax(92px, 1.3fr) auto; gap: 5px; }
+  .site-header .header-main > .brand > span:last-child strong,
+  .site-header .header-main > .brand > span:last-child b { font-size: 11px; }
+  .site-header .header-actions > button,
+  .site-header .category-trigger { width: 27px; }
+  .site-header .search-form input { font-size: 9px; }
+}
