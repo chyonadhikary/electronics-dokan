@@ -583,3 +583,30 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .announcement-social { gap: 8px; }
   .announcement-social a[aria-label="Facebook"], .announcement-social a[aria-label="YouTube"], .top-divider { display: none; }
 }
+
+/* Focused homepage: banner first, with only essential shopping information below it. */
+.focused-home { min-height: 100vh; background: #fff; }
+.focused-hero { position: relative; min-height: min(68vh, 720px); overflow: hidden; background: var(--navy-deep); }
+.focused-hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .7s ease; }
+.focused-hero-slide.is-active { opacity: 1; }
+.focused-hero-dots { position: absolute; z-index: 2; left: 50%; bottom: 18px; display: flex; gap: 7px; transform: translateX(-50%); }
+.focused-hero-dots button { width: 8px; height: 8px; padding: 0; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; background: transparent; }
+.focused-hero-dots button.is-active { background: #fff; }
+.focused-actions { display: flex; justify-content: center; gap: 10px; padding-top: 22px; }
+.focused-actions .button { min-width: 170px; }
+.focused-stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 28px; padding-top: 18px; color: var(--muted); font: 10px var(--mono); }
+.focused-stats span { display: inline-flex; align-items: center; gap: 6px; }
+.focused-stats svg { color: var(--teal); }
+.focused-promises { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding-top: 24px; padding-bottom: 32px; }
+.focused-promises div { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 58px; border: 1px solid var(--line); border-radius: 10px; background: var(--teal-wash); color: var(--navy); font-size: 11px; text-align: center; }
+.focused-promises svg { color: var(--teal); flex: 0 0 auto; }
+.focused-promises b { font-weight: 600; }
+@media (max-width: 700px) {
+  .focused-home { min-height: calc(100vh - 22px); }
+  .focused-hero { min-height: 55vh; }
+  .focused-actions { padding-top: 15px; gap: 7px; }
+  .focused-actions .button { min-width: 0; flex: 1; padding: 0 10px; font-size: 10px; }
+  .focused-stats { justify-content: flex-start; gap: 10px 15px; padding-top: 14px; font-size: 9px; }
+  .focused-promises { grid-template-columns: repeat(2, 1fr); gap: 7px; padding-top: 18px; padding-bottom: 22px; }
+  .focused-promises div { min-height: 50px; padding: 8px 5px; font-size: 9px; }
+}

@@ -27,5 +27,9 @@
   "support": {
     "hours": "Every day · 9:00 AM–10:00 PM",
     "email": "hello@electronicsdokan.com"
-  }
+  },
+  "heroBanners": [
+    "/images/home/hero-banner.webp"
+  ],
+  "heroIntervalMs": 5000
 }

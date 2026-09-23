@@ -94,6 +94,8 @@ type SiteConfig = {
   social: { facebook: string; tiktok: string; youtube: string };
   shipping: { couriers: Array<{ id: string; name: string; deliveryCharge: number }> };
   support: { hours: string; email: string };
+  heroBanners?: string[];
+  heroIntervalMs?: number;
 };
 
 type LocationData = {
@@ -133,6 +135,8 @@ const FALLBACK_SITE: SiteConfig = {
   social: { facebook: "https://facebook.com/electronicsdokanin", tiktok: "https://tiktok.com/@electronicsdokan", youtube: "electronicsdokan" },
   shipping: { couriers: [{ id: "bangladesh-post-office", name: "Bangladesh Post Office", deliveryCharge: 20 }, { id: "steadfast", name: "Steadfast Courier", deliveryCharge: 120 }] },
   support: { hours: "Every day · 9:00 AM–10:00 PM", email: "hello@electronicsdokan.com" },
+  heroBanners: ["/images/home/hero-banner.webp"],
+  heroIntervalMs: 5000,
 };
 
 const formatBDT = (value: number) => `৳${new Intl.NumberFormat("en-BD").format(value)}`;
@@ -218,7 +222,7 @@ function App() {
 
   const renderPage = () => {
     if (!ready) return <LoadingState />;
-    if (path === "/" || path === "") return <HomePage products={products} navigate={navigate} addToCart={addToCart} />;
+    if (path === "/" || path === "") return <HomePage products={products} site={site} navigate={navigate} />;
     if (path.startsWith("/products")) return <ProductsPage products={products} navigate={navigate} addToCart={addToCart} />;
     if (path.startsWith("/product/")) return <ProductPage products={products} navigate={navigate} addToCart={addToCart} />;
     if (path === "/cart") return <CartPage products={products} cart={cart} site={site} navigate={navigate} updateQty={updateQty} removeFromCart={removeFromCart} />;
@@ -229,9 +233,9 @@ function App() {
 
   return <>
     <Toaster position="bottom-right" toastOptions={{ className: "toast-card" }} />
-    <Header site={site} cartCount={cartCount} path={path} navigate={navigate} products={products} />
+    {path !== "/" && path !== "" && <Header site={site} cartCount={cartCount} path={path} navigate={navigate} products={products} />}
     <main>{renderPage()}</main>
-    <Footer site={site} navigate={navigate} />
+    {path !== "/" && path !== "" && <Footer site={site} navigate={navigate} />}
     <a className="whatsapp-float" href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={22} /><span>Chat with us</span></a>
   </>;
 }
@@ -262,7 +266,6 @@ function Header({ site, cartCount, path, navigate, products }: { site: SiteConfi
       {mobileOpen && <div className="mobile-nav container"><button onClick={() => { navigate("/products"); setMobileOpen(false); }}>Shop all products</button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMobileOpen(false); }}>{category}</button>)}<a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer">Chat on WhatsApp</a></div>}
       <div className="container header-sub"><span><Truck size={15} /> Delivery across Bangladesh</span><span><BadgeCheck size={15} /> Quality checked components</span><span><MessageCircle size={15} /> Human support on WhatsApp</span><span className="header-sub-right">{site.support.hours}</span></div>
     </header>
-    {path === "/" && <section className="upload-hero-banner" aria-label="Promotional banner"><div className="container"><img src="/images/home/hero-banner.webp" alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} /><span>Upload your hero banner image</span></div></section>}
   </>;
 }
 
@@ -276,24 +279,23 @@ function Footer({ site, navigate }: { site: SiteConfig; navigate: (path: string)
   return <footer className="footer"><div className="container footer-grid"><div className="footer-brand"><button className="brand footer-logo" onClick={() => navigate("/")}><span className="brand-mark"><Zap size={20} fill="currentColor" /></span><span><strong>electronics</strong><b>dokan</b></span></button><p>Thoughtful components, honest prices and friendly support for builders across Bangladesh.</p><div className="social-row"><a href={site.social.facebook} aria-label="Facebook" target="_blank" rel="noreferrer"><Facebook size={17} /></a><a href={`https://www.tiktok.com/@electronicsdokan`} aria-label="TikTok" target="_blank" rel="noreferrer"><span className="social-text">♪</span></a><a href={`https://www.youtube.com/@${site.social.youtube}`} aria-label="YouTube" target="_blank" rel="noreferrer"><Youtube size={17} /></a></div></div><div><h4>Shop</h4><button onClick={() => navigate("/products")}>All products</button><button onClick={() => navigate("/products?category=ESP32")}>ESP32 & ESP8266</button><button onClick={() => navigate("/products?category=Sensors")}>Sensors & modules</button><button onClick={() => navigate("/products?category=Tools")}>Tools & accessories</button></div><div><h4>Customer care</h4><button onClick={() => navigate("/shipping")}>Shipping information</button><button onClick={() => navigate("/returns")}>Return / refund</button><button onClick={() => navigate("/contact")}>Contact us</button><button onClick={() => navigate("/privacy")}>Privacy</button></div><div className="footer-contact"><h4>Need help?</h4><p><MapPin size={15} /> {site.address}</p><a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer"><MessageCircle size={16} /> {site.whatsapp}</a><p><Clock3 size={15} /> {site.support.hours}</p><a href={`mailto:${site.support.email}`}><Send size={15} /> {site.support.email}</a><div className="payment-methods"><h4>Supported payment methods</h4><div className="payment-badges">{paymentMethods.map(([label, src]) => <span key={label}><img src={src} alt="" aria-hidden="true" onError={(event) => { event.currentTarget.style.display = "none"; }} /><b>{label}</b></span>)}</div></div></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Electronics Dokan. All rights reserved.</span><span>Guest checkout · WhatsApp ordering · No account required</span></div></footer>;
 }
 
-function HomePage({ products, navigate, addToCart }: { products: Product[]; navigate: (path: string) => void; addToCart: (id: string, qty?: number) => void }) {
-  const categories = Array.from(new Set(products.map((product) => product.category))).sort();
-  const featured = products.filter((product) => product.featured).slice(0, 8);
-  const newArrivals = products.filter((product) => product.newArrival).slice(0, 8);
-  const trending = products.filter((product) => product.trending).slice(0, 8);
-  const stocked = products.filter((product) => product.stock).slice(0, 8);
-  const brands = Array.from(new Set(products.map((product) => product.brand).filter((brand) => brand && brand !== "Not specified"))).slice(0, 8);
-  const shelf = (eyebrow: string, title: string, items: Product[], action: string, query: string) => <section className="reference-shelf container"><SectionHeading eyebrow={eyebrow} title={title} action={action} onAction={() => navigate(`/products?${query}`)} /><div className="shelf-track">{items.map((product) => <ProductCard key={product.id} product={product} navigate={navigate} addToCart={addToCart} />)}</div></section>;
-  return <div className="reference-home">
-    <section className="reference-hero"><div className="reference-hero-image" /><div className="container reference-hero-content"><div className="eyebrow"><span className="eyebrow-line" /> Electronics, modules & tools from Khulna</div><h1>Build something<br /><em>real.</em></h1><p>Practical components, fair prices and friendly WhatsApp support for students, makers, technicians and curious builders across Bangladesh.</p><div className="hero-actions"><button className="button button-primary" onClick={() => navigate('/products')}>Shop all products <ArrowRight size={17} /></button><a className="button button-light" href={`https://wa.me/${"8801938640733"}?text=${encodeURIComponent("Hello Electronics Dokan, please help me choose components.")}`} target="_blank" rel="noreferrer"><MessageCircle size={17} /> Ask for help</a></div><div className="reference-hero-pills"><span><BadgeCheck size={15} /> {products.length} catalogue items</span><span><Truck size={15} /> Nationwide delivery</span><span><MessageCircle size={15} /> WhatsApp ordering</span></div></div></section>
-    <div className="container promise-strip reference-promises"><div><span className="promise-icon"><Truck size={18} /></span><span><b>Delivery across Bangladesh</b><small>Bangladesh Post Office & Steadfast</small></span></div><div><span className="promise-icon"><BadgeCheck size={18} /></span><span><b>Quality checked components</b><small>Useful parts for real projects</small></span></div><div><span className="promise-icon"><ShoppingBag size={18} /></span><span><b>Guest checkout</b><small>No account required</small></span></div><div><span className="promise-icon"><MessageCircle size={18} /></span><span><b>Human support</b><small>From Phultala, Khulna</small></span></div></div>
-    {shelf("Top picks", "Start with something good", featured, "View all", "sort=featured")}
-    {shelf("Fresh on the bench", "New arrivals", newArrivals, "View new arrivals", "sort=new")}
-    <section className="reference-category-band"><div className="container"><SectionHeading eyebrow="Browse the catalogue" title="Popular categories" action="View all categories" onAction={() => navigate('/products')} /><div className="reference-category-grid">{categories.slice(0, 8).map((category, index) => <button key={category} className={`reference-category reference-category-${index % 4}`} onClick={() => navigate(`/products?category=${encodeURIComponent(category)}`)}><span className="category-index">{String(index + 1).padStart(2, '0')}</span><span className="category-art"><img src={categoryImagePath(category)} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} /><CircuitIcon index={index} /></span><strong>{category}</strong><small>{products.filter((product) => product.category === category).length} products <ArrowRight size={13} /></small></button>)}</div></div></section>
-    {shelf("Trending now", "Popular with builders", trending.length ? trending : stocked, "Shop trending", "sort=featured")}
-    <section className="reference-brands section container"><SectionHeading eyebrow="Trusted parts, thoughtfully selected" title="Shop by brand" action="View all products" onAction={() => navigate('/products')} /><div className="brand-chip-grid">{(brands.length ? brands : ['ESP32', 'Arduino', 'TP4056', 'LM386', 'TDA2030', 'NE555']).map((brand, index) => <button key={brand} onClick={() => navigate(`/products?search=${encodeURIComponent(brand)}`)}><span>{String(index + 1).padStart(2, '0')}</span><strong>{brand}</strong><ArrowRight size={15} className="arrow-diagonal" /></button>)}</div></section>
-    <section className="reference-about"><div className="container reference-about-grid"><div><div className="eyebrow"><span className="eyebrow-line" /> Electronics Dokan</div><h2>Your local source for <em>better builds.</em></h2></div><div><p>Electronics Dokan is an online electronics shop from Phultala, Khulna. We bring together development boards, modules, sensors, components, tools and test equipment for school projects, prototypes, repairs and everyday maker work.</p><button className="text-link" onClick={() => navigate('/products')}>Explore the catalogue <ArrowRight size={15} /></button></div></div></section>
-    <section className="reference-service-strip"><div className="container reference-service-grid"><div><BadgeCheck size={20} /><strong>Carefully selected</strong><span>Practical parts, clear pricing</span></div><div><Truck size={20} /><strong>Delivery nationwide</strong><span>Fixed courier options at checkout</span></div><div><MessageCircle size={20} /><strong>WhatsApp support</strong><span>Get help before you order</span></div><div><Zap size={20} /><strong>Build with confidence</strong><span>Beginner-friendly catalogue</span></div></div></section>
+function HomePage({ products, site, navigate }: { products: Product[]; site: SiteConfig; navigate: (path: string) => void }) {
+  const banners = site.heroBanners?.length ? site.heroBanners : ["/images/home/hero-banner.webp"];
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    if (banners.length < 2) return;
+    const timer = window.setInterval(() => setActive((current) => (current + 1) % banners.length), Math.max(3000, site.heroIntervalMs || 5000));
+    return () => window.clearInterval(timer);
+  }, [banners.length, site.heroIntervalMs]);
+  const categories = new Set(products.map((product) => product.category)).size;
+  return <div className="focused-home">
+    <section className="focused-hero" aria-label="Electronics Dokan promotional banners">
+      {banners.map((banner, index) => <img key={`${banner}-${index}`} className={`focused-hero-slide ${index === active ? "is-active" : ""}`} src={banner} alt={`Electronics Dokan banner ${index + 1}`} onError={(event) => { event.currentTarget.style.display = "none"; }} />)}
+      {banners.length > 1 && <div className="focused-hero-dots" aria-label="Banner navigation">{banners.map((banner, index) => <button key={`${banner}-dot`} className={index === active ? "is-active" : ""} onClick={() => setActive(index)} aria-label={`Show banner ${index + 1}`} />)}</div>}
+    </section>
+    <section className="focused-actions container"><button className="button button-primary" onClick={() => navigate("/products")}>Shop all products <ArrowRight size={17} /></button><a className="button button-light" href={`https://wa.me/${site.whatsappInternational}?text=${encodeURIComponent("Hello Electronics Dokan, please help me choose components.")}`} target="_blank" rel="noreferrer"><MessageCircle size={17} /> Ask for help</a></section>
+    <section className="focused-stats container"><span><BadgeCheck size={16} /> {products.length} catalogue items</span><span><ShoppingBag size={16} /> {categories} categories</span><span><Truck size={16} /> Nationwide delivery</span><span><MessageCircle size={16} /> WhatsApp ordering</span></section>
+    <section className="focused-promises container"><div><Truck size={19} /><b>Delivery across Bangladesh</b></div><div><BadgeCheck size={19} /><b>Quality checked products</b></div><div><ShoppingBag size={19} /><b>Guest checkout</b></div><div><MessageCircle size={19} /><b>Human support</b></div></section>
   </div>;
 }
 function categoryImagePath(category: string) { return `/images/categories/${category.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}.webp`; }
