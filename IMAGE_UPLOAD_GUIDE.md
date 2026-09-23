@@ -6,8 +6,6 @@ Upload images under `client/public/images/products/` using the exact case-sensit
 
 | # | Category | Product name | Product ID | SKU | Image filename | Upload path | Notes |
 |---:|---|---|---|---|---|---|---|
-| 1 | Imported | Chyon Adhikary | `sku-mkt-60001-344546` | MKT-60001-344546 | `sku-mkt-60001-344546.webp` | `client/public/images/products/sku-mkt-60001-344546.webp` | Out of stock |
-| 2 | Meters & Testers | Sunwa YX-360TRn Analog Multimeter \| Pointer AC/DC Voltage Current Tester with Leads | `sku-mkt-90001-prod-1081` | MKT-90001-PROD-1081 | `sku-mkt-90001-prod-1081.webp` | `client/public/images/products/sku-mkt-90001-prod-1081.webp` | Standalone catalogue item |
 | 3 | Accessories | CAMEL GG-5 Hot Melt Glue Gun 100-240V \| Electric Heat Glue Gun for Craft & DIY Repairs | `sku-prod-1072` | PROD-1072 | `sku-prod-1072.webp` | `client/public/images/products/sku-prod-1072.webp` | Standalone catalogue item |
 | 4 | Accessories | ESD-15 Curved Tip Precision Tweezers 121mm \| Stainless Steel Bent Tip Tweezer for Electronics | `item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics` | Not specified | `item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics.webp` | `client/public/images/products/item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics.webp` | Standalone catalogue item |
 | 5 | Accessories | Metal Slingshot Release Trigger Mechanism \| DIY Crossbow & Slingshot Trigger Device | `sku-prod-1063` | PROD-1063 | `sku-prod-1063.webp` | `client/public/images/products/sku-prod-1063.webp` | Standalone catalogue item |
@@ -113,7 +111,6 @@ Upload images under `client/public/images/products/` using the exact case-sensit
 | 105 | Meters & Testers | HTC-2 Digital Clock Alarm & Hygrometer Thermometer \| LCD Temperature Humidity Monitor with Wired Sensor | `item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor` | Not specified | `item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor.webp` | `client/public/images/products/item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor.webp` | Standalone catalogue item |
 | 106 | Meters & Testers | Mini LCD Digital Thermometer Hygrometer with Probe \| Compact Temperature Humidity Meter | `item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter` | Not specified | `item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter.webp` | `client/public/images/products/item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter.webp` | Standalone catalogue item |
 | 107 | Meters & Testers | MT87 Digital Clamp Meter \| AC/DC Current Voltage Clamp Multimeter | `item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter` | Not specified | `item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp` | `client/public/images/products/item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp` | Standalone catalogue item |
-| 108 | Meters & Testers | Sunwa YX-360TRn Analog Multimeter \| Pointer AC/DC Voltage Current Tester with Leads | `sku-prod-1081` | PROD-1081 | `sku-prod-1081.webp` | `client/public/images/products/sku-prod-1081.webp` | Standalone catalogue item |
 | 109 | Meters & Testers | UNI-T UT33D+ Digital Multimeter \| AC/DC Voltage Current Resistance Meter with Test Leads | `item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads` | Not specified | `item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads.webp` | `client/public/images/products/item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads.webp` | Standalone catalogue item |
 | 110 | Meters & Testers | USB Power Capacity Tester \| Voltage Current Meter with Data Display | `item-usb-power-capacity-tester-voltage-current-meter-with-data-display` | Not specified | `item-usb-power-capacity-tester-voltage-current-meter-with-data-display.webp` | `client/public/images/products/item-usb-power-capacity-tester-voltage-current-meter-with-data-display.webp` | Standalone catalogue item |
 | 111 | Modules | 4-Channel Wireless RF Remote Control Receiver Module + Transmitter Fob (315/433MHz) | `item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob` | Not specified | `item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob.webp` | `client/public/images/products/item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob.webp` | Standalone catalogue item |
@@ -339,3 +336,44 @@ Upload images under `client/public/images/products/` using the exact case-sensit
 3. Do not edit `products.json` or the manifest merely to add an image—the filename mapping is already prepared.
 4. If a file is absent, the site logs a warning in the browser console and shows the local placeholder instead of a broken-image icon.
 5. Variant images are optional. If a variant image is absent, its parent product image is used automatically.
+
+## Homepage hero banner
+
+Upload the homepage banner image using this exact path and filename:
+
+```text
+client/public/images/home/hero-banner.webp
+```
+
+The banner appears directly below the search bar on the homepage. Recommended dimensions are **1200 × 360 px** or another wide image with approximately a 3:1 ratio. The image should be WebP format and use lowercase naming.
+
+## Homepage category images
+
+Upload category images under:
+
+```text
+client/public/images/categories/
+```
+
+Use these exact filenames for the current catalogue categories:
+
+| Category | Exact upload path |
+|---|---|
+| Accessories | `client/public/images/categories/accessories.webp` |
+| Audio | `client/public/images/categories/audio.webp` |
+| Battery | `client/public/images/categories/battery.webp` |
+| Capacitors | `client/public/images/categories/capacitors.webp` |
+| Communication | `client/public/images/categories/communication.webp` |
+| Components | `client/public/images/categories/components.webp` |
+| Development Boards | `client/public/images/categories/development-boards.webp` |
+| Diodes & Rectifiers | `client/public/images/categories/diodes-and-rectifiers.webp` |
+| Display | `client/public/images/categories/display.webp` |
+| Diy Electronics | `client/public/images/categories/diy-electronics.webp` |
+| Electric Bike Parts | `client/public/images/categories/electric-bike-parts.webp` |
+| Meters & Testers | `client/public/images/categories/meters-and-testers.webp` |
+| Modules | `client/public/images/categories/modules.webp` |
+| Resistors | `client/public/images/categories/resistors.webp` |
+| Semiconductors | `client/public/images/categories/semiconductors.webp` |
+| Soldering Tools | `client/public/images/categories/soldering-tools.webp` |
+
+Recommended category image size is **600 × 400 px** in WebP format. If an image is missing, the site automatically keeps the existing circuit-style fallback icon instead of showing a broken image.
