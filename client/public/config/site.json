@@ -39,7 +39,8 @@
     "email": "hello@electronicsdokan.com"
   },
   "heroBanners": [
-    "/images/home/hero-banner.webp"
+    "/images/home/hero-banner.webp",
+    "/images/home/hero-banner-2.webp"
   ],
   "heroIntervalMs": 5000
 }

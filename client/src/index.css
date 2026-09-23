@@ -713,3 +713,41 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .courier-option-logo { width: 36px; height: 30px; display: grid; place-items: center; position: relative; overflow: hidden; border-radius: 5px; background: var(--teal-wash); color: var(--teal); }
 .courier-option-logo img { position: absolute; z-index: 1; max-width: 90%; max-height: 25px; object-fit: contain; }
 @media (max-width: 700px) { .tracking-hero { padding-top: 48px; } .courier-tracking-grid, .offer-grid { grid-template-columns: 1fr; padding-top: 25px; } .courier-tracking-card { min-height: 0; } .tracking-help { align-items: flex-start; flex-wrap: wrap; margin-bottom: 65px; } .tracking-help p { flex-basis: calc(100% - 32px); } .offer-card { min-height: 260px; } }
+
+/* Final homepage polish: reliable carousel controls, media-safe icons, and compact above-the-fold layout */
+.focused-banner { position: relative; overflow: hidden; }
+.focused-banner-arrow { position: absolute; z-index: 3; top: 50%; width: 36px; height: 36px; display: grid; place-items: center; transform: translateY(-50%); border: 1px solid rgba(255,255,255,.7); border-radius: 50%; background: rgba(10,31,49,.58); color: #fff; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+.focused-banner-arrow:hover { background: var(--teal); }
+.focused-banner-arrow-left { left: 14px; }
+.focused-banner-arrow-right { right: 14px; }
+.focused-banner-dots { bottom: 12px; }
+.social-links a { width: 34px; height: 25px; border-radius: 6px; background: rgba(255,255,255,.05); }
+.social-links img { inset: 2px; width: calc(100% - 4px); height: calc(100% - 4px); object-fit: contain; border-radius: 4px; }
+.courier-option-logo { width: 62px; height: 34px; flex: 0 0 62px; border-radius: 6px; background: #f0f9f8; }
+.courier-option-logo img { max-width: 100%; max-height: 30px; width: auto; height: auto; object-fit: contain; }
+.courier-logo-slot img { max-width: 88%; max-height: 76px; width: auto; height: auto; object-fit: contain; }
+.custom-brand-logo { display: block; width: 116px; height: 42px; object-fit: contain; object-position: left center; }
+.brand.has-custom-logo .brand-mark, .footer-logo.has-custom-logo .brand-mark { display: none; }
+.brand.has-custom-logo > span:last-child { display: none; }
+.footer-logo.has-custom-logo > span:last-child { display: none; }
+.focused-banner-actions { padding-top: 7px; }
+.focused-banner-stats { padding-top: 6px; gap: 6px 18px; }
+.focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises { min-height: 54px; margin-top: 0; }
+.focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises > div { min-height: 54px; padding: 7px 11px; gap: 8px; }
+.focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises b { font-size: 10px; }
+.focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises small { font-size: 8px; }
+.focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises .promise-icon { width: 27px; height: 27px; }
+.reference-shelf { padding-top: 34px; }
+@media (max-width: 700px) {
+  .focused-banner-arrow { width: 30px; height: 30px; }
+  .focused-banner-arrow-left { left: 8px; }
+  .focused-banner-arrow-right { right: 8px; }
+  .social-links a { width: 29px; height: 23px; }
+  .custom-brand-logo { width: 102px; height: 34px; }
+  .focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises { margin-top: 5px; }
+  .focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises > div { min-height: 38px; padding: 5px 5px; gap: 5px; }
+  .focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises b { font-size: 8px; }
+  .focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises small { display: none; }
+  .focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises .promise-icon { width: 21px; height: 21px; }
+  .reference-shelf { padding-top: 25px; }
+}
