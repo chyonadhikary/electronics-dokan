@@ -10,6 +10,12 @@
     "tiktok": "https://tiktok.com/@electronicsdokan",
     "youtube": "electronicsdokan"
   },
+  "socialIcons": {
+    "facebook": "/images/social/facebook.webp",
+    "youtube": "/images/social/youtube.webp",
+    "tiktok": "/images/social/tiktok.webp",
+    "whatsapp": "/images/social/whatsapp.webp"
+  },
   "shipping": {
     "couriers": [
       {

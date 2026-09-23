@@ -94,6 +94,7 @@ type SiteConfig = {
   address: string;
   siteUrl: string;
   social: { facebook: string; tiktok: string; youtube: string };
+  socialIcons?: { facebook?: string; youtube?: string; tiktok?: string; whatsapp?: string };
   shipping: { couriers: Array<{ id: string; name: string; deliveryCharge: number }> };
   support: { hours: string; email: string };
   heroBanners?: string[];
@@ -135,6 +136,7 @@ const FALLBACK_SITE: SiteConfig = {
   address: "Phultala, Khulna, Bangladesh",
   siteUrl: "",
   social: { facebook: "https://facebook.com/electronicsdokanin", tiktok: "https://tiktok.com/@electronicsdokan", youtube: "electronicsdokan" },
+  socialIcons: { facebook: "/images/social/facebook.webp", youtube: "/images/social/youtube.webp", tiktok: "/images/social/tiktok.webp", whatsapp: "/images/social/whatsapp.webp" },
   shipping: { couriers: [{ id: "bangladesh-post-office", name: "Bangladesh Post Office", deliveryCharge: 20 }, { id: "steadfast", name: "Steadfast Courier", deliveryCharge: 120 }] },
   support: { hours: "Every day · 9:00 AM–10:00 PM", email: "hello@electronicsdokan.com" },
   heroBanners: ["/images/home/hero-banner.webp"],
@@ -244,6 +246,8 @@ function App() {
     <main>{renderPage()}</main>
     <Footer site={site} navigate={navigate} />
     <a className="whatsapp-float" href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={22} /><span>Chat with us</span></a>
+    <ScrollControls productPage={path.startsWith("/product/")} />
+    <StickyFooterNav site={site} cartCount={cartCount} navigate={navigate} />
   </>;
 }
 
@@ -259,7 +263,7 @@ function Header({ site, cartCount, path, navigate, products }: { site: SiteConfi
     setMenuOpen(false);
   };
   return <>
-    <div className="announcement"><div className="container announcement-inner"><span>Build the future with Electronics Dokan</span><span className="announcement-social"><a href={site.social.facebook} aria-label="Facebook" target="_blank" rel="noreferrer"><Facebook size={15} /></a><a href={site.social.youtube.startsWith("http") ? site.social.youtube : `https://www.youtube.com/@${site.social.youtube}`} aria-label="YouTube" target="_blank" rel="noreferrer"><Youtube size={15} /></a><span className="top-divider">|</span><a href={`tel:${site.whatsapp}`} aria-label="Call Electronics Dokan">Hotline: {site.whatsapp}</a></span></div></div>
+    <div className="announcement"><div className="container announcement-inner"><span>Build the future with Electronics Dokan</span><span className="announcement-social"><SocialLinks site={site} /><span className="top-divider">|</span><a href={`tel:${site.whatsapp}`} aria-label="Call Electronics Dokan">Hotline: {site.whatsapp}</a></span></div></div>
     <header className="site-header">
       <div className="container header-main">
         <button className="brand" onClick={() => navigate("/")} aria-label="Go to Electronics Dokan home"><span className="brand-mark"><Zap size={20} fill="currentColor" /></span><span><strong>electronics</strong><b>dokan</b><small>Build beyond ordinary</small></span></button>
@@ -275,6 +279,29 @@ function Header({ site, cartCount, path, navigate, products }: { site: SiteConfi
     </header>
   </>;
 }
+
+function SocialLinks({ site }: { site: SiteConfig }) {
+  const youtube = site.social.youtube.startsWith("http") ? site.social.youtube : `https://www.youtube.com/@${site.social.youtube}`;
+  const links = [
+    ["Facebook", site.social.facebook, site.socialIcons?.facebook, <Facebook size={14} />],
+    ["YouTube", youtube, site.socialIcons?.youtube, <Youtube size={14} />],
+    ["TikTok", site.social.tiktok, site.socialIcons?.tiktok, <span className="social-fallback-text">♪</span>],
+    ["WhatsApp", `https://wa.me/${site.whatsappInternational}`, site.socialIcons?.whatsapp, <MessageCircle size={14} />],
+  ] as const;
+  return <span className="social-links">{links.map(([label, href, image, fallback]) => <a key={label} href={href} aria-label={label} target="_blank" rel="noreferrer"><span className="social-icon-fallback">{fallback}</span>{image && <img src={image} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} />}</a>)}</span>;
+}
+
+function ScrollControls({ productPage }: { productPage: boolean }) {
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => { const onScroll = () => setShowTop(window.scrollY > 260); onScroll(); window.addEventListener("scroll", onScroll, { passive: true }); return () => window.removeEventListener("scroll", onScroll); }, []);
+  return <div className={`scroll-controls ${showTop ? "is-visible" : ""} ${productPage ? "product-scroll-controls" : ""}`}><button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top"><ChevronDown size={18} className="chevron-up" /></button>{productPage && <button onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })} aria-label="Scroll to bottom"><ChevronDown size={18} /></button>}</div>;
+}
+
+function StickyFooterNav({ site, cartCount, navigate }: { site: SiteConfig; cartCount: number; navigate: (path: string) => void }) {
+  return <nav className="sticky-footer-nav" aria-label="Quick navigation"><button onClick={() => navigate("/")}><span><Zap size={18} /></span><small>Home</small></button><button onClick={() => navigate("/categories")}><span><Menu size={18} /></span><small>Category</small></button><button onClick={() => navigate("/cart")}><span className="sticky-cart-icon"><ShoppingCart size={18} />{cartCount > 0 && <b>{cartCount}</b>}</span><small>Cart</small></button><button onClick={() => navigate("/products?sort=deals")}><span><TagIcon /></span><small>Offer</small></button><a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer"><span><MessageCircle size={18} /></span><small>WhatsApp</small></a></nav>;
+}
+
+function TagIcon() { return <span className="tag-icon">%</span>; }
 
 function Footer({ site, navigate }: { site: SiteConfig; navigate: (path: string) => void }) {
   const paymentMethods = [
