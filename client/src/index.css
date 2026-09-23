@@ -865,3 +865,40 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .checkout-benefits { gap: 8px; padding: 13px; }
 .checkout-benefits > div { padding: 8px; }
 @media (max-width: 700px) { .social-links a { width: 27px; height: 27px; } .announcement-social .social-links a { width: 24px; height: 24px; } .whatsapp-float > img { width: 23px; height: 23px; } .checkout-page .form-section { padding: 14px 0; } }
+
+/* Mobile header, sticky search, compact courier cards, and lighter WhatsApp control */
+.search-form { position: fixed; z-index: 38; top: 47px; left: 50%; width: min(540px, calc(100% - 390px)); transform: translateX(-50%); box-shadow: 0 6px 20px rgba(20,44,60,.08); }
+.courier-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.courier-option { min-height: 58px; padding: 9px 11px; border-radius: 8px; }
+.courier-option-copy { gap: 8px; }
+.courier-option-logo { width: 44px; height: 27px; flex-basis: 44px; border-radius: 4px; }
+.courier-option-logo img { max-width: 40px; max-height: 23px; }
+.courier-option-copy b { font-size: 10px; }
+.courier-option-copy small { font-size: 8px; }
+.courier-option > strong { font-size: 10px; }
+.whatsapp-float { background: #fff; color: var(--teal); border: 1px solid #b8dcd9; border-radius: 50%; padding: 9px; box-shadow: 0 6px 18px rgba(20,77,84,.16); }
+.whatsapp-float:hover { background: var(--teal-wash); color: var(--teal); box-shadow: 0 8px 21px rgba(20,77,84,.2); }
+.whatsapp-float > img { width: 25px; height: 25px; background: transparent; }
+@media (max-width: 900px) { .search-form { width: min(500px, calc(100% - 250px)); } }
+@media (max-width: 700px) {
+  .announcement-inner { min-height: 39px; padding: 0 12px; }
+  .announcement-inner > span:first-child { display: none !important; }
+  .announcement-social { width: 100%; display: flex; justify-content: space-between; gap: 8px !important; }
+  .announcement-social .social-links { order: 1; display: inline-flex; gap: 7px; }
+  .announcement-social .top-divider { display: none; }
+  .announcement-social > a[aria-label="Call Electronics Dokan"] { order: 2; margin-left: auto; color: #cfe9e7; font: 8px var(--mono); }
+  .announcement-social .language-select { order: 3; }
+  .announcement-social .social-links a { width: 25px; height: 25px; background: rgba(255,255,255,.08); border-color: rgba(190,232,229,.5); }
+  .site-header .header-main { min-height: 48px; padding: 8px 12px; }
+  .site-header .header-main > .brand { display: none; }
+  .site-header .header-main { justify-content: flex-end; }
+  .site-header .header-actions { margin-left: auto; }
+  .site-header .search-form { position: fixed; top: 47px; left: 12px; right: 12px; width: auto; transform: none; height: 38px; }
+  .site-header .header-sub { display: none; }
+  .courier-options { grid-template-columns: 1fr 1fr; gap: 7px; }
+  .courier-option { min-height: 52px; padding: 7px; }
+  .courier-option-copy b { font-size: 8px; }
+  .courier-option-copy small { display: none; }
+  .courier-option > strong { font-size: 9px; }
+  .payment-detail-fields { gap: 8px; }
+}
