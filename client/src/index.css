@@ -479,6 +479,10 @@ del { color: #9caeb1; font: 10px var(--mono); }
 
 /* Reference-inspired marketplace homepage: same familiar shopping rhythm, original Electronics Dokan visual language. */
 .reference-home { background: #fff; }
+.upload-hero-banner { padding: 18px 0 0; background: #fff; }
+.upload-hero-banner .container { min-height: 170px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid #c9e1ef; border-radius: 18px; background: #f7fbfd; box-shadow: 0 10px 30px rgba(30, 100, 150, .08); }
+.upload-hero-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.upload-hero-banner span { color: #9ab0bc; font: 11px var(--mono); letter-spacing: .04em; }
 .reference-hero { min-height: 420px; position: relative; overflow: hidden; background: var(--navy-deep); color: #fff; }
 .reference-hero-image { position: absolute; inset: 0; background-image: linear-gradient(90deg, rgba(12,32,46,.98) 0%, rgba(12,32,46,.84) 42%, rgba(12,32,46,.22) 100%), url('/hero.png'); background-size: cover; background-position: center; }
 .reference-hero-content { position: relative; z-index: 1; padding: 74px 0 58px; }
@@ -504,6 +508,7 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .reference-category .category-index { position: absolute; top: 15px; left: 16px; color: rgba(255,255,255,.62); font: 10px var(--mono); }
 .reference-category .category-art { position: absolute; right: 14px; top: 16px; width: 92px; height: 92px; color: rgba(255,255,255,.3); }
 .reference-category .category-art svg { width: 100%; height: 100%; }
+.reference-category .category-art img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
 .reference-category strong { position: relative; max-width: 150px; font: 600 20px/1.08 var(--display); letter-spacing: -.05em; }
 .reference-category small { position: relative; display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,.72); font: 10px var(--mono); }
 .reference-brands { padding-top: 64px; padding-bottom: 75px; }
