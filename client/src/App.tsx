@@ -294,7 +294,7 @@ function SocialLinks({ site }: { site: SiteConfig }) {
 function ScrollControls({ productPage }: { productPage: boolean }) {
   const [showTop, setShowTop] = useState(false);
   useEffect(() => { const onScroll = () => setShowTop(window.scrollY > 260); onScroll(); window.addEventListener("scroll", onScroll, { passive: true }); return () => window.removeEventListener("scroll", onScroll); }, []);
-  return <div className={`scroll-controls ${showTop ? "is-visible" : ""} ${productPage ? "product-scroll-controls" : ""}`}><button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top"><ChevronDown size={18} className="chevron-up" /></button>{productPage && <button onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })} aria-label="Scroll to bottom"><ChevronDown size={18} /></button>}</div>;
+  return <div className={`scroll-controls ${showTop || productPage ? "is-visible" : ""} ${productPage ? "product-scroll-controls" : ""}`}><button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top"><ChevronDown size={18} className="chevron-up" /></button>{productPage && <button onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })} aria-label="Scroll to bottom"><ChevronDown size={18} /></button>}</div>;
 }
 
 function StickyFooterNav({ site, cartCount, navigate }: { site: SiteConfig; cartCount: number; navigate: (path: string) => void }) {
