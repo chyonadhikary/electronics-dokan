@@ -751,3 +751,27 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .focused-banner + .focused-banner-actions + .focused-banner-stats + .reference-promises .promise-icon { width: 21px; height: 21px; }
   .reference-shelf { padding-top: 25px; }
 }
+
+/* Compact auto-scrolling catalogue rows */
+.reference-category-band { margin-top: 30px; padding: 30px 0 34px; }
+.category-marquee, .brand-marquee { overflow: hidden; margin-top: 18px; mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); }
+.category-marquee-track, .brand-marquee-track { width: max-content; display: flex; gap: 11px; animation: category-marquee-scroll 38s linear infinite; }
+.category-marquee:hover .category-marquee-track, .brand-marquee:hover .brand-marquee-track { animation-play-state: paused; }
+.reference-category { flex: 0 0 176px; min-height: 112px; padding: 13px; border-radius: 9px; }
+.reference-category .category-art { width: 62px; height: 62px; right: 10px; top: 10px; }
+.reference-category strong { max-width: 125px; font-size: 16px; }
+.reference-category small { font-size: 9px; }
+@keyframes category-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 5px)); } }
+.brand-marquee-track { animation-name: brand-marquee-scroll; animation-duration: 42s; }
+.brand-marquee .brand-chip-grid button, .brand-marquee-track > button { flex: 0 0 188px; min-height: 65px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; padding: 11px 13px; background: #fff; border: 1px solid var(--line); border-radius: 8px; text-align: left; }
+.brand-marquee-track > button:hover { border-color: #9bd7d8; box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+@keyframes brand-marquee-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 5px)); } }
+@media (prefers-reduced-motion: reduce) { .category-marquee-track, .brand-marquee-track { animation: none; } }
+@media (max-width: 700px) {
+  .reference-category-band { margin-top: 20px; padding: 24px 0 28px; }
+  .category-marquee, .brand-marquee { margin-top: 14px; }
+  .reference-category { flex-basis: 150px; min-height: 96px; padding: 11px; }
+  .reference-category .category-art { width: 49px; height: 49px; }
+  .reference-category strong { font-size: 14px; }
+  .brand-marquee-track > button { flex-basis: 158px; min-height: 56px; padding: 9px 10px; }
+}
