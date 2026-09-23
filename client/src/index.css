@@ -813,3 +813,31 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .reference-service-grid strong { font-size: 11px; }
 .reference-service-grid span { font-size: 9px; }
 @media (max-width: 700px) { .header-quick-links { gap: 10px; overflow-x: auto; max-width: 100%; } .header-quick-links button { font-size: 8px; white-space: nowrap; } .resource-hero { padding-top: 42px; } .resource-grid { grid-template-columns: 1fr; padding-bottom: 50px; } .resource-card { min-height: 220px; } .reference-about { padding: 30px 0; } .reference-about-grid { gap: 18px; } .reference-about h2 { font-size: 29px; } .reference-service-grid > div { padding: 10px 7px; } }
+
+/* Final visual polish and commerce controls */
+.announcement { background: #083f4b; color: #d8f4f1; border-bottom-color: rgba(117,224,215,.22); }
+.announcement-inner a, .announcement-social a { color: #7de4df; }
+.header-sub { background: #f4fbfa; border-top-color: #d8eeee; border-bottom: 1px solid #e0eeee; color: #406873; }
+.header-quick-links button { color: #296a75; }
+.social-row a { position: relative; overflow: hidden; }
+.footer-social-images a img { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); object-fit: contain; z-index: 1; border-radius: 50%; }
+.footer-social-images a > svg, .footer-social-images a > .social-text { position: relative; z-index: 0; }
+.footer-social-images a img + svg, .footer-social-images a img + .social-text { opacity: .12; }
+.footer { padding-top: 42px; }
+.footer-grid { gap: 34px; padding-bottom: 36px; }
+.footer-brand p { margin: 13px 0; line-height: 1.55; }
+.image-zoom-control { position: absolute; right: 14px; bottom: 14px; z-index: 3; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.94); color: var(--navy); box-shadow: 0 5px 17px rgba(20,44,60,.15); }
+.image-zoom-control:hover { background: var(--teal); color: #fff; }
+.product-resources { grid-column: 1 / -1; }
+.resource-link-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+.resource-link-list a, .resource-subsection a { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 7px; color: var(--teal); font-size: 11px; }
+.resource-link-list a:hover, .resource-subsection a:hover { border-color: var(--teal); background: var(--teal-wash); }
+.resource-subsection { margin-top: 22px; }
+.resource-subsection h3 { margin: 0 0 9px; color: var(--navy); font: 600 14px var(--display); }
+.resource-subsection p, .resource-empty { color: var(--muted); font-size: 11px; line-height: 1.65; }
+.attention-note { margin-top: 22px; padding: 13px 15px; border-left: 3px solid #e29a61; background: #fff8ef; }
+.attention-note b { color: #9a5e2e; font: 600 12px var(--display); }
+.attention-note p { margin: 4px 0 0; color: #765d49; font-size: 11px; line-height: 1.6; }
+.coupon-success { margin-top: 8px; color: #198066; font: 10px var(--mono); }
+.coupon-code-field, .payment-methods-grid { display: grid; }
+@media (max-width: 700px) { .resource-link-list { grid-template-columns: 1fr; } .footer { padding-top: 32px; } .footer-grid { gap: 23px 16px; } }
