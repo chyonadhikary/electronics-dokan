@@ -85,6 +85,7 @@ type Product = {
 };
 
 type Brand = { name: string; slug: string; image: string };
+type Language = "en" | "bn";
 
 type SiteConfig = {
   storeName: string;
@@ -171,6 +172,7 @@ function usePath() {
 
 function App() {
   const { path, navigate } = usePath();
+  const [language, setLanguage] = useState<Language>(() => (localStorage.getItem("electronics-dokan-language") as Language) || "en");
   const [products, setProducts] = useState<Product[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [site, setSite] = useState<SiteConfig>(FALLBACK_SITE);
@@ -202,6 +204,7 @@ function App() {
   }, []);
 
   useEffect(() => { localStorage.setItem("electronics-dokan-cart", JSON.stringify(cart)); }, [cart]);
+  useEffect(() => { localStorage.setItem("electronics-dokan-language", language); document.documentElement.lang = language === "bn" ? "bn" : "en"; }, [language]);
   useEffect(() => {
     const title = path.startsWith("/product/") ? `${slugToTitle(path.split("/")[2] || "Product")} · ${site.storeName}` : `${site.storeName} · ${site.tagline}`;
     document.title = title;
@@ -242,16 +245,16 @@ function App() {
 
   return <>
     <Toaster position="bottom-right" toastOptions={{ className: "toast-card" }} />
-    <Header site={site} cartCount={cartCount} path={path} navigate={navigate} products={products} />
+    <Header site={site} cartCount={cartCount} path={path} navigate={navigate} products={products} language={language} setLanguage={setLanguage} />
     <main>{renderPage()}</main>
     <Footer site={site} navigate={navigate} />
-    <a className="whatsapp-float" href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={22} /><span>Chat with us</span></a>
+    <WhatsAppFloat site={site} language={language} />
     <ScrollControls productPage={path.startsWith("/product/")} />
-    <StickyFooterNav site={site} cartCount={cartCount} navigate={navigate} />
+    <StickyFooterNav site={site} cartCount={cartCount} navigate={navigate} language={language} />
   </>;
 }
 
-function Header({ site, cartCount, path, navigate, products }: { site: SiteConfig; cartCount: number; path: string; navigate: (path: string) => void; products: Product[] }) {
+function Header({ site, cartCount, path, navigate, products, language, setLanguage }: { site: SiteConfig; cartCount: number; path: string; navigate: (path: string) => void; products: Product[]; language: Language; setLanguage: (language: Language) => void }) {
   const [searchValue, setSearchValue] = useState(() => new URLSearchParams(window.location.search).get("search") || "");
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -263,7 +266,7 @@ function Header({ site, cartCount, path, navigate, products }: { site: SiteConfi
     setMenuOpen(false);
   };
   return <>
-    <div className="announcement"><div className="container announcement-inner"><span>Build the future with Electronics Dokan</span><span className="announcement-social"><SocialLinks site={site} /><span className="top-divider">|</span><a href={`tel:${site.whatsapp}`} aria-label="Call Electronics Dokan">Hotline: {site.whatsapp}</a></span></div></div>
+    <div className="announcement"><div className="container announcement-inner"><span>{language === "bn" ? "Electronics Dokan-এর সঙ্গে ভবিষ্যৎ তৈরি করুন" : "Build the future with Electronics Dokan"}</span><span className="announcement-social"><SocialLinks site={site} /><span className="top-divider">|</span><a href={`tel:${site.whatsapp}`} aria-label="Call Electronics Dokan">Hotline: {site.whatsapp}</a><select className="language-select" value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label="Language"><option value="en">EN</option><option value="bn">বাংলা</option></select></span></div></div>
     <header className="site-header">
       <div className="container header-main">
         <button className="brand" onClick={() => navigate("/")} aria-label="Go to Electronics Dokan home"><span className="brand-mark"><Zap size={20} fill="currentColor" /></span><span><strong>electronics</strong><b>dokan</b><small>Build beyond ordinary</small></span></button>
@@ -274,7 +277,7 @@ function Header({ site, cartCount, path, navigate, products }: { site: SiteConfi
           <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Open menu">{mobileOpen ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
       </div>
-      {mobileOpen && <div className="mobile-nav container"><button onClick={() => { navigate("/products"); setMobileOpen(false); }}>Shop all products</button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMobileOpen(false); }}>{category}</button>)}<a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer">Chat on WhatsApp</a></div>}
+      {mobileOpen && <div className="mobile-nav container"><button onClick={() => { navigate("/products"); setMobileOpen(false); }}>{language === "bn" ? "সব পণ্য দেখুন" : "Shop all products"}</button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMobileOpen(false); }}>{category}</button>)}<a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer">{language === "bn" ? "WhatsApp-এ কথা বলুন" : "Chat on WhatsApp"}</a></div>}
       <div className="container header-sub"><span><Truck size={15} /> Delivery across Bangladesh</span><span><BadgeCheck size={15} /> Quality checked components</span><span><MessageCircle size={15} /> Human support on WhatsApp</span><span className="header-sub-right">{site.support.hours}</span></div>
     </header>
   </>;
@@ -297,8 +300,15 @@ function ScrollControls({ productPage }: { productPage: boolean }) {
   return <div className={`scroll-controls ${showTop || productPage ? "is-visible" : ""} ${productPage ? "product-scroll-controls" : ""}`}><button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top"><ChevronDown size={18} className="chevron-up" /></button>{productPage && <button onClick={() => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" })} aria-label="Scroll to bottom"><ChevronDown size={18} /></button>}</div>;
 }
 
-function StickyFooterNav({ site, cartCount, navigate }: { site: SiteConfig; cartCount: number; navigate: (path: string) => void }) {
-  return <nav className="sticky-footer-nav" aria-label="Quick navigation"><button onClick={() => navigate("/")}><span><Zap size={18} /></span><small>Home</small></button><button onClick={() => navigate("/categories")}><span><Menu size={18} /></span><small>Category</small></button><button onClick={() => navigate("/cart")}><span className="sticky-cart-icon"><ShoppingCart size={18} />{cartCount > 0 && <b>{cartCount}</b>}</span><small>Cart</small></button><button onClick={() => navigate("/products?sort=deals")}><span><TagIcon /></span><small>Offer</small></button><a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer"><span><MessageCircle size={18} /></span><small>WhatsApp</small></a></nav>;
+function WhatsAppFloat({ site, language }: { site: SiteConfig; language: Language }) {
+  const [notice, setNotice] = useState(false);
+  useEffect(() => { const timer = window.setInterval(() => setNotice(true), 60000); return () => window.clearInterval(timer); }, []);
+  return <div className="whatsapp-float-wrap">{notice && <button className="whatsapp-notice" onClick={() => setNotice(false)} aria-label="Dismiss WhatsApp notice">{language === "bn" ? "সমস্যা হলে মেসেজ করুন" : "Message us if you need help"}<span>×</span></button>}<a className="whatsapp-float" href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><MessageCircle size={22} /><span>{language === "bn" ? "WhatsApp-এ কথা বলুন" : "Chat with us"}</span></a></div>;
+}
+
+function StickyFooterNav({ site, cartCount, navigate, language }: { site: SiteConfig; cartCount: number; navigate: (path: string) => void; language: Language }) {
+  const labels = language === "bn" ? { home: "হোম", category: "ক্যাটাগরি", cart: "কার্ট", offer: "অফার", whatsapp: "WhatsApp" } : { home: "Home", category: "Category", cart: "Cart", offer: "Offer", whatsapp: "WhatsApp" };
+  return <nav className="sticky-footer-nav" aria-label="Quick navigation"><button onClick={() => navigate("/")}><span><Zap size={18} /></span><small>{labels.home}</small></button><button onClick={() => navigate("/categories")}><span><Menu size={18} /></span><small>{labels.category}</small></button><button onClick={() => navigate("/cart")}><span className="sticky-cart-icon"><ShoppingCart size={18} />{cartCount > 0 && <b>{cartCount}</b>}</span><small>{labels.cart}</small></button><button onClick={() => navigate("/products?sort=deals")}><span><TagIcon /></span><small>{labels.offer}</small></button><a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer"><span><MessageCircle size={18} /></span><small>{labels.whatsapp}</small></a></nav>;
 }
 
 function TagIcon() { return <span className="tag-icon">%</span>; }

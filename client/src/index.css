@@ -663,3 +663,27 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .scroll-controls button { width: 33px; height: 33px; }
   .whatsapp-float { bottom: 74px; }
 }
+
+/* Final mobile header and floating-control alignment */
+.language-select { height: 22px; border: 1px solid rgba(124,229,223,.45); border-radius: 5px; padding: 0 4px; background: transparent; color: #7ce5df; font: 9px var(--mono); outline: 0; }
+.language-select option { color: var(--navy); background: #fff; }
+.whatsapp-float-wrap { position: fixed; z-index: 40; right: 22px; bottom: 88px; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.whatsapp-float-wrap .whatsapp-float { position: static; }
+.whatsapp-notice { display: inline-flex; align-items: center; gap: 10px; max-width: 230px; padding: 9px 11px; border: 1px solid #bde5d6; border-radius: 10px 10px 2px 10px; background: #fff; color: #116c50; box-shadow: 0 8px 24px rgba(22,138,99,.18); font: 10px var(--mono); animation: notice-pop .3s ease-out; }
+.whatsapp-notice span { color: #789097; font-size: 16px; line-height: 1; }
+@keyframes notice-pop { from { opacity: 0; transform: translateY(8px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.scroll-controls { bottom: 145px; }
+.product-scroll-controls { bottom: 145px; }
+@media (max-width: 700px) {
+  .announcement-inner { justify-content: space-between; min-height: 35px; }
+  .announcement-inner > span:first-child { display: inline-flex !important; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 8px; }
+  .announcement-social { flex: 0 0 auto; gap: 4px !important; }
+  .announcement-social > .top-divider { display: none; }
+  .announcement-social > a[href^="tel:"] { font-size: 8px; }
+  .social-links a { width: 20px; height: 20px; }
+  .social-links a:nth-child(4) { display: none; }
+  .language-select { height: 20px; font-size: 8px; }
+  .whatsapp-float-wrap { right: 14px; bottom: 73px; }
+  .whatsapp-float { bottom: auto; }
+  .scroll-controls, .product-scroll-controls { right: 13px; bottom: 137px; }
+}
