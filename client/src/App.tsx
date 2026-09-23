@@ -280,8 +280,10 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
   const [searchValue, setSearchValue] = useState(() => new URLSearchParams(window.location.search).get("search") || "");
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchSticky, setSearchSticky] = useState(false);
   const categories = Array.from(new Set(products.map((product) => product.category))).sort();
   useEffect(() => setSearchValue(new URLSearchParams(window.location.search).get("search") || ""), [path]);
+  useEffect(() => { const onScroll = () => setSearchSticky(window.scrollY > 80); onScroll(); window.addEventListener("scroll", onScroll, { passive: true }); return () => window.removeEventListener("scroll", onScroll); }, []);
   const submitSearch = (event: FormEvent) => {
     event.preventDefault();
     navigate(searchValue.trim() ? `/products?search=${encodeURIComponent(searchValue.trim())}` : "/products");
@@ -292,11 +294,11 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
     <header className="site-header">
       <div className="container header-main">
         <button className={`brand ${site.logo ? "has-custom-logo" : ""}`} onClick={() => navigate("/")} aria-label="Go to Electronics Dokan home">{site.logo && <img className="custom-brand-logo" src={site.logo} alt="" onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.remove("has-custom-logo"); }} />}<span className="brand-mark"><Zap size={20} fill="currentColor" /></span><span><strong>electronics</strong><b>dokan</b><small>Build beyond ordinary</small></span></button>
-        <form className="search-form" onSubmit={submitSearch}><Search size={19} /><input aria-label="Search products" value={searchValue} onChange={(event) => { setSearchValue(event.target.value); if (path.startsWith("/products")) navigate(event.target.value ? `/products?search=${encodeURIComponent(event.target.value)}` : "/products"); }} placeholder="Search products, brands, categories..." /><kbd>⌘ K</kbd><button type="submit" aria-label="Search"><ArrowRight size={19} /></button></form>
+        <form className={`search-form ${searchSticky ? "is-sticky" : ""}`} onSubmit={submitSearch}><Search size={19} /><input aria-label="Search products" value={searchValue} onChange={(event) => { setSearchValue(event.target.value); if (path.startsWith("/products")) navigate(event.target.value ? `/products?search=${encodeURIComponent(event.target.value)}` : "/products"); }} placeholder="Search products, brands, categories..." /><kbd>⌘ K</kbd><button type="submit" aria-label="Search"><ArrowRight size={19} /></button></form>
         <div className="header-actions">
           <div className="category-menu-wrap"><button className="icon-button category-trigger" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}><Menu size={20} /><span className="hide-mobile">Categories</span><ChevronDown size={15} /></button>{menuOpen && <div className="category-menu"><button onClick={() => { navigate("/products"); setMenuOpen(false); }}>All products <span>{products.length}</span></button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMenuOpen(false); }}>{category}<span>{products.filter((product) => product.category === category).length}</span></button>)}</div>}</div>
           <button className="cart-button" onClick={() => navigate("/cart")} aria-label={`Cart with ${cartCount} items`}><ShoppingCart size={21} /><span className="hide-mobile">Cart</span>{cartCount > 0 && <b>{cartCount}</b>}</button>
-          <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Open menu">{mobileOpen ? <X size={22} /> : <MoreVertical size={22} />}</button>
+          <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Open menu">{mobileOpen ? <X size={22} /> : <MoreVertical size={20} />}<span className="mobile-menu-label">Menu</span></button>
         </div>
       </div>
       {mobileOpen && <div className="mobile-nav container"><button onClick={() => { navigate("/products"); setMobileOpen(false); }}>{language === "bn" ? "সব পণ্য দেখুন" : "Shop all products"}</button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMobileOpen(false); }}>{category}</button>)}<a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer">{language === "bn" ? "WhatsApp-এ কথা বলুন" : "Chat on WhatsApp"}</a></div>}

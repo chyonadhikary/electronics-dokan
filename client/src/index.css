@@ -917,3 +917,18 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .focused-banner-stats span:nth-child(4) { display: none; }
   .reference-promises { display: none; }
 }
+
+/* Scroll-aware search: preserve the initial header layout, then pin only after scrolling */
+.search-form { position: relative; top: auto; left: auto; width: auto; transform: none; box-shadow: none; }
+.search-form.is-sticky { position: fixed; z-index: 38; top: 8px; left: 50%; width: min(540px, calc(100% - 390px)); transform: translateX(-50%); box-shadow: 0 6px 20px rgba(20,44,60,.12); }
+.mobile-menu-button { display: inline-flex; align-items: center; gap: 4px; }
+.mobile-menu-label { display: none; font: 9px var(--mono); }
+@media (max-width: 900px) { .search-form.is-sticky { width: min(500px, calc(100% - 250px)); } }
+@media (max-width: 700px) {
+  .site-header .search-form, .site-header .search-form.is-sticky { position: relative; top: auto; left: auto; right: auto; width: auto; height: 38px; transform: none; box-shadow: none; }
+  .site-header .search-form.is-sticky { position: fixed; z-index: 38; top: 8px; left: 12px; right: 12px; width: auto; box-shadow: 0 6px 20px rgba(20,44,60,.12); }
+  .mobile-menu-label { display: inline; }
+  .focused-banner-stats { flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; white-space: nowrap; justify-content: space-between; gap: 10px; scrollbar-width: none; }
+  .focused-banner-stats::-webkit-scrollbar { display: none; }
+  .focused-banner-stats span { flex: 0 0 auto; font-size: 8px; }
+}
