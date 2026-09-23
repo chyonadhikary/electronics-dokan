@@ -841,3 +841,27 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .coupon-success { margin-top: 8px; color: #198066; font: 10px var(--mono); }
 .coupon-code-field, .payment-methods-grid { display: grid; }
 @media (max-width: 700px) { .resource-link-list { grid-template-columns: 1fr; } .footer { padding-top: 32px; } .footer-grid { gap: 23px 16px; } }
+
+/* Header and checkout refinement */
+.announcement { background: var(--navy); color: #d7eeee; }
+.header-main { background: #fff; border-bottom: 1px solid #dcecec; }
+.header-sub { background: var(--teal-wash); color: var(--navy); border-top-color: #cce8e7; border-bottom-color: #cce8e7; }
+.header-quick-links button { color: var(--navy); font-weight: 600; }
+.header-quick-links button:hover { color: var(--teal); }
+.social-links { gap: 7px; }
+.social-links a { width: 30px; height: 30px; border-radius: 50%; background: #f3fbfa; border: 1px solid #c7e6e4; color: var(--teal); }
+.social-links a:hover { background: var(--teal); color: #fff; }
+.social-links img { inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); border-radius: 50%; object-fit: contain; background: #fff; padding: 2px; }
+.whatsapp-float { display: inline-flex; align-items: center; gap: 8px; }
+.whatsapp-float > img { width: 25px; height: 25px; object-fit: contain; border-radius: 50%; background: #fff; }
+.checkout-page .form-section { padding: 18px 0; }
+.checkout-page .form-heading { margin-bottom: 14px; }
+.checkout-page .form-heading h2 { font-size: 17px; }
+.checkout-page .form-heading p { font-size: 10px; }
+.checkout-page .form-grid { gap: 11px; }
+.payment-reference-box { display: grid; gap: 4px; margin-top: 12px; padding: 11px 13px; border: 1px solid #b9e4df; border-radius: 8px; background: #effbf9; color: #176b73; font-size: 10px; line-height: 1.55; }
+.payment-reference-box strong { font: 700 12px var(--mono); color: var(--navy); }
+.checkout-summary { padding: 17px; }
+.checkout-benefits { gap: 8px; padding: 13px; }
+.checkout-benefits > div { padding: 8px; }
+@media (max-width: 700px) { .social-links a { width: 27px; height: 27px; } .announcement-social .social-links a { width: 24px; height: 24px; } .whatsapp-float > img { width: 23px; height: 23px; } .checkout-page .form-section { padding: 14px 0; } }
