@@ -775,3 +775,14 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .reference-category strong { font-size: 14px; }
   .brand-marquee-track > button { flex-basis: 158px; min-height: 56px; padding: 9px 10px; }
 }
+
+/* Touch drag support and visible brand artwork for the scrolling rows */
+.category-marquee, .brand-marquee { overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; touch-action: pan-y; }
+.category-marquee::-webkit-scrollbar, .brand-marquee::-webkit-scrollbar { display: none; }
+.category-marquee.is-dragging, .brand-marquee.is-dragging { cursor: grabbing; }
+.category-marquee.is-dragging .category-marquee-track, .brand-marquee.is-dragging .brand-marquee-track { animation-play-state: paused; }
+.marquee-copy { display: flex; gap: 11px; }
+.brand-marquee-track > button { grid-template-columns: 30px 1fr auto; }
+.brand-marquee-image { width: 30px; height: 30px; display: grid; place-items: center; position: relative; overflow: hidden; border-radius: 5px; background: var(--teal-wash); color: var(--teal); }
+.brand-marquee-image img { position: absolute; z-index: 1; inset: 2px; width: calc(100% - 4px); height: calc(100% - 4px); object-fit: contain; }
+@media (max-width: 700px) { .brand-marquee-track > button { grid-template-columns: 26px 1fr auto; } .brand-marquee-image { width: 26px; height: 26px; } }
