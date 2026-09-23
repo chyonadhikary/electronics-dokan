@@ -961,14 +961,22 @@ del { color: #9caeb1; font: 10px var(--mono); }
 }
 
 @media (max-width: 700px) {
+  .site-header .container { width: calc(100% - 20px); }
   .site-header .header-main {
     display: grid;
-    grid-template-columns: minmax(102px, 1fr) minmax(105px, 1.45fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: 38px 36px;
     gap: 7px;
-    min-height: 58px;
-    padding: 6px 10px;
+    min-height: 87px;
+    padding: 6px 0 8px;
   }
-  .site-header .header-main > .brand { max-width: 124px; gap: 5px; }
+  .site-header .header-main > .brand {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    max-width: 140px;
+    gap: 5px;
+  }
   .site-header .header-main > .brand .brand-mark svg { width: 17px; height: 17px; }
   .site-header .header-main > .brand > span:last-child strong,
   .site-header .header-main > .brand > span:last-child b { font-size: 12px; }
@@ -976,6 +984,8 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .custom-brand-logo { width: 88px; height: 30px; }
   .site-header .search-form,
   .site-header .search-form.is-sticky {
+    grid-column: 1 / -1;
+    grid-row: 2;
     width: 100%;
     height: 36px;
     gap: 6px;
@@ -987,7 +997,12 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .site-header .search-form input::placeholder { text-overflow: ellipsis; }
   .site-header .search-form button { width: 27px; height: 27px; border-radius: 6px; }
   .site-header .search-form button svg { width: 15px; height: 15px; }
-  .site-header .header-actions { gap: 2px; }
+  .site-header .header-actions {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    gap: 2px;
+  }
   .site-header .header-actions > button,
   .site-header .category-trigger { width: 30px; height: 32px; padding: 0; justify-content: center; }
   .site-header .category-trigger svg:first-child,
@@ -998,10 +1013,53 @@ del { color: #9caeb1; font: 10px var(--mono); }
 }
 
 @media (max-width: 390px) {
-  .site-header .header-main { grid-template-columns: minmax(92px, 1fr) minmax(92px, 1.3fr) auto; gap: 5px; }
+  .site-header .header-main { grid-template-columns: minmax(0, 1fr) auto; gap: 5px; }
   .site-header .header-main > .brand > span:last-child strong,
   .site-header .header-main > .brand > span:last-child b { font-size: 11px; }
   .site-header .header-actions > button,
   .site-header .category-trigger { width: 27px; }
   .site-header .search-form input { font-size: 9px; }
+}
+
+/* Final mobile alignment: sticky search follows the same gutter as the hero banner. */
+@media (max-width: 700px) {
+  .site-header .search-form.is-sticky {
+    position: fixed;
+    z-index: 38;
+    top: 8px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    transform: none;
+    box-shadow: 0 7px 22px rgba(20,44,60,.16);
+  }
+}
+
+/* Use the same bold circular WhatsApp affordance on desktop, checkout, and mobile. */
+.whatsapp-float-wrap { right: 18px; bottom: 88px; }
+.whatsapp-float-wrap .whatsapp-float {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  color: #fff;
+  box-shadow: 0 9px 24px rgba(22,138,99,.3);
+}
+.whatsapp-float-wrap .whatsapp-float:hover {
+  background: #0f6d4f;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+.whatsapp-float-wrap .whatsapp-float > img { width: 32px; height: 32px; background: transparent; padding: 0; }
+.whatsapp-float-wrap .whatsapp-float > span { display: none; }
+@media (max-width: 700px) {
+  .whatsapp-float-wrap { right: 10px; bottom: 74px; }
+  .whatsapp-float-wrap .whatsapp-float { width: 50px; height: 50px; }
+  .whatsapp-float-wrap .whatsapp-float > img { width: 31px; height: 31px; }
 }
