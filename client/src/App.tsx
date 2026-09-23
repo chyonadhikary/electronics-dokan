@@ -15,6 +15,7 @@ import {
   Instagram,
   MapPin,
   Menu,
+  MoreVertical,
   MessageCircle,
   Minus,
   PackageCheck,
@@ -295,7 +296,7 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
         <div className="header-actions">
           <div className="category-menu-wrap"><button className="icon-button category-trigger" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}><Menu size={20} /><span className="hide-mobile">Categories</span><ChevronDown size={15} /></button>{menuOpen && <div className="category-menu"><button onClick={() => { navigate("/products"); setMenuOpen(false); }}>All products <span>{products.length}</span></button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMenuOpen(false); }}>{category}<span>{products.filter((product) => product.category === category).length}</span></button>)}</div>}</div>
           <button className="cart-button" onClick={() => navigate("/cart")} aria-label={`Cart with ${cartCount} items`}><ShoppingCart size={21} /><span className="hide-mobile">Cart</span>{cartCount > 0 && <b>{cartCount}</b>}</button>
-          <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Open menu">{mobileOpen ? <X size={22} /> : <Menu size={22} />}</button>
+          <button className="mobile-menu-button" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Open menu">{mobileOpen ? <X size={22} /> : <MoreVertical size={22} />}</button>
         </div>
       </div>
       {mobileOpen && <div className="mobile-nav container"><button onClick={() => { navigate("/products"); setMobileOpen(false); }}>{language === "bn" ? "সব পণ্য দেখুন" : "Shop all products"}</button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMobileOpen(false); }}>{category}</button>)}<a href={`https://wa.me/${site.whatsappInternational}`} target="_blank" rel="noreferrer">{language === "bn" ? "WhatsApp-এ কথা বলুন" : "Chat on WhatsApp"}</a></div>}

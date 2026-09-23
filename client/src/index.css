@@ -902,3 +902,18 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .courier-option > strong { font-size: 9px; }
   .payment-detail-fields { gap: 8px; }
 }
+
+/* Restore the complete mobile header and keep the homepage mobile-first */
+@media (max-width: 700px) {
+  .site-header .header-main > .brand { display: inline-flex; max-width: 150px; min-width: 0; }
+  .site-header .header-main > .brand .brand-mark { flex: 0 0 auto; }
+  .site-header .header-main > .brand > span:last-child { display: grid; }
+  .site-header .header-main > .brand > span:last-child small { display: none; }
+  .site-header .header-main > .brand > span:last-child strong, .site-header .header-main > .brand > span:last-child b { font-size: 14px; }
+  .site-header .header-main { justify-content: space-between; }
+  .site-header .header-actions { margin-left: 0; }
+  .announcement-social .social-links a[aria-label="Facebook"], .announcement-social .social-links a[aria-label="YouTube"], .announcement-social .social-links a[aria-label="TikTok"] { display: grid !important; }
+  .announcement-social .social-links a[aria-label="WhatsApp"] { display: none !important; }
+  .focused-banner-stats span:nth-child(4) { display: none; }
+  .reference-promises { display: none; }
+}
