@@ -1063,3 +1063,69 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .whatsapp-float-wrap .whatsapp-float { width: 50px; height: 50px; }
   .whatsapp-float-wrap .whatsapp-float > img { width: 31px; height: 31px; }
 }
+
+/* In-page product magnifier: never send shoppers to a bare image tab. */
+.image-zoom-modal {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(7, 29, 42, .82);
+  backdrop-filter: blur(5px);
+  animation: zoom-fade-in .18s ease-out;
+}
+.image-zoom-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(92vw, 980px);
+  height: min(88vh, 760px);
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 16px;
+  background: #f4fbfb;
+  box-shadow: 0 24px 80px rgba(0,0,0,.35);
+}
+.image-zoom-stage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.image-zoom-close {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+}
+.image-zoom-close:hover { background: var(--teal); }
+@keyframes zoom-fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+.courier-options { width: 100%; min-width: 0; }
+.courier-option { min-width: 0; overflow: hidden; }
+.courier-option-copy { min-width: 0; flex: 1 1 auto; }
+.courier-option-copy > span:last-child { min-width: 0; }
+.courier-option-copy b { display: block; overflow-wrap: anywhere; }
+.submit-order { max-width: 100%; min-width: 0; white-space: normal; }
+.scroll-controls { right: 10px; max-width: calc(100vw - 20px); }
+@media (max-width: 700px) {
+  .image-zoom-modal { padding: 12px; }
+  .image-zoom-stage { width: 100%; height: min(82vh, 620px); padding: 18px; border-radius: 12px; }
+  .courier-options { grid-template-columns: 1fr; gap: 10px; }
+  .courier-option { grid-template-columns: minmax(0, 1fr) auto; min-height: 60px; padding: 9px 10px; }
+  .courier-option-copy { gap: 9px; }
+  .courier-option-copy b { font-size: 10px; line-height: 1.25; }
+  .courier-option > strong { flex: 0 0 auto; font-size: 10px; }
+  .submit-order { gap: 7px; padding-left: 9px; padding-right: 9px; font-size: 10px; }
+  .scroll-controls, .product-scroll-controls { right: 10px; bottom: 137px; }
+  .scroll-controls button { width: 34px; height: 34px; }
+}
