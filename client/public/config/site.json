@@ -21,12 +21,16 @@
       {
         "id": "bangladesh-post-office",
         "name": "Bangladesh Post Office",
-        "deliveryCharge": 20
+        "deliveryCharge": 20,
+        "logo": "/images/couriers/bangladesh-post-office.webp",
+        "trackingUrl": "https://report.dms.bdpost.gov.bd/"
       },
       {
         "id": "steadfast",
         "name": "Steadfast Courier",
-        "deliveryCharge": 120
+        "deliveryCharge": 120,
+        "logo": "/images/couriers/steadfast.webp",
+        "trackingUrl": "https://steadfast.com.bd/"
       }
     ]
   },
