@@ -37,6 +37,34 @@ export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbzvcGg
 
 export type OrderSubmitResult = { ok: boolean; configured: boolean; orderId?: string; opaque?: boolean };
 
+export type OrderTrackingResult = {
+  ok: boolean;
+  error?: string;
+  order?: {
+    orderId: string;
+    dateTime: string;
+    status: string;
+    total: number;
+    paymentMethod: string;
+    itemSummary: string;
+    quantity: string;
+    courier: string;
+  };
+};
+
+export async function trackOrder(orderId: string): Promise<OrderTrackingResult> {
+  if (!ORDER_BACKEND_URL || ORDER_BACKEND_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL")) {
+    return { ok: false, error: "Order tracking is not configured yet." };
+  }
+  const url = `${ORDER_BACKEND_URL}?action=track&orderId=${encodeURIComponent(orderId.trim().toUpperCase())}`;
+  try {
+    const response = await fetch(url, { method: "GET", headers: { Accept: "application/json" } });
+    return (await response.json()) as OrderTrackingResult;
+  } catch {
+    return { ok: false, error: "We could not reach the order service. Please try again." };
+  }
+}
+
 export async function submitOrderToAppsScript(payload: OrderPayload): Promise<OrderSubmitResult> {
   if (!ORDER_BACKEND_URL || ORDER_BACKEND_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL")) {
     return { ok: false, configured: false };
