@@ -28,6 +28,8 @@ export type OrderPayload = {
   total: number;
   courier: string;
   paymentMethod: string;
+  paymentMobile: string;
+  transactionId: string;
   customerNote: string;
   couponCode: string;
   source: string;
