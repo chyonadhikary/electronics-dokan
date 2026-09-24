@@ -33,7 +33,6 @@ export type OrderPayload = {
   source: string;
 };
 
-// Replace this value after deploying the Google Apps Script Web App.
 export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbzvcGgEV-I8Ev7kIVpbYImYTwafLKiu7sYYrrS7HluF_8ytG8E6NTR3DMb5VSX7ya2P/exec";
 
 export type OrderSubmitResult = { ok: boolean; configured: boolean; orderId?: string; opaque?: boolean };
@@ -44,6 +43,20 @@ export async function submitOrderToAppsScript(payload: OrderPayload): Promise<Or
   }
 
   const body = JSON.stringify(payload);
+  const submitOpaque = async (): Promise<OrderSubmitResult> => {
+    // Apps Script may follow its redirect to a response that the browser cannot
+    // expose to JavaScript. The receiver is idempotent by clientRequestId, so
+    // this request is safe even when the first request already reached Sheets.
+    await fetch(ORDER_BACKEND_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body,
+      keepalive: true,
+    });
+    return { ok: true, configured: true, opaque: true, orderId: payload.clientRequestId };
+  };
+
   try {
     const response = await fetch(ORDER_BACKEND_URL, {
       method: "POST",
@@ -52,21 +65,19 @@ export async function submitOrderToAppsScript(payload: OrderPayload): Promise<Or
       keepalive: true,
     });
     if (!response.ok) throw new Error("Order service rejected the request");
-    const result = await response.json() as { ok?: boolean; orderId?: string };
-    if (!result.ok) throw new Error("Order service did not accept the request");
-    return { ok: true, configured: true, orderId: result.orderId };
-  } catch (error) {
-    // Apps Script ContentService may return a cross-origin response that browsers
-    // cannot expose to JavaScript. The backend is idempotent by clientRequestId,
-    // so this fallback still records the order without creating duplicates.
-    if (error instanceof TypeError) {
-      try {
-        await fetch(ORDER_BACKEND_URL, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body, keepalive: true });
-        return { ok: true, configured: true, opaque: true, orderId: payload.clientRequestId };
-      } catch {
-        // Fall through to the customer-safe error below.
-      }
+
+    // Read as text first: a successful Apps Script redirect can occasionally
+    // return an HTML wrapper instead of exposing the JSON response to fetch.
+    const raw = await response.text();
+    try {
+      const result = JSON.parse(raw) as { ok?: boolean; orderId?: string };
+      if (!result.ok) throw new Error("Order service did not accept the request");
+      return { ok: true, configured: true, orderId: result.orderId };
+    } catch (parseError) {
+      if (parseError instanceof Error && parseError.message === "Order service did not accept the request") throw parseError;
+      return submitOpaque();
     }
-    throw new Error("ORDER_SUBMISSION_FAILED");
+  } catch {
+    return submitOpaque();
   }
 }
