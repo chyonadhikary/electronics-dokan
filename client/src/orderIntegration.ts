@@ -34,7 +34,7 @@ export type OrderPayload = {
 };
 
 // Replace this value after deploying the Google Apps Script Web App.
-export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbxfB2xgFecnBN3pSLUnEOo2Pn-N8pMFmL0GizQAWNtwe0hVpwOi-FROw0J-wr8IRek/exec";
+export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbzvcGgEV-I8Ev7kIVpbYImYTwafLKiu7sYYrrS7HluF_8ytG8E6NTR3DMb5VSX7ya2P/exec";
 
 export type OrderSubmitResult = { ok: boolean; configured: boolean; orderId?: string; opaque?: boolean };
 
