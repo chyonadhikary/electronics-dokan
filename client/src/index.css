@@ -707,12 +707,17 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .order-track-card h2 { margin: 0 0 8px; color: var(--navy); font: 600 25px var(--display); letter-spacing: -.05em; }
 .order-track-card p { color: var(--muted); font-size: 12px; }
 .order-track-form { display: flex; gap: 9px; margin-top: 19px; }
-.order-track-form input { flex: 1; min-width: 0; padding: 13px 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--navy); font: 12px var(--mono); }
+.order-track-form input { flex: 1; min-width: 0; padding: 14px 15px; border: 1px solid var(--line); border-radius: 10px; color: var(--navy); background: #fbfdfd; font: 12px var(--mono); transition: border-color .2s, box-shadow .2s; }
+.order-track-form input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 4px rgba(23,107,115,.12); }
+.tracking-lookup-hints { display: flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--muted-light); font: 10px var(--mono); }
+.tracking-lookup-hints button { padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--teal); font: 10px var(--mono); cursor: pointer; }
+.tracking-lookup-hints button:hover { border-color: var(--teal); background: var(--teal-wash); }
 .order-track-result { margin-top: 16px; padding: 17px; border-radius: 10px; background: var(--teal-wash); }
 .order-track-result.error { background: #fff1f0; color: #a33c36; }
 .order-track-result-head, .order-track-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
 .order-track-result-head { margin-bottom: 12px; color: var(--navy); }
-.order-track-result-head strong { font: 600 15px var(--mono); }
+.order-track-result-head strong { display: block; margin-top: 3px; font: 600 15px var(--mono); }
+.result-kicker { display: block; color: var(--teal); font: 700 9px var(--mono); letter-spacing: .12em; }
 .order-track-row { padding: 8px 0; border-top: 1px solid #cfe9e6; color: var(--muted); font-size: 11px; }
 .order-track-row b { color: var(--navy); text-align: right; }
 .order-status-pill { display: inline-flex; padding: 5px 9px; border-radius: 999px; background: var(--navy); color: #fff; font: 600 10px var(--mono); }
