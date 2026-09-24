@@ -1,34 +1,63 @@
-# Electronics Dokan order dashboard
+# Electronics Dokan Order Desk
 
-The repository now contains the complete implementation for a Google Sheet–bound order dashboard and customer tracking page.
+Google Sheet-এর `Orders` tab-এর জন্য Apps Script-ভিত্তিক একটি polished order-management sidebar এখন repository-তে আছে। এটি কোনো paid server বা database ব্যবহার করে না। Google Sheet খুলে **Order Dashboard → Open dashboard** নির্বাচন করলেই UI চালু হবে।
 
-## What is included
+## Dashboard সুবিধা
 
-The Apps Script source adds a status dropdown with these values: **Pending, Confirmed, Processing, Shipped, Delivered, Cancelled, and On Hold**. The selected value is written back to the `Order Status` column and is returned by the public tracking endpoint.
+Dashboard-এ order search, status filter, order summary, full customer/order details, payment status update, order status update এবং shipping label preview/print আছে। `Print / Save PDF` চাপলে browser-এর print dialog খুলবে; সেখান থেকে printer অথবা **Save as PDF** নির্বাচন করা যাবে। Label print করার পর `Shipping Label Status` স্বয়ংক্রিয়ভাবে `Printed` হবে।
 
-The same Apps Script project adds an **Order Dashboard** menu to the spreadsheet. The sidebar includes order search, status editing, customer/order summary, and **Print / Save PDF label**. The label contains the order number, customer, phone, delivery address, items, payment method, amount to collect, and current status.
+## Orders sheet columns
 
-The main website `/tracking` page now accepts an `ED-YYYYMMDD-NNNN` order number and displays the customer-safe fields: current status, timeline, order date, item summary, quantity, total, payment method, and courier information. Phone number and address are not exposed on the public page.
+Backend পুরনো প্রথম 17টি column-এর অবস্থান বজায় রাখে এবং নতুন column না থাকলে স্বয়ংক্রিয়ভাবে শেষে যোগ করে:
 
-## One-time activation in Apps Script
+| Order ID | Date & Time | Customer Name | Phone | WhatsApp | Email | Address | District | Area | Products | Quantity | Subtotal | Delivery Charge | Total | Payment Method | Customer Note | Order Status | Payment Mobile | Transaction ID | Payment Status | Shipping Label Status | Last Updated |
+|---|---|---|---|---|---|---|---|---|---|---|---:|---:|---:|---|---|---|---|---|---|---|---|
 
-1. Open the connected Apps Script project: [Electronics Dokan Order Receiver](https://script.google.com/home/projects/1jGpnt8SIhqDAZ1esZ3lVDwZBoDpJrbjbBiAaiiPHj6zrazmcDalVBTgZ/edit).
-2. Open `Code.gs`, replace its contents with the repository version at [`google-apps-script/Code.gs`](./google-apps-script/Code.gs), and click **Save**.
-3. In the function selector, run `onOpen` once if the custom menu does not appear automatically. Approve the normal Google authorization prompt if shown.
-4. Return to the connected spreadsheet and reload it. A new **Order Dashboard** menu will appear.
-5. Select **Order Dashboard → Apply status dropdowns** once. The `Order Status` column will then have the selectable status list.
-6. Select **Order Dashboard → Open dashboard** to open the management sidebar.
-7. Select **Deploy → Manage deployments**, edit the existing Web app deployment, choose the new version, keep **Execute as: Me** and **Who has access: Anyone**, then deploy. The existing `/exec` URL remains the same.
+### Order Status
 
-## Website activation
+`Pending`, `Confirmed`, `Processing`, `Packed`, `Shipped`, `Delivered`, `Cancelled`, `On Hold`
 
-After the Apps Script deployment is updated, push the repository commit so GitHub Pages deploys the new `/tracking` page. The backend URL is already configured in `client/src/orderIntegration.ts`.
+### Payment Status
 
-## Two possible long-term approaches
+`Pending`, `Confirmed`, `Failed`, `Partially Paid`, `Refunded`
 
-| Approach | Tradeoffs | Cost | Setup complexity |
-|---|---|---:|---:|
-| **Current Sheet-bound dashboard** | Fast, familiar, uses the existing Orders sheet and Apps Script; suitable for a small-to-medium order volume. The public tracking endpoint must remain anonymous and therefore exposes only limited order fields. | Free within the current Google setup | Low |
-| Separate authenticated admin web app | More polished permissions, richer analytics, audit logs, bulk actions, and label templates. Requires a separate database/authentication layer and ongoing hosting. | Higher, depending on hosting and database | Medium–high |
+### Shipping Label Status
 
-The current implementation uses the first approach because it matches the requested Google Sheet workflow and avoids introducing a second data store.
+`Not Printed`, `Printed`
+
+Dashboard update এবং Sheet-এর dropdown—দুই পথেই validation প্রয়োগ হয়। প্রতিটি update-এর সময় `Last Updated` timestamp লেখা হয়।
+
+## One-time Apps Script activation
+
+1. Google Sheet খুলে **Extensions → Apps Script** নির্বাচন করুন।
+2. `google-apps-script/Code.gs`-এর সম্পূর্ণ code Apps Script editor-এ paste করে Save করুন।
+3. Project Settings → Script properties-এ `SHEET_ID`, `TELEGRAM_BOT_TOKEN`, এবং `TELEGRAM_CHAT_ID` রাখুন।
+4. Function selector থেকে `onOpen` একবার চালান এবং authorization সম্পন্ন করুন।
+5. Spreadsheet reload করুন।
+6. **Order Dashboard → Apply dropdowns and formatting** একবার চালান।
+7. **Order Dashboard → Open dashboard** নির্বাচন করুন।
+8. Web app deployment-এর Manage deployments থেকে নতুন version deploy করুন; **Execute as: Me** এবং **Who has access: Anyone** রাখুন। Existing `/exec` URL ব্যবহার করা যাবে।
+
+## Print/PDF workflow
+
+Dashboard-এ order খুঁজে `Print / Save PDF` চাপুন। Label preview browser print layout-এ খুলবে। Desktop Chrome-এ printer বা `Save as PDF`, এবং Android Chrome-এ print service/PDF destination নির্বাচন করা যায়। Label-এ order ID, customer, phone, full address, area, district, products, quantity, payment method, payment status, collection amount এবং order status থাকে।
+
+## Website payload
+
+Checkout এখন backend-এ `paymentMobile` এবং `transactionId`-ও পাঠায়। নতুন order-এর initial `Payment Status` সবসময় `Pending`; admin dashboard বা Sheet থেকে পরে `Confirmed`, `Failed`, `Partially Paid`, বা `Refunded` করা যাবে। Customer frontend কখনো Telegram token, chat ID বা Sheet ID পায় না।
+
+## Validation
+
+Repository-তে নিম্নলিখিত checks পাস করেছে:
+
+```bash
+node --check /tmp/electronics-dokan-Code.js
+pnpm check
+pnpm build
+```
+
+Build-এর সময় Vite analytics endpoint/website-id না থাকার warning দেখা যেতে পারে; এটি আগের project configuration-এর warning এবং build সফল হয়েছে।
+
+## Important note
+
+এই Apps Script source repository-তে রাখা থাকলেও secrets source code-এ রাখা যাবে না। Telegram token, Telegram chat ID এবং Sheet ID অবশ্যই Apps Script Script Properties-এ থাকবে।
