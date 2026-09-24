@@ -1,0 +1,296 @@
+<!doctype html><meta charset="utf-8"><title>Code.gs source</title><textarea id="source" style="width:100%;height:98vh;font:14px monospace">/**
+ * Electronics Dokan order receiver
+ *
+ * Deploy as a Web app:
+ *   Execute as: Me
+ *   Who has access: Anyone
+ *
+ * Configure Script Properties before deployment:
+ *   SHEET_ID              Google Spreadsheet ID
+ *   TELEGRAM_BOT_TOKEN    BotFather token
+ *   TELEGRAM_CHAT_ID      Private chat ID that receives notifications
+ *   ALLOWED_ORIGIN        Optional, informational only for static clients
+ *   PRICE_CATALOG_JSON    Optional JSON object: {&quot;product-id&quot;: {&quot;sku&quot;:&quot;SKU&quot;, &quot;price&quot;:100}}
+ */
+
+const CONFIG = Object.freeze({
+  sheetName: &#x27;Orders&#x27;,
+  header: [
+    &#x27;Order ID&#x27;, &#x27;Date &amp; Time&#x27;, &#x27;Customer Name&#x27;, &#x27;Phone&#x27;, &#x27;WhatsApp&#x27;, &#x27;Email&#x27;,
+    &#x27;Address&#x27;, &#x27;District&#x27;, &#x27;Area&#x27;, &#x27;Products&#x27;, &#x27;Quantity&#x27;, &#x27;Subtotal&#x27;,
+    &#x27;Delivery Charge&#x27;, &#x27;Total&#x27;, &#x27;Payment Method&#x27;, &#x27;Customer Note&#x27;, &#x27;Order Status&#x27;
+  ],
+  status: &#x27;Pending&#x27;,
+  statusOptions: [&#x27;Pending&#x27;, &#x27;Confirmed&#x27;, &#x27;Processing&#x27;, &#x27;Shipped&#x27;, &#x27;Delivered&#x27;, &#x27;Cancelled&#x27;, &#x27;On Hold&#x27;],
+  maxBodyBytes: 50000,
+  maxItems: 50,
+  maxText: 2000
+});
+
+function doGet(e) {
+  const params = e &amp;&amp; e.parameter ? e.parameter : {};
+  if (params.action === &#x27;track&#x27;) return trackOrder_(params.orderId);
+  return json_({ ok: true, service: &#x27;electronics-dokan-orders&#x27;, version: &#x27;1.1&#x27; });
+}
+
+function onOpen() {
+  SpreadsheetApp.getUi()
+    .createMenu(&#x27;Order Dashboard&#x27;)
+    .addItem(&#x27;Open dashboard&#x27;, &#x27;showOrderDashboard&#x27;)
+    .addItem(&#x27;Apply status dropdowns&#x27;, &#x27;applyStatusValidation&#x27;)
+    .addToUi();
+}
+
+function showOrderDashboard() {
+  const html = HtmlService.createHtmlOutput(getDashboardHtml_())
+    .setTitle(&#x27;Electronics Dokan Order Dashboard&#x27;);
+  SpreadsheetApp.getUi().showSidebar(html);
+}
+
+function applyStatusValidation() {
+  const sheet = getOrdersSheet_(requiredProperty_(PropertiesService.getScriptProperties(), &#x27;SHEET_ID&#x27;));
+  const rule = SpreadsheetApp.newDataValidation()
+    .requireValueInList(CONFIG.statusOptions, true)
+    .setAllowInvalid(false)
+    .build();
+  const rows = Math.max(sheet.getMaxRows() - 1, 1);
+  sheet.getRange(2, CONFIG.header.length, rows, 1).setDataValidation(rule);
+  SpreadsheetApp.getActive().toast(&#x27;Status dropdowns are ready in the Order Status column.&#x27;);
+}
+
+function trackOrder_(orderId) {
+  const cleanId = clean_(orderId);
+  if (!/^ED-\d{8}-\d{4}$/.test(cleanId)) return json_({ ok: false, error: &#x27;Invalid order number&#x27; });
+  const sheet = getOrdersSheet_(requiredProperty_(PropertiesService.getScriptProperties(), &#x27;SHEET_ID&#x27;));
+  const record = findOrderRow_(sheet, cleanId);
+  if (!record) return json_({ ok: false, error: &#x27;Order not found&#x27; });
+  return json_({ ok: true, order: publicOrder_(record.values) });
+}
+
+function getDashboardOrders() {
+  const sheet = getOrdersSheet_(requiredProperty_(PropertiesService.getScriptProperties(), &#x27;SHEET_ID&#x27;));
+  const lastRow = sheet.getLastRow();
+  if (lastRow &lt; 2) return [];
+  return sheet.getRange(2, 1, lastRow - 1, CONFIG.header.length).getValues()
+    .filter(function (row) { return clean_(row[0]); })
+    .reverse()
+    .map(dashboardOrder_);
+}
+
+function saveOrderStatus(orderId, status) {
+  const cleanId = clean_(orderId);
+  const cleanStatus = clean_(status);
+  if (!CONFIG.statusOptions.includes(cleanStatus)) throw new Error(&#x27;Invalid order status&#x27;);
+  const sheet = getOrdersSheet_(requiredProperty_(PropertiesService.getScriptProperties(), &#x27;SHEET_ID&#x27;));
+  const record = findOrderRow_(sheet, cleanId);
+  if (!record) throw new Error(&#x27;Order not found&#x27;);
+  sheet.getRange(record.row, CONFIG.header.length).setValue(cleanStatus);
+  return dashboardOrder_(sheet.getRange(record.row, 1, 1, CONFIG.header.length).getValues()[0]);
+}
+
+function findOrderRow_(sheet, orderId) {
+  const lastRow = sheet.getLastRow();
+  if (lastRow &lt; 2) return null;
+  const ids = sheet.getRange(2, 1, lastRow - 1, 1).getValues();
+  for (let index = 0; index &lt; ids.length; index += 1) {
+    if (String(ids[index][0]) === orderId) return { row: index + 2, values: sheet.getRange(index + 2, 1, 1, CONFIG.header.length).getValues()[0] };
+  }
+  return null;
+}
+
+function publicOrder_(row) {
+  return {
+    orderId: clean_(row[0]),
+    dateTime: dateText_(row[1]),
+    status: clean_(row[16]) || CONFIG.status,
+    total: Number(row[13]) || 0,
+    paymentMethod: clean_(row[14]),
+    itemSummary: clean_(row[9]),
+    quantity: clean_(row[10]),
+    courier: clean_(row[12])
+  };
+}
+
+function dashboardOrder_(row) {
+  return {
+    orderId: clean_(row[0]), dateTime: dateText_(row[1]), customerName: clean_(row[2]),
+    phone: clean_(row[3]), whatsapp: clean_(row[4]), email: clean_(row[5]), address: clean_(row[6]),
+    district: clean_(row[7]), area: clean_(row[8]), products: clean_(row[9]), quantity: clean_(row[10]),
+    subtotal: Number(row[11]) || 0, deliveryCharge: Number(row[12]) || 0, total: Number(row[13]) || 0,
+    paymentMethod: clean_(row[14]), note: clean_(row[15]), status: clean_(row[16]) || CONFIG.status
+  };
+}
+
+function dateText_(value) {
+  if (!value) return &#x27;&#x27;;
+  return Utilities.formatDate(new Date(value), Session.getScriptTimeZone() || &#x27;Asia/Dhaka&#x27;, &#x27;dd MMM yyyy, hh:mm a&#x27;);
+}
+
+function getDashboardHtml_() {
+  return `&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;base target=&quot;_top&quot;&gt;&lt;style&gt;
+  *{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#172033;font:13px Arial,sans-serif}header{background:linear-gradient(135deg,#102a43,#176b87);color:white;padding:18px 16px}header h1{font-size:18px;margin:0 0 5px}header p{margin:0;color:#d9f2f3;font-size:11px}.wrap{padding:14px}.toolbar{display:flex;gap:8px;margin-bottom:12px}.toolbar input,.toolbar select{min-width:0;flex:1;border:1px solid #cbd5e1;border-radius:8px;padding:9px;background:white}.button{border:0;border-radius:8px;padding:9px 11px;background:#176b87;color:#fff;cursor:pointer;font-weight:700}.button.secondary{background:#e2e8f0;color:#172033}.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:12px;margin-bottom:12px;box-shadow:0 4px 15px #102a4310}.muted{color:#64748b;font-size:11px}.row{display:flex;justify-content:space-between;gap:10px;margin:7px 0}.row strong{color:#0f766e}.status{width:100%;padding:8px;border:1px solid #94a3b8;border-radius:7px;background:#fff}.empty{padding:20px;text-align:center;color:#64748b}.label{background:#fff;color:#111;padding:18px;border:1px solid #dbe3ec;border-radius:6px;margin-top:12px}.label h2{margin:0 0 10px;font-size:20px}.label .line{border-top:1px dashed #94a3b8;margin:10px 0}.print-only{display:none}@media print{body&gt;*{display:none!important}.print-only{display:block!important}.label{border:0;margin:0;padding:0}.no-print{display:none!important}}
+  &lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;h1&gt;Electronics Dokan&lt;/h1&gt;&lt;p&gt;Order dashboard · status, customer details and shipping labels&lt;/p&gt;&lt;/header&gt;&lt;div class=&quot;wrap&quot;&gt;&lt;div class=&quot;toolbar&quot;&gt;&lt;input id=&quot;search&quot; placeholder=&quot;Search order ID or customer&quot; oninput=&quot;render()&quot;&gt;&lt;button class=&quot;button secondary&quot; onclick=&quot;load()&quot;&gt;Refresh&lt;/button&gt;&lt;/div&gt;&lt;div id=&quot;orders&quot;&gt;&lt;/div&gt;&lt;div id=&quot;label&quot; class=&quot;print-only&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;
+  let orders=[]; const statuses=${JSON.stringify(CONFIG.statusOptions)};
+  function load(){google.script.run.withSuccessHandler(data=&gt;{orders=data;render()}).withFailureHandler(showError).getDashboardOrders()}
+  function render(){const q=(document.getElementById(&#x27;search&#x27;).value||&#x27;&#x27;).toLowerCase();const list=orders.filter(o=&gt;(o.orderId+&#x27; &#x27;+o.customerName).toLowerCase().includes(q));const root=document.getElementById(&#x27;orders&#x27;);if(!list.length){root.innerHTML=&#x27;&lt;div class=&quot;card empty&quot;&gt;No orders found.&lt;/div&gt;&#x27;;return}root.innerHTML=list.map(o=&gt;\`&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;row&quot;&gt;&lt;strong&gt;\${esc(o.orderId)}&lt;/strong&gt;&lt;span class=&quot;muted&quot;&gt;\${esc(o.dateTime)}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;\${esc(o.customerName)}&lt;/b&gt;&lt;div class=&quot;muted&quot;&gt;\${esc(o.phone)} · \${esc(o.district)}&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;row&quot;&gt;&lt;span&gt;Total&lt;/span&gt;&lt;strong&gt;৳\${Number(o.total).toLocaleString(&#x27;en-BD&#x27;)}&lt;/strong&gt;&lt;/div&gt;&lt;select class=&quot;status&quot; onchange=&quot;save(&#x27;\${o.orderId}&#x27;,this.value)&quot;&gt;\${statuses.map(s=&gt;\`&lt;option \${s===o.status?&#x27;selected&#x27;:&#x27;&#x27;}&gt;\${s}&lt;/option&gt;\`).join(&#x27;&#x27;)}&lt;/select&gt;&lt;div class=&quot;toolbar&quot; style=&quot;margin:10px 0 0&quot;&gt;&lt;button class=&quot;button&quot; onclick=&quot;printLabel(&#x27;\${o.orderId}&#x27;)&quot;&gt;Print / Save PDF label&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;\`).join(&#x27;&#x27;)}
+  function save(id,status){google.script.run.withSuccessHandler(updated=&gt;{const i=orders.findIndex(o=&gt;o.orderId===id);if(i&gt;=0)orders[i]=updated;render()}).withFailureHandler(showError).saveOrderStatus(id,status)}
+  function printLabel(id){const o=orders.find(x=&gt;x.orderId===id);if(!o)return;document.getElementById(&#x27;label&#x27;).innerHTML=\`&lt;div class=&quot;label&quot;&gt;&lt;h2&gt;Electronics Dokan — Shipping Label&lt;/h2&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;b&gt;Order: \${esc(o.orderId)}&lt;/b&gt;&lt;p&gt;&lt;b&gt;Customer:&lt;/b&gt; \${esc(o.customerName)}&lt;br&gt;&lt;b&gt;Phone:&lt;/b&gt; \${esc(o.phone)}&lt;br&gt;&lt;b&gt;Address:&lt;/b&gt; \${esc(o.address)}&lt;br&gt;&lt;b&gt;District:&lt;/b&gt; \${esc(o.district)}&lt;br&gt;&lt;b&gt;Area:&lt;/b&gt; \${esc(o.area)}&lt;/p&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;Items:&lt;/b&gt; \${esc(o.products)}&lt;br&gt;&lt;b&gt;Qty:&lt;/b&gt; \${esc(o.quantity)}&lt;br&gt;&lt;b&gt;Payment:&lt;/b&gt; \${esc(o.paymentMethod)}&lt;br&gt;&lt;b&gt;Collect:&lt;/b&gt; &lt;strong&gt;৳\${Number(o.total).toLocaleString(&#x27;en-BD&#x27;)}&lt;/strong&gt;&lt;/p&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;small&gt;Status: \${esc(o.status)} · \${esc(o.dateTime)}&lt;/small&gt;&lt;/div&gt;\`;window.print()}
+  function showError(e){alert((e&amp;&amp;e.message)||&#x27;Could not complete the action.&#x27;)} function esc(v){return String(v??&#x27;&#x27;).replace(/[&amp;&lt;&gt;&quot;&#x27;]/g,c=&gt;({&#x27;&amp;&#x27;:&#x27;&amp;amp;&#x27;,&#x27;&lt;&#x27;:&#x27;&amp;lt;&#x27;,&#x27;&gt;&#x27;:&#x27;&amp;gt;&#x27;,&#x27;&quot;&#x27;:&#x27;&amp;quot;&#x27;,&quot;&#x27;&quot;:&#x27;&amp;#39;&#x27;}[c]))} load();
+  &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;`;
+}
+
+
+function doPost(e) {
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(15000);
+    const payload = parsePayload_(e);
+    validatePayload_(payload);
+
+    const props = PropertiesService.getScriptProperties();
+    validateCatalogPrices_(payload, props);
+    const sheetId = requiredProperty_(props, &#x27;SHEET_ID&#x27;);
+    const sheet = getOrdersSheet_(sheetId);
+    const existing = findOrderByRequestId_(sheet, payload.clientRequestId);
+    if (existing) return json_({ ok: true, duplicate: true, orderId: existing.orderId, notificationSent: existing.notificationSent });
+
+    const orderId = nextOrderId_(sheet);
+    const now = new Date();
+    const row = toRow_(orderId, now, payload);
+    sheet.appendRow(row);
+    formatSheet_(sheet);
+
+    let notificationSent = false;
+    let notificationError = &#x27;&#x27;;
+    try {
+      sendTelegram_(props, orderId, now, payload);
+      notificationSent = true;
+    } catch (telegramError) {
+      notificationError = safeError_(telegramError);
+      console.error(&#x27;Telegram notification failed: &#x27; + notificationError);
+    }
+
+    // Hidden metadata columns are not added to the required Orders header. The
+    // request ID is stored in UserProperties for duplicate protection.
+    rememberRequest_(payload.clientRequestId, orderId, notificationSent);
+    return json_({ ok: true, orderId, status: CONFIG.status, notificationSent, warning: notificationError ? &#x27;Notification delivery is pending.&#x27; : undefined });
+  } catch (error) {
+    console.error(safeError_(error));
+    return json_({ ok: false, error: publicError_(error) });
+  } finally {
+    try { lock.releaseLock(); } catch (_) {}
+  }
+}
+
+function parsePayload_(e) {
+  if (!e || !e.postData || !e.postData.contents) throw new Error(&#x27;Missing request body&#x27;);
+  if (e.postData.contents.length &gt; CONFIG.maxBodyBytes) throw new Error(&#x27;Request is too large&#x27;);
+  let payload;
+  try { payload = JSON.parse(e.postData.contents); } catch (_) { throw new Error(&#x27;Request body must be JSON&#x27;); }
+  return payload;
+}
+
+function validatePayload_(payload) {
+  if (!payload || typeof payload !== &#x27;object&#x27;) throw new Error(&#x27;Invalid order payload&#x27;);
+  const required = [&#x27;clientRequestId&#x27;, &#x27;customer&#x27;, &#x27;items&#x27;, &#x27;subtotal&#x27;, &#x27;deliveryCharge&#x27;, &#x27;total&#x27;, &#x27;paymentMethod&#x27;];
+  required.forEach(function (key) { if (payload[key] === undefined || payload[key] === null || payload[key] === &#x27;&#x27;) throw new Error(&#x27;Missing required order field&#x27;); });
+  if (!/^[A-Za-z0-9_-]{6,80}$/.test(String(payload.clientRequestId))) throw new Error(&#x27;Invalid request ID&#x27;);
+  if (!Array.isArray(payload.items) || payload.items.length &lt; 1 || payload.items.length &gt; CONFIG.maxItems) throw new Error(&#x27;Invalid order items&#x27;);
+  const customer = payload.customer;
+  [&#x27;name&#x27;, &#x27;phone&#x27;, &#x27;address&#x27;, &#x27;district&#x27;, &#x27;area&#x27;].forEach(function (key) { if (!clean_(customer[key])) throw new Error(&#x27;Missing required customer field&#x27;); });
+  if (!/^01\d{9}$/.test(String(customer.phone).replace(/\s+/g, &#x27;&#x27;))) throw new Error(&#x27;Invalid phone number&#x27;);
+  payload.items.forEach(function (item) {
+    if (!clean_(item.productName) || !clean_(item.productId)) throw new Error(&#x27;Invalid product item&#x27;);
+    if (!Number.isInteger(Number(item.quantity)) || Number(item.quantity) &lt; 1 || Number(item.quantity) &gt; 1000) throw new Error(&#x27;Invalid quantity&#x27;);
+    [&#x27;unitPrice&#x27;, &#x27;subtotal&#x27;].forEach(function (key) { if (!Number.isFinite(Number(item[key])) || Number(item[key]) &lt; 0) throw new Error(&#x27;Invalid item price&#x27;); });
+  });
+  [&#x27;subtotal&#x27;, &#x27;deliveryCharge&#x27;, &#x27;discount&#x27;, &#x27;total&#x27;].forEach(function (key) { if (!Number.isFinite(Number(payload[key])) || Number(payload[key]) &lt; 0) throw new Error(&#x27;Invalid order amount&#x27;); });
+  const expected = roundMoney_(Number(payload.subtotal) + Number(payload.deliveryCharge) - Number(payload.discount || 0));
+  if (Math.abs(expected - Number(payload.total)) &gt; 0.01) throw new Error(&#x27;Order total mismatch&#x27;);
+}
+
+function validateCatalogPrices_(payload, props) {
+  const raw = props.getProperty(&#x27;PRICE_CATALOG_JSON&#x27;);
+  if (!raw) return;
+  let catalog;
+  try { catalog = JSON.parse(raw); } catch (_) { throw new Error(&#x27;PRICE_CATALOG_JSON is invalid&#x27;); }
+  payload.items.forEach(function (item) {
+    const expected = catalog[item.productId] || catalog[item.sku];
+    if (!expected) throw new Error(&#x27;Product is not available&#x27;);
+    if (Math.abs(Number(expected.price) - Number(item.unitPrice)) &gt; 0.01) throw new Error(&#x27;Product price has changed&#x27;);
+    if (expected.sku &amp;&amp; String(expected.sku) !== String(item.sku)) throw new Error(&#x27;Product SKU mismatch&#x27;);
+  });
+}
+
+function getOrdersSheet_(sheetId) {
+  const spreadsheet = SpreadsheetApp.openById(sheetId);
+  let sheet = spreadsheet.getSheetByName(CONFIG.sheetName);
+  if (!sheet) sheet = spreadsheet.insertSheet(CONFIG.sheetName);
+  if (sheet.getLastRow() === 0) sheet.appendRow(CONFIG.header);
+  else if (sheet.getRange(1, 1, 1, CONFIG.header.length).getValues()[0].join(&#x27;|&#x27;) !== CONFIG.header.join(&#x27;|&#x27;)) throw new Error(&#x27;Orders sheet header does not match required structure&#x27;);
+  return sheet;
+}
+
+function toRow_(orderId, now, payload) {
+  const customer = payload.customer;
+  const products = payload.items.map(function (item) { return clean_(item.productName) + &#x27; [&#x27; + clean_(item.sku || item.productId) + &#x27;]&#x27;; }).join(&#x27; | &#x27;);
+  const quantities = payload.items.map(function (item) { return String(Number(item.quantity)); }).join(&#x27; + &#x27;);
+  const address = [customer.address, customer.postOffice, customer.postCode, customer.division].filter(Boolean).map(clean_).join(&#x27;, &#x27;);
+  return [
+    orderId, now, clean_(customer.name), clean_(customer.phone), clean_(customer.whatsapp || customer.phone), clean_(customer.email),
+    address, clean_(customer.district), clean_(customer.area), products, quantities, roundMoney_(payload.subtotal),
+    roundMoney_(payload.deliveryCharge), roundMoney_(payload.total), clean_(payload.paymentMethod), clean_(payload.customerNote), CONFIG.status
+  ];
+}
+
+function nextOrderId_(sheet) {
+  const tz = Session.getScriptTimeZone() || &#x27;Asia/Dhaka&#x27;;
+  const datePart = Utilities.formatDate(new Date(), tz, &#x27;yyyyMMdd&#x27;);
+  const lastRow = sheet.getLastRow();
+  const values = lastRow &gt; 1 ? sheet.getRange(2, 1, lastRow - 1, 1).getValues().flat() : [];
+  let max = 0;
+  values.forEach(function (value) {
+    const match = String(value).match(new RegExp(&#x27;^ED-&#x27; + datePart + &#x27;-(\\d{4})$&#x27;));
+    if (match) max = Math.max(max, Number(match[1]));
+  });
+  return &#x27;ED-&#x27; + datePart + &#x27;-&#x27; + String(max + 1).padStart(4, &#x27;0&#x27;);
+}
+
+function sendTelegram_(props, orderId, now, payload) {
+  const token = requiredProperty_(props, &#x27;TELEGRAM_BOT_TOKEN&#x27;);
+  const chatId = requiredProperty_(props, &#x27;TELEGRAM_CHAT_ID&#x27;);
+  const tz = Session.getScriptTimeZone() || &#x27;Asia/Dhaka&#x27;;
+  const dateText = Utilities.formatDate(now, tz, &#x27;dd MMM yyyy, hh:mm a&#x27;);
+  const c = payload.customer;
+  const itemText = payload.items.map(function (item) { return &#x27;• &lt;b&gt;&#x27; + html_(item.productName) + &#x27;&lt;/b&gt; × &#x27; + Number(item.quantity) + &#x27; — &#x27; + money_(item.subtotal); }).join(&#x27;\n&#x27;);
+  const message = [
+    &#x27;&lt;b&gt;🛒 NEW ORDER&lt;/b&gt;&#x27;, &#x27;━━━━━━━━━━━━━━&#x27;,
+    &#x27;📦 &lt;b&gt;Order ID:&lt;/b&gt; &#x27; + html_(orderId), &#x27;🕐 &lt;b&gt;Date:&lt;/b&gt; &#x27; + html_(dateText), &#x27;&#x27;,
+    &#x27;👤 &lt;b&gt;CUSTOMER&lt;/b&gt;&#x27;, &#x27;Name: &#x27; + html_(c.name), &#x27;Phone: &#x27; + html_(c.phone), &#x27;WhatsApp: &#x27; + html_(c.whatsapp || c.phone), c.email ? &#x27;Email: &#x27; + html_(c.email) : &#x27;&#x27;, &#x27;&#x27;,
+    &#x27;📍 &lt;b&gt;DELIVERY&lt;/b&gt;&#x27;, &#x27;Address: &#x27; + html_(c.address), &#x27;District: &#x27; + html_(c.district), &#x27;Area: &#x27; + html_(c.area), &#x27;&#x27;,
+    &#x27;🛍️ &lt;b&gt;ORDER&lt;/b&gt;&#x27;, itemText, &#x27;&#x27;, &#x27;Subtotal: &#x27; + money_(payload.subtotal), &#x27;🚚 Delivery: &#x27; + money_(payload.deliveryCharge), &#x27;💰 &lt;b&gt;TOTAL: &#x27; + money_(payload.total) + &#x27;&lt;/b&gt;&#x27;, &#x27;&#x27;,
+    &#x27;💳 Payment: &#x27; + html_(payload.paymentMethod), &#x27;🚚 Courier: &#x27; + html_(payload.courier || &#x27;Not specified&#x27;), payload.customerNote ? &#x27;📝 Note: &#x27; + html_(payload.customerNote) : &#x27;&#x27;, &#x27;📌 Status: &lt;b&gt;&#x27; + CONFIG.status + &#x27;&lt;/b&gt;&#x27;, &#x27;━━━━━━━━━━━━━━&#x27;
+  ].filter(Boolean).join(&#x27;\n&#x27;);
+  const url = &#x27;https://api.telegram.org/bot&#x27; + encodeURIComponent(token) + &#x27;/sendMessage&#x27;;
+  const response = UrlFetchApp.fetch(url, { method: &#x27;post&#x27;, contentType: &#x27;application/json&#x27;, payload: JSON.stringify({ chat_id: chatId, text: message, parse_mode: &#x27;HTML&#x27;, disable_web_page_preview: true }), muteHttpExceptions: true });
+  const result = JSON.parse(response.getContentText() || &#x27;{}&#x27;);
+  if (!result.ok) throw new Error(&#x27;Telegram API rejected the message&#x27;);
+}
+
+function findOrderByRequestId_(sheet, requestId) {
+  const record = PropertiesService.getScriptProperties().getProperty(&#x27;REQ_&#x27; + requestId);
+  return record ? JSON.parse(record) : null;
+}
+function rememberRequest_(requestId, orderId, notificationSent) {
+  PropertiesService.getScriptProperties().setProperty(&#x27;REQ_&#x27; + requestId, JSON.stringify({ orderId: orderId, notificationSent: notificationSent }));
+}
+function requiredProperty_(props, key) { const value = props.getProperty(key); if (!value) throw new Error(&#x27;Missing server configuration: &#x27; + key); return value; }
+function clean_(value) { return String(value == null ? &#x27;&#x27; : value).replace(/[&lt;&gt;]/g, &#x27;&#x27;).replace(/[\r\n]+/g, &#x27; &#x27;).trim().slice(0, CONFIG.maxText); }
+function html_(value) { return clean_(value).replace(/&amp;/g, &#x27;&amp;amp;&#x27;).replace(/&lt;/g, &#x27;&amp;lt;&#x27;).replace(/&gt;/g, &#x27;&amp;gt;&#x27;).replace(/&quot;/g, &#x27;&amp;quot;&#x27;); }
+function money_(value) { return &#x27;৳&#x27; + Number(value || 0).toLocaleString(&#x27;en-BD&#x27;, { maximumFractionDigits: 2 }); }
+function roundMoney_(value) { return Math.round(Number(value) * 100) / 100; }
+function formatSheet_(sheet) { sheet.setFrozenRows(1); sheet.getRange(1, 1, 1, CONFIG.header.length).setFontWeight(&#x27;bold&#x27;).setBackground(&#x27;#102a43&#x27;).setFontColor(&#x27;#ffffff&#x27;); sheet.autoResizeColumns(1, CONFIG.header.length); applyStatusValidation(); }
+function safeError_(error) { return error &amp;&amp; error.message ? String(error.message).slice(0, 300) : &#x27;Unknown error&#x27;; }
+function publicError_(error) { return safeError_(error).indexOf(&#x27;Missing server configuration&#x27;) &gt;= 0 ? &#x27;Order service is not configured&#x27; : &#x27;Order could not be submitted&#x27;; }
+function json_(data) { return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON); }
+</textarea><script>const el=document.getElementById('source');el.focus();el.select();</script>
