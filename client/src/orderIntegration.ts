@@ -35,7 +35,7 @@ export type OrderPayload = {
   source: string;
 };
 
-export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbzvcGgEV-I8Ev7kIVpbYImYTwafLKiu7sYYrrS7HluF_8ytG8E6NTR3DMb5VSX7ya2P/exec";
+export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbzugIS_nD5WU3EeoQ_UEpDufoEQoe37tzhdxXVdoN7qUywY3i6JSbXMH5aReTZKg5xH/exec";
 
 export type OrderSubmitResult = { ok: boolean; configured: boolean; orderId?: string; opaque?: boolean };
 
@@ -48,17 +48,21 @@ export type OrderTrackingResult = {
     status: string;
     total: number;
     paymentMethod: string;
+    paymentStatus: string;
+    deliveryMethod: string;
+    carrier: string;
+    trackingNumber: string;
+    customerName: string;
     itemSummary: string;
     quantity: string;
-    courier: string;
   };
 };
 
-export async function trackOrder(orderId: string): Promise<OrderTrackingResult> {
+export async function trackOrder(lookup: string): Promise<OrderTrackingResult> {
   if (!ORDER_BACKEND_URL || ORDER_BACKEND_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL")) {
     return { ok: false, error: "Order tracking is not configured yet." };
   }
-  const url = `${ORDER_BACKEND_URL}?action=track&orderId=${encodeURIComponent(orderId.trim().toUpperCase())}`;
+  const url = `${ORDER_BACKEND_URL}?action=track&orderId=${encodeURIComponent(lookup.trim())}`;
   try {
     const response = await fetch(url, { method: "GET", headers: { Accept: "application/json" } });
     return (await response.json()) as OrderTrackingResult;
