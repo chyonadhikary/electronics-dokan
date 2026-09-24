@@ -550,7 +550,7 @@ function CheckoutPage({ products, cart, site, locations, navigate }: { products:
     });
     const payload: OrderPayload = {
       clientRequestId: orderNumber,
-      customer: { name: form.fullName.trim(), phone: form.mobile.trim(), whatsapp: form.altMobile.trim() || form.mobile.trim(), email: form.email.trim(), address: form.fullAddress.trim(), district: form.district.trim(), area: form.area.trim(), division: form.division.trim(), postOffice: form.postOffice.trim(), postCode: form.postCode.trim() },
+      customer: { name: form.fullName.trim(), phone: form.mobile.trim(), whatsapp: form.altMobile.trim() || form.mobile.trim(), email: form.email.trim(), address: (form.fullAddress.trim() || form.area.trim()), district: form.district.trim(), area: form.area.trim(), division: form.division.trim(), postOffice: form.postOffice.trim(), postCode: form.postCode.trim() },
       items: itemPayload,
       subtotal, deliveryCharge: delivery, discount, total,
       courier: selectedCourier?.name || "", paymentMethod: form.paymentMethod, customerNote: form.note.trim(), couponCode: form.couponCode.trim().toUpperCase(), source: window.location.origin,
