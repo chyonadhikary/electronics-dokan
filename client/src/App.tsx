@@ -396,6 +396,7 @@ function XiaozhiFlasher() {
   const [error, setError] = useState("");
   const [eraseAll, setEraseAll] = useState(true);
   const [openAfterFlash, setOpenAfterFlash] = useState(true);
+  const [resetAfterFlash, setResetAfterFlash] = useState(true);
   const [logs, setLogs] = useState<string[]>([]);
   const [ports, setPorts] = useState<any[]>([]);
   const [selectedPortIndex, setSelectedPortIndex] = useState(0);
@@ -449,6 +450,26 @@ function XiaozhiFlasher() {
     if (port) { try { await port.close(); } catch { /* already closed */ } }
     setMonitoring(false);
   };
+  const pulseReset = async (port: any) => {
+    if (!port) throw new Error("Select an authorized port first.");
+    await stopMonitor();
+    if (!port.readable && !port.writable) await port.open({ baudRate: 115200 });
+    if (!port.setSignals) throw new Error("This USB serial adapter does not expose hardware reset signals.");
+    addLog("Sending hardware reset signal to the board…");
+    await port.setSignals({ dataTerminalReady: false, requestToSend: false });
+    await new Promise((resolve) => setTimeout(resolve, 120));
+    await port.setSignals({ dataTerminalReady: true, requestToSend: false });
+    await new Promise((resolve) => setTimeout(resolve, 120));
+    await port.setSignals({ dataTerminalReady: false, requestToSend: false });
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    setStatus("Board reset · ready"); addLog("Board reset complete. Firmware should now be running.");
+  };
+  const resetBoard = async () => {
+    if (busy) return;
+    setError("");
+    try { await pulseReset(selectedPort); if (openAfterFlash) await startMonitor(selectedPort); }
+    catch (caught) { const message = caught instanceof Error ? caught.message : "The board could not be reset."; setError(message); setStatus("Reset failed"); addLog(`ERROR: ${message}`); }
+  };
   const startMonitor = async (port: any) => {
     if (!port) throw new Error("Select an authorized port first.");
     if (!port.readable && !port.writable) await port.open({ baudRate: 115200 });
@@ -477,11 +498,13 @@ function XiaozhiFlasher() {
       setStatus(eraseAll ? "Erasing complete flash…" : "Preparing flash…"); addLog(eraseAll ? "Erase enabled: complete flash erase requested." : "Erase disabled: existing flash is not being fully erased.");
       await loader.writeFlash({ fileArray: [{ data, address: 0 }], flashMode: "dio" as never, flashFreq: "40m" as never, flashSize: "keep" as never, eraseAll, compress: true, reportProgress: (_fileIndex, written, total) => { const percent = Math.round((written / total) * 100); setProgress(percent); setStatus(`Writing firmware… ${percent}%`); } });
       await loader.after("hard_reset"); try { await transport.disconnect(); } catch { /* already closed */ } transport = null;
-      setProgress(100); setStatus("Flash complete · board rebooted"); addLog("Flash complete. Board rebooted successfully.");
+      setProgress(100); setStatus("Flash written · resetting board…"); addLog("Flash write complete. Preparing board reset…");
+      if (resetAfterFlash) await pulseReset(selectedPort);
+      setStatus("Flash complete · board ready"); addLog("Flash complete and board reset. Firmware should now be running.");
       if (openAfterFlash) { await new Promise((resolve) => setTimeout(resolve, 700)); await startMonitor(selectedPort); }
     } catch (caught) { const message = caught instanceof Error ? caught.message : "The board could not be flashed."; setError(message); setStatus("Flash stopped"); addLog(`ERROR: ${message}`); try { if (transport) await transport.disconnect(); } catch { /* cleanup */ } } finally { setBusy(false); }
   };
-  return <div className="custom-flasher"><div className="flasher-port-manager"><div className="flasher-port-heading"><b>1 · Select this website's port</b><button type="button" onClick={refreshPorts} disabled={busy}>Refresh</button></div><p>Chrome does not expose the COM number to websites. Do not use the first port automatically—select the authorized USB VID/PID that belongs to your ESP32-S3.</p>{ports.length ? <div className="flasher-port-list">{ports.map((port, index) => <label key={index}><input type="radio" name="xiaozhi-port" checked={selectedPortIndex === index} onChange={() => { setSelectedPortIndex(index); setStatus("Port selected"); }} disabled={busy} /><span>{portLabel(port, index)}</span></label>)}</div> : <div className="flasher-no-port">No Electronics Dokan port authorized yet.</div>}<button type="button" className="button button-flasher-secondary" onClick={authorizePort} disabled={busy}>Authorize port once</button></div><div className="flasher-controls"><button className="button button-primary flasher-activate" onClick={flash} disabled={busy || monitoring || !selectedPort}>{busy ? "Flashing…" : "Flash local firmware"}</button><button className="button button-flasher-secondary" onClick={monitoring ? stopMonitor : connectMonitor} disabled={busy || !selectedPort}>{monitoring ? "Disconnect monitor" : "Connect serial monitor"}</button></div><div className="flasher-options"><label><input type="checkbox" checked={eraseAll} onChange={(event) => setEraseAll(event.target.checked)} disabled={busy} /> Erase complete flash before install</label><label><input type="checkbox" checked={openAfterFlash} onChange={(event) => setOpenAfterFlash(event.target.checked)} disabled={busy} /> Open compact monitor after flash</label></div><div className="custom-flasher-status"><span>{status}</span>{chip && <b>{chip}</b>}</div>{(busy || progress > 0) && <div className="flasher-progress"><i style={{ width: `${progress}%` }} /></div>}<div className="serial-monitor"><div className="serial-monitor-heading"><b>Serial monitor</b><button type="button" onClick={() => setMonitorExpanded((value) => !value)}>{monitorExpanded ? "Collapse" : "Expand"}</button><button type="button" onClick={() => setLogs([])}>Clear</button><small>115200 baud</small></div><div ref={logRef} className={`serial-monitor-log${monitorExpanded ? " expanded" : ""}`}>{logs.length ? logs.map((line, index) => <div key={`${index}-${line}`}>{line}</div>) : <span className="serial-monitor-empty">Compact log appears here after connecting the selected port.</span>}</div></div>{error && <p className="flasher-error">{error}</p>}</div>;
+  return <div className="custom-flasher"><div className="flasher-port-manager"><div className="flasher-port-heading"><b>1 · Select this website's port</b><button type="button" onClick={refreshPorts} disabled={busy}>Refresh</button></div><p>Chrome does not expose the COM number to websites. Do not use the first port automatically—select the authorized USB VID/PID that belongs to your ESP32-S3.</p>{ports.length ? <div className="flasher-port-list">{ports.map((port, index) => <label key={index}><input type="radio" name="xiaozhi-port" checked={selectedPortIndex === index} onChange={() => { setSelectedPortIndex(index); setStatus("Port selected"); }} disabled={busy} /><span>{portLabel(port, index)}</span></label>)}</div> : <div className="flasher-no-port">No Electronics Dokan port authorized yet.</div>}<button type="button" className="button button-flasher-secondary" onClick={authorizePort} disabled={busy}>Authorize port once</button></div><div className="flasher-controls"><button className="button button-primary flasher-activate" onClick={flash} disabled={busy || monitoring || !selectedPort}>{busy ? "Flashing…" : "Flash local firmware"}</button><button className="button button-flasher-secondary" onClick={monitoring ? stopMonitor : connectMonitor} disabled={busy || !selectedPort}>{monitoring ? "Disconnect monitor" : "Connect serial monitor"}</button><button className="button button-flasher-secondary" onClick={resetBoard} disabled={busy || !selectedPort}>Reset board</button></div><div className="flasher-options"><label><input type="checkbox" checked={eraseAll} onChange={(event) => setEraseAll(event.target.checked)} disabled={busy} /> Erase complete flash before install</label><label><input type="checkbox" checked={resetAfterFlash} onChange={(event) => setResetAfterFlash(event.target.checked)} disabled={busy} /> Reset board after flash</label><label><input type="checkbox" checked={openAfterFlash} onChange={(event) => setOpenAfterFlash(event.target.checked)} disabled={busy} /> Open compact monitor after reset</label></div><div className="custom-flasher-status"><span>{status}</span>{chip && <b>{chip}</b>}</div>{(busy || progress > 0) && <div className="flasher-progress"><i style={{ width: `${progress}%` }} /></div>}<div className="serial-monitor"><div className="serial-monitor-heading"><b>Serial monitor</b><button type="button" onClick={() => setMonitorExpanded((value) => !value)}>{monitorExpanded ? "Collapse" : "Expand"}</button><button type="button" onClick={() => setLogs([])}>Clear</button><small>115200 baud</small></div><div ref={logRef} className={`serial-monitor-log${monitorExpanded ? " expanded" : ""}`}>{logs.length ? logs.map((line, index) => <div key={`${index}-${line}`}>{line}</div>) : <span className="serial-monitor-empty">Compact log appears here after connecting the selected port.</span>}</div></div>{error && <p className="flasher-error">{error}</p>}</div>;
 }
 
 function XiaozhiProjectPage({ navigate }: { navigate: (path: string) => void }) {
