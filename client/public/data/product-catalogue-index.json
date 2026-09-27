@@ -1,0 +1,2496 @@
+{
+  "generatedAt": "2026-09-27",
+  "site": "https://electronicsdokan.com",
+  "skuPrefix": "EDP",
+  "skuNote": "Internal Electronics Dokan inventory SKU; not a GS1/EAN barcode.",
+  "productCount": 165,
+  "variantCount": 173,
+  "categoryCount": 16,
+  "brandCount": 20,
+  "categories": [
+    {
+      "name": "Accessories",
+      "productCount": 5,
+      "variantCount": 2
+    },
+    {
+      "name": "Audio",
+      "productCount": 23,
+      "variantCount": 4
+    },
+    {
+      "name": "Battery",
+      "productCount": 8,
+      "variantCount": 0
+    },
+    {
+      "name": "Capacitors",
+      "productCount": 3,
+      "variantCount": 42
+    },
+    {
+      "name": "Communication",
+      "productCount": 5,
+      "variantCount": 0
+    },
+    {
+      "name": "Components",
+      "productCount": 8,
+      "variantCount": 2
+    },
+    {
+      "name": "Development Boards",
+      "productCount": 4,
+      "variantCount": 0
+    },
+    {
+      "name": "Diodes & Rectifiers",
+      "productCount": 6,
+      "variantCount": 0
+    },
+    {
+      "name": "Display",
+      "productCount": 5,
+      "variantCount": 0
+    },
+    {
+      "name": "Diy Electronics",
+      "productCount": 18,
+      "variantCount": 0
+    },
+    {
+      "name": "Electric Bike Parts",
+      "productCount": 2,
+      "variantCount": 0
+    },
+    {
+      "name": "Meters & Testers",
+      "productCount": 5,
+      "variantCount": 0
+    },
+    {
+      "name": "Modules",
+      "productCount": 22,
+      "variantCount": 2
+    },
+    {
+      "name": "Resistors",
+      "productCount": 3,
+      "variantCount": 110
+    },
+    {
+      "name": "Semiconductors",
+      "productCount": 45,
+      "variantCount": 11
+    },
+    {
+      "name": "Soldering Tools",
+      "productCount": 3,
+      "variantCount": 0
+    }
+  ],
+  "brands": [
+    {
+      "name": "BAKU",
+      "productCount": 1
+    },
+    {
+      "name": "CAMEL",
+      "productCount": 1
+    },
+    {
+      "name": "EGBO",
+      "productCount": 1
+    },
+    {
+      "name": "ELEC&Lifes",
+      "productCount": 1
+    },
+    {
+      "name": "Generic / Unbranded",
+      "productCount": 139
+    },
+    {
+      "name": "GoAT",
+      "productCount": 1
+    },
+    {
+      "name": "HYDZ",
+      "productCount": 1
+    },
+    {
+      "name": "JAVINO",
+      "productCount": 4
+    },
+    {
+      "name": "JRC",
+      "productCount": 2
+    },
+    {
+      "name": "KAWH",
+      "productCount": 1
+    },
+    {
+      "name": "KESHY",
+      "productCount": 2
+    },
+    {
+      "name": "L-faster",
+      "productCount": 2
+    },
+    {
+      "name": "Liludin",
+      "productCount": 1
+    },
+    {
+      "name": "PUMUDDSY",
+      "productCount": 1
+    },
+    {
+      "name": "SHARP",
+      "productCount": 1
+    },
+    {
+      "name": "SY",
+      "productCount": 1
+    },
+    {
+      "name": "Tdidaz",
+      "productCount": 1
+    },
+    {
+      "name": "UNI-T",
+      "productCount": 1
+    },
+    {
+      "name": "VANXY",
+      "productCount": 1
+    },
+    {
+      "name": "Zhuang One",
+      "productCount": 2
+    }
+  ],
+  "products": [
+    {
+      "serial": 1,
+      "id": "sku-prod-1072",
+      "sku": "EDP-ACC-0001",
+      "slug": "camel-gg-5-hot-melt-glue-gun-100-240v-electric-heat-glue-gun-for-craft-and-diy-repairs",
+      "name": "CAMEL GG-5 Hot Melt Glue Gun 100-240V | Electric Heat Glue Gun for Craft & DIY Repairs",
+      "category": "Accessories",
+      "brand": "CAMEL",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/camel-gg-5-hot-melt-glue-gun-100-240v-electric-heat-glue-gun-for-craft-and-diy-repairs",
+      "images": [
+        "/images/products/sku-prod-1072.webp"
+      ]
+    },
+    {
+      "serial": 2,
+      "id": "item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics",
+      "sku": "EDP-ACC-0002",
+      "slug": "esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics",
+      "name": "ESD-15 Curved Tip Precision Tweezers 121mm | Stainless Steel Bent Tip Tweezer for Electronics",
+      "category": "Accessories",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics",
+      "images": [
+        "/images/products/item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics.webp"
+      ]
+    },
+    {
+      "serial": 3,
+      "id": "sku-prod-1063",
+      "sku": "EDP-ACC-0003",
+      "slug": "metal-slingshot-release-trigger-mechanism-diy-crossbow-and-slingshot-trigger-device",
+      "name": "Metal Slingshot Release Trigger Mechanism | DIY Crossbow & Slingshot Trigger Device",
+      "category": "Accessories",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/metal-slingshot-release-trigger-mechanism-diy-crossbow-and-slingshot-trigger-device",
+      "images": [
+        "/images/products/sku-prod-1063.webp"
+      ]
+    },
+    {
+      "serial": 4,
+      "id": "item-precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making",
+      "sku": "EDP-ACC-0004",
+      "slug": "precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making",
+      "name": "Precision Hobby Knife with #11 Blades | 5.5 inch Craft Knife for PCB & Model Making",
+      "category": "Accessories",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making",
+      "images": [
+        "/images/products/item-precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making.webp"
+      ]
+    },
+    {
+      "serial": 5,
+      "id": "sku-prod-1086",
+      "sku": "EDP-ACC-0005",
+      "slug": "usb-type-c-male-plug-solder-connector-board-4-pin-6-pin-usb-c-repair-plug",
+      "name": "USB Type-C Male/Female Plug Solder Connector Board (JRC-BCC8) | 4-Pin/6-Pin USB-C Repair Plug",
+      "category": "Accessories",
+      "brand": "JRC",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/usb-type-c-male-plug-solder-connector-board-4-pin-6-pin-usb-c-repair-plug",
+      "images": [
+        "/images/products/sku-prod-1086.webp"
+      ]
+    },
+    {
+      "serial": 6,
+      "id": "item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq",
+      "sku": "EDP-AUD-0006",
+      "slug": "bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq",
+      "name": "Bluetooth MP3 Decoder Board with Color Display, USB, TF Card, AUX, FM Radio & EQ",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq",
+      "images": [
+        "/images/products/item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq.webp"
+      ]
+    },
+    {
+      "serial": 7,
+      "id": "sku-prod-1061",
+      "sku": "EDP-AUD-0007",
+      "slug": "digital-fm-wireless-transmitter-module-with-lcd-display-87-5-108mhz-dsp-and-pll-board",
+      "name": "Digital FM Wireless Transmitter Module with LCD Display | 87.5-108MHz DSP & PLL Board",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/digital-fm-wireless-transmitter-module-with-lcd-display-87-5-108mhz-dsp-and-pll-board",
+      "images": [
+        "/images/products/sku-prod-1061.webp"
+      ]
+    },
+    {
+      "serial": 8,
+      "id": "item-jrc4558d-dual-operational-amplifier-ic-dip-8",
+      "sku": "EDP-AUD-0008",
+      "slug": "jrc4558d-dual-operational-amplifier-ic-dip-8",
+      "name": "JRC4558D Dual Operational Amplifier IC DIP-8",
+      "category": "Audio",
+      "brand": "JRC",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/jrc4558d-dual-operational-amplifier-ic-dip-8",
+      "images": [
+        "/images/products/item-jrc4558d-dual-operational-amplifier-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 9,
+      "id": "item-la4440-dual-audio-power-amplifier-ic",
+      "sku": "EDP-AUD-0009",
+      "slug": "la4440-dual-audio-power-amplifier-ic",
+      "name": "LA4440 Dual Audio Power Amplifier IC (Zip-13)",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/la4440-dual-audio-power-amplifier-ic",
+      "images": [
+        "/images/products/item-la4440-dual-audio-power-amplifier-ic.webp",
+        "/images/products/item-la4440-dual-audio-power-amplifier-ic-2.webp"
+      ]
+    },
+    {
+      "serial": 10,
+      "id": "item-lm386-audio-power-amplifier-ic-dip-8",
+      "sku": "EDP-AUD-0010",
+      "slug": "lm386-audio-power-amplifier-ic-dip-8",
+      "name": "LM386 Audio Power Amplifier IC DIP-8",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/lm386-audio-power-amplifier-ic-dip-8",
+      "images": [
+        "/images/products/item-lm386-audio-power-amplifier-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 11,
+      "id": "sku-prod-1070",
+      "sku": "EDP-AUD-0011",
+      "slug": "ne5532-hi-fi-preamplifier-audio-tone-control-board-treble-midrange-bass-volume-control",
+      "name": "NE5532 Hi-Fi Preamplifier Audio Tone Control Board (MT Version 2.1) | Treble Midrange Bass Volume Control",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ne5532-hi-fi-preamplifier-audio-tone-control-board-treble-midrange-bass-volume-control",
+      "images": [
+        "/images/products/sku-prod-1070.webp"
+      ]
+    },
+    {
+      "serial": 12,
+      "id": "item-pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module",
+      "sku": "EDP-AUD-0012",
+      "slug": "pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module",
+      "name": "PAM8403 Mini Digital Audio Amplifier Board | 2x3W Class D Stereo Amp Module",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module",
+      "images": [
+        "/images/products/item-pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module.webp"
+      ]
+    },
+    {
+      "serial": 13,
+      "id": "item-rotary-potentiometer-b100k-with-nut-and-washer",
+      "sku": "EDP-AUD-0013",
+      "slug": "rotary-potentiometer-b50k-b100k-with-nut-washer-audio-pot",
+      "name": "Rotary Potentiometer B50K / B100K with Nut & Washer (Audio Pot)",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/rotary-potentiometer-b50k-b100k-with-nut-washer-audio-pot",
+      "images": [
+        "/images/products/item-rotary-potentiometer-b100k-with-nut-and-washer.webp",
+        "/images/products/item-rotary-potentiometer-b50k-with-nut-and-washer.webp"
+      ]
+    },
+    {
+      "serial": 14,
+      "id": "item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek",
+      "sku": "EDP-AUD-0014",
+      "slug": "single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek",
+      "name": "Single supply low pass filter board subwoofer preamp board 2.1 channel DC10-30V Creek",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek",
+      "images": [
+        "/images/products/item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek.webp"
+      ]
+    },
+    {
+      "serial": 15,
+      "id": "item-tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module",
+      "sku": "EDP-AUD-0015",
+      "slug": "tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module",
+      "name": "TDA2030A Mono Audio Amplifier Board with Heatsink | DIY Amplifier Module",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module",
+      "images": [
+        "/images/products/item-tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module.webp"
+      ]
+    },
+    {
+      "serial": 16,
+      "id": "item-tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8",
+      "sku": "EDP-AUD-0016",
+      "slug": "tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8",
+      "name": "TDA2822 Dual Low-Voltage Audio Power Amplifier IC DIP-8",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8",
+      "images": [
+        "/images/products/item-tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 17,
+      "id": "item-tea2025b-dual-audio-power-amplifier-ic-dip-16",
+      "sku": "EDP-AUD-0017",
+      "slug": "tea2025b-dual-audio-power-amplifier-ic-dip-16",
+      "name": "TEA2025B Dual Audio Power Amplifier IC DIP-16",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tea2025b-dual-audio-power-amplifier-ic-dip-16",
+      "images": [
+        "/images/products/item-tea2025b-dual-audio-power-amplifier-ic-dip-16.webp"
+      ]
+    },
+    {
+      "serial": 18,
+      "id": "sku-prod-1080",
+      "sku": "EDP-AUD-0018",
+      "slug": "tpa3110-xh-a232-30w-30w-2-0-channel-digital-stereo-audio-power-amplifier-board-dc-8-26v-3a",
+      "name": "TPA3110 XH-A232 30W+30W 2.0 Channel Digital Stereo Audio Power Amplifier Board DC 8-26V 3A",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tpa3110-xh-a232-30w-30w-2-0-channel-digital-stereo-audio-power-amplifier-board-dc-8-26v-3a",
+      "images": [
+        "/images/products/sku-prod-1080.webp"
+      ]
+    },
+    {
+      "serial": 19,
+      "id": "item-wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy",
+      "sku": "EDP-AUD-0019",
+      "slug": "wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy",
+      "name": "Wireless Bluetooth 5.0 MP3 Decoder Audio Receiver Module AUXTFUSB for Car Home Stereo Speaker DIY",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy",
+      "images": [
+        "/images/products/item-wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy.webp"
+      ]
+    },
+    {
+      "serial": 20,
+      "id": "item-wp4-10-4-pin-speaker-terminal-push-connector",
+      "sku": "EDP-AUD-0020",
+      "slug": "wp4-10-4-pin-speaker-terminal-push-connector",
+      "name": "WP4-10 4-Pin Speaker Terminal Push Connector",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/wp4-10-4-pin-speaker-terminal-push-connector",
+      "images": [
+        "/images/products/item-wp4-10-4-pin-speaker-terminal-push-connector.webp"
+      ]
+    },
+    {
+      "serial": 21,
+      "id": "sku-prod-1059",
+      "sku": "EDP-BAT-0021",
+      "slug": "03962a-tp4056-micro-usb-5v-1a-lithium-battery-charger-board-dual-protection-module",
+      "name": "03962A TP4056 Micro USB 5V 1A Lithium Battery Charger Board | Dual Protection Module",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/03962a-tp4056-micro-usb-5v-1a-lithium-battery-charger-board-dual-protection-module",
+      "images": [
+        "/images/products/sku-prod-1059.webp"
+      ]
+    },
+    {
+      "serial": 22,
+      "id": "sku-prod-1068",
+      "sku": "EDP-BAT-0022",
+      "slug": "12v-battery-low-voltage-cutoff-protection-switch-module-undervoltage-relay-controller",
+      "name": "12V Battery Low Voltage Cutoff Protection Switch Module | Undervoltage Relay Controller",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/12v-battery-low-voltage-cutoff-protection-switch-module-undervoltage-relay-controller",
+      "images": [
+        "/images/products/sku-prod-1068.webp"
+      ]
+    },
+    {
+      "serial": 23,
+      "id": "item-2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module",
+      "sku": "EDP-BAT-0023",
+      "slug": "2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module",
+      "name": "2S Li-ion Battery BMS Protection Board | 2-Cell Series Balance Charging Protection Module (Type A)",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module",
+      "images": [
+        "/images/products/item-2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module.webp"
+      ]
+    },
+    {
+      "serial": 24,
+      "id": "item-2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module",
+      "sku": "EDP-BAT-0024",
+      "slug": "2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module",
+      "name": "2S Li-ion Battery BMS Protection Board | 2-Cell Series Protection Module (Type B, SY Brand)",
+      "category": "Battery",
+      "brand": "SY",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module",
+      "images": [
+        "/images/products/item-2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module.webp"
+      ]
+    },
+    {
+      "serial": 25,
+      "id": "item-3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board",
+      "sku": "EDP-BAT-0025",
+      "slug": "3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board",
+      "name": "3S 20A Li-ion Lithium Battery 18650 Charger PCB BMS Protection Board",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board",
+      "images": [
+        "/images/products/item-3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board.webp"
+      ]
+    },
+    {
+      "serial": 26,
+      "id": "item-micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output",
+      "sku": "EDP-BAT-0026",
+      "slug": "micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output",
+      "name": "Micro USB Lithium Battery Charging Boost Module | TP4056 Style Charger with Boost Output",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output",
+      "images": [
+        "/images/products/item-micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output.webp"
+      ]
+    },
+    {
+      "serial": 27,
+      "id": "sku-prod-1083",
+      "sku": "EDP-BAT-0027",
+      "slug": "type-c-15w-2s-lithium-battery-charging-boost-module-2-cell-series-fast-charger",
+      "name": "Type-C 15W 2S Lithium Battery Charging Boost Module | 2-Cell Series Fast Charger",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/type-c-15w-2s-lithium-battery-charging-boost-module-2-cell-series-fast-charger",
+      "images": [
+        "/images/products/sku-prod-1083.webp"
+      ]
+    },
+    {
+      "serial": 28,
+      "id": "item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display",
+      "sku": "EDP-BAT-0028",
+      "slug": "xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display",
+      "name": "XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay & Display",
+      "category": "Battery",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display",
+      "images": [
+        "/images/products/item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display.webp"
+      ]
+    },
+    {
+      "serial": 29,
+      "id": "ed-cercap",
+      "sku": "EDP-CAP-0029",
+      "slug": "ceramic-capacitor",
+      "name": "Ceramic Capacitor",
+      "category": "Capacitors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 21,
+      "url": "https://electronicsdokan.com/product/ceramic-capacitor",
+      "images": [
+        "/images/products/ed-cercap.webp"
+      ]
+    },
+    {
+      "serial": 30,
+      "id": "ed-elcap",
+      "sku": "EDP-CAP-0030",
+      "slug": "electrolytic-capacitor",
+      "name": "Electrolytic Capacitor",
+      "category": "Capacitors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 21,
+      "url": "https://electronicsdokan.com/product/electrolytic-capacitor",
+      "images": [
+        "/images/products/ed-elcap.webp"
+      ]
+    },
+    {
+      "serial": 31,
+      "id": "ed-high-voltage-ceramic-disc-bulk-pack-vanxy",
+      "sku": "EDP-CAP-0031",
+      "slug": "high-voltage-ceramic-disc-capacitors-bulk-pack",
+      "name": "High Voltage Ceramic Disc Capacitors – Bulk Pack (VANXY)",
+      "category": "Capacitors",
+      "brand": "VANXY",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/high-voltage-ceramic-disc-capacitors-bulk-pack",
+      "images": [
+        "/images/products/ed-high-voltage-ceramic-disc-bulk-pack-vanxy.webp"
+      ]
+    },
+    {
+      "serial": 32,
+      "id": "sku-prod-1057",
+      "sku": "EDP-COM-0032",
+      "slug": "esp-01-esp8266-serial-wi-fi-transceiver-module-wireless-internet-iot-board",
+      "name": "ESP-01 ESP8266 Serial Wi-Fi Transceiver Module | Wireless Internet IoT Board",
+      "category": "Communication",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/esp-01-esp8266-serial-wi-fi-transceiver-module-wireless-internet-iot-board",
+      "images": [
+        "/images/products/sku-prod-1057.webp"
+      ]
+    },
+    {
+      "serial": 33,
+      "id": "sku-prod-1058",
+      "sku": "EDP-COM-0033",
+      "slug": "keshy-usb-to-esp-01-esp8266-adapter-board-serial-wireless-programmer-module",
+      "name": "KESHY USB to ESP-01 ESP8266 Adapter Board | Serial Wireless Programmer Module",
+      "category": "Communication",
+      "brand": "KESHY",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/keshy-usb-to-esp-01-esp8266-adapter-board-serial-wireless-programmer-module",
+      "images": [
+        "/images/products/sku-prod-1058.webp"
+      ]
+    },
+    {
+      "serial": 34,
+      "id": "item-sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board",
+      "sku": "EDP-COM-0034",
+      "slug": "sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board",
+      "name": "SIM800 GSM Module Bare Board | SIM Card Slot GSM/GPRS Circuit Board",
+      "category": "Communication",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board",
+      "images": [
+        "/images/products/item-sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board.webp"
+      ]
+    },
+    {
+      "serial": 35,
+      "id": "sku-prod-1077",
+      "sku": "EDP-COM-0035",
+      "slug": "sim900a-gsm-gprs-module-with-antenna-quad-band-serial-communication-module",
+      "name": "SIM900A GSM/GPRS Module with Antenna | Quad-Band Serial Communication Module",
+      "category": "Communication",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/sim900a-gsm-gprs-module-with-antenna-quad-band-serial-communication-module",
+      "images": [
+        "/images/products/sku-prod-1077.webp"
+      ]
+    },
+    {
+      "serial": 36,
+      "id": "item-0603-red-smd-led-620-625nm",
+      "sku": "EDP-CMP-0036",
+      "slug": "0603-red-smd-led-620-625nm",
+      "name": "0603 Red SMD LED 620-625nm (5 Pic)",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/0603-red-smd-led-620-625nm",
+      "images": [
+        "/images/products/item-0603-red-smd-led-620-625nm.webp"
+      ]
+    },
+    {
+      "serial": 37,
+      "id": "item-13001-npn-power-transistor-to-92",
+      "sku": "EDP-SEM-0037",
+      "slug": "13001-npn-power-transistor-to-92",
+      "name": "13001 NPN Power Transistor TO-92",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/13001-npn-power-transistor-to-92",
+      "images": [
+        "/images/products/item-13001-npn-power-transistor-to-92.webp"
+      ]
+    },
+    {
+      "serial": 38,
+      "id": "item-16-pin-dip-ic-socket-base",
+      "sku": "EDP-SEM-0038",
+      "slug": "16-pin-dip-ic-socket-base",
+      "name": "16-Pin DIP IC Socket / Base",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/16-pin-dip-ic-socket-base",
+      "images": [
+        "/images/products/item-16-pin-dip-ic-socket-base.webp"
+      ]
+    },
+    {
+      "serial": 39,
+      "id": "item-1n5399-rectifier-diode-1000v-1-5a-do-15",
+      "sku": "EDP-DIO-0039",
+      "slug": "1n5399-rectifier-diode-1000v-1-5a-do-15",
+      "name": "1N5399 Rectifier Diode 1000V 1.5A DO-15 (10Pcs)",
+      "category": "Diodes & Rectifiers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/1n5399-rectifier-diode-1000v-1-5a-do-15",
+      "images": [
+        "/images/products/item-1n5399-rectifier-diode-1000v-1-5a-do-15.webp"
+      ]
+    },
+    {
+      "serial": 40,
+      "id": "sku-prod-1093",
+      "sku": "EDP-SEM-0040",
+      "slug": "2n2219a-high-speed-npn-power-transistor-switching-and-amp-transistor",
+      "name": "2N2219A High Speed NPN Power Transistor (TO-39 Metal Can) | Switching & Amp Transistor",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/2n2219a-high-speed-npn-power-transistor-switching-and-amp-transistor",
+      "images": [
+        "/images/products/sku-prod-1093.webp"
+      ]
+    },
+    {
+      "serial": 41,
+      "id": "sku-prod-1088",
+      "sku": "EDP-AUD-0041",
+      "slug": "2n3866-high-frequency-npn-transistor-rf-amplifier-transistor",
+      "name": "2N3866 High Frequency NPN Transistor (TO-39 Metal Can) | RF Amplifier Transistor",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/2n3866-high-frequency-npn-transistor-rf-amplifier-transistor",
+      "images": [
+        "/images/products/sku-prod-1088.webp"
+      ]
+    },
+    {
+      "serial": 42,
+      "id": "sku-prod-1091",
+      "sku": "EDP-SEM-0042",
+      "slug": "2sc1971-c1971-npn-vhf-rf-power-transistor-6w-175mhz-rf-output-transistor",
+      "name": "2SC1971 C1971 NPN VHF RF Power Transistor (TO-220) | 6W 175MHz RF Output Transistor",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/2sc1971-c1971-npn-vhf-rf-power-transistor-6w-175mhz-rf-output-transistor",
+      "images": [
+        "/images/products/sku-prod-1091.webp"
+      ]
+    },
+    {
+      "serial": 43,
+      "id": "item-30f124-igbt-transistor-to-3p",
+      "sku": "EDP-SEM-0043",
+      "slug": "30f124-igbt-transistor-to-3p",
+      "name": "30F124 IGBT Transistor TO-3P",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/30f124-igbt-transistor-to-3p",
+      "images": [
+        "/images/products/item-30f124-igbt-transistor-to-3p.webp"
+      ]
+    },
+    {
+      "serial": 44,
+      "id": "item-40-pin-female-header-strip-2-54mm-single-row",
+      "sku": "EDP-CMP-0044",
+      "slug": "40-pin-header-strip-2-54mm-single-row",
+      "name": "40-Pin Header Strip 2.54mm Single Row",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/40-pin-header-strip-2-54mm-single-row",
+      "images": [
+        "/images/products/item-40-pin-female-header-strip-2-54mm-single-row.webp",
+        "/images/products/item-40-pin-male-header-strip-2-54mm-single-row.webp"
+      ]
+    },
+    {
+      "serial": 45,
+      "id": "item-60w-ceramic-cartridge-heater-65mm",
+      "sku": "EDP-CMP-0045",
+      "slug": "60w-ceramic-cartridge-heater-65mm",
+      "name": "60W Ceramic Cartridge Heater 65mm (Soldering Iron / 3D Printer Heating Element)",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/60w-ceramic-cartridge-heater-65mm",
+      "images": [
+        "/images/products/item-60w-ceramic-cartridge-heater-65mm.webp"
+      ]
+    },
+    {
+      "serial": 46,
+      "id": "item-7n60-n-channel-power-mosfet-7a-600v-to-220",
+      "sku": "EDP-SEM-0046",
+      "slug": "7n60-n-channel-power-mosfet-7a-600v-to-220",
+      "name": "7N60 N-Channel Power MOSFET 7A 600V TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/7n60-n-channel-power-mosfet-7a-600v-to-220",
+      "images": [
+        "/images/products/item-7n60-n-channel-power-mosfet-7a-600v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 47,
+      "id": "item-8-pin-dip-ic-socket-base",
+      "sku": "EDP-SEM-0047",
+      "slug": "8-pin-dip-ic-socket-base",
+      "name": "8-Pin DIP IC Socket / Base (SY)",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/8-pin-dip-ic-socket-base",
+      "images": [
+        "/images/products/item-8-pin-dip-ic-socket-base.webp"
+      ]
+    },
+    {
+      "serial": 48,
+      "id": "item-bd135-npn-power-transistor-to-126",
+      "sku": "EDP-SEM-0048",
+      "slug": "bd-d882-npn-pnp-power-transistor-to-126",
+      "name": "BD/D882 NPN/PNP Power Transistor TO-126",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 3,
+      "url": "https://electronicsdokan.com/product/bd-d882-npn-pnp-power-transistor-to-126",
+      "images": [
+        "/images/products/item-bd135-npn-power-transistor-to-126.webp",
+        "/images/products/item-bd139-npn-power-transistor-to-126.webp",
+        "/images/products/item-d882-npn-power-transistor-to-126.webp"
+      ]
+    },
+    {
+      "serial": 49,
+      "id": "item-bd140-pnp-power-transistor-to-126",
+      "sku": "EDP-SEM-0049",
+      "slug": "bd140-pnp-power-transistor-to-126",
+      "name": "BD140 PNP Power Transistor TO-126",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/bd140-pnp-power-transistor-to-126",
+      "images": [
+        "/images/products/item-bd140-pnp-power-transistor-to-126.webp"
+      ]
+    },
+    {
+      "serial": 50,
+      "id": "sku-prod-1090",
+      "sku": "EDP-SEM-0050",
+      "slug": "bf494-npn-medium-frequency-rf-transistor-am-fm-radio-oscillator-transistor",
+      "name": "BF494 NPN Medium Frequency RF Transistor (TO-92) | AM/FM Radio Oscillator Transistor",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/bf494-npn-medium-frequency-rf-transistor-am-fm-radio-oscillator-transistor",
+      "images": [
+        "/images/products/sku-prod-1090.webp"
+      ]
+    },
+    {
+      "serial": 51,
+      "id": "item-bt136-triac-4a-600v-to-220",
+      "sku": "EDP-SEM-0051",
+      "slug": "bt-triac-to-220",
+      "name": "BT Triac TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/bt-triac-to-220",
+      "images": [
+        "/images/products/item-bt136-triac-4a-600v-to-220.webp",
+        "/images/products/item-bt137-triac-8a-600v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 52,
+      "id": "sku-prod-1094",
+      "sku": "EDP-SEM-0052",
+      "slug": "cd40174be-cmos-hex-d-type-flip-flop-ic-logic-ic-component",
+      "name": "CD40174BE CMOS Hex D-Type Flip-Flop IC (DIP-16) | Logic IC Component",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cd40174be-cmos-hex-d-type-flip-flop-ic-logic-ic-component",
+      "images": [
+        "/images/products/sku-prod-1094.webp"
+      ]
+    },
+    {
+      "serial": 53,
+      "id": "item-e13003-2-npn-power-transistor-to-126",
+      "sku": "EDP-SEM-0053",
+      "slug": "e13003-2-npn-power-transistor-to-126",
+      "name": "E13003-2 NPN Power Transistor TO-126",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/e13003-2-npn-power-transistor-to-126",
+      "images": [
+        "/images/products/item-e13003-2-npn-power-transistor-to-126.webp"
+      ]
+    },
+    {
+      "serial": 54,
+      "id": "sku-prod-1087",
+      "sku": "EDP-SEM-0054",
+      "slug": "fga25n120-1200v-25a-igbt-transistor-high-power-switching-induction-cooker-igbt",
+      "name": "FGA25N120 1200V 25A IGBT Transistor | High Power Switching Induction Cooker IGBT",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/fga25n120-1200v-25a-igbt-transistor-high-power-switching-induction-cooker-igbt",
+      "images": [
+        "/images/products/sku-prod-1087.webp"
+      ]
+    },
+    {
+      "serial": 55,
+      "id": "item-fqpf12n60c-n-channel-power-mosfet-to-220f",
+      "sku": "EDP-SEM-0055",
+      "slug": "fqpf12n60c-n-channel-power-mosfet-to-220f",
+      "name": "FQPF12N60C N-Channel Power MOSFET TO-220F",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/fqpf12n60c-n-channel-power-mosfet-to-220f",
+      "images": [
+        "/images/products/item-fqpf12n60c-n-channel-power-mosfet-to-220f.webp"
+      ]
+    },
+    {
+      "serial": 56,
+      "id": "item-fr607-fast-recovery-rectifier-diode-6a-1000v",
+      "sku": "EDP-DIO-0056",
+      "slug": "fr607-fast-recovery-rectifier-diode-6a-1000v",
+      "name": "FR607 Fast Recovery Rectifier Diode 6A 1000V (Pack)",
+      "category": "Diodes & Rectifiers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/fr607-fast-recovery-rectifier-diode-6a-1000v",
+      "images": [
+        "/images/products/item-fr607-fast-recovery-rectifier-diode-6a-1000v.webp"
+      ]
+    },
+    {
+      "serial": 57,
+      "id": "item-glass-reed-switch-magnetic-sensor",
+      "sku": "EDP-CMP-0057",
+      "slug": "glass-reed-switch-magnetic-sensor",
+      "name": "Glass Reed Switch Magnetic Sensor (Liludin)",
+      "category": "Components",
+      "brand": "Liludin",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/glass-reed-switch-magnetic-sensor",
+      "images": [
+        "/images/products/item-glass-reed-switch-magnetic-sensor.webp"
+      ]
+    },
+    {
+      "serial": 58,
+      "id": "item-i-shaped-dip-power-inductor-coil",
+      "sku": "EDP-CMP-0058",
+      "slug": "i-shaped-dip-power-inductor-coil",
+      "name": "I-Shaped DIP Power Inductor Coil",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/i-shaped-dip-power-inductor-coil",
+      "images": [
+        "/images/products/item-i-shaped-dip-power-inductor-coil.webp"
+      ]
+    },
+    {
+      "serial": 59,
+      "id": "item-irf224-n-channel-power-mosfet-3-8a-250v-to-220",
+      "sku": "EDP-SEM-0059",
+      "slug": "irf224-n-channel-power-mosfet-3-8a-250v-to-220",
+      "name": "IRF224 N-Channel Power MOSFET 3.8A 250V TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/irf224-n-channel-power-mosfet-3-8a-250v-to-220",
+      "images": [
+        "/images/products/item-irf224-n-channel-power-mosfet-3-8a-250v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 60,
+      "id": "item-irf770-n-channel-power-mosfet-8a-400v-to-220",
+      "sku": "EDP-SEM-0060",
+      "slug": "irf770-n-channel-power-mosfet-8a-400v-to-220",
+      "name": "IRF770 N-Channel Power MOSFET 8A 400V TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/irf770-n-channel-power-mosfet-8a-400v-to-220",
+      "images": [
+        "/images/products/item-irf770-n-channel-power-mosfet-8a-400v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 61,
+      "id": "item-irfz44n-n-channel-power-mosfet-to-220",
+      "sku": "EDP-SEM-0061",
+      "slug": "irfz44n-n-channel-power-mosfet-to-220",
+      "name": "IRFZ44N N-Channel Power MOSFET TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/irfz44n-n-channel-power-mosfet-to-220",
+      "images": [
+        "/images/products/item-irfz44n-n-channel-power-mosfet-to-220.webp"
+      ]
+    },
+    {
+      "serial": 62,
+      "id": "item-kbpc5010-bridge-rectifier-50a-1000v-metal-case",
+      "sku": "EDP-DIO-0062",
+      "slug": "kbpc5010-bridge-rectifier-50a-1000v-metal-case",
+      "name": "KBPC5010 Bridge Rectifier 50A 1000V Metal Case",
+      "category": "Diodes & Rectifiers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/kbpc5010-bridge-rectifier-50a-1000v-metal-case",
+      "images": [
+        "/images/products/item-kbpc5010-bridge-rectifier-50a-1000v-metal-case.webp"
+      ]
+    },
+    {
+      "serial": 63,
+      "id": "item-lm338t-adjustable-voltage-regulator-to-220",
+      "sku": "EDP-CMP-0063",
+      "slug": "lm338t-adjustable-voltage-regulator-to-220",
+      "name": "LM338T Adjustable Voltage Regulator TO-220 (5A)",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/lm338t-adjustable-voltage-regulator-to-220",
+      "images": [
+        "/images/products/item-lm338t-adjustable-voltage-regulator-to-220.webp"
+      ]
+    },
+    {
+      "serial": 64,
+      "id": "item-mps2907-pnp-general-purpose-transistor-to-92",
+      "sku": "EDP-SEM-0064",
+      "slug": "mps2907-pnp-general-purpose-transistor-to-92",
+      "name": "MPS2907 PNP General Purpose Transistor TO-92",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mps2907-pnp-general-purpose-transistor-to-92",
+      "images": [
+        "/images/products/item-mps2907-pnp-general-purpose-transistor-to-92.webp"
+      ]
+    },
+    {
+      "serial": 65,
+      "id": "item-piezo-contact-microphone-sensor-disc-with-wires",
+      "sku": "EDP-CMP-0065",
+      "slug": "piezo-contact-microphone-sensor-disc-with-wires",
+      "name": "Piezo Contact Microphone Sensor Disc with Wires (Pack)",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/piezo-contact-microphone-sensor-disc-with-wires",
+      "images": [
+        "/images/products/item-piezo-contact-microphone-sensor-disc-with-wires.webp"
+      ]
+    },
+    {
+      "serial": 66,
+      "id": "item-tyn612-scr-thyristor-12a-600v-to-220",
+      "sku": "EDP-SEM-0066",
+      "slug": "tyn612-scr-thyristor-12a-600v-to-220",
+      "name": "TYN612 SCR Thyristor 12A 600V TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tyn612-scr-thyristor-12a-600v-to-220",
+      "images": [
+        "/images/products/item-tyn612-scr-thyristor-12a-600v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 67,
+      "id": "item-vs1838b-infrared-ir-receiver-sensor",
+      "sku": "EDP-CMP-0067",
+      "slug": "vs1838b-infrared-ir-receiver-sensor",
+      "name": "VS1838B Infrared IR Receiver Sensor",
+      "category": "Components",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/vs1838b-infrared-ir-receiver-sensor",
+      "images": [
+        "/images/products/item-vs1838b-infrared-ir-receiver-sensor.webp"
+      ]
+    },
+    {
+      "serial": 68,
+      "id": "sku-prod-1066",
+      "sku": "EDP-DSP-0068",
+      "slug": "1602-16-2-character-lcd-display-module-hd44780-standard-screen",
+      "name": "1602 16×2 Character LCD Display Module (Green Backlight) | HD44780 Standard Screen",
+      "category": "Display",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/1602-16-2-character-lcd-display-module-hd44780-standard-screen",
+      "images": [
+        "/images/products/sku-prod-1066.webp"
+      ]
+    },
+    {
+      "serial": 69,
+      "id": "sku-prod-1067",
+      "sku": "EDP-DSP-0069",
+      "slug": "2004-20-4-character-lcd-display-module-hd44780-large-screen",
+      "name": "2004 20×4 Character LCD Display Module (Blue Screen 5V) | HD44780 Large Screen",
+      "category": "Display",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/2004-20-4-character-lcd-display-module-hd44780-large-screen",
+      "images": [
+        "/images/products/sku-prod-1067.webp"
+      ]
+    },
+    {
+      "serial": 70,
+      "id": "sku-prod-1071",
+      "sku": "EDP-DEV-0070",
+      "slug": "esp32-devkit-board-cp2102-38-pin-micro-usb-wifi-bluetooth-dual-core-iot-board",
+      "name": "ESP32 DevKit Board CP2102 38-Pin Micro USB | WiFi + Bluetooth Dual-Core IoT Board",
+      "category": "Development Boards",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/esp32-devkit-board-cp2102-38-pin-micro-usb-wifi-bluetooth-dual-core-iot-board",
+      "images": [
+        "/images/products/sku-prod-1071.webp"
+      ]
+    },
+    {
+      "serial": 71,
+      "id": "item-esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb",
+      "sku": "EDP-DEV-0071",
+      "slug": "esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb",
+      "name": "ESP8266 NodeMCU Development Board | WiFi IoT Board with Type-C USB",
+      "category": "Development Boards",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb",
+      "images": [
+        "/images/products/item-esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb.webp"
+      ]
+    },
+    {
+      "serial": 72,
+      "id": "item-iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module",
+      "sku": "EDP-MOD-0072",
+      "slug": "iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module",
+      "name": "IIC/I2C Interface Adapter Board for LCD1602 | HW-61 Serial LCD Adaptation Module",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module",
+      "images": [
+        "/images/products/item-iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module.webp"
+      ]
+    },
+    {
+      "serial": 73,
+      "id": "item-szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board",
+      "sku": "EDP-DEV-0073",
+      "slug": "szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board",
+      "name": "SZYTF Nano3 Compatible Mini Development Board | LGT8F328P Arduino Nano Compatible Type-C Board",
+      "category": "Development Boards",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board",
+      "images": [
+        "/images/products/item-szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board.webp"
+      ]
+    },
+    {
+      "serial": 74,
+      "id": "item-db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35",
+      "sku": "EDP-DIO-0074",
+      "slug": "db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35",
+      "name": "DB-3 DIAC Trigger Diode Bidirectional 2A 28-36V DO-35",
+      "category": "Diodes & Rectifiers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35",
+      "images": [
+        "/images/products/item-db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35.webp"
+      ]
+    },
+    {
+      "serial": 75,
+      "id": "item-stps2045ct-dual-schottky-rectifier-20a-45v-to-220",
+      "sku": "EDP-DIO-0075",
+      "slug": "stps2045ct-dual-schottky-rectifier-20a-45v-to-220",
+      "name": "STPS2045CT Dual Schottky Rectifier 20A 45V TO-220",
+      "category": "Diodes & Rectifiers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/stps2045ct-dual-schottky-rectifier-20a-45v-to-220",
+      "images": [
+        "/images/products/item-stps2045ct-dual-schottky-rectifier-20a-45v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 76,
+      "id": "item-8-8-red-led-dot-matrix-display-module",
+      "sku": "EDP-DSP-0076",
+      "slug": "8-8-red-led-dot-matrix-display-module",
+      "name": "8×8 Red LED Dot Matrix Display Module (MAX7219)",
+      "category": "Display",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/8-8-red-led-dot-matrix-display-module",
+      "images": [
+        "/images/products/item-8-8-red-led-dot-matrix-display-module.webp"
+      ]
+    },
+    {
+      "serial": 77,
+      "id": "item-max7219-4-in-1-dot-matrix-led-display-module",
+      "sku": "EDP-DSP-0077",
+      "slug": "max7219-4-in-1-dot-matrix-led-display-module",
+      "name": "MAX7219 4-in-1 Dot Matrix LED Display Module",
+      "category": "Display",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/max7219-4-in-1-dot-matrix-led-display-module",
+      "images": [
+        "/images/products/item-max7219-4-in-1-dot-matrix-led-display-module.webp"
+      ]
+    },
+    {
+      "serial": 78,
+      "id": "item-10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led",
+      "sku": "EDP-DIY-0078",
+      "slug": "10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led",
+      "name": "10W High Power COB LED Chip (White) | DIY Floodlight & Spotlight LED",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led",
+      "images": [
+        "/images/products/item-10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led.webp"
+      ]
+    },
+    {
+      "serial": 79,
+      "id": "sku-prod-1078",
+      "sku": "EDP-DIY-0079",
+      "slug": "4-digit-led-digital-clock-diy-kit-stc12c2052-electronic-soldering-practice-kit-with-alarm",
+      "name": "4-Digit LED Digital Clock DIY Kit | STC12C2052 Electronic Soldering Practice Kit with Alarm",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/4-digit-led-digital-clock-diy-kit-stc12c2052-electronic-soldering-practice-kit-with-alarm",
+      "images": [
+        "/images/products/sku-prod-1078.webp"
+      ]
+    },
+    {
+      "serial": 80,
+      "id": "item-4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs",
+      "sku": "EDP-DIY-0080",
+      "slug": "4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs",
+      "name": "4-Head Ultrasonic Mist Maker Driver Module | USB Atomizer Fogger Board with Ceramic Discs",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs",
+      "images": [
+        "/images/products/item-4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs.webp"
+      ]
+    },
+    {
+      "serial": 81,
+      "id": "sku-prod-1060",
+      "sku": "EDP-DIO-0081",
+      "slug": "4-5v-650nm-red-laser-dot-diode-head-module-5mw-laser-transmitter-component",
+      "name": "4.5V 650nm Red Laser Dot Diode Head Module | 5mW Laser Transmitter Component",
+      "category": "Diodes & Rectifiers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/4-5v-650nm-red-laser-dot-diode-head-module-5mw-laser-transmitter-component",
+      "images": [
+        "/images/products/sku-prod-1060.webp"
+      ]
+    },
+    {
+      "serial": 82,
+      "id": "sku-prod-1064",
+      "sku": "EDP-DIY-0082",
+      "slug": "775-motor-water-pump-diy-kit-plastic-impeller-housing-and-screws-set",
+      "name": "775 Motor Water Pump DIY Kit | Plastic Impeller Housing & Screws Set (Pink)",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/775-motor-water-pump-diy-kit-plastic-impeller-housing-and-screws-set",
+      "images": [
+        "/images/products/sku-prod-1064.webp"
+      ]
+    },
+    {
+      "serial": 83,
+      "id": "item-czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb",
+      "sku": "EDP-DIY-0083",
+      "slug": "czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb",
+      "name": "CZB6721960 FM/AM Radio Receiver DIY Soldering Kit | Electronic Learning Kit with PCB",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb",
+      "images": [
+        "/images/products/item-czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb.webp"
+      ]
+    },
+    {
+      "serial": 84,
+      "id": "item-elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit",
+      "sku": "EDP-DIY-0084",
+      "slug": "elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit",
+      "name": "ELEC&Lifes 10-LED Chaser Light DIY Kit | NE555 Sequential LED Running Light Soldering Kit",
+      "category": "Diy Electronics",
+      "brand": "ELEC&Lifes",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit",
+      "images": [
+        "/images/products/item-elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit.webp"
+      ]
+    },
+    {
+      "serial": 85,
+      "id": "sku-prod-1075",
+      "sku": "EDP-DIY-0085",
+      "slug": "goat-sh-e-879-3-digit-led-clock-diy-kit-hour-minute-second-display-soldering-kit",
+      "name": "GoAT SH-E 879 3-Digit LED Clock DIY Kit | Hour Minute Second Display Soldering Kit",
+      "category": "Diy Electronics",
+      "brand": "GoAT",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/goat-sh-e-879-3-digit-led-clock-diy-kit-hour-minute-second-display-soldering-kit",
+      "images": [
+        "/images/products/sku-prod-1075.webp"
+      ]
+    },
+    {
+      "serial": 86,
+      "id": "item-hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit",
+      "sku": "EDP-DIY-0086",
+      "slug": "hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit",
+      "name": "HYDZ Wireless Charging Coil Module DIY Kit | Induction Charger Circuit Kit",
+      "category": "Diy Electronics",
+      "brand": "HYDZ",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit",
+      "images": [
+        "/images/products/item-hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit.webp"
+      ]
+    },
+    {
+      "serial": 87,
+      "id": "sku-prod-1074",
+      "sku": "EDP-DIY-0087",
+      "slug": "javino-dc3-5v-high-voltage-generator-diy-kit-mini-spark-generator-kit",
+      "name": "Javino DC3-5V High Voltage Generator DIY Kit | Mini Spark Generator Kit",
+      "category": "Diy Electronics",
+      "brand": "JAVINO",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/javino-dc3-5v-high-voltage-generator-diy-kit-mini-spark-generator-kit",
+      "images": [
+        "/images/products/sku-prod-1074.webp"
+      ]
+    },
+    {
+      "serial": 88,
+      "id": "item-javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit",
+      "sku": "EDP-DIY-0088",
+      "slug": "javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit",
+      "name": "Javino High Voltage Generator Module with Heatsink | ZVS Driver Boost Kit",
+      "category": "Diy Electronics",
+      "brand": "JAVINO",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit",
+      "images": [
+        "/images/products/item-javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit.webp"
+      ]
+    },
+    {
+      "serial": 89,
+      "id": "item-keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit",
+      "sku": "EDP-DIY-0089",
+      "slug": "keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit",
+      "name": "KESHY FM Stereo Radio DIY Kit | 76-108MHz Wireless Transmitter Receiver Soldering Kit",
+      "category": "Diy Electronics",
+      "brand": "KESHY",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit",
+      "images": [
+        "/images/products/item-keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit.webp"
+      ]
+    },
+    {
+      "serial": 90,
+      "id": "item-mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects",
+      "sku": "EDP-DIY-0090",
+      "slug": "mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects",
+      "name": "Mini Diaphragm Water Pump | DC Motor Driven Small Pump for DIY Projects",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects",
+      "images": [
+        "/images/products/item-mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects.webp"
+      ]
+    },
+    {
+      "serial": 91,
+      "id": "item-mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board",
+      "sku": "EDP-DIY-0091",
+      "slug": "mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board",
+      "name": "Mini Vibration Atomizer Mist Maker Module with Casing | USB Type-C Humidifier Driver Board",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board",
+      "images": [
+        "/images/products/item-mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board.webp"
+      ]
+    },
+    {
+      "serial": 92,
+      "id": "sku-prod-1073",
+      "sku": "EDP-DIY-0092",
+      "slug": "rf-300-micro-dc-solar-fan-motor-dc-3-6v-low-power-high-efficiency-motor-for-diy-projects",
+      "name": "RF-300 Micro DC Solar Fan Motor DC 3-6V | Low Power High Efficiency Motor for DIY Projects",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/rf-300-micro-dc-solar-fan-motor-dc-3-6v-low-power-high-efficiency-motor-for-diy-projects",
+      "images": [
+        "/images/products/sku-prod-1073.webp"
+      ]
+    },
+    {
+      "serial": 93,
+      "id": "item-white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting",
+      "sku": "EDP-DIY-0093",
+      "slug": "white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting",
+      "name": "White DC 4V 5W COB LED Ring Light | Round High-Power LED Chip for DIY Lighting",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting",
+      "images": [
+        "/images/products/item-white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting.webp"
+      ]
+    },
+    {
+      "serial": 94,
+      "id": "sku-prod-1076",
+      "sku": "EDP-DIY-0094",
+      "slug": "winwin-rotating-led-electronic-clock-diy-kit-round-pcb-soldering-kit",
+      "name": "WinWin Rotating LED Electronic Clock DIY Kit | Round PCB Soldering Kit",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/winwin-rotating-led-electronic-clock-diy-kit-round-pcb-soldering-kit",
+      "images": [
+        "/images/products/sku-prod-1076.webp"
+      ]
+    },
+    {
+      "serial": 95,
+      "id": "item-l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring",
+      "sku": "EDP-EBP-0095",
+      "slug": "l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring",
+      "name": "L-faster 250W Brushed DC Motor Speed Controller Box | Electric Bike Scooter Controller with Full Wiring",
+      "category": "Electric Bike Parts",
+      "brand": "L-faster",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring",
+      "images": [
+        "/images/products/item-l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring.webp"
+      ]
+    },
+    {
+      "serial": 96,
+      "id": "item-l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket",
+      "sku": "EDP-EBP-0096",
+      "slug": "l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket",
+      "name": "L-faster Electric Bike Conversion Kit Accessories | 250W Motor Kit with Chain, Keys, Throttle & Bracket",
+      "category": "Electric Bike Parts",
+      "brand": "L-faster",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket",
+      "images": [
+        "/images/products/item-l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket.webp"
+      ]
+    },
+    {
+      "serial": 97,
+      "id": "item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor",
+      "sku": "EDP-MTR-0097",
+      "slug": "htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor",
+      "name": "HTC-2 Digital Clock Alarm & Hygrometer Thermometer | LCD Temperature Humidity Monitor with Wired Sensor",
+      "category": "Meters & Testers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor",
+      "images": [
+        "/images/products/item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor.webp"
+      ]
+    },
+    {
+      "serial": 98,
+      "id": "item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter",
+      "sku": "EDP-MTR-0098",
+      "slug": "mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter",
+      "name": "Mini LCD Digital Thermometer Hygrometer with Probe | Compact Temperature Humidity Meter",
+      "category": "Meters & Testers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter",
+      "images": [
+        "/images/products/item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter.webp"
+      ]
+    },
+    {
+      "serial": 99,
+      "id": "item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter",
+      "sku": "EDP-MTR-0099",
+      "slug": "mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter",
+      "name": "MT87 Digital Clamp Meter | AC/DC Current Voltage Clamp Multimeter",
+      "category": "Meters & Testers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter",
+      "images": [
+        "/images/products/item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp"
+      ]
+    },
+    {
+      "serial": 100,
+      "id": "item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads",
+      "sku": "EDP-MTR-0100",
+      "slug": "uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads",
+      "name": "UNI-T UT33D+ Digital Multimeter | AC/DC Voltage Current Resistance Meter with Test Leads",
+      "category": "Meters & Testers",
+      "brand": "UNI-T",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads",
+      "images": [
+        "/images/products/item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads.webp"
+      ]
+    },
+    {
+      "serial": 101,
+      "id": "item-usb-power-capacity-tester-voltage-current-meter-with-data-display",
+      "sku": "EDP-MTR-0101",
+      "slug": "usb-power-capacity-tester-voltage-current-meter-with-data-display",
+      "name": "USB Power Capacity Tester | Voltage Current Meter with Data Display",
+      "category": "Meters & Testers",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/usb-power-capacity-tester-voltage-current-meter-with-data-display",
+      "images": [
+        "/images/products/item-usb-power-capacity-tester-voltage-current-meter-with-data-display.webp"
+      ]
+    },
+    {
+      "serial": 102,
+      "id": "item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob",
+      "sku": "EDP-MOD-0102",
+      "slug": "4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob",
+      "name": "4-Channel Wireless RF Remote Control Receiver Module + Transmitter Fob (315/433MHz)",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob",
+      "images": [
+        "/images/products/item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob.webp"
+      ]
+    },
+    {
+      "serial": 103,
+      "id": "item-4n35-optocoupler-dip-6",
+      "sku": "EDP-SEM-0103",
+      "slug": "4n35-optocoupler-dip-6",
+      "name": "4N35 Optocoupler DIP-6 (GOHJMY)",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/4n35-optocoupler-dip-6",
+      "images": [
+        "/images/products/item-4n35-optocoupler-dip-6.webp"
+      ]
+    },
+    {
+      "serial": 104,
+      "id": "item-74hc14d-hex-schmitt-trigger-inverter-soic-14",
+      "sku": "EDP-MOD-0104",
+      "slug": "74hc14d-hex-schmitt-trigger-inverter-soic-14",
+      "name": "74HC14D Hex Schmitt-Trigger Inverter SOIC-14 (PUMUDDSY)",
+      "category": "Modules",
+      "brand": "PUMUDDSY",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/74hc14d-hex-schmitt-trigger-inverter-soic-14",
+      "images": [
+        "/images/products/item-74hc14d-hex-schmitt-trigger-inverter-soic-14.webp"
+      ]
+    },
+    {
+      "serial": 105,
+      "id": "sku-prod-1065",
+      "sku": "EDP-MOD-0105",
+      "slug": "775-high-speed-dc-motor-12v-21000rpm-double-ball-bearing-motor-for-diy-drill-and-saw",
+      "name": "775 High Speed DC Motor 12V 21000RPM | Double Ball Bearing Motor for DIY Drill & Saw",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/775-high-speed-dc-motor-12v-21000rpm-double-ball-bearing-motor-for-diy-drill-and-saw",
+      "images": [
+        "/images/products/sku-prod-1065.webp"
+      ]
+    },
+    {
+      "serial": 106,
+      "id": "item-ap8012h-offline-switching-power-supply-pwm-ic-dip-8",
+      "sku": "EDP-SEM-0106",
+      "slug": "ap8012h-offline-switching-power-supply-pwm-ic-dip-8",
+      "name": "AP8012H Offline Switching Power Supply PWM IC DIP-8",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ap8012h-offline-switching-power-supply-pwm-ic-dip-8",
+      "images": [
+        "/images/products/item-ap8012h-offline-switching-power-supply-pwm-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 107,
+      "id": "item-bta12-600b-triac-12a-600v-to-220",
+      "sku": "EDP-SEM-0107",
+      "slug": "bta-triac-600v-to-220",
+      "name": "BTA Triac 600V TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/bta-triac-600v-to-220",
+      "images": [
+        "/images/products/item-bta12-600b-triac-12a-600v-to-220.webp",
+        "/images/products/item-bta16-600b-triac-16a-600v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 108,
+      "id": "item-bta41-800b-triac-40a-800v-to-3p",
+      "sku": "EDP-SEM-0108",
+      "slug": "bta41-800b-triac-40a-800v-to-3p",
+      "name": "BTA41-800B Triac 40A 800V TO-3P (Zhuang One Electronics)",
+      "category": "Semiconductors",
+      "brand": "Zhuang One",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/bta41-800b-triac-40a-800v-to-3p",
+      "images": [
+        "/images/products/item-bta41-800b-triac-40a-800v-to-3p.webp"
+      ]
+    },
+    {
+      "serial": 109,
+      "id": "item-ca-1235-adjustable-dc-dc-buck-converter-module-3a",
+      "sku": "EDP-MOD-0109",
+      "slug": "ca-1235-adjustable-dc-dc-buck-converter-module-3a",
+      "name": "CA-1235 Adjustable DC-DC Buck Converter Module 3A (EGBO)",
+      "category": "Modules",
+      "brand": "EGBO",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ca-1235-adjustable-dc-dc-buck-converter-module-3a",
+      "images": [
+        "/images/products/item-ca-1235-adjustable-dc-dc-buck-converter-module-3a.webp"
+      ]
+    },
+    {
+      "serial": 110,
+      "id": "item-cd4011be-quad-2-input-nand-gate-ic-dip-14",
+      "sku": "EDP-SEM-0110",
+      "slug": "cd4011be-quad-2-input-nand-gate-ic-dip-14",
+      "name": "CD4011BE Quad 2-Input NAND Gate IC DIP-14",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cd4011be-quad-2-input-nand-gate-ic-dip-14",
+      "images": [
+        "/images/products/item-cd4011be-quad-2-input-nand-gate-ic-dip-14.webp"
+      ]
+    },
+    {
+      "serial": 111,
+      "id": "item-cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original",
+      "sku": "EDP-SEM-0111",
+      "slug": "cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original",
+      "name": "CD4017 CD4017B CD4017BE 4017 DECADE COUNTER DIVIDER IC new original",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original",
+      "images": [
+        "/images/products/item-cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original.webp"
+      ]
+    },
+    {
+      "serial": 112,
+      "id": "item-cd4017be-decade-counter-divider-ic-dip-16",
+      "sku": "EDP-SEM-0112",
+      "slug": "cd4017be-decade-counter-divider-ic-dip-16",
+      "name": "CD4017BE Decade Counter/Divider IC DIP-16",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cd4017be-decade-counter-divider-ic-dip-16",
+      "images": [
+        "/images/products/item-cd4017be-decade-counter-divider-ic-dip-16.webp"
+      ]
+    },
+    {
+      "serial": 113,
+      "id": "item-compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board",
+      "sku": "EDP-MOD-0113",
+      "slug": "compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board",
+      "name": "Compact PWM DC Motor Speed Controller Module | Mini Adjustable Speed Control Board",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board",
+      "images": [
+        "/images/products/item-compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board.webp"
+      ]
+    },
+    {
+      "serial": 114,
+      "id": "item-cs75n75-n-channel-power-mosfet-75a-75v-to-220",
+      "sku": "EDP-SEM-0114",
+      "slug": "cs75n75-n-channel-power-mosfet-75a-75v-to-220",
+      "name": "CS75N75 N-Channel Power MOSFET 75A 75V TO-220",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cs75n75-n-channel-power-mosfet-75a-75v-to-220",
+      "images": [
+        "/images/products/item-cs75n75-n-channel-power-mosfet-75a-75v-to-220.webp"
+      ]
+    },
+    {
+      "serial": 115,
+      "id": "item-cxd9883am-sop-ic",
+      "sku": "EDP-SEM-0115",
+      "slug": "cxd9883am-sop-ic",
+      "name": "CXD9883AM SOP IC (Sony)",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cxd9883am-sop-ic",
+      "images": [
+        "/images/products/item-cxd9883am-sop-ic.webp"
+      ]
+    },
+    {
+      "serial": 116,
+      "id": "sku-prod-1069",
+      "sku": "EDP-MOD-0116",
+      "slug": "dc-0-25v-voltage-sensor-module-voltage-divider-board-for-arduino",
+      "name": "DC 0-25V Voltage Sensor Module | Voltage Divider Board for Arduino",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/dc-0-25v-voltage-sensor-module-voltage-divider-board-for-arduino",
+      "images": [
+        "/images/products/sku-prod-1069.webp"
+      ]
+    },
+    {
+      "serial": 117,
+      "id": "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a",
+      "sku": "EDP-MOD-0117",
+      "slug": "dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a",
+      "name": "DC-DC Buck Module Red Board USB Output DC6-20V to 5V 3A",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a",
+      "images": [
+        "/images/products/item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+        "/images/products/item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp"
+      ]
+    },
+    {
+      "serial": 118,
+      "id": "item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe",
+      "sku": "EDP-MOD-0118",
+      "slug": "dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe",
+      "name": "DM-W3002 Digital Temperature Controller Module | 12V/220V Relay Thermostat with Sensor Probe",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe",
+      "images": [
+        "/images/products/item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe.webp"
+      ]
+    },
+    {
+      "serial": 119,
+      "id": "item-dual-usb-dc-dc-step-down-converter-module",
+      "sku": "EDP-MOD-0119",
+      "slug": "dual-usb-dc-dc-step-down-converter-module",
+      "name": "Dual USB DC-DC Step Down Converter Module (JAVINO)",
+      "category": "Modules",
+      "brand": "JAVINO",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/dual-usb-dc-dc-step-down-converter-module",
+      "images": [
+        "/images/products/item-dual-usb-dc-dc-step-down-converter-module.webp"
+      ]
+    },
+    {
+      "serial": 120,
+      "id": "item-ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb",
+      "sku": "EDP-SEM-0120",
+      "slug": "ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb",
+      "name": "IR2113 Dual MOSFET Driver Module Board | High/Low Side Gate Driver PCB",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb",
+      "images": [
+        "/images/products/item-ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb.webp"
+      ]
+    },
+    {
+      "serial": 121,
+      "id": "item-javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller",
+      "sku": "EDP-SEM-0121",
+      "slug": "javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller",
+      "name": "Javino 2000W SCR Voltage Regulator Module | High Power AC Motor Speed & Dimmer Controller",
+      "category": "Semiconductors",
+      "brand": "JAVINO",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller",
+      "images": [
+        "/images/products/item-javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller.webp"
+      ]
+    },
+    {
+      "serial": 122,
+      "id": "item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a",
+      "sku": "EDP-MOD-0122",
+      "slug": "jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a",
+      "name": "JDQ-01 Automatic Power/Battery Backup Switch Module 5V-48V 10A (SY)",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a",
+      "images": [
+        "/images/products/item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a.webp"
+      ]
+    },
+    {
+      "serial": 123,
+      "id": "item-lm324n-quad-operational-amplifier-ic-dip-14",
+      "sku": "EDP-AUD-0123",
+      "slug": "lm324n-quad-operational-amplifier-ic-dip-14",
+      "name": "LM324N Quad Operational Amplifier IC DIP-14",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/lm324n-quad-operational-amplifier-ic-dip-14",
+      "images": [
+        "/images/products/item-lm324n-quad-operational-amplifier-ic-dip-14.webp"
+      ]
+    },
+    {
+      "serial": 124,
+      "id": "item-lm358p-dual-operational-amplifier-ic-dip-8",
+      "sku": "EDP-AUD-0124",
+      "slug": "lm358p-dual-operational-amplifier-ic-dip-8",
+      "name": "LM358P Dual Operational Amplifier IC DIP-8",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/lm358p-dual-operational-amplifier-ic-dip-8",
+      "images": [
+        "/images/products/item-lm358p-dual-operational-amplifier-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 125,
+      "id": "item-lm3914n-1-led-dot-bar-display-driver-ic-dip-18",
+      "sku": "EDP-SEM-0125",
+      "slug": "lm3914n-1-led-dot-bar-display-driver-ic-dip-18",
+      "name": "LM3914N-1 LED Dot/Bar Display Driver IC DIP-18",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/lm3914n-1-led-dot-bar-display-driver-ic-dip-18",
+      "images": [
+        "/images/products/item-lm3914n-1-led-dot-bar-display-driver-ic-dip-18.webp"
+      ]
+    },
+    {
+      "serial": 126,
+      "id": "item-lm393-dual-voltage-comparator-ic-dip-8",
+      "sku": "EDP-SEM-0126",
+      "slug": "lm393-dual-voltage-comparator-ic-dip-8",
+      "name": "LM393 Dual Voltage Comparator IC DIP-8",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/lm393-dual-voltage-comparator-ic-dip-8",
+      "images": [
+        "/images/products/item-lm393-dual-voltage-comparator-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 127,
+      "id": "item-mc-38-wired-door-window-magnetic-sensor-switch",
+      "sku": "EDP-MOD-0127",
+      "slug": "mc-38-wired-door-window-magnetic-sensor-switch",
+      "name": "MC-38 Wired Door Window Magnetic Sensor Switch (Tdidaz)",
+      "category": "Modules",
+      "brand": "Tdidaz",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mc-38-wired-door-window-magnetic-sensor-switch",
+      "images": [
+        "/images/products/item-mc-38-wired-door-window-magnetic-sensor-switch.webp"
+      ]
+    },
+    {
+      "serial": 128,
+      "id": "item-mcp602-mcp6002-dual-op-amp-ic-dip-8",
+      "sku": "EDP-SEM-0128",
+      "slug": "mcp602-mcp6002-dual-op-amp-ic-dip-8",
+      "name": "MCP602 / MCP6002 Dual Op-Amp IC DIP-8",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mcp602-mcp6002-dual-op-amp-ic-dip-8",
+      "images": [
+        "/images/products/item-mcp602-mcp6002-dual-op-amp-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 129,
+      "id": "item-mfrc-522-rfid-rc522-ic-card-reader-module-kit",
+      "sku": "EDP-SEM-0129",
+      "slug": "mfrc-522-rfid-rc522-ic-card-reader-module-kit",
+      "name": "MFRC-522 RFID RC522 IC Card Reader Module Kit",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mfrc-522-rfid-rc522-ic-card-reader-module-kit",
+      "images": [
+        "/images/products/item-mfrc-522-rfid-rc522-ic-card-reader-module-kit.webp"
+      ]
+    },
+    {
+      "serial": 130,
+      "id": "sku-prod-1082",
+      "sku": "EDP-MOD-0130",
+      "slug": "mh-mini-360-dc-dc-step-down-buck-converter-module-ultra-small-power-step-down-board",
+      "name": "MH-Mini-360 DC-DC Step-Down Buck Converter Module | Ultra Small Power Step-Down Board",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mh-mini-360-dc-dc-step-down-buck-converter-module-ultra-small-power-step-down-board",
+      "images": [
+        "/images/products/sku-prod-1082.webp"
+      ]
+    },
+    {
+      "serial": 131,
+      "id": "item-mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer",
+      "sku": "EDP-AUD-0131",
+      "slug": "mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer",
+      "name": "Mini DC-DC Boost Converter Module | Adjustable Step-Up Power Module with SET Potentiometer",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer",
+      "images": [
+        "/images/products/item-mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer.webp"
+      ]
+    },
+    {
+      "serial": 132,
+      "id": "item-moc3063-zero-cross-optoisolator-triac-driver-dip-6",
+      "sku": "EDP-SEM-0132",
+      "slug": "moc3063-zero-cross-optoisolator-triac-driver-dip-6",
+      "name": "MOC3063 Zero-Cross Optoisolator Triac Driver DIP-6 (Zhuang One)",
+      "category": "Semiconductors",
+      "brand": "Zhuang One",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/moc3063-zero-cross-optoisolator-triac-driver-dip-6",
+      "images": [
+        "/images/products/item-moc3063-zero-cross-optoisolator-triac-driver-dip-6.webp"
+      ]
+    },
+    {
+      "serial": 133,
+      "id": "item-ne555p-precision-timer-ic-dip-8",
+      "sku": "EDP-SEM-0133",
+      "slug": "ne555p-precision-timer-ic-dip-8",
+      "name": "NE555P Precision Timer IC DIP-8",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/ne555p-precision-timer-ic-dip-8",
+      "images": [
+        "/images/products/item-ne555p-precision-timer-ic-dip-8.webp",
+        "/images/products/item-ne555p-precision-timer-ic-dip-8-2.webp"
+      ]
+    },
+    {
+      "serial": 134,
+      "id": "item-ne556n-dual-precision-timer-ic-dip-14",
+      "sku": "EDP-SEM-0134",
+      "slug": "ne556n-dual-precision-timer-ic-dip-14",
+      "name": "NE556N Dual Precision Timer IC DIP-14",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ne556n-dual-precision-timer-ic-dip-14",
+      "images": [
+        "/images/products/item-ne556n-dual-precision-timer-ic-dip-14.webp"
+      ]
+    },
+    {
+      "serial": 135,
+      "id": "item-pc817-optocoupler-dip-4",
+      "sku": "EDP-SEM-0135",
+      "slug": "pc817-optocoupler-dip-4",
+      "name": "PC817 Optocoupler DIP-4 (SHARP)",
+      "category": "Semiconductors",
+      "brand": "SHARP",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/pc817-optocoupler-dip-4",
+      "images": [
+        "/images/products/item-pc817-optocoupler-dip-4.webp"
+      ]
+    },
+    {
+      "serial": 136,
+      "id": "item-photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor",
+      "sku": "EDP-MOD-0136",
+      "slug": "photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor",
+      "name": "Photocell Light Sensor Switch Module | Automatic Dusk to Dawn Streetlight Sensor",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor",
+      "images": [
+        "/images/products/item-photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor.webp"
+      ]
+    },
+    {
+      "serial": 137,
+      "id": "item-pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob",
+      "sku": "EDP-MOD-0137",
+      "slug": "pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob",
+      "name": "PWM DC Motor Speed Controller Module | 4.5-35V Adjustable Speed Control Board with Knob",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob",
+      "images": [
+        "/images/products/item-pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob.webp"
+      ]
+    },
+    {
+      "serial": 138,
+      "id": "sku-prod-1079",
+      "sku": "EDP-MOD-0138",
+      "slug": "qc3-0-diy-fast-charger-step-down-module",
+      "name": "QC3.0 DIY Fast Charger Step-Down (Buck) Module.",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/qc3-0-diy-fast-charger-step-down-module",
+      "images": [
+        "/images/products/sku-prod-1079.webp"
+      ]
+    },
+    {
+      "serial": 139,
+      "id": "item-sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16",
+      "sku": "EDP-SEM-0139",
+      "slug": "sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16",
+      "name": "SG3525AN PWM Switch-Mode Power Supply Controller IC DIP-16",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16",
+      "images": [
+        "/images/products/item-sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16.webp"
+      ]
+    },
+    {
+      "serial": 140,
+      "id": "item-sw-420-vibration-shock-sensor-module",
+      "sku": "EDP-MOD-0140",
+      "slug": "sw-420-vibration-shock-sensor-module",
+      "name": "SW-420 Vibration / Shock Sensor Module",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/sw-420-vibration-shock-sensor-module",
+      "images": [
+        "/images/products/item-sw-420-vibration-shock-sensor-module.webp"
+      ]
+    },
+    {
+      "serial": 141,
+      "id": "item-tny278pn-off-line-switcher-ic-dip-7",
+      "sku": "EDP-SEM-0141",
+      "slug": "tny278pn-off-line-switcher-ic-dip-7",
+      "name": "TNY278PN Off-Line Switcher IC DIP-7",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tny278pn-off-line-switcher-ic-dip-7",
+      "images": [
+        "/images/products/item-tny278pn-off-line-switcher-ic-dip-7.webp"
+      ]
+    },
+    {
+      "serial": 142,
+      "id": "item-tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board",
+      "sku": "EDP-MOD-0142",
+      "slug": "tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board",
+      "name": "TPS61088 Boost Converter Module 8A | High Current USB Output DC-DC Step-Up Board",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board",
+      "images": [
+        "/images/products/item-tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board.webp"
+      ]
+    },
+    {
+      "serial": 143,
+      "id": "item-ua741cn-operational-amplifier-ic-dip-8",
+      "sku": "EDP-AUD-0143",
+      "slug": "ua741cn-operational-amplifier-ic-dip-8",
+      "name": "UA741CN Operational Amplifier IC DIP-8",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ua741cn-operational-amplifier-ic-dip-8",
+      "images": [
+        "/images/products/item-ua741cn-operational-amplifier-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 144,
+      "id": "item-uc3842an-current-mode-pwm-controller-ic-dip-8",
+      "sku": "EDP-SEM-0144",
+      "slug": "uc384x-current-mode-pwm-controller-ic-dip-8",
+      "name": "UC384x Current Mode PWM Controller IC DIP-8",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 2,
+      "url": "https://electronicsdokan.com/product/uc384x-current-mode-pwm-controller-ic-dip-8",
+      "images": [
+        "/images/products/item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp",
+        "/images/products/item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp"
+      ]
+    },
+    {
+      "serial": 145,
+      "id": "item-uln2003an-darlington-transistor-array-ic-dip-16",
+      "sku": "EDP-SEM-0145",
+      "slug": "uln2003an-darlington-transistor-array-ic-dip-16",
+      "name": "ULN2003AN Darlington Transistor Array IC DIP-16",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/uln2003an-darlington-transistor-array-ic-dip-16",
+      "images": [
+        "/images/products/item-uln2003an-darlington-transistor-array-ic-dip-16.webp"
+      ]
+    },
+    {
+      "serial": 146,
+      "id": "item-usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection",
+      "sku": "EDP-MOD-0146",
+      "slug": "usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection",
+      "name": "USB-C PD Trigger Board | Fast Charge Protocol Decoy Module with DIP Switch Selection",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection",
+      "images": [
+        "/images/products/item-usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection.webp"
+      ]
+    },
+    {
+      "serial": 147,
+      "id": "item-xh-m601-12v-battery-charging-control-board-with-voltmeter",
+      "sku": "EDP-MOD-0147",
+      "slug": "xh-m601-12v-battery-charging-control-board-with-voltmeter",
+      "name": "XH-M601 12V Battery Charging Control Board with Voltmeter",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/xh-m601-12v-battery-charging-control-board-with-voltmeter",
+      "images": [
+        "/images/products/item-xh-m601-12v-battery-charging-control-board-with-voltmeter.webp"
+      ]
+    },
+    {
+      "serial": 148,
+      "id": "ed-res-1p",
+      "sku": "EDP-RES-0148",
+      "slug": "1-precision-resistor",
+      "name": "1% Precision Resistor",
+      "category": "Resistors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 34,
+      "url": "https://electronicsdokan.com/product/1-precision-resistor",
+      "images": [
+        "/images/products/ed-res-1p.webp"
+      ]
+    },
+    {
+      "serial": 149,
+      "id": "ed-res-pwr",
+      "sku": "EDP-RES-0149",
+      "slug": "power-resistor-1w-1-2w",
+      "name": "Power Resistor 1W / 1/2W",
+      "category": "Resistors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 16,
+      "url": "https://electronicsdokan.com/product/power-resistor-1w-1-2w",
+      "images": [
+        "/images/products/ed-res-pwr.webp"
+      ]
+    },
+    {
+      "serial": 150,
+      "id": "ed-res-qw",
+      "sku": "EDP-RES-0150",
+      "slug": "quarter-watt-resistor-5-10-tolerance",
+      "name": "Quarter Watt Resistor 5–10% Tolerance",
+      "category": "Resistors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 60,
+      "url": "https://electronicsdokan.com/product/quarter-watt-resistor-5-10-tolerance",
+      "images": [
+        "/images/products/ed-res-qw.webp"
+      ]
+    },
+    {
+      "serial": 151,
+      "id": "item-cd4040be-cd4040-dip-16",
+      "sku": "EDP-SEM-0151",
+      "slug": "cd4040be-cd4040-dip-16",
+      "name": "CD4040BE CD4040 DIP-16",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cd4040be-cd4040-dip-16",
+      "images": [
+        "/images/products/item-cd4040be-cd4040-dip-16.webp"
+      ]
+    },
+    {
+      "serial": 152,
+      "id": "item-cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original",
+      "sku": "EDP-SEM-0152",
+      "slug": "cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original",
+      "name": "CD4066 CD4066BE DIP-14 logic chip bi-directional switch New Original",
+      "category": "Semiconductors",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original",
+      "images": [
+        "/images/products/item-cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original.webp"
+      ]
+    },
+    {
+      "serial": 153,
+      "id": "sku-prod-1084",
+      "sku": "EDP-SLD-0153",
+      "slug": "908-60w-adjustable-temperature-electric-soldering-iron-soldering-pen-tool",
+      "name": "908 60W Adjustable Temperature Electric Soldering Iron (220V ESD Safe) | Soldering Pen Tool",
+      "category": "Soldering Tools",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/908-60w-adjustable-temperature-electric-soldering-iron-soldering-pen-tool",
+      "images": [
+        "/images/products/sku-prod-1084.webp"
+      ]
+    },
+    {
+      "serial": 154,
+      "id": "item-baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste",
+      "sku": "EDP-SLD-0154",
+      "slug": "baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste",
+      "name": "BAKU BK-150 Soldering Paste Flux | 150g Advanced Quality Soldering Flux Paste",
+      "category": "Soldering Tools",
+      "brand": "BAKU",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste",
+      "images": [
+        "/images/products/item-baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste.webp"
+      ]
+    },
+    {
+      "serial": 155,
+      "id": "sku-prod-1062",
+      "sku": "EDP-SLD-0155",
+      "slug": "kawh-900m-series-soldering-iron-tip-oxygen-free-copper-lead-free-tip",
+      "name": "KAWH 900M Series Soldering Iron Tip (Knife / K Tip) | Oxygen-Free Copper Lead-Free Tip",
+      "category": "Soldering Tools",
+      "brand": "KAWH",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/kawh-900m-series-soldering-iron-tip-oxygen-free-copper-lead-free-tip",
+      "images": [
+        "/images/products/sku-prod-1062.webp"
+      ]
+    },
+    {
+      "serial": 156,
+      "id": "max98357a-i2s-digital-audio-amplifier-module",
+      "sku": "EDP-AUD-0156",
+      "slug": "max98357a-i2s-digital-audio-amplifier-module",
+      "name": "MAX98357A I2S Digital Audio Amplifier Module",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/max98357a-i2s-digital-audio-amplifier-module",
+      "images": [
+        "/images/products/max98357a-i2s-digital-audio-amplifier-module.webp"
+      ]
+    },
+    {
+      "serial": 157,
+      "id": "chyon-esp32-s3-n16r8-uvc-oled-custom-board",
+      "sku": "EDP-DEV-0157",
+      "slug": "chyon-esp32-s3-n16r8-uvc-oled-custom-board",
+      "name": "ESP32-S3 N16R8 Development Board",
+      "category": "Development Boards",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/chyon-esp32-s3-n16r8-uvc-oled-custom-board",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 158,
+      "id": "inmp441-i2s-mems-microphone-module",
+      "sku": "EDP-AUD-0158",
+      "slug": "inmp441-i2s-mems-microphone-module",
+      "name": "INMP441 I2S MEMS Microphone Module",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/inmp441-i2s-mems-microphone-module",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 159,
+      "id": "ssd1306-096-inch-128x64-i2c-oled-display",
+      "sku": "EDP-DSP-0159",
+      "slug": "ssd1306-096-inch-128x64-i2c-oled-display",
+      "name": "0.96″ SSD1306 128×64 I2C OLED Display Module",
+      "category": "Display",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ssd1306-096-inch-128x64-i2c-oled-display",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 160,
+      "id": "cs100a-ultrasonic-distance-sensor",
+      "sku": "EDP-MOD-0160",
+      "slug": "cs100a-ultrasonic-distance-sensor",
+      "name": "CS100A Ultrasonic Distance Sensor Module",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/cs100a-ultrasonic-distance-sensor",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 161,
+      "id": "l298n-dual-h-bridge-motor-driver-module",
+      "sku": "EDP-MOD-0161",
+      "slug": "l298n-dual-h-bridge-motor-driver-module",
+      "name": "L298N Dual H-Bridge Motor Driver Module",
+      "category": "Modules",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/l298n-dual-h-bridge-motor-driver-module",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 162,
+      "id": "ws2812-8-pixel-rgb-led-panel",
+      "sku": "EDP-DIY-0162",
+      "slug": "ws2812-8-pixel-rgb-led-panel",
+      "name": "WS2812B 8-Pixel RGB LED Module",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/ws2812-8-pixel-rgb-led-panel",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 163,
+      "id": "bo-motor-four-wheel-robot-set",
+      "sku": "EDP-DIY-0163",
+      "slug": "bo-motor-four-wheel-robot-set",
+      "name": "BO Gear Motor + Wheel Robot Set",
+      "category": "Diy Electronics",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/bo-motor-four-wheel-robot-set",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 164,
+      "id": "usb-uvc-camera-module-native-usb-host",
+      "sku": "EDP-COM-0164",
+      "slug": "usb-uvc-camera-module-native-usb-host",
+      "name": "USB UVC Camera Module – Native USB Host Compatible",
+      "category": "Communication",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/usb-uvc-camera-module-native-usb-host",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    },
+    {
+      "serial": 165,
+      "id": "3w-4-ohm-mono-speaker",
+      "sku": "EDP-AUD-0165",
+      "slug": "3w-4-ohm-mono-speaker",
+      "name": "3W 4Ω Mono Speaker",
+      "category": "Audio",
+      "brand": "Generic / Unbranded",
+      "variantCount": 0,
+      "url": "https://electronicsdokan.com/product/3w-4-ohm-mono-speaker",
+      "images": [
+        "/images/placeholders/product-placeholder.webp"
+      ]
+    }
+  ]
+}

@@ -1,74 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://electronicsdokan.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/products</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/projects</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/projects/xiaozhi-ai</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/projects/chyon-ai-4wheel-robot</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/pre-order</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/corporate</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/shipping</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/returns</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/privacy</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/terms</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://electronicsdokan.com/contact</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://electronicsdokan.com/product/camel-gg-5-hot-melt-glue-gun-100-240v-electric-heat-glue-gun-for-craft-and-diy-repairs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1072.webp</image:loc>
       <image:title>CAMEL GG-5 Hot Melt Glue Gun 100-240V | Electric Heat Glue Gun for Craft &amp; DIY Repairs</image:title>
@@ -76,8 +9,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-esd-15-curved-tip-precision-tweezers-121mm-stainless-steel-bent-tip-tweezer-for-electronics.webp</image:loc>
       <image:title>ESD-15 Curved Tip Precision Tweezers 121mm | Stainless Steel Bent Tip Tweezer for Electronics</image:title>
@@ -85,8 +16,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/metal-slingshot-release-trigger-mechanism-diy-crossbow-and-slingshot-trigger-device</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1063.webp</image:loc>
       <image:title>Metal Slingshot Release Trigger Mechanism | DIY Crossbow &amp; Slingshot Trigger Device</image:title>
@@ -94,8 +23,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-precision-hobby-knife-with-11-blades-5-5-inch-craft-knife-for-pcb-and-model-making.webp</image:loc>
       <image:title>Precision Hobby Knife with #11 Blades | 5.5 inch Craft Knife for PCB &amp; Model Making</image:title>
@@ -103,8 +30,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/usb-type-c-male-plug-solder-connector-board-4-pin-6-pin-usb-c-repair-plug</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1086.webp</image:loc>
       <image:title>USB Type-C Male/Female Plug Solder Connector Board (JRC-BCC8) | 4-Pin/6-Pin USB-C Repair Plug</image:title>
@@ -112,8 +37,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq.webp</image:loc>
       <image:title>Bluetooth MP3 Decoder Board with Color Display, USB, TF Card, AUX, FM Radio &amp; EQ</image:title>
@@ -121,8 +44,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/digital-fm-wireless-transmitter-module-with-lcd-display-87-5-108mhz-dsp-and-pll-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1061.webp</image:loc>
       <image:title>Digital FM Wireless Transmitter Module with LCD Display | 87.5-108MHz DSP &amp; PLL Board</image:title>
@@ -130,8 +51,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/jrc4558d-dual-operational-amplifier-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-jrc4558d-dual-operational-amplifier-ic-dip-8.webp</image:loc>
       <image:title>JRC4558D Dual Operational Amplifier IC DIP-8</image:title>
@@ -139,8 +58,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/la4440-dual-audio-power-amplifier-ic</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-la4440-dual-audio-power-amplifier-ic.webp</image:loc>
       <image:title>LA4440 Dual Audio Power Amplifier IC (Zip-13)</image:title>
@@ -152,8 +69,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/lm386-audio-power-amplifier-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-lm386-audio-power-amplifier-ic-dip-8.webp</image:loc>
       <image:title>LM386 Audio Power Amplifier IC DIP-8</image:title>
@@ -161,8 +76,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ne5532-hi-fi-preamplifier-audio-tone-control-board-treble-midrange-bass-volume-control</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1070.webp</image:loc>
       <image:title>NE5532 Hi-Fi Preamplifier Audio Tone Control Board (MT Version 2.1) | Treble Midrange Bass Volume Control</image:title>
@@ -170,8 +83,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-pam8403-mini-digital-audio-amplifier-board-2x3w-class-d-stereo-amp-module.webp</image:loc>
       <image:title>PAM8403 Mini Digital Audio Amplifier Board | 2x3W Class D Stereo Amp Module</image:title>
@@ -179,8 +90,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/rotary-potentiometer-b50k-b100k-with-nut-washer-audio-pot</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-rotary-potentiometer-b100k-with-nut-and-washer.webp</image:loc>
       <image:title>Rotary Potentiometer B50K / B100K with Nut &amp; Washer (Audio Pot)</image:title>
@@ -192,8 +101,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek.webp</image:loc>
       <image:title>Single supply low pass filter board subwoofer preamp board 2.1 channel DC10-30V Creek</image:title>
@@ -201,8 +108,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-tda2030a-mono-audio-amplifier-board-with-heatsink-diy-amplifier-module.webp</image:loc>
       <image:title>TDA2030A Mono Audio Amplifier Board with Heatsink | DIY Amplifier Module</image:title>
@@ -210,8 +115,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-tda2822-dual-low-voltage-audio-power-amplifier-ic-dip-8.webp</image:loc>
       <image:title>TDA2822 Dual Low-Voltage Audio Power Amplifier IC DIP-8</image:title>
@@ -219,8 +122,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tea2025b-dual-audio-power-amplifier-ic-dip-16</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-tea2025b-dual-audio-power-amplifier-ic-dip-16.webp</image:loc>
       <image:title>TEA2025B Dual Audio Power Amplifier IC DIP-16</image:title>
@@ -228,8 +129,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tpa3110-xh-a232-30w-30w-2-0-channel-digital-stereo-audio-power-amplifier-board-dc-8-26v-3a</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1080.webp</image:loc>
       <image:title>TPA3110 XH-A232 30W+30W 2.0 Channel Digital Stereo Audio Power Amplifier Board DC 8-26V 3A</image:title>
@@ -237,8 +136,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-wireless-bluetooth-5-0-mp3-decoder-audio-receiver-module-auxtfusb-for-car-home-stereo-speaker-diy.webp</image:loc>
       <image:title>Wireless Bluetooth 5.0 MP3 Decoder Audio Receiver Module AUXTFUSB for Car Home Stereo Speaker DIY</image:title>
@@ -246,8 +143,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/wp4-10-4-pin-speaker-terminal-push-connector</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-wp4-10-4-pin-speaker-terminal-push-connector.webp</image:loc>
       <image:title>WP4-10 4-Pin Speaker Terminal Push Connector</image:title>
@@ -255,8 +150,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/03962a-tp4056-micro-usb-5v-1a-lithium-battery-charger-board-dual-protection-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1059.webp</image:loc>
       <image:title>03962A TP4056 Micro USB 5V 1A Lithium Battery Charger Board | Dual Protection Module</image:title>
@@ -264,8 +157,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/12v-battery-low-voltage-cutoff-protection-switch-module-undervoltage-relay-controller</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1068.webp</image:loc>
       <image:title>12V Battery Low Voltage Cutoff Protection Switch Module | Undervoltage Relay Controller</image:title>
@@ -273,8 +164,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-2s-li-ion-battery-bms-protection-board-2-cell-series-balance-charging-protection-module.webp</image:loc>
       <image:title>2S Li-ion Battery BMS Protection Board | 2-Cell Series Balance Charging Protection Module (Type A)</image:title>
@@ -282,8 +171,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-2s-li-ion-battery-bms-protection-board-2-cell-series-protection-module.webp</image:loc>
       <image:title>2S Li-ion Battery BMS Protection Board | 2-Cell Series Protection Module (Type B, SY Brand)</image:title>
@@ -291,8 +178,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-3s-20a-li-ion-lithium-battery-18650-charger-pcb-bms-protection-board.webp</image:loc>
       <image:title>3S 20A Li-ion Lithium Battery 18650 Charger PCB BMS Protection Board</image:title>
@@ -300,8 +185,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-micro-usb-lithium-battery-charging-boost-module-tp4056-style-charger-with-boost-output.webp</image:loc>
       <image:title>Micro USB Lithium Battery Charging Boost Module | TP4056 Style Charger with Boost Output</image:title>
@@ -309,8 +192,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/type-c-15w-2s-lithium-battery-charging-boost-module-2-cell-series-fast-charger</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1083.webp</image:loc>
       <image:title>Type-C 15W 2S Lithium Battery Charging Boost Module | 2-Cell Series Fast Charger</image:title>
@@ -318,8 +199,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display.webp</image:loc>
       <image:title>XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay &amp; Display</image:title>
@@ -327,8 +206,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ceramic-capacitor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/ed-cercap.webp</image:loc>
       <image:title>Ceramic Capacitor</image:title>
@@ -336,8 +213,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/electrolytic-capacitor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/ed-elcap.webp</image:loc>
       <image:title>Electrolytic Capacitor</image:title>
@@ -345,8 +220,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/high-voltage-ceramic-disc-capacitors-bulk-pack</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/ed-high-voltage-ceramic-disc-bulk-pack-vanxy.webp</image:loc>
       <image:title>High Voltage Ceramic Disc Capacitors – Bulk Pack (VANXY)</image:title>
@@ -354,8 +227,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/esp-01-esp8266-serial-wi-fi-transceiver-module-wireless-internet-iot-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1057.webp</image:loc>
       <image:title>ESP-01 ESP8266 Serial Wi-Fi Transceiver Module | Wireless Internet IoT Board</image:title>
@@ -363,8 +234,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/keshy-usb-to-esp-01-esp8266-adapter-board-serial-wireless-programmer-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1058.webp</image:loc>
       <image:title>KESHY USB to ESP-01 ESP8266 Adapter Board | Serial Wireless Programmer Module</image:title>
@@ -372,8 +241,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-sim800-gsm-module-bare-board-sim-card-slot-gsm-gprs-circuit-board.webp</image:loc>
       <image:title>SIM800 GSM Module Bare Board | SIM Card Slot GSM/GPRS Circuit Board</image:title>
@@ -381,8 +248,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/sim900a-gsm-gprs-module-with-antenna-quad-band-serial-communication-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1077.webp</image:loc>
       <image:title>SIM900A GSM/GPRS Module with Antenna | Quad-Band Serial Communication Module</image:title>
@@ -390,8 +255,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/0603-red-smd-led-620-625nm</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-0603-red-smd-led-620-625nm.webp</image:loc>
       <image:title>0603 Red SMD LED 620-625nm (5 Pic)</image:title>
@@ -399,8 +262,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/13001-npn-power-transistor-to-92</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-13001-npn-power-transistor-to-92.webp</image:loc>
       <image:title>13001 NPN Power Transistor TO-92</image:title>
@@ -408,8 +269,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/16-pin-dip-ic-socket-base</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-16-pin-dip-ic-socket-base.webp</image:loc>
       <image:title>16-Pin DIP IC Socket / Base</image:title>
@@ -417,8 +276,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/1n5399-rectifier-diode-1000v-1-5a-do-15</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-1n5399-rectifier-diode-1000v-1-5a-do-15.webp</image:loc>
       <image:title>1N5399 Rectifier Diode 1000V 1.5A DO-15 (10Pcs)</image:title>
@@ -426,8 +283,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/2n2219a-high-speed-npn-power-transistor-switching-and-amp-transistor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1093.webp</image:loc>
       <image:title>2N2219A High Speed NPN Power Transistor (TO-39 Metal Can) | Switching &amp; Amp Transistor</image:title>
@@ -435,8 +290,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/2n3866-high-frequency-npn-transistor-rf-amplifier-transistor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1088.webp</image:loc>
       <image:title>2N3866 High Frequency NPN Transistor (TO-39 Metal Can) | RF Amplifier Transistor</image:title>
@@ -444,8 +297,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/2sc1971-c1971-npn-vhf-rf-power-transistor-6w-175mhz-rf-output-transistor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1091.webp</image:loc>
       <image:title>2SC1971 C1971 NPN VHF RF Power Transistor (TO-220) | 6W 175MHz RF Output Transistor</image:title>
@@ -453,8 +304,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/30f124-igbt-transistor-to-3p</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-30f124-igbt-transistor-to-3p.webp</image:loc>
       <image:title>30F124 IGBT Transistor TO-3P</image:title>
@@ -462,8 +311,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/40-pin-header-strip-2-54mm-single-row</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-40-pin-female-header-strip-2-54mm-single-row.webp</image:loc>
       <image:title>40-Pin Header Strip 2.54mm Single Row</image:title>
@@ -475,8 +322,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/60w-ceramic-cartridge-heater-65mm</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-60w-ceramic-cartridge-heater-65mm.webp</image:loc>
       <image:title>60W Ceramic Cartridge Heater 65mm (Soldering Iron / 3D Printer Heating Element)</image:title>
@@ -484,8 +329,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/7n60-n-channel-power-mosfet-7a-600v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-7n60-n-channel-power-mosfet-7a-600v-to-220.webp</image:loc>
       <image:title>7N60 N-Channel Power MOSFET 7A 600V TO-220</image:title>
@@ -493,8 +336,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/8-pin-dip-ic-socket-base</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-8-pin-dip-ic-socket-base.webp</image:loc>
       <image:title>8-Pin DIP IC Socket / Base (SY)</image:title>
@@ -502,8 +343,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bd-d882-npn-pnp-power-transistor-to-126</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-bd135-npn-power-transistor-to-126.webp</image:loc>
       <image:title>BD/D882 NPN/PNP Power Transistor TO-126</image:title>
@@ -519,8 +358,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bd140-pnp-power-transistor-to-126</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-bd140-pnp-power-transistor-to-126.webp</image:loc>
       <image:title>BD140 PNP Power Transistor TO-126</image:title>
@@ -528,8 +365,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bf494-npn-medium-frequency-rf-transistor-am-fm-radio-oscillator-transistor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1090.webp</image:loc>
       <image:title>BF494 NPN Medium Frequency RF Transistor (TO-92) | AM/FM Radio Oscillator Transistor</image:title>
@@ -537,8 +372,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bt-triac-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-bt136-triac-4a-600v-to-220.webp</image:loc>
       <image:title>BT Triac TO-220</image:title>
@@ -550,8 +383,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cd40174be-cmos-hex-d-type-flip-flop-ic-logic-ic-component</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1094.webp</image:loc>
       <image:title>CD40174BE CMOS Hex D-Type Flip-Flop IC (DIP-16) | Logic IC Component</image:title>
@@ -559,8 +390,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/e13003-2-npn-power-transistor-to-126</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-e13003-2-npn-power-transistor-to-126.webp</image:loc>
       <image:title>E13003-2 NPN Power Transistor TO-126</image:title>
@@ -568,8 +397,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/fga25n120-1200v-25a-igbt-transistor-high-power-switching-induction-cooker-igbt</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1087.webp</image:loc>
       <image:title>FGA25N120 1200V 25A IGBT Transistor | High Power Switching Induction Cooker IGBT</image:title>
@@ -577,8 +404,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/fqpf12n60c-n-channel-power-mosfet-to-220f</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-fqpf12n60c-n-channel-power-mosfet-to-220f.webp</image:loc>
       <image:title>FQPF12N60C N-Channel Power MOSFET TO-220F</image:title>
@@ -586,8 +411,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/fr607-fast-recovery-rectifier-diode-6a-1000v</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-fr607-fast-recovery-rectifier-diode-6a-1000v.webp</image:loc>
       <image:title>FR607 Fast Recovery Rectifier Diode 6A 1000V (Pack)</image:title>
@@ -595,8 +418,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/glass-reed-switch-magnetic-sensor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-glass-reed-switch-magnetic-sensor.webp</image:loc>
       <image:title>Glass Reed Switch Magnetic Sensor (Liludin)</image:title>
@@ -604,8 +425,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/i-shaped-dip-power-inductor-coil</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-i-shaped-dip-power-inductor-coil.webp</image:loc>
       <image:title>I-Shaped DIP Power Inductor Coil</image:title>
@@ -613,8 +432,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/irf224-n-channel-power-mosfet-3-8a-250v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-irf224-n-channel-power-mosfet-3-8a-250v-to-220.webp</image:loc>
       <image:title>IRF224 N-Channel Power MOSFET 3.8A 250V TO-220</image:title>
@@ -622,8 +439,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/irf770-n-channel-power-mosfet-8a-400v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-irf770-n-channel-power-mosfet-8a-400v-to-220.webp</image:loc>
       <image:title>IRF770 N-Channel Power MOSFET 8A 400V TO-220</image:title>
@@ -631,8 +446,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/irfz44n-n-channel-power-mosfet-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-irfz44n-n-channel-power-mosfet-to-220.webp</image:loc>
       <image:title>IRFZ44N N-Channel Power MOSFET TO-220</image:title>
@@ -640,8 +453,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/kbpc5010-bridge-rectifier-50a-1000v-metal-case</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-kbpc5010-bridge-rectifier-50a-1000v-metal-case.webp</image:loc>
       <image:title>KBPC5010 Bridge Rectifier 50A 1000V Metal Case</image:title>
@@ -649,8 +460,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/lm338t-adjustable-voltage-regulator-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-lm338t-adjustable-voltage-regulator-to-220.webp</image:loc>
       <image:title>LM338T Adjustable Voltage Regulator TO-220 (5A)</image:title>
@@ -658,8 +467,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mps2907-pnp-general-purpose-transistor-to-92</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mps2907-pnp-general-purpose-transistor-to-92.webp</image:loc>
       <image:title>MPS2907 PNP General Purpose Transistor TO-92</image:title>
@@ -667,8 +474,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/piezo-contact-microphone-sensor-disc-with-wires</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-piezo-contact-microphone-sensor-disc-with-wires.webp</image:loc>
       <image:title>Piezo Contact Microphone Sensor Disc with Wires (Pack)</image:title>
@@ -676,8 +481,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tyn612-scr-thyristor-12a-600v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-tyn612-scr-thyristor-12a-600v-to-220.webp</image:loc>
       <image:title>TYN612 SCR Thyristor 12A 600V TO-220</image:title>
@@ -685,8 +488,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/vs1838b-infrared-ir-receiver-sensor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-vs1838b-infrared-ir-receiver-sensor.webp</image:loc>
       <image:title>VS1838B Infrared IR Receiver Sensor</image:title>
@@ -694,8 +495,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/1602-16-2-character-lcd-display-module-hd44780-standard-screen</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1066.webp</image:loc>
       <image:title>1602 16×2 Character LCD Display Module (Green Backlight) | HD44780 Standard Screen</image:title>
@@ -703,8 +502,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/2004-20-4-character-lcd-display-module-hd44780-large-screen</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1067.webp</image:loc>
       <image:title>2004 20×4 Character LCD Display Module (Blue Screen 5V) | HD44780 Large Screen</image:title>
@@ -712,8 +509,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/esp32-devkit-board-cp2102-38-pin-micro-usb-wifi-bluetooth-dual-core-iot-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1071.webp</image:loc>
       <image:title>ESP32 DevKit Board CP2102 38-Pin Micro USB | WiFi + Bluetooth Dual-Core IoT Board</image:title>
@@ -721,8 +516,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-esp8266-nodemcu-development-board-wifi-iot-board-with-type-c-usb.webp</image:loc>
       <image:title>ESP8266 NodeMCU Development Board | WiFi IoT Board with Type-C USB</image:title>
@@ -730,8 +523,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-iic-i2c-interface-adapter-board-for-lcd1602-hw-61-serial-lcd-adaptation-module.webp</image:loc>
       <image:title>IIC/I2C Interface Adapter Board for LCD1602 | HW-61 Serial LCD Adaptation Module</image:title>
@@ -739,8 +530,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-szytf-nano3-compatible-mini-development-board-lgt8f328p-arduino-nano-compatible-type-c-board.webp</image:loc>
       <image:title>SZYTF Nano3 Compatible Mini Development Board | LGT8F328P Arduino Nano Compatible Type-C Board</image:title>
@@ -748,8 +537,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-db-3-diac-trigger-diode-bidirectional-2a-28-36v-do-35.webp</image:loc>
       <image:title>DB-3 DIAC Trigger Diode Bidirectional 2A 28-36V DO-35</image:title>
@@ -757,8 +544,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/stps2045ct-dual-schottky-rectifier-20a-45v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-stps2045ct-dual-schottky-rectifier-20a-45v-to-220.webp</image:loc>
       <image:title>STPS2045CT Dual Schottky Rectifier 20A 45V TO-220</image:title>
@@ -766,8 +551,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/8-8-red-led-dot-matrix-display-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-8-8-red-led-dot-matrix-display-module.webp</image:loc>
       <image:title>8×8 Red LED Dot Matrix Display Module (MAX7219)</image:title>
@@ -775,8 +558,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/max7219-4-in-1-dot-matrix-led-display-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-max7219-4-in-1-dot-matrix-led-display-module.webp</image:loc>
       <image:title>MAX7219 4-in-1 Dot Matrix LED Display Module</image:title>
@@ -784,8 +565,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-10w-high-power-cob-led-chip-diy-floodlight-and-spotlight-led.webp</image:loc>
       <image:title>10W High Power COB LED Chip (White) | DIY Floodlight &amp; Spotlight LED</image:title>
@@ -793,8 +572,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/4-digit-led-digital-clock-diy-kit-stc12c2052-electronic-soldering-practice-kit-with-alarm</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1078.webp</image:loc>
       <image:title>4-Digit LED Digital Clock DIY Kit | STC12C2052 Electronic Soldering Practice Kit with Alarm</image:title>
@@ -802,8 +579,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-4-head-ultrasonic-mist-maker-driver-module-usb-atomizer-fogger-board-with-ceramic-discs.webp</image:loc>
       <image:title>4-Head Ultrasonic Mist Maker Driver Module | USB Atomizer Fogger Board with Ceramic Discs</image:title>
@@ -811,8 +586,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/4-5v-650nm-red-laser-dot-diode-head-module-5mw-laser-transmitter-component</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1060.webp</image:loc>
       <image:title>4.5V 650nm Red Laser Dot Diode Head Module | 5mW Laser Transmitter Component</image:title>
@@ -820,8 +593,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/775-motor-water-pump-diy-kit-plastic-impeller-housing-and-screws-set</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1064.webp</image:loc>
       <image:title>775 Motor Water Pump DIY Kit | Plastic Impeller Housing &amp; Screws Set (Pink)</image:title>
@@ -829,8 +600,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-czb6721960-fm-am-radio-receiver-diy-soldering-kit-electronic-learning-kit-with-pcb.webp</image:loc>
       <image:title>CZB6721960 FM/AM Radio Receiver DIY Soldering Kit | Electronic Learning Kit with PCB</image:title>
@@ -838,8 +607,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-elecandlifes-10-led-chaser-light-diy-kit-ne555-sequential-led-running-light-soldering-kit.webp</image:loc>
       <image:title>ELEC&amp;Lifes 10-LED Chaser Light DIY Kit | NE555 Sequential LED Running Light Soldering Kit</image:title>
@@ -847,8 +614,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/goat-sh-e-879-3-digit-led-clock-diy-kit-hour-minute-second-display-soldering-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1075.webp</image:loc>
       <image:title>GoAT SH-E 879 3-Digit LED Clock DIY Kit | Hour Minute Second Display Soldering Kit</image:title>
@@ -856,8 +621,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-hydz-wireless-charging-coil-module-diy-kit-induction-charger-circuit-kit.webp</image:loc>
       <image:title>HYDZ Wireless Charging Coil Module DIY Kit | Induction Charger Circuit Kit</image:title>
@@ -865,8 +628,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/javino-dc3-5v-high-voltage-generator-diy-kit-mini-spark-generator-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1074.webp</image:loc>
       <image:title>Javino DC3-5V High Voltage Generator DIY Kit | Mini Spark Generator Kit</image:title>
@@ -874,8 +635,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-javino-high-voltage-generator-module-with-heatsink-zvs-driver-boost-kit.webp</image:loc>
       <image:title>Javino High Voltage Generator Module with Heatsink | ZVS Driver Boost Kit</image:title>
@@ -883,8 +642,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-keshy-fm-stereo-radio-diy-kit-76-108mhz-wireless-transmitter-receiver-soldering-kit.webp</image:loc>
       <image:title>KESHY FM Stereo Radio DIY Kit | 76-108MHz Wireless Transmitter Receiver Soldering Kit</image:title>
@@ -892,8 +649,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mini-diaphragm-water-pump-dc-motor-driven-small-pump-for-diy-projects.webp</image:loc>
       <image:title>Mini Diaphragm Water Pump | DC Motor Driven Small Pump for DIY Projects</image:title>
@@ -901,8 +656,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mini-vibration-atomizer-mist-maker-module-with-casing-usb-type-c-humidifier-driver-board.webp</image:loc>
       <image:title>Mini Vibration Atomizer Mist Maker Module with Casing | USB Type-C Humidifier Driver Board</image:title>
@@ -910,8 +663,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/rf-300-micro-dc-solar-fan-motor-dc-3-6v-low-power-high-efficiency-motor-for-diy-projects</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1073.webp</image:loc>
       <image:title>RF-300 Micro DC Solar Fan Motor DC 3-6V | Low Power High Efficiency Motor for DIY Projects</image:title>
@@ -919,8 +670,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-white-dc-4v-5w-cob-led-ring-light-round-high-power-led-chip-for-diy-lighting.webp</image:loc>
       <image:title>White DC 4V 5W COB LED Ring Light | Round High-Power LED Chip for DIY Lighting</image:title>
@@ -928,8 +677,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/winwin-rotating-led-electronic-clock-diy-kit-round-pcb-soldering-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1076.webp</image:loc>
       <image:title>WinWin Rotating LED Electronic Clock DIY Kit | Round PCB Soldering Kit</image:title>
@@ -937,8 +684,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-l-faster-250w-brushed-dc-motor-speed-controller-box-electric-bike-scooter-controller-with-full-wiring.webp</image:loc>
       <image:title>L-faster 250W Brushed DC Motor Speed Controller Box | Electric Bike Scooter Controller with Full Wiring</image:title>
@@ -946,8 +691,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-l-faster-electric-bike-conversion-kit-accessories-250w-motor-kit-with-chain-keys-throttle-and-bracket.webp</image:loc>
       <image:title>L-faster Electric Bike Conversion Kit Accessories | 250W Motor Kit with Chain, Keys, Throttle &amp; Bracket</image:title>
@@ -955,8 +698,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-htc-2-digital-clock-alarm-and-hygrometer-thermometer-lcd-temperature-humidity-monitor-with-wired-sensor.webp</image:loc>
       <image:title>HTC-2 Digital Clock Alarm &amp; Hygrometer Thermometer | LCD Temperature Humidity Monitor with Wired Sensor</image:title>
@@ -964,8 +705,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mini-lcd-digital-thermometer-hygrometer-with-probe-compact-temperature-humidity-meter.webp</image:loc>
       <image:title>Mini LCD Digital Thermometer Hygrometer with Probe | Compact Temperature Humidity Meter</image:title>
@@ -973,8 +712,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mt87-digital-clamp-meter-ac-dc-current-voltage-clamp-multimeter.webp</image:loc>
       <image:title>MT87 Digital Clamp Meter | AC/DC Current Voltage Clamp Multimeter</image:title>
@@ -982,8 +719,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-uni-t-ut33d-digital-multimeter-ac-dc-voltage-current-resistance-meter-with-test-leads.webp</image:loc>
       <image:title>UNI-T UT33D+ Digital Multimeter | AC/DC Voltage Current Resistance Meter with Test Leads</image:title>
@@ -991,8 +726,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/usb-power-capacity-tester-voltage-current-meter-with-data-display</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-usb-power-capacity-tester-voltage-current-meter-with-data-display.webp</image:loc>
       <image:title>USB Power Capacity Tester | Voltage Current Meter with Data Display</image:title>
@@ -1000,8 +733,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-4-channel-wireless-rf-remote-control-receiver-module-transmitter-fob.webp</image:loc>
       <image:title>4-Channel Wireless RF Remote Control Receiver Module + Transmitter Fob (315/433MHz)</image:title>
@@ -1009,8 +740,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/4n35-optocoupler-dip-6</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-4n35-optocoupler-dip-6.webp</image:loc>
       <image:title>4N35 Optocoupler DIP-6 (GOHJMY)</image:title>
@@ -1018,8 +747,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/74hc14d-hex-schmitt-trigger-inverter-soic-14</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-74hc14d-hex-schmitt-trigger-inverter-soic-14.webp</image:loc>
       <image:title>74HC14D Hex Schmitt-Trigger Inverter SOIC-14 (PUMUDDSY)</image:title>
@@ -1027,8 +754,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/775-high-speed-dc-motor-12v-21000rpm-double-ball-bearing-motor-for-diy-drill-and-saw</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1065.webp</image:loc>
       <image:title>775 High Speed DC Motor 12V 21000RPM | Double Ball Bearing Motor for DIY Drill &amp; Saw</image:title>
@@ -1036,8 +761,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ap8012h-offline-switching-power-supply-pwm-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-ap8012h-offline-switching-power-supply-pwm-ic-dip-8.webp</image:loc>
       <image:title>AP8012H Offline Switching Power Supply PWM IC DIP-8</image:title>
@@ -1045,8 +768,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bta-triac-600v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-bta12-600b-triac-12a-600v-to-220.webp</image:loc>
       <image:title>BTA Triac 600V TO-220</image:title>
@@ -1058,8 +779,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bta41-800b-triac-40a-800v-to-3p</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-bta41-800b-triac-40a-800v-to-3p.webp</image:loc>
       <image:title>BTA41-800B Triac 40A 800V TO-3P (Zhuang One Electronics)</image:title>
@@ -1067,8 +786,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ca-1235-adjustable-dc-dc-buck-converter-module-3a</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-ca-1235-adjustable-dc-dc-buck-converter-module-3a.webp</image:loc>
       <image:title>CA-1235 Adjustable DC-DC Buck Converter Module 3A (EGBO)</image:title>
@@ -1076,8 +793,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cd4011be-quad-2-input-nand-gate-ic-dip-14</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cd4011be-quad-2-input-nand-gate-ic-dip-14.webp</image:loc>
       <image:title>CD4011BE Quad 2-Input NAND Gate IC DIP-14</image:title>
@@ -1085,8 +800,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cd4017-cd4017b-cd4017be-4017-decade-counter-divider-ic-new-original.webp</image:loc>
       <image:title>CD4017 CD4017B CD4017BE 4017 DECADE COUNTER DIVIDER IC new original</image:title>
@@ -1094,8 +807,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cd4017be-decade-counter-divider-ic-dip-16</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cd4017be-decade-counter-divider-ic-dip-16.webp</image:loc>
       <image:title>CD4017BE Decade Counter/Divider IC DIP-16</image:title>
@@ -1103,8 +814,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-compact-pwm-dc-motor-speed-controller-module-mini-adjustable-speed-control-board.webp</image:loc>
       <image:title>Compact PWM DC Motor Speed Controller Module | Mini Adjustable Speed Control Board</image:title>
@@ -1112,8 +821,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cs75n75-n-channel-power-mosfet-75a-75v-to-220</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cs75n75-n-channel-power-mosfet-75a-75v-to-220.webp</image:loc>
       <image:title>CS75N75 N-Channel Power MOSFET 75A 75V TO-220</image:title>
@@ -1121,8 +828,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cxd9883am-sop-ic</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cxd9883am-sop-ic.webp</image:loc>
       <image:title>CXD9883AM SOP IC (Sony)</image:title>
@@ -1130,8 +835,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/dc-0-25v-voltage-sensor-module-voltage-divider-board-for-arduino</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1069.webp</image:loc>
       <image:title>DC 0-25V Voltage Sensor Module | Voltage Divider Board for Arduino</image:title>
@@ -1139,8 +842,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp</image:loc>
       <image:title>DC-DC Buck Module Red Board USB Output DC6-20V to 5V 3A</image:title>
@@ -1152,8 +853,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe.webp</image:loc>
       <image:title>DM-W3002 Digital Temperature Controller Module | 12V/220V Relay Thermostat with Sensor Probe</image:title>
@@ -1161,8 +860,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/dual-usb-dc-dc-step-down-converter-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-dual-usb-dc-dc-step-down-converter-module.webp</image:loc>
       <image:title>Dual USB DC-DC Step Down Converter Module (JAVINO)</image:title>
@@ -1170,8 +867,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-ir2113-dual-mosfet-driver-module-board-high-low-side-gate-driver-pcb.webp</image:loc>
       <image:title>IR2113 Dual MOSFET Driver Module Board | High/Low Side Gate Driver PCB</image:title>
@@ -1179,8 +874,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-javino-2000w-scr-voltage-regulator-module-high-power-ac-motor-speed-and-dimmer-controller.webp</image:loc>
       <image:title>Javino 2000W SCR Voltage Regulator Module | High Power AC Motor Speed &amp; Dimmer Controller</image:title>
@@ -1188,8 +881,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a.webp</image:loc>
       <image:title>JDQ-01 Automatic Power/Battery Backup Switch Module 5V-48V 10A (SY)</image:title>
@@ -1197,8 +888,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/lm324n-quad-operational-amplifier-ic-dip-14</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-lm324n-quad-operational-amplifier-ic-dip-14.webp</image:loc>
       <image:title>LM324N Quad Operational Amplifier IC DIP-14</image:title>
@@ -1206,8 +895,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/lm358p-dual-operational-amplifier-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-lm358p-dual-operational-amplifier-ic-dip-8.webp</image:loc>
       <image:title>LM358P Dual Operational Amplifier IC DIP-8</image:title>
@@ -1215,8 +902,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/lm3914n-1-led-dot-bar-display-driver-ic-dip-18</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-lm3914n-1-led-dot-bar-display-driver-ic-dip-18.webp</image:loc>
       <image:title>LM3914N-1 LED Dot/Bar Display Driver IC DIP-18</image:title>
@@ -1224,8 +909,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/lm393-dual-voltage-comparator-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-lm393-dual-voltage-comparator-ic-dip-8.webp</image:loc>
       <image:title>LM393 Dual Voltage Comparator IC DIP-8</image:title>
@@ -1233,8 +916,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mc-38-wired-door-window-magnetic-sensor-switch</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mc-38-wired-door-window-magnetic-sensor-switch.webp</image:loc>
       <image:title>MC-38 Wired Door Window Magnetic Sensor Switch (Tdidaz)</image:title>
@@ -1242,8 +923,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mcp602-mcp6002-dual-op-amp-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mcp602-mcp6002-dual-op-amp-ic-dip-8.webp</image:loc>
       <image:title>MCP602 / MCP6002 Dual Op-Amp IC DIP-8</image:title>
@@ -1251,8 +930,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mfrc-522-rfid-rc522-ic-card-reader-module-kit</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mfrc-522-rfid-rc522-ic-card-reader-module-kit.webp</image:loc>
       <image:title>MFRC-522 RFID RC522 IC Card Reader Module Kit</image:title>
@@ -1260,8 +937,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mh-mini-360-dc-dc-step-down-buck-converter-module-ultra-small-power-step-down-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1082.webp</image:loc>
       <image:title>MH-Mini-360 DC-DC Step-Down Buck Converter Module | Ultra Small Power Step-Down Board</image:title>
@@ -1269,8 +944,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-mini-dc-dc-boost-converter-module-adjustable-step-up-power-module-with-set-potentiometer.webp</image:loc>
       <image:title>Mini DC-DC Boost Converter Module | Adjustable Step-Up Power Module with SET Potentiometer</image:title>
@@ -1278,8 +951,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/moc3063-zero-cross-optoisolator-triac-driver-dip-6</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-moc3063-zero-cross-optoisolator-triac-driver-dip-6.webp</image:loc>
       <image:title>MOC3063 Zero-Cross Optoisolator Triac Driver DIP-6 (Zhuang One)</image:title>
@@ -1287,8 +958,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ne555p-precision-timer-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-ne555p-precision-timer-ic-dip-8.webp</image:loc>
       <image:title>NE555P Precision Timer IC DIP-8</image:title>
@@ -1300,8 +969,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ne556n-dual-precision-timer-ic-dip-14</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-ne556n-dual-precision-timer-ic-dip-14.webp</image:loc>
       <image:title>NE556N Dual Precision Timer IC DIP-14</image:title>
@@ -1309,8 +976,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/pc817-optocoupler-dip-4</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-pc817-optocoupler-dip-4.webp</image:loc>
       <image:title>PC817 Optocoupler DIP-4 (SHARP)</image:title>
@@ -1318,8 +983,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-photocell-light-sensor-switch-module-automatic-dusk-to-dawn-streetlight-sensor.webp</image:loc>
       <image:title>Photocell Light Sensor Switch Module | Automatic Dusk to Dawn Streetlight Sensor</image:title>
@@ -1327,8 +990,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-pwm-dc-motor-speed-controller-module-4-5-35v-adjustable-speed-control-board-with-knob.webp</image:loc>
       <image:title>PWM DC Motor Speed Controller Module | 4.5-35V Adjustable Speed Control Board with Knob</image:title>
@@ -1336,8 +997,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/qc3-0-diy-fast-charger-step-down-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1079.webp</image:loc>
       <image:title>QC3.0 DIY Fast Charger Step-Down (Buck) Module.</image:title>
@@ -1345,8 +1004,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-sg3525an-pwm-switch-mode-power-supply-controller-ic-dip-16.webp</image:loc>
       <image:title>SG3525AN PWM Switch-Mode Power Supply Controller IC DIP-16</image:title>
@@ -1354,8 +1011,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/sw-420-vibration-shock-sensor-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-sw-420-vibration-shock-sensor-module.webp</image:loc>
       <image:title>SW-420 Vibration / Shock Sensor Module</image:title>
@@ -1363,8 +1018,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tny278pn-off-line-switcher-ic-dip-7</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-tny278pn-off-line-switcher-ic-dip-7.webp</image:loc>
       <image:title>TNY278PN Off-Line Switcher IC DIP-7</image:title>
@@ -1372,8 +1025,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-tps61088-boost-converter-module-8a-high-current-usb-output-dc-dc-step-up-board.webp</image:loc>
       <image:title>TPS61088 Boost Converter Module 8A | High Current USB Output DC-DC Step-Up Board</image:title>
@@ -1381,8 +1032,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ua741cn-operational-amplifier-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-ua741cn-operational-amplifier-ic-dip-8.webp</image:loc>
       <image:title>UA741CN Operational Amplifier IC DIP-8</image:title>
@@ -1390,8 +1039,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/uc384x-current-mode-pwm-controller-ic-dip-8</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp</image:loc>
       <image:title>UC384x Current Mode PWM Controller IC DIP-8</image:title>
@@ -1403,8 +1050,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/uln2003an-darlington-transistor-array-ic-dip-16</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-uln2003an-darlington-transistor-array-ic-dip-16.webp</image:loc>
       <image:title>ULN2003AN Darlington Transistor Array IC DIP-16</image:title>
@@ -1412,8 +1057,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-usb-c-pd-trigger-board-fast-charge-protocol-decoy-module-with-dip-switch-selection.webp</image:loc>
       <image:title>USB-C PD Trigger Board | Fast Charge Protocol Decoy Module with DIP Switch Selection</image:title>
@@ -1421,8 +1064,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/xh-m601-12v-battery-charging-control-board-with-voltmeter</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-xh-m601-12v-battery-charging-control-board-with-voltmeter.webp</image:loc>
       <image:title>XH-M601 12V Battery Charging Control Board with Voltmeter</image:title>
@@ -1430,8 +1071,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/1-precision-resistor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/ed-res-1p.webp</image:loc>
       <image:title>1% Precision Resistor</image:title>
@@ -1439,8 +1078,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/power-resistor-1w-1-2w</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/ed-res-pwr.webp</image:loc>
       <image:title>Power Resistor 1W / 1/2W</image:title>
@@ -1448,8 +1085,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/quarter-watt-resistor-5-10-tolerance</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/ed-res-qw.webp</image:loc>
       <image:title>Quarter Watt Resistor 5–10% Tolerance</image:title>
@@ -1457,8 +1092,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cd4040be-cd4040-dip-16</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cd4040be-cd4040-dip-16.webp</image:loc>
       <image:title>CD4040BE CD4040 DIP-16</image:title>
@@ -1466,8 +1099,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-cd4066-cd4066be-dip-14-logic-chip-bi-directional-switch-new-original.webp</image:loc>
       <image:title>CD4066 CD4066BE DIP-14 logic chip bi-directional switch New Original</image:title>
@@ -1475,8 +1106,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/908-60w-adjustable-temperature-electric-soldering-iron-soldering-pen-tool</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1084.webp</image:loc>
       <image:title>908 60W Adjustable Temperature Electric Soldering Iron (220V ESD Safe) | Soldering Pen Tool</image:title>
@@ -1484,8 +1113,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/item-baku-bk-150-soldering-paste-flux-150g-advanced-quality-soldering-flux-paste.webp</image:loc>
       <image:title>BAKU BK-150 Soldering Paste Flux | 150g Advanced Quality Soldering Flux Paste</image:title>
@@ -1493,8 +1120,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/kawh-900m-series-soldering-iron-tip-oxygen-free-copper-lead-free-tip</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/sku-prod-1062.webp</image:loc>
       <image:title>KAWH 900M Series Soldering Iron Tip (Knife / K Tip) | Oxygen-Free Copper Lead-Free Tip</image:title>
@@ -1502,8 +1127,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/max98357a-i2s-digital-audio-amplifier-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/products/max98357a-i2s-digital-audio-amplifier-module.webp</image:loc>
       <image:title>MAX98357A I2S Digital Audio Amplifier Module</image:title>
@@ -1511,8 +1134,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/chyon-esp32-s3-n16r8-uvc-oled-custom-board</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>ESP32-S3 N16R8 Development Board</image:title>
@@ -1520,8 +1141,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/inmp441-i2s-mems-microphone-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>INMP441 I2S MEMS Microphone Module</image:title>
@@ -1529,8 +1148,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ssd1306-096-inch-128x64-i2c-oled-display</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>0.96″ SSD1306 128×64 I2C OLED Display Module</image:title>
@@ -1538,8 +1155,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/cs100a-ultrasonic-distance-sensor</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>CS100A Ultrasonic Distance Sensor Module</image:title>
@@ -1547,8 +1162,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/l298n-dual-h-bridge-motor-driver-module</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>L298N Dual H-Bridge Motor Driver Module</image:title>
@@ -1556,8 +1169,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/ws2812-8-pixel-rgb-led-panel</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>WS2812B 8-Pixel RGB LED Module</image:title>
@@ -1565,8 +1176,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/bo-motor-four-wheel-robot-set</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>BO Gear Motor + Wheel Robot Set</image:title>
@@ -1574,8 +1183,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/usb-uvc-camera-module-native-usb-host</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>USB UVC Camera Module – Native USB Host Compatible</image:title>
@@ -1583,8 +1190,6 @@
   </url>
   <url>
     <loc>https://electronicsdokan.com/product/3w-4-ohm-mono-speaker</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
     <image:image>
       <image:loc>https://electronicsdokan.com/images/placeholders/product-placeholder.webp</image:loc>
       <image:title>3W 4Ω Mono Speaker</image:title>

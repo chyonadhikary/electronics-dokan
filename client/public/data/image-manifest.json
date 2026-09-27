@@ -1,4 +1,6 @@
 {
+  "version": 2,
+  "generatedFrom": "/data/products.json",
   "products": {
     "sku-prod-1072": {
       "default": "sku-prod-1072.webp",
@@ -23,7 +25,16 @@
     "sku-prod-1086": {
       "default": "sku-prod-1086.webp",
       "defaultPath": "/images/products/sku-prod-1086.webp",
-      "variants": {}
+      "variants": {
+        "EDP-ACC-0005-V01": {
+          "file": "sku-prod-1086.webp",
+          "path": "/images/products/sku-prod-1086.webp"
+        },
+        "EDP-ACC-0005-V02": {
+          "file": "sku-prod-1086.webp",
+          "path": "/images/products/sku-prod-1086.webp"
+        }
+      }
     },
     "item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq": {
       "default": "item-bluetooth-mp3-decoder-board-with-color-display-usb-tf-card-aux-fm-radio-and-eq.webp",
@@ -43,12 +54,16 @@
     "item-la4440-dual-audio-power-amplifier-ic": {
       "default": "item-la4440-dual-audio-power-amplifier-ic.webp",
       "defaultPath": "/images/products/item-la4440-dual-audio-power-amplifier-ic.webp",
-      "variants": {}
-    },
-    "item-la4440-dual-audio-power-amplifier-ic-2": {
-      "default": "item-la4440-dual-audio-power-amplifier-ic-2.webp",
-      "defaultPath": "/images/products/item-la4440-dual-audio-power-amplifier-ic-2.webp",
-      "variants": {}
+      "variants": {
+        "EDP-AUD-0009-V01": {
+          "file": "item-la4440-dual-audio-power-amplifier-ic.webp",
+          "path": "/images/products/item-la4440-dual-audio-power-amplifier-ic.webp"
+        },
+        "EDP-AUD-0009-V02": {
+          "file": "item-la4440-dual-audio-power-amplifier-ic-2.webp",
+          "path": "/images/products/item-la4440-dual-audio-power-amplifier-ic-2.webp"
+        }
+      }
     },
     "item-lm386-audio-power-amplifier-ic-dip-8": {
       "default": "item-lm386-audio-power-amplifier-ic-dip-8.webp",
@@ -68,12 +83,16 @@
     "item-rotary-potentiometer-b100k-with-nut-and-washer": {
       "default": "item-rotary-potentiometer-b100k-with-nut-and-washer.webp",
       "defaultPath": "/images/products/item-rotary-potentiometer-b100k-with-nut-and-washer.webp",
-      "variants": {}
-    },
-    "item-rotary-potentiometer-b50k-with-nut-and-washer": {
-      "default": "item-rotary-potentiometer-b50k-with-nut-and-washer.webp",
-      "defaultPath": "/images/products/item-rotary-potentiometer-b50k-with-nut-and-washer.webp",
-      "variants": {}
+      "variants": {
+        "EDP-AUD-0013-V01": {
+          "file": "item-rotary-potentiometer-b100k-with-nut-and-washer.webp",
+          "path": "/images/products/item-rotary-potentiometer-b100k-with-nut-and-washer.webp"
+        },
+        "EDP-AUD-0013-V02": {
+          "file": "item-rotary-potentiometer-b50k-with-nut-and-washer.webp",
+          "path": "/images/products/item-rotary-potentiometer-b50k-with-nut-and-washer.webp"
+        }
+      }
     },
     "item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek": {
       "default": "item-single-supply-low-pass-filter-board-subwoofer-preamp-board-2-1-channel-dc10-30v-creek.webp",
@@ -154,54 +173,180 @@
       "default": "ed-cercap.webp",
       "defaultPath": "/images/products/ed-cercap.webp",
       "variants": {
-        "ed-cercap-47": "ed-cercap-47.webp",
-        "ed-cercap-33": "ed-cercap-33.webp",
-        "ed-cercap-39": "ed-cercap-39.webp",
-        "ed-cercap-101": "ed-cercap-101.webp",
-        "ed-cercap-10": "ed-cercap-10.webp",
-        "ed-cercap-102": "ed-cercap-102.webp",
-        "ed-cercap-22": "ed-cercap-22.webp",
-        "ed-cercap-27": "ed-cercap-27.webp",
-        "ed-cercap-103": "ed-cercap-103.webp",
-        "ed-cercap-4-7": "ed-cercap-4-7.webp",
-        "ed-cercap-104": "ed-cercap-104.webp",
-        "ed-cercap-6": "ed-cercap-6.webp",
-        "ed-cercap-2-2": "ed-cercap-2-2.webp",
-        "ed-cercap-6-8": "ed-cercap-6-8.webp",
-        "ed-cercap-151": "ed-cercap-151.webp",
-        "ed-cercap-30": "ed-cercap-30.webp",
-        "ed-cercap-223": "ed-cercap-223.webp",
-        "ed-cercap-203": "ed-cercap-203.webp",
-        "ed-cercap-12": "ed-cercap-12.webp",
-        "ed-cercap-471": "ed-cercap-471.webp",
-        "ed-cercap-15": "ed-cercap-15.webp"
+        "EDP-CAP-0029-V01": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V02": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V03": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V04": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V05": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V06": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V07": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V08": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V09": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V10": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V11": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V12": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V13": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V14": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V15": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V16": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V17": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V18": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V19": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V20": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        },
+        "EDP-CAP-0029-V21": {
+          "file": "ed-cercap.webp",
+          "path": "/images/products/ed-cercap.webp"
+        }
       }
     },
     "ed-elcap": {
       "default": "ed-elcap.webp",
       "defaultPath": "/images/products/ed-elcap.webp",
       "variants": {
-        "ed-elcap-470uf-63v": "ed-elcap-470uf-63v.webp",
-        "ed-elcap-1000uf-25v": "ed-elcap-1000uf-25v.webp",
-        "ed-elcap-3300uf-50v": "ed-elcap-3300uf-50v.webp",
-        "ed-elcap-1000uf-63v": "ed-elcap-1000uf-63v.webp",
-        "ed-elcap-2-2uf-50v": "ed-elcap-2-2uf-50v.webp",
-        "ed-elcap-10uf-25v": "ed-elcap-10uf-25v.webp",
-        "ed-elcap-220uf-25v": "ed-elcap-220uf-25v.webp",
-        "ed-elcap-220uf-63v": "ed-elcap-220uf-63v.webp",
-        "ed-elcap-470uf-25v": "ed-elcap-470uf-25v.webp",
-        "ed-elcap-1uf-50v": "ed-elcap-1uf-50v.webp",
-        "ed-elcap-2200uf-50v": "ed-elcap-2200uf-50v.webp",
-        "ed-elcap-3300uf-35v": "ed-elcap-3300uf-35v.webp",
-        "ed-elcap-4-7uf-50v": "ed-elcap-4-7uf-50v.webp",
-        "ed-elcap-10uf-50v": "ed-elcap-10uf-50v.webp",
-        "ed-elcap-330uf-25v": "ed-elcap-330uf-25v.webp",
-        "ed-elcap-100uf-16v-a": "ed-elcap-100uf-16v-a.webp",
-        "ed-elcap-22uf-50v": "ed-elcap-22uf-50v.webp",
-        "ed-elcap-470uf-16v": "ed-elcap-470uf-16v.webp",
-        "ed-elcap-4-7uf-400v": "ed-elcap-4-7uf-400v.webp",
-        "ed-elcap-100uf-16v-b": "ed-elcap-100uf-16v-b.webp",
-        "ed-elcap-3-3uf-400v": "ed-elcap-3-3uf-400v.webp"
+        "EDP-CAP-0030-V01": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V02": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V03": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V04": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V05": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V06": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V07": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V08": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V09": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V10": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V11": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V12": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V13": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V14": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V15": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V16": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V17": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V18": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V19": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V20": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        },
+        "EDP-CAP-0030-V21": {
+          "file": "ed-elcap.webp",
+          "path": "/images/products/ed-elcap.webp"
+        }
       }
     },
     "ed-high-voltage-ceramic-disc-bulk-pack-vanxy": {
@@ -272,12 +417,16 @@
     "item-40-pin-female-header-strip-2-54mm-single-row": {
       "default": "item-40-pin-female-header-strip-2-54mm-single-row.webp",
       "defaultPath": "/images/products/item-40-pin-female-header-strip-2-54mm-single-row.webp",
-      "variants": {}
-    },
-    "item-40-pin-male-header-strip-2-54mm-single-row": {
-      "default": "item-40-pin-male-header-strip-2-54mm-single-row.webp",
-      "defaultPath": "/images/products/item-40-pin-male-header-strip-2-54mm-single-row.webp",
-      "variants": {}
+      "variants": {
+        "EDP-CMP-0044-V01": {
+          "file": "item-40-pin-female-header-strip-2-54mm-single-row.webp",
+          "path": "/images/products/item-40-pin-female-header-strip-2-54mm-single-row.webp"
+        },
+        "EDP-CMP-0044-V02": {
+          "file": "item-40-pin-male-header-strip-2-54mm-single-row.webp",
+          "path": "/images/products/item-40-pin-male-header-strip-2-54mm-single-row.webp"
+        }
+      }
     },
     "item-60w-ceramic-cartridge-heater-65mm": {
       "default": "item-60w-ceramic-cartridge-heater-65mm.webp",
@@ -297,12 +446,20 @@
     "item-bd135-npn-power-transistor-to-126": {
       "default": "item-bd135-npn-power-transistor-to-126.webp",
       "defaultPath": "/images/products/item-bd135-npn-power-transistor-to-126.webp",
-      "variants": {}
-    },
-    "item-bd139-npn-power-transistor-to-126": {
-      "default": "item-bd139-npn-power-transistor-to-126.webp",
-      "defaultPath": "/images/products/item-bd139-npn-power-transistor-to-126.webp",
-      "variants": {}
+      "variants": {
+        "EDP-SEM-0048-V01": {
+          "file": "item-bd135-npn-power-transistor-to-126.webp",
+          "path": "/images/products/item-bd135-npn-power-transistor-to-126.webp"
+        },
+        "EDP-SEM-0048-V02": {
+          "file": "item-bd139-npn-power-transistor-to-126.webp",
+          "path": "/images/products/item-bd139-npn-power-transistor-to-126.webp"
+        },
+        "EDP-SEM-0048-V03": {
+          "file": "item-d882-npn-power-transistor-to-126.webp",
+          "path": "/images/products/item-d882-npn-power-transistor-to-126.webp"
+        }
+      }
     },
     "item-bd140-pnp-power-transistor-to-126": {
       "default": "item-bd140-pnp-power-transistor-to-126.webp",
@@ -317,21 +474,20 @@
     "item-bt136-triac-4a-600v-to-220": {
       "default": "item-bt136-triac-4a-600v-to-220.webp",
       "defaultPath": "/images/products/item-bt136-triac-4a-600v-to-220.webp",
-      "variants": {}
-    },
-    "item-bt137-triac-8a-600v-to-220": {
-      "default": "item-bt137-triac-8a-600v-to-220.webp",
-      "defaultPath": "/images/products/item-bt137-triac-8a-600v-to-220.webp",
-      "variants": {}
+      "variants": {
+        "EDP-SEM-0051-V01": {
+          "file": "item-bt136-triac-4a-600v-to-220.webp",
+          "path": "/images/products/item-bt136-triac-4a-600v-to-220.webp"
+        },
+        "EDP-SEM-0051-V02": {
+          "file": "item-bt137-triac-8a-600v-to-220.webp",
+          "path": "/images/products/item-bt137-triac-8a-600v-to-220.webp"
+        }
+      }
     },
     "sku-prod-1094": {
       "default": "sku-prod-1094.webp",
       "defaultPath": "/images/products/sku-prod-1094.webp",
-      "variants": {}
-    },
-    "item-d882-npn-power-transistor-to-126": {
-      "default": "item-d882-npn-power-transistor-to-126.webp",
-      "defaultPath": "/images/products/item-d882-npn-power-transistor-to-126.webp",
       "variants": {}
     },
     "item-e13003-2-npn-power-transistor-to-126": {
@@ -607,12 +763,16 @@
     "item-bta12-600b-triac-12a-600v-to-220": {
       "default": "item-bta12-600b-triac-12a-600v-to-220.webp",
       "defaultPath": "/images/products/item-bta12-600b-triac-12a-600v-to-220.webp",
-      "variants": {}
-    },
-    "item-bta16-600b-triac-16a-600v-to-220": {
-      "default": "item-bta16-600b-triac-16a-600v-to-220.webp",
-      "defaultPath": "/images/products/item-bta16-600b-triac-16a-600v-to-220.webp",
-      "variants": {}
+      "variants": {
+        "EDP-SEM-0107-V01": {
+          "file": "item-bta12-600b-triac-12a-600v-to-220.webp",
+          "path": "/images/products/item-bta12-600b-triac-12a-600v-to-220.webp"
+        },
+        "EDP-SEM-0107-V02": {
+          "file": "item-bta16-600b-triac-16a-600v-to-220.webp",
+          "path": "/images/products/item-bta16-600b-triac-16a-600v-to-220.webp"
+        }
+      }
     },
     "item-bta41-800b-triac-40a-800v-to-3p": {
       "default": "item-bta41-800b-triac-40a-800v-to-3p.webp",
@@ -662,7 +822,16 @@
     "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a": {
       "default": "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
       "defaultPath": "/images/products/item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
-      "variants": {}
+      "variants": {
+        "EDP-MOD-0117-V01": {
+          "file": "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+          "path": "/images/products/item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp"
+        },
+        "EDP-MOD-0117-V02": {
+          "file": "item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
+          "path": "/images/products/item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp"
+        }
+      }
     },
     "item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe": {
       "default": "item-dm-w3002-digital-temperature-controller-module-12v-220v-relay-thermostat-with-sensor-probe.webp",
@@ -687,11 +856,6 @@
     "item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a": {
       "default": "item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a.webp",
       "defaultPath": "/images/products/item-jdq-01-automatic-power-battery-backup-switch-module-5v-48v-10a.webp",
-      "variants": {}
-    },
-    "item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a": {
-      "default": "item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
-      "defaultPath": "/images/products/item-lm2596-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a.webp",
       "variants": {}
     },
     "item-lm324n-quad-operational-amplifier-ic-dip-14": {
@@ -747,12 +911,16 @@
     "item-ne555p-precision-timer-ic-dip-8": {
       "default": "item-ne555p-precision-timer-ic-dip-8.webp",
       "defaultPath": "/images/products/item-ne555p-precision-timer-ic-dip-8.webp",
-      "variants": {}
-    },
-    "item-ne555p-precision-timer-ic-dip-8-2": {
-      "default": "item-ne555p-precision-timer-ic-dip-8-2.webp",
-      "defaultPath": "/images/products/item-ne555p-precision-timer-ic-dip-8-2.webp",
-      "variants": {}
+      "variants": {
+        "EDP-SEM-0133-V01": {
+          "file": "item-ne555p-precision-timer-ic-dip-8.webp",
+          "path": "/images/products/item-ne555p-precision-timer-ic-dip-8.webp"
+        },
+        "EDP-SEM-0133-V02": {
+          "file": "item-ne555p-precision-timer-ic-dip-8-2.webp",
+          "path": "/images/products/item-ne555p-precision-timer-ic-dip-8-2.webp"
+        }
+      }
     },
     "item-ne556n-dual-precision-timer-ic-dip-14": {
       "default": "item-ne556n-dual-precision-timer-ic-dip-14.webp",
@@ -807,12 +975,16 @@
     "item-uc3842an-current-mode-pwm-controller-ic-dip-8": {
       "default": "item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp",
       "defaultPath": "/images/products/item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp",
-      "variants": {}
-    },
-    "item-uc3843an-current-mode-pwm-controller-ic-dip-8": {
-      "default": "item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp",
-      "defaultPath": "/images/products/item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp",
-      "variants": {}
+      "variants": {
+        "EDP-SEM-0144-V01": {
+          "file": "item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp",
+          "path": "/images/products/item-uc3842an-current-mode-pwm-controller-ic-dip-8.webp"
+        },
+        "EDP-SEM-0144-V02": {
+          "file": "item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp",
+          "path": "/images/products/item-uc3843an-current-mode-pwm-controller-ic-dip-8.webp"
+        }
+      }
     },
     "item-uln2003an-darlington-transistor-array-ic-dip-16": {
       "default": "item-uln2003an-darlington-transistor-array-ic-dip-16.webp",
@@ -833,128 +1005,458 @@
       "default": "ed-res-1p.webp",
       "defaultPath": "/images/products/ed-res-1p.webp",
       "variants": {
-        "ed-res-1p-47k-a": "ed-res-1p-47k-a.webp",
-        "ed-res-1p-30k-a": "ed-res-1p-30k-a.webp",
-        "ed-res-1p-12k": "ed-res-1p-12k.webp",
-        "ed-res-1p-30k-b": "ed-res-1p-30k-b.webp",
-        "ed-res-1p-820k": "ed-res-1p-820k.webp",
-        "ed-res-1p-680k": "ed-res-1p-680k.webp",
-        "ed-res-1p-100-a": "ed-res-1p-100-a.webp",
-        "ed-res-1p-220": "ed-res-1p-220.webp",
-        "ed-res-1p-1-1k": "ed-res-1p-1-1k.webp",
-        "ed-res-1p-510": "ed-res-1p-510.webp",
-        "ed-res-1p-51k": "ed-res-1p-51k.webp",
-        "ed-res-1p-10k": "ed-res-1p-10k.webp",
-        "ed-res-1p-270": "ed-res-1p-270.webp",
-        "ed-res-1p-1k": "ed-res-1p-1k.webp",
-        "ed-res-1p-470k": "ed-res-1p-470k.webp",
-        "ed-res-1p-68k": "ed-res-1p-68k.webp",
-        "ed-res-1p-22": "ed-res-1p-22.webp",
-        "ed-res-1p-100k": "ed-res-1p-100k.webp",
-        "ed-res-1p-20k": "ed-res-1p-20k.webp",
-        "ed-res-1p-10": "ed-res-1p-10.webp",
-        "ed-res-1p-2k": "ed-res-1p-2k.webp",
-        "ed-res-1p-6-8k": "ed-res-1p-6-8k.webp",
-        "ed-res-1p-47k-b": "ed-res-1p-47k-b.webp",
-        "ed-res-1p-22k": "ed-res-1p-22k.webp",
-        "ed-res-1p-1m": "ed-res-1p-1m.webp",
-        "ed-res-1p-330k": "ed-res-1p-330k.webp",
-        "ed-res-1p-47": "ed-res-1p-47.webp",
-        "ed-res-1p-680": "ed-res-1p-680.webp",
-        "ed-res-1p-100-b": "ed-res-1p-100-b.webp",
-        "ed-res-1p-220k": "ed-res-1p-220k.webp",
-        "ed-res-1p-150": "ed-res-1p-150.webp",
-        "ed-res-1p-4-7k": "ed-res-1p-4-7k.webp",
-        "ed-res-1p-330": "ed-res-1p-330.webp",
-        "ed-res-1p-470": "ed-res-1p-470.webp"
+        "EDP-RES-0148-V01": {
+          "file": "ed-res-1p-47k-a.webp",
+          "path": "/images/products/ed-res-1p-47k-a.webp"
+        },
+        "EDP-RES-0148-V02": {
+          "file": "ed-res-1p-30k-a.webp",
+          "path": "/images/products/ed-res-1p-30k-a.webp"
+        },
+        "EDP-RES-0148-V03": {
+          "file": "ed-res-1p-12k.webp",
+          "path": "/images/products/ed-res-1p-12k.webp"
+        },
+        "EDP-RES-0148-V04": {
+          "file": "ed-res-1p-30k-b.webp",
+          "path": "/images/products/ed-res-1p-30k-b.webp"
+        },
+        "EDP-RES-0148-V05": {
+          "file": "ed-res-1p-820k.webp",
+          "path": "/images/products/ed-res-1p-820k.webp"
+        },
+        "EDP-RES-0148-V06": {
+          "file": "ed-res-1p-680k.webp",
+          "path": "/images/products/ed-res-1p-680k.webp"
+        },
+        "EDP-RES-0148-V07": {
+          "file": "ed-res-1p-100-a.webp",
+          "path": "/images/products/ed-res-1p-100-a.webp"
+        },
+        "EDP-RES-0148-V08": {
+          "file": "ed-res-1p-220.webp",
+          "path": "/images/products/ed-res-1p-220.webp"
+        },
+        "EDP-RES-0148-V09": {
+          "file": "ed-res-1p-1-1k.webp",
+          "path": "/images/products/ed-res-1p-1-1k.webp"
+        },
+        "EDP-RES-0148-V10": {
+          "file": "ed-res-1p-510.webp",
+          "path": "/images/products/ed-res-1p-510.webp"
+        },
+        "EDP-RES-0148-V11": {
+          "file": "ed-res-1p-51k.webp",
+          "path": "/images/products/ed-res-1p-51k.webp"
+        },
+        "EDP-RES-0148-V12": {
+          "file": "ed-res-1p-10k.webp",
+          "path": "/images/products/ed-res-1p-10k.webp"
+        },
+        "EDP-RES-0148-V13": {
+          "file": "ed-res-1p-270.webp",
+          "path": "/images/products/ed-res-1p-270.webp"
+        },
+        "EDP-RES-0148-V14": {
+          "file": "ed-res-1p-1k.webp",
+          "path": "/images/products/ed-res-1p-1k.webp"
+        },
+        "EDP-RES-0148-V15": {
+          "file": "ed-res-1p-470k.webp",
+          "path": "/images/products/ed-res-1p-470k.webp"
+        },
+        "EDP-RES-0148-V16": {
+          "file": "ed-res-1p-68k.webp",
+          "path": "/images/products/ed-res-1p-68k.webp"
+        },
+        "EDP-RES-0148-V17": {
+          "file": "ed-res-1p-22.webp",
+          "path": "/images/products/ed-res-1p-22.webp"
+        },
+        "EDP-RES-0148-V18": {
+          "file": "ed-res-1p-100k.webp",
+          "path": "/images/products/ed-res-1p-100k.webp"
+        },
+        "EDP-RES-0148-V19": {
+          "file": "ed-res-1p-20k.webp",
+          "path": "/images/products/ed-res-1p-20k.webp"
+        },
+        "EDP-RES-0148-V20": {
+          "file": "ed-res-1p-10.webp",
+          "path": "/images/products/ed-res-1p-10.webp"
+        },
+        "EDP-RES-0148-V21": {
+          "file": "ed-res-1p-2k.webp",
+          "path": "/images/products/ed-res-1p-2k.webp"
+        },
+        "EDP-RES-0148-V22": {
+          "file": "ed-res-1p-6-8k.webp",
+          "path": "/images/products/ed-res-1p-6-8k.webp"
+        },
+        "EDP-RES-0148-V23": {
+          "file": "ed-res-1p-47k-b.webp",
+          "path": "/images/products/ed-res-1p-47k-b.webp"
+        },
+        "EDP-RES-0148-V24": {
+          "file": "ed-res-1p-22k.webp",
+          "path": "/images/products/ed-res-1p-22k.webp"
+        },
+        "EDP-RES-0148-V25": {
+          "file": "ed-res-1p-1m.webp",
+          "path": "/images/products/ed-res-1p-1m.webp"
+        },
+        "EDP-RES-0148-V26": {
+          "file": "ed-res-1p-330k.webp",
+          "path": "/images/products/ed-res-1p-330k.webp"
+        },
+        "EDP-RES-0148-V27": {
+          "file": "ed-res-1p-47.webp",
+          "path": "/images/products/ed-res-1p-47.webp"
+        },
+        "EDP-RES-0148-V28": {
+          "file": "ed-res-1p-680.webp",
+          "path": "/images/products/ed-res-1p-680.webp"
+        },
+        "EDP-RES-0148-V29": {
+          "file": "ed-res-1p-100-b.webp",
+          "path": "/images/products/ed-res-1p-100-b.webp"
+        },
+        "EDP-RES-0148-V30": {
+          "file": "ed-res-1p-220k.webp",
+          "path": "/images/products/ed-res-1p-220k.webp"
+        },
+        "EDP-RES-0148-V31": {
+          "file": "ed-res-1p-150.webp",
+          "path": "/images/products/ed-res-1p-150.webp"
+        },
+        "EDP-RES-0148-V32": {
+          "file": "ed-res-1p-4-7k.webp",
+          "path": "/images/products/ed-res-1p-4-7k.webp"
+        },
+        "EDP-RES-0148-V33": {
+          "file": "ed-res-1p-330.webp",
+          "path": "/images/products/ed-res-1p-330.webp"
+        },
+        "EDP-RES-0148-V34": {
+          "file": "ed-res-1p-470.webp",
+          "path": "/images/products/ed-res-1p-470.webp"
+        }
       }
     },
     "ed-res-pwr": {
       "default": "ed-res-pwr.webp",
       "defaultPath": "/images/products/ed-res-pwr.webp",
       "variants": {
-        "ed-res-pwr-120-1w": "ed-res-pwr-120-1w.webp",
-        "ed-res-pwr-10-1w": "ed-res-pwr-10-1w.webp",
-        "ed-res-pwr-220-1w": "ed-res-pwr-220-1w.webp",
-        "ed-res-pwr-150-1w": "ed-res-pwr-150-1w.webp",
-        "ed-res-pwr-12k-1-2w": "ed-res-pwr-12k-1-2w.webp",
-        "ed-res-pwr-1k-1-2w": "ed-res-pwr-1k-1-2w.webp",
-        "ed-res-pwr-100-1-2w-a": "ed-res-pwr-100-1-2w-a.webp",
-        "ed-res-pwr-2-2k-1-2w": "ed-res-pwr-2-2k-1-2w.webp",
-        "ed-res-pwr-1-8k-1-2w": "ed-res-pwr-1-8k-1-2w.webp",
-        "ed-res-pwr-560-1-2w": "ed-res-pwr-560-1-2w.webp",
-        "ed-res-pwr-390-1-2w": "ed-res-pwr-390-1-2w.webp",
-        "ed-res-pwr-100-1-2w-b": "ed-res-pwr-100-1-2w-b.webp",
-        "ed-res-pwr-4-7k-1-2w": "ed-res-pwr-4-7k-1-2w.webp",
-        "ed-res-pwr-10k-1-2w": "ed-res-pwr-10k-1-2w.webp",
-        "ed-res-pwr-47-1-2w": "ed-res-pwr-47-1-2w.webp",
-        "ed-res-pwr-46-1-2w": "ed-res-pwr-46-1-2w.webp"
+        "EDP-RES-0149-V01": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V02": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V03": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V04": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V05": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V06": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V07": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V08": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V09": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V10": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V11": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V12": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V13": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V14": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V15": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        },
+        "EDP-RES-0149-V16": {
+          "file": "ed-res-pwr.webp",
+          "path": "/images/products/ed-res-pwr.webp"
+        }
       }
     },
     "ed-res-qw": {
       "default": "ed-res-qw.webp",
       "defaultPath": "/images/products/ed-res-qw.webp",
       "variants": {
-        "ed-res-qw-150": "ed-res-qw-150.webp",
-        "ed-res-qw-1k": "ed-res-qw-1k.webp",
-        "ed-res-qw-56k": "ed-res-qw-56k.webp",
-        "ed-res-qw-8-2": "ed-res-qw-8-2.webp",
-        "ed-res-qw-3-9": "ed-res-qw-3-9.webp",
-        "ed-res-qw-4-7": "ed-res-qw-4-7.webp",
-        "ed-res-qw-39": "ed-res-qw-39.webp",
-        "ed-res-qw-680": "ed-res-qw-680.webp",
-        "ed-res-qw-1": "ed-res-qw-1.webp",
-        "ed-res-qw-6-8k": "ed-res-qw-6-8k.webp",
-        "ed-res-qw-22-1w": "ed-res-qw-22-1w.webp",
-        "ed-res-qw-820": "ed-res-qw-820.webp",
-        "ed-res-qw-33": "ed-res-qw-33.webp",
-        "ed-res-qw-100": "ed-res-qw-100.webp",
-        "ed-res-qw-1-8-a": "ed-res-qw-1-8-a.webp",
-        "ed-res-qw-15": "ed-res-qw-15.webp",
-        "ed-res-qw-2-2": "ed-res-qw-2-2.webp",
-        "ed-res-qw-210": "ed-res-qw-210.webp",
-        "ed-res-qw-3-3": "ed-res-qw-3-3.webp",
-        "ed-res-qw-180": "ed-res-qw-180.webp",
-        "ed-res-qw-1-8-b": "ed-res-qw-1-8-b.webp",
-        "ed-res-qw-47": "ed-res-qw-47.webp",
-        "ed-res-qw-56": "ed-res-qw-56.webp",
-        "ed-res-qw-6-8": "ed-res-qw-6-8.webp",
-        "ed-res-qw-10": "ed-res-qw-10.webp",
-        "ed-res-qw-22k": "ed-res-qw-22k.webp",
-        "ed-res-qw-470k": "ed-res-qw-470k.webp",
-        "ed-res-qw-150k": "ed-res-qw-150k.webp",
-        "ed-res-qw-1-8k": "ed-res-qw-1-8k.webp",
-        "ed-res-qw-560k": "ed-res-qw-560k.webp",
-        "ed-res-qw-4-7m": "ed-res-qw-4-7m.webp",
-        "ed-res-qw-100k": "ed-res-qw-100k.webp",
-        "ed-res-qw-330k": "ed-res-qw-330k.webp",
-        "ed-res-qw-3-9k": "ed-res-qw-3-9k.webp",
-        "ed-res-qw-220k": "ed-res-qw-220k.webp",
-        "ed-res-qw-15k": "ed-res-qw-15k.webp",
-        "ed-res-qw-10k": "ed-res-qw-10k.webp",
-        "ed-res-qw-27k": "ed-res-qw-27k.webp",
-        "ed-res-qw-680k": "ed-res-qw-680k.webp",
-        "ed-res-qw-2-2k": "ed-res-qw-2-2k.webp",
-        "ed-res-qw-7-5k": "ed-res-qw-7-5k.webp",
-        "ed-res-qw-82k": "ed-res-qw-82k.webp",
-        "ed-res-qw-47k": "ed-res-qw-47k.webp",
-        "ed-res-qw-120k": "ed-res-qw-120k.webp",
-        "ed-res-qw-4-6k": "ed-res-qw-4-6k.webp",
-        "ed-res-qw-5-6k-a": "ed-res-qw-5-6k-a.webp",
-        "ed-res-qw-3-3m": "ed-res-qw-3-3m.webp",
-        "ed-res-qw-2m": "ed-res-qw-2m.webp",
-        "ed-res-qw-1-5k": "ed-res-qw-1-5k.webp",
-        "ed-res-qw-390k": "ed-res-qw-390k.webp",
-        "ed-res-qw-2-2m": "ed-res-qw-2-2m.webp",
-        "ed-res-qw-3k": "ed-res-qw-3k.webp",
-        "ed-res-qw-33k": "ed-res-qw-33k.webp",
-        "ed-res-qw-12k": "ed-res-qw-12k.webp",
-        "ed-res-qw-18k": "ed-res-qw-18k.webp",
-        "ed-res-qw-4-7k": "ed-res-qw-4-7k.webp",
-        "ed-res-qw-180k": "ed-res-qw-180k.webp",
-        "ed-res-qw-3-3k": "ed-res-qw-3-3k.webp",
-        "ed-res-qw-2-7k": "ed-res-qw-2-7k.webp",
-        "ed-res-qw-5-6k-b": "ed-res-qw-5-6k-b.webp"
+        "EDP-RES-0150-V01": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V02": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V03": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V04": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V05": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V06": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V07": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V08": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V09": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V10": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V11": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V12": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V13": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V14": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V15": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V16": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V17": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V18": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V19": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V20": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V21": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V22": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V23": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V24": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V25": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V26": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V27": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V28": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V29": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V30": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V31": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V32": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V33": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V34": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V35": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V36": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V37": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V38": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V39": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V40": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V41": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V42": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V43": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V44": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V45": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V46": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V47": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V48": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V49": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V50": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V51": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V52": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V53": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V54": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V55": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V56": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V57": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V58": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V59": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        },
+        "EDP-RES-0150-V60": {
+          "file": "ed-res-qw.webp",
+          "path": "/images/products/ed-res-qw.webp"
+        }
       }
     },
     "item-cd4040be-cd4040-dip-16": {
@@ -986,100 +1488,51 @@
       "default": "max98357a-i2s-digital-audio-amplifier-module.webp",
       "defaultPath": "/images/products/max98357a-i2s-digital-audio-amplifier-module.webp",
       "variants": {}
+    },
+    "chyon-esp32-s3-n16r8-uvc-oled-custom-board": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "inmp441-i2s-mems-microphone-module": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "ssd1306-096-inch-128x64-i2c-oled-display": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "cs100a-ultrasonic-distance-sensor": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "l298n-dual-h-bridge-motor-driver-module": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "ws2812-8-pixel-rgb-led-panel": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "bo-motor-four-wheel-robot-set": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "usb-uvc-camera-module-native-usb-host": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
+    },
+    "3w-4-ohm-mono-speaker": {
+      "default": "product-placeholder.webp",
+      "defaultPath": "/images/placeholders/product-placeholder.webp",
+      "variants": {}
     }
-  },
-  "duplicateWarnings": [
-    {
-      "productFamily": "ed-elcap",
-      "displayName": "100µF 16V",
-      "sourceRows": [
-        16,
-        20
-      ],
-      "prices": [
-        3,
-        5
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    },
-    {
-      "productFamily": "ed-res-qw",
-      "displayName": "1.8Ω",
-      "sourceRows": [
-        15,
-        21
-      ],
-      "prices": [
-        1,
-        1
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    },
-    {
-      "productFamily": "ed-res-qw",
-      "displayName": "5.6KΩ",
-      "sourceRows": [
-        46,
-        60
-      ],
-      "prices": [
-        1,
-        1
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    },
-    {
-      "productFamily": "ed-res-1p",
-      "displayName": "47KΩ",
-      "sourceRows": [
-        1,
-        23
-      ],
-      "prices": [
-        1,
-        1
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    },
-    {
-      "productFamily": "ed-res-1p",
-      "displayName": "30KΩ",
-      "sourceRows": [
-        2,
-        4
-      ],
-      "prices": [
-        1,
-        1
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    },
-    {
-      "productFamily": "ed-res-1p",
-      "displayName": "100Ω",
-      "sourceRows": [
-        7,
-        29
-      ],
-      "prices": [
-        1,
-        1
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    },
-    {
-      "productFamily": "ed-res-pwr",
-      "displayName": "100Ω 1/2W",
-      "sourceRows": [
-        7,
-        12
-      ],
-      "prices": [
-        1,
-        1
-      ],
-      "message": "Duplicate source value preserved as separate variants."
-    }
-  ],
-  "generatedAt": "2026-09-22"
+  }
 }

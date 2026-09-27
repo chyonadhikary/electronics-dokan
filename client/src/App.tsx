@@ -179,7 +179,12 @@ const localizedApplications = (product: Product) => document.documentElement.lan
 const localizedAttention = (product: Product) => document.documentElement.lang === "bn" ? (product.attentionBn || product.attention || "") : (product.attention || "");
 const priceUnitLabel = (unit: Variant["priceUnit"] | undefined) => unit === "per_2_pieces" ? "per 2 pieces" : "per piece";
 const productPrice = (product: Product) => product.variants?.length ? Math.min(...product.variants.map((v) => v.price)) : product.price;
-const imagePath = (filename?: string) => filename ? `/images/products/${filename}` : "/images/placeholders/product-placeholder.webp";
+const imagePath = (filename?: string) => {
+  if (!filename) return "/images/placeholders/product-placeholder.webp";
+  if (/^https?:\/\//i.test(filename)) return filename;
+  if (filename.startsWith("/")) return filename;
+  return `/images/products/${filename}`;
+};
 const imageFor = (product: Product, variantId?: string) => {
   const variant = product.variants?.find((v) => v.variantId === variantId);
   return variant ? imagePath(variant.image) : (product.images?.[0] || imagePath(product.image));
@@ -265,6 +270,49 @@ function App() {
     description.setAttribute("content", "Shop dependable electronics, development boards, sensors and maker tools from Electronics Dokan in Bangladesh.");
     document.head.appendChild(description);
   }, [path, site]);
+
+  // Keep every navigable page self-describing for crawlers and social previews.
+  useEffect(() => {
+    const origin = (site.siteUrl || window.location.origin).replace(/\/$/, "");
+    const pathname = window.location.pathname || "/";
+    const canonicalPath = pathname.startsWith("/product/") ? pathname : (pathname === "/" ? "/" : pathname.replace(/\/$/, ""));
+    const canonicalUrl = `${origin}${canonicalPath}`;
+    const product = pathname.startsWith("/product/") ? products.find((item) => item.slug === pathname.split("/").pop()) : undefined;
+    const title = product ? `${localizedProductName(product)} · ${site.storeName}` : `${site.storeName} · ${site.tagline}`;
+    const description = product ? localizedDescription(product).slice(0, 300) : "Dependable boards, sensors, modules and tools for builders across Bangladesh.";
+    const image = product ? imageFor(product) : (site.heroBanners?.[0] || "/images/placeholders/product-placeholder.webp");
+    const absoluteImage = image.startsWith("http") ? image : `${origin}${image}`;
+    const brandImage = site.logo || site.heroBanners?.[0] || "/images/placeholders/product-placeholder.webp";
+    const absoluteBrandImage = brandImage.startsWith("http") ? brandImage : `${origin}${brandImage}`;
+    const setMeta = (selector: string, attributes: Record<string, string>) => {
+      let node = document.head.querySelector(selector) as HTMLMetaElement | null;
+      if (!node) { node = document.createElement("meta"); document.head.appendChild(node); }
+      Object.entries(attributes).forEach(([key, value]) => node!.setAttribute(key, value));
+    };
+    let canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
+    canonical.href = canonicalUrl;
+    document.title = title;
+    setMeta('meta[name="description"]', { name: "description", content: description });
+    setMeta('meta[property="og:title"]', { property: "og:title", content: title });
+    setMeta('meta[property="og:description"]', { property: "og:description", content: description });
+    setMeta('meta[property="og:url"]', { property: "og:url", content: canonicalUrl });
+    setMeta('meta[property="og:image"]', { property: "og:image", content: absoluteImage });
+    setMeta('meta[name="twitter:card"]', { name: "twitter:card", content: "summary_large_image" });
+    setMeta('meta[name="twitter:title"]', { name: "twitter:title", content: title });
+    setMeta('meta[name="twitter:description"]', { name: "twitter:description", content: description });
+    setMeta('meta[name="twitter:image"]', { name: "twitter:image", content: absoluteImage });
+    let schema = document.head.querySelector('#electronics-dokan-jsonld') as HTMLScriptElement | null;
+    if (!schema) { schema = document.createElement("script"); schema.id = "electronics-dokan-jsonld"; schema.type = "application/ld+json"; document.head.appendChild(schema); }
+    const graph: Record<string, unknown>[] = [{ "@type": "Organization", "@id": `${origin}/#organization`, name: site.storeName, url: origin, logo: absoluteBrandImage, address: site.address }, { "@type": "WebSite", "@id": `${origin}/#website`, name: site.storeName, url: origin, publisher: { "@id": `${origin}/#organization` } }];
+    if (product) {
+      const variants = product.variants || [];
+      const prices = variants.length ? variants.map((item) => item.price) : [product.price];
+      graph.push({ "@type": "Product", "@id": `${canonicalUrl}#product`, name: localizedProductName(product), description, image: [absoluteImage], sku: product.sku, mpn: product.sku, category: product.category, brand: { "@type": "Brand", name: product.brand }, offers: { "@type": variants.length > 1 ? "AggregateOffer" : "Offer", url: canonicalUrl, priceCurrency: "BDT", lowPrice: Math.min(...prices), highPrice: Math.max(...prices), price: Math.min(...prices), offerCount: variants.length || 1, availability: product.stock ? "https://schema.org/InStock" : (isPreOrderProduct(product) ? "https://schema.org/PreOrder" : "https://schema.org/OutOfStock") } });
+      graph.push({ "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: product.category, item: `${origin}/products?category=${encodeURIComponent(product.category)}` }, { "@type": "ListItem", position: 3, name: localizedProductName(product), item: canonicalUrl }] });
+    }
+    schema.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
+  }, [path, products, site, language]);
 
   const cartCount = cart.reduce((sum, line) => sum + line.qty, 0);
   const addToCart = (productId: string, qty = 1, variantId?: string, source?: HTMLElement) => {

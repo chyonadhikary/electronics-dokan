@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /checkout
+Disallow: /cart
+Disallow: /tracking
 Sitemap: https://electronicsdokan.com/sitemap.xml
+Sitemap: https://electronicsdokan.com/image-sitemap.xml
