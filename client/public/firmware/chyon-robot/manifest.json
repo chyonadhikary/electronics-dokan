@@ -1,0 +1,21 @@
+{
+  "name": "Chyon AI 4-Wheel Robot ESP32-S3 N16R8",
+  "version": "2.5.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "chyon-ai-4wheel-robot-v2.5.0-esp32s3-n16r8.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ],
+  "flashMode": "dio",
+  "flashFreq": "80m",
+  "flashSize": "16MB",
+  "monitorBaud": 115200,
+  "description": "Complete merged image built from the Chyon AI ESP32-S3 N16R8 UVC OLED four-wheel robot source project."
+}
