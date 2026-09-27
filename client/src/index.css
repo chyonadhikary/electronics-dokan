@@ -1848,3 +1848,59 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .announcement-actions .top-whatsapp-mobile-label { display: none !important; }
   .announcement-actions > .language-select { display: block !important; width: 78px !important; min-width: 78px !important; height: 28px !important; margin: 0 !important; }
 }
+
+/* Mobile final guard: the wrapper becomes transparent, but its three controls occupy fixed grid columns. */
+@media (max-width: 700px) {
+  .announcement-inner {
+    grid-template-columns: auto minmax(0, 1fr) auto !important;
+    gap: 5px !important;
+    padding: 0 5px !important;
+  }
+  .announcement-actions { display: contents !important; }
+  .announcement-actions > .announcement-social {
+    grid-column: 1 !important;
+    justify-self: start !important;
+    min-width: max-content;
+  }
+  .announcement-actions > .announcement-social .social-links { gap: 4px !important; }
+  .announcement-actions > .announcement-social .social-links a {
+    width: 24px !important;
+    height: 24px !important;
+    flex: 0 0 24px;
+  }
+  .announcement-actions > .top-whatsapp-contact {
+    grid-column: 2 !important;
+    justify-self: center !important;
+    display: inline-flex !important;
+    width: auto !important;
+    min-width: 112px !important;
+    max-width: calc(100vw - 150px);
+    height: 28px !important;
+    padding: 3px 7px !important;
+    gap: 5px !important;
+    border-radius: 999px !important;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .announcement-actions > .top-whatsapp-contact img { width: 20px !important; height: 20px !important; flex: 0 0 20px; }
+  .announcement-actions .top-whatsapp-desktop-label { display: none !important; }
+  .announcement-actions .top-whatsapp-mobile-label { display: inline !important; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .announcement-actions > .language-select {
+    grid-column: 3 !important;
+    justify-self: end !important;
+    display: block !important;
+    width: 65px !important;
+    min-width: 65px !important;
+    height: 25px !important;
+    margin: 0 -5px 0 0 !important;
+    padding: 0 2px !important;
+    font-size: 9px !important;
+  }
+}
+@media (max-width: 390px) {
+  .announcement-inner { gap: 3px !important; padding-left: 3px !important; }
+  .announcement-actions > .announcement-social .social-links { gap: 2px !important; }
+  .announcement-actions > .announcement-social .social-links a { width: 22px !important; height: 22px !important; flex-basis: 22px; }
+  .announcement-actions > .top-whatsapp-contact { min-width: 103px !important; padding-left: 4px !important; padding-right: 4px !important; font-size: 8px !important; }
+  .announcement-actions > .language-select { width: 62px !important; min-width: 62px !important; font-size: 8px !important; }
+}
