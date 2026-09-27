@@ -1,6 +1,6 @@
 {
-  "productCount": 175,
-  "variantCount": 152,
+  "productCount": 166,
+  "variantCount": 170,
   "variantStockTotal": 12260,
   "duplicateWarnings": [
     {
@@ -93,6 +93,89 @@
         1
       ],
       "message": "Duplicate source value preserved as separate variants."
+    },
+    {
+      "productFamily": "item-rotary-potentiometer-b100k-with-nut-and-washer",
+      "displayName": "Rotary Potentiometer B50K / B100K with Nut & Washer (Audio Pot)",
+      "sourceRows": [
+        16,
+        17
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-40-pin-female-header-strip-2-54mm-single-row",
+      "displayName": "40-Pin Header Strip 2.54mm Single Row",
+      "sourceRows": [
+        48,
+        49
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-bd135-npn-power-transistor-to-126",
+      "displayName": "BD NPN Power Transistor TO-126",
+      "sourceRows": [
+        53,
+        54
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-bt136-triac-4a-600v-to-220",
+      "displayName": "BT Triac TO-220",
+      "sourceRows": [
+        57,
+        58
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-bta12-600b-triac-12a-600v-to-220",
+      "displayName": "BTA Triac 600V TO-220",
+      "sourceRows": [
+        116,
+        117
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-dc-dc-buck-module-red-board-usb-output-dc6-20v-to-5v-3a",
+      "displayName": "DC-DC Buck Module Red Board USB Output DC6-20V to 5V 3A",
+      "sourceRows": [
+        127,
+        133
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-uc3842an-current-mode-pwm-controller-ic-dip-8",
+      "displayName": "UC384x Current Mode PWM Controller IC DIP-8",
+      "sourceRows": [
+        156,
+        157
+      ],
+      "message": "Near-duplicate source products merged into selectable variants."
+    },
+    {
+      "productFamily": "item-la4440-dual-audio-power-amplifier-ic",
+      "displayName": "LA4440 Dual Audio Power Amplifier IC (Zip-13)",
+      "sourceRows": [
+        11,
+        12
+      ],
+      "message": "Quality variants merged into one selectable product."
+    },
+    {
+      "productFamily": "item-ne555p-precision-timer-ic-dip-8",
+      "displayName": "NE555P Precision Timer IC DIP-8",
+      "sourceRows": [
+        144,
+        145
+      ],
+      "message": "Quality variants merged into one selectable product."
     }
-  ]
+  ],
+  "brandCount": 62,
+  "categoryCount": 16
 }
