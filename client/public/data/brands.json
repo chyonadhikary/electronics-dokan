@@ -1,18 +1,8 @@
 [
   {
-    "name": "BAKU",
-    "slug": "baku",
-    "image": ""
-  },
-  {
     "name": "Bambu Lab 3D Printing",
     "slug": "bambu-lab-3d-printing",
     "image": "/images/brands/bambu-lab-3d-printing.webp"
-  },
-  {
-    "name": "CAMEL",
-    "slug": "camel",
-    "image": ""
   },
   {
     "name": "CASIO",
@@ -60,16 +50,6 @@
     "image": "/images/brands/efest-power.webp"
   },
   {
-    "name": "EGBO",
-    "slug": "egbo",
-    "image": ""
-  },
-  {
-    "name": "ELEC&Lifes",
-    "slug": "elec-lifes",
-    "image": ""
-  },
-  {
     "name": "Fluke",
     "slug": "fluke",
     "image": "/images/brands/fluke.webp"
@@ -78,16 +58,6 @@
     "name": "FNIRSI",
     "slug": "fnirsi",
     "image": "/images/brands/fnirsi.webp"
-  },
-  {
-    "name": "Generic / Unbranded",
-    "slug": "generic-unbranded",
-    "image": ""
-  },
-  {
-    "name": "GoAT",
-    "slug": "goat",
-    "image": ""
   },
   {
     "name": "Hantek",
@@ -100,19 +70,9 @@
     "image": "/images/brands/hobbyking.webp"
   },
   {
-    "name": "HYDZ",
-    "slug": "hydz",
-    "image": ""
-  },
-  {
     "name": "INGCO",
     "slug": "ingco",
     "image": "/images/brands/ingco.webp"
-  },
-  {
-    "name": "JAVINO",
-    "slug": "javino",
-    "image": ""
   },
   {
     "name": "JOYKALY",
@@ -120,39 +80,14 @@
     "image": "/images/brands/joykaly.webp"
   },
   {
-    "name": "JRC",
-    "slug": "jrc",
-    "image": ""
-  },
-  {
-    "name": "KAWH",
-    "slug": "kawh",
-    "image": ""
-  },
-  {
-    "name": "KESHY",
-    "slug": "keshy",
-    "image": ""
-  },
-  {
     "name": "KYORITSU",
     "slug": "kyoritsu",
     "image": "/images/brands/kyoritsu.webp"
   },
   {
-    "name": "L-faster",
-    "slug": "l-faster",
-    "image": ""
-  },
-  {
     "name": "Liitokala",
     "slug": "liitokala",
     "image": "/images/brands/liitokala.webp"
-  },
-  {
-    "name": "Liludin",
-    "slug": "liludin",
-    "image": ""
   },
   {
     "name": "Luminous",
@@ -200,11 +135,6 @@
     "image": "/images/brands/pololu.webp"
   },
   {
-    "name": "PUMUDDSY",
-    "slug": "pumuddsy",
-    "image": ""
-  },
-  {
     "name": "ROGERELE",
     "slug": "rogerele",
     "image": "/images/brands/rogerele.webp"
@@ -218,11 +148,6 @@
     "name": "Seeed Studio",
     "slug": "seeed-studio",
     "image": "/images/brands/seeed-studio.webp"
-  },
-  {
-    "name": "SHARP",
-    "slug": "sharp",
-    "image": ""
   },
   {
     "name": "SINOTIMER",
@@ -243,16 +168,6 @@
     "name": "Suoyong Technology",
     "slug": "suoyong-technology",
     "image": "/images/brands/suoyong-technology.webp"
-  },
-  {
-    "name": "SY",
-    "slug": "sy",
-    "image": ""
-  },
-  {
-    "name": "Tdidaz",
-    "slug": "tdidaz",
-    "image": ""
   },
   {
     "name": "Techshop Bangladesh",
@@ -290,11 +205,6 @@
     "image": "/images/brands/unicol.webp"
   },
   {
-    "name": "VANXY",
-    "slug": "vanxy",
-    "image": ""
-  },
-  {
     "name": "VICTOR",
     "slug": "victor",
     "image": "/images/brands/victor.webp"
@@ -308,10 +218,5 @@
     "name": "YAGE",
     "slug": "yage",
     "image": "/images/brands/yage.webp"
-  },
-  {
-    "name": "Zhuang One",
-    "slug": "zhuang-one",
-    "image": ""
   }
 ]
