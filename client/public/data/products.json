@@ -8658,5 +8658,521 @@
     "nameBn": "MAX98357A I2S ডিজিটাল অডিও অ্যাম্প্লিফায়ার মডিউল",
     "shortDescriptionBn": "ESP32, Raspberry Pi, STM32 এবং smart-speaker project-এর জন্য compact mono Class-D I2S amplifier।",
     "descriptionBn": "MAX98357A হলো একটি compact Class-D digital audio amplifier, যা external DAC ছাড়াই সরাসরি I2S digital audio গ্রহণ করে mono speaker চালাতে পারে। ESP32, Raspberry Pi, STM32 এবং অন্যান্য I2S-enabled microcontroller project-এর জন্য উপযোগী।"
+  },
+  {
+    "id": "chyon-esp32-s3-n16r8-uvc-oled-custom-board",
+    "slug": "chyon-esp32-s3-n16r8-uvc-oled-custom-board",
+    "name": "ESP32-S3 N16R8 UVC OLED Custom Board",
+    "category": "Development Boards",
+    "sourceCategory": "DEVELOPMENT BOARDS",
+    "sku": "CHYON-ESP32-S3-N16R8-UVC-OLED-CUSTOM-BOARD",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Chyon AI robot main controller. Must be the N16R8 UVC OLED board; ordinary ESP32 DevKit boards are not compatible.",
+    "shortDescription": "ESP32-S3 N16R8 custom board with native USB host, PSRAM and OLED support for the Chyon AI robot.",
+    "brand": "Not specified",
+    "specifications": {
+      "Target": "ESP32-S3",
+      "Memory": "16MB flash / 8MB PSRAM",
+      "USB": "Native USB host / UVC camera support",
+      "Display": "OLED support",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "ESP32-S3 N16R8 UVC OLED Custom Board",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 167,
+    "nameBn": "ESP32-S3 N16R8 UVC OLED Custom Board",
+    "shortDescriptionBn": "ESP32-S3 N16R8 custom board with native USB host, PSRAM and OLED support for the Chyon AI robot.",
+    "descriptionBn": "Chyon AI robot main controller. Must be the N16R8 UVC OLED board; ordinary ESP32 DevKit boards are not compatible.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "inmp441-i2s-mems-microphone-module",
+    "slug": "inmp441-i2s-mems-microphone-module",
+    "name": "INMP441 I2S MEMS Microphone Module",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "INMP441-I2S-MEMS-MICROPHONE-MODULE",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for the Chyon AI robot voice input path.",
+    "shortDescription": "Digital I2S MEMS microphone module for voice input and speech recognition projects.",
+    "brand": "Not specified",
+    "specifications": {
+      "Interface": "I2S",
+      "Type": "Digital MEMS microphone",
+      "Use": "Voice input",
+      "Robot pins": "WS GPIO4 · SCK GPIO5 · DIN GPIO6",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "INMP441 I2S MEMS Microphone Module",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 168,
+    "nameBn": "INMP441 I2S MEMS Microphone Module",
+    "shortDescriptionBn": "Digital I2S MEMS microphone module for voice input and speech recognition projects.",
+    "descriptionBn": "Required for the Chyon AI robot voice input path.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "ssd1306-096-inch-128x64-i2c-oled-display",
+    "slug": "ssd1306-096-inch-128x64-i2c-oled-display",
+    "name": "0.96-inch SSD1306 128×64 I2C OLED Display",
+    "category": "Display",
+    "sourceCategory": "DISPLAY",
+    "sku": "SSD1306-096-INCH-128X64-I2C-OLED-DISPLAY",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for the Chyon AI robot display and pairing information.",
+    "shortDescription": "Compact 128×64 I2C OLED display for status, pairing code and assistant face output.",
+    "brand": "Not specified",
+    "specifications": {
+      "Controller": "SSD1306",
+      "Resolution": "128×64",
+      "Interface": "I2C",
+      "Robot pins": "SDA GPIO40 · SCL GPIO42",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "0.96-inch SSD1306 128×64 I2C OLED Display",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 169,
+    "nameBn": "0.96-inch SSD1306 128×64 I2C OLED Display",
+    "shortDescriptionBn": "Compact 128×64 I2C OLED display for status, pairing code and assistant face output.",
+    "descriptionBn": "Required for the Chyon AI robot display and pairing information.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "cs100a-ultrasonic-distance-sensor",
+    "slug": "cs100a-ultrasonic-distance-sensor",
+    "name": "CS100A Ultrasonic Distance Sensor",
+    "category": "Modules",
+    "sourceCategory": "MODULES",
+    "sku": "CS100A-ULTRASONIC-DISTANCE-SENSOR",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for the Chyon AI robot obstacle guard. Use the specified Echo voltage divider before GPIO2.",
+    "shortDescription": "Ultrasonic distance sensor for obstacle detection and safe robot movement control.",
+    "brand": "Not specified",
+    "specifications": {
+      "Signal": "TRIG / ECHO",
+      "Robot pins": "TRIG GPIO1 · ECHO GPIO2",
+      "Safety": "Echo must pass through 10kΩ/20kΩ divider",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "CS100A Ultrasonic Distance Sensor",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 170,
+    "nameBn": "CS100A Ultrasonic Distance Sensor",
+    "shortDescriptionBn": "Ultrasonic distance sensor for obstacle detection and safe robot movement control.",
+    "descriptionBn": "Required for the Chyon AI robot obstacle guard. Use the specified Echo voltage divider before GPIO2.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "l298n-dual-h-bridge-motor-driver-module",
+    "slug": "l298n-dual-h-bridge-motor-driver-module",
+    "name": "L298N Dual H-Bridge Motor Driver Module",
+    "category": "Modules",
+    "sourceCategory": "MODULES",
+    "sku": "L298N-DUAL-H-BRIDGE-MOTOR-DRIVER-MODULE",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for Chyon AI robot motor direction and enable control.",
+    "shortDescription": "Dual H-bridge motor driver module for controlling the four-wheel robot motors.",
+    "brand": "Not specified",
+    "specifications": {
+      "Driver": "Dual H-bridge",
+      "Control": "ENA GPIO8 · ENB GPIO13",
+      "Direction": "IN1 GPIO9 · IN2 GPIO10 · IN3 GPIO11 · IN4 GPIO12",
+      "Power": "Use separate motor battery; common ground with logic",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "L298N Dual H-Bridge Motor Driver Module",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 171,
+    "nameBn": "L298N Dual H-Bridge Motor Driver Module",
+    "shortDescriptionBn": "Dual H-bridge motor driver module for controlling the four-wheel robot motors.",
+    "descriptionBn": "Required for Chyon AI robot motor direction and enable control.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "ws2812-8-pixel-rgb-led-panel",
+    "slug": "ws2812-8-pixel-rgb-led-panel",
+    "name": "WS2812 8-Pixel RGB LED Panel",
+    "category": "Diy Electronics",
+    "sourceCategory": "DIY ELECTRONICS",
+    "sku": "WS2812-8-PIXEL-RGB-LED-PANEL",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for the Chyon AI robot status panel.",
+    "shortDescription": "Eight-pixel addressable RGB LED panel for robot status and feedback lighting.",
+    "brand": "Not specified",
+    "specifications": {
+      "Pixels": "8",
+      "Data": "DIN GPIO3",
+      "Power": "External 5V supply and common ground",
+      "Recommended": "Add 470–1000µF capacitor; use level shifter where possible",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "WS2812 8-Pixel RGB LED Panel",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 172,
+    "nameBn": "WS2812 8-Pixel RGB LED Panel",
+    "shortDescriptionBn": "Eight-pixel addressable RGB LED panel for robot status and feedback lighting.",
+    "descriptionBn": "Required for the Chyon AI robot status panel.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "bo-motor-four-wheel-robot-set",
+    "slug": "bo-motor-four-wheel-robot-set",
+    "name": "BO Motor Four-Wheel Robot Set",
+    "category": "Diy Electronics",
+    "sourceCategory": "DIY ELECTRONICS",
+    "sku": "BO-MOTOR-FOUR-WHEEL-ROBOT-SET",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for the Chyon AI robot drive system.",
+    "shortDescription": "Four BO geared DC motors for a compact four-wheel robot chassis.",
+    "brand": "Not specified",
+    "specifications": {
+      "Quantity": "4 motors",
+      "Driver": "L298N",
+      "Safety": "Lift wheels during first movement test",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "BO Motor Four-Wheel Robot Set",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 173,
+    "nameBn": "BO Motor Four-Wheel Robot Set",
+    "shortDescriptionBn": "Four BO geared DC motors for a compact four-wheel robot chassis.",
+    "descriptionBn": "Required for the Chyon AI robot drive system.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "usb-uvc-camera-module-native-usb-host",
+    "slug": "usb-uvc-camera-module-native-usb-host",
+    "name": "USB-UVC Camera Module for Native USB Host",
+    "category": "Communication",
+    "sourceCategory": "COMMUNICATION",
+    "sku": "USB-UVC-CAMERA-MODULE-NATIVE-USB-HOST",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for Chyon AI robot camera vision. Use the native camera/host Type-C port.",
+    "shortDescription": "USB-UVC camera module for native USB host vision on the ESP32-S3 robot board.",
+    "brand": "Not specified",
+    "specifications": {
+      "Interface": "USB-UVC",
+      "Connection": "Native USB host",
+      "Robot pins": "D− GPIO19 · D+ GPIO20",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "USB-UVC Camera Module for Native USB Host",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 174,
+    "nameBn": "USB-UVC Camera Module for Native USB Host",
+    "shortDescriptionBn": "USB-UVC camera module for native USB host vision on the ESP32-S3 robot board.",
+    "descriptionBn": "Required for Chyon AI robot camera vision. Use the native camera/host Type-C port.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "10k-20k-echo-voltage-divider-resistor-set",
+    "slug": "10k-20k-echo-voltage-divider-resistor-set",
+    "name": "10kΩ + 20kΩ Echo Voltage Divider Resistor Set",
+    "category": "Resistors",
+    "sourceCategory": "RESISTORS",
+    "sku": "10K-20K-ECHO-VOLTAGE-DIVIDER-RESISTOR-SET",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required safety parts for the CS100A sensor connection.",
+    "shortDescription": "Matched 10kΩ and 20kΩ resistors for safely reducing the CS100A Echo voltage before ESP32-S3 GPIO2.",
+    "brand": "Not specified",
+    "specifications": {
+      "Values": "10kΩ and 20kΩ",
+      "Connection": "Echo → 10kΩ → GPIO2; GPIO2 → 20kΩ → GND",
+      "Warning": "Never connect a 5V Echo signal directly to ESP32-S3 GPIO2",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "10kΩ + 20kΩ Echo Voltage Divider Resistor Set",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 175,
+    "nameBn": "10kΩ + 20kΩ Echo Voltage Divider Resistor Set",
+    "shortDescriptionBn": "Matched 10kΩ and 20kΩ resistors for safely reducing the CS100A Echo voltage before ESP32-S3 GPIO2.",
+    "descriptionBn": "Required safety parts for the CS100A sensor connection.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
+  },
+  {
+    "id": "2w-4-ohm-mono-speaker",
+    "slug": "2w-4-ohm-mono-speaker",
+    "name": "2W 4Ω Mono Speaker",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "2W-4-OHM-MONO-SPEAKER",
+    "price": 0,
+    "priceDisplay": "Out of stock",
+    "currency": "BDT",
+    "availability": "out_of_stock",
+    "stock": false,
+    "stockStatus": "Out of stock · Request restock",
+    "preOrder": "Request restock",
+    "description": "Required for the Chyon AI robot voice output.",
+    "shortDescription": "Small 2W 4Ω speaker for the MAX98357A mono I2S amplifier output.",
+    "brand": "Not specified",
+    "specifications": {
+      "Power": "2W",
+      "Impedance": "4Ω",
+      "Output": "Mono",
+      "Amplifier": "MAX98357A",
+      "Status": "Out of stock · Request restock"
+    },
+    "keywords": [
+      "2W 4Ω Mono Speaker",
+      "Chyon AI 4-wheel robot",
+      "voice control robot",
+      "out of stock",
+      "request restock"
+    ],
+    "sourceUrl": "Not specified",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": false,
+    "trending": false,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 176,
+    "nameBn": "2W 4Ω Mono Speaker",
+    "shortDescriptionBn": "Small 2W 4Ω speaker for the MAX98357A mono I2S amplifier output.",
+    "descriptionBn": "Required for the Chyon AI robot voice output.",
+    "projects": [
+      {
+        "title": "Chyon AI 4-wheel robot",
+        "url": "/projects/chyon-ai-4wheel-robot"
+      }
+    ],
+    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
   }
 ]
