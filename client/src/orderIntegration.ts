@@ -35,7 +35,7 @@ export type OrderPayload = {
   source: string;
 };
 
-export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbytuO-YgFq8G0DxszII_1TfrtGwSID2TCqlJoye56Y5_37ZIyum0LiIin-NKw0YwGv8/exec";
+export const ORDER_BACKEND_URL = "https://script.google.com/macros/s/AKfycbyJVOpCcXhuiy-qq0ajlupUr8UhKGmQUlwx81kRJkON7dWinK6PHtpPR_Vtu6XcZcE/exec";
 
 export type OrderSubmitResult = { ok: boolean; configured: boolean; orderId?: string; opaque?: boolean };
 
