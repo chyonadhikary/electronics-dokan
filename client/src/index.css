@@ -1454,3 +1454,9 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
 /* Keep homepage product shelves compact: descriptions remain available on detail/shop pages only. */
 .reference-shelf .product-short { display: none; }
 .reference-shelf .product-bottom { margin-top: 12px; }
+
+/* Desktop homepage shelf alignment: keep every price/action row on one baseline despite different name lengths. */
+.reference-shelf .product-card { display: flex; flex-direction: column; height: 100%; }
+.reference-shelf .product-card-body { display: flex; flex: 1 1 auto; flex-direction: column; min-height: 0; }
+.reference-shelf .product-name { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-height: 37.5px; max-height: 37.5px; overflow: hidden; }
+.reference-shelf .product-bottom { width: 100%; margin-top: auto; }
