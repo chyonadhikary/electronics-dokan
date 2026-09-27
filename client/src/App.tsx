@@ -232,7 +232,7 @@ function App() {
   });
   const [ready, setReady] = useState(false);
   const [routeLoading, setRouteLoading] = useState(true);
-  const [cartFlight, setCartFlight] = useState<{ image: string; name: string; fromX: number; fromY: number; toX: number; toY: number } | null>(null);
+  const [cartFlight, setCartFlight] = useState<{ image: string; name: string; fromX: number; fromY: number; toX: number; toY: number; durationMs: number } | null>(null);
 
   useEffect(() => {
     setRouteLoading(true);
@@ -330,8 +330,12 @@ function App() {
       const sourceRect = animationSource.getBoundingClientRect();
       const target = document.querySelector(".cart-button") as HTMLElement | null;
       const targetRect = target?.getBoundingClientRect();
-      setCartFlight({ image: imageFor(product, variantId), name: localizedProductName(product), fromX: sourceRect.left + sourceRect.width / 2, fromY: sourceRect.top + sourceRect.height / 2, toX: targetRect ? targetRect.left + targetRect.width / 2 : window.innerWidth - 42, toY: targetRect ? targetRect.top + targetRect.height / 2 : 28 });
-      window.setTimeout(() => setCartFlight(null), 2250);
+      const toX = targetRect ? targetRect.left + targetRect.width / 2 : window.innerWidth - 42;
+      const toY = targetRect ? targetRect.top + targetRect.height / 2 : 28;
+      const distance = Math.hypot(toX - (sourceRect.left + sourceRect.width / 2), toY - (sourceRect.top + sourceRect.height / 2));
+      const durationMs = Math.min(2900, Math.max(1900, Math.round(distance / 0.42)));
+      setCartFlight({ image: imageFor(product, variantId), name: localizedProductName(product), fromX: sourceRect.left + sourceRect.width / 2, fromY: sourceRect.top + sourceRect.height / 2, toX, toY, durationMs });
+      window.setTimeout(() => setCartFlight(null), durationMs + 80);
     }
     toast.success(`${product ? localizedProductName(product) : "Item"}${variant ? ` — ${variant.displayName}` : ""} added to cart`);
   };
@@ -776,9 +780,9 @@ function QuickViewModal({ product, navigate, addToCart, onClose }: { product: Pr
   return <div className="quick-view-modal" role="dialog" aria-modal="true" aria-label={bn ? "দ্রুত product view" : "Quick product view"} onClick={onClose}><div className="quick-view-card" onClick={(event) => event.stopPropagation()}><button type="button" className="quick-view-close" onClick={onClose} aria-label="Close quick view"><X size={18} /></button><div className="quick-view-image"><div className="product-image-bg" /><img src={imageFor(product)} alt={localizedProductName(product)} /></div><div className="quick-view-copy"><span className="eyebrow"><span className="eyebrow-line" /> {bn ? "দ্রুত দেখা" : "Quick view"}</span><h2>{localizedProductName(product)}</h2><p>{localizedShortDescription(product)}</p><strong className="quick-view-price">{product.stock ? (hasVariants ? `Starting from ${formatBDT(productPrice(product))}` : formatBDT(product.price)) : (product.priceDisplay || (bn ? "স্টকে নেই" : "Out of stock"))}</strong>{hasVariants && <small className="quick-view-variants">{product.variants.length} {bn ? "টি variant · detail page-এ নির্বাচন করুন" : "variants · choose on detail page"}</small>}<div className="quick-view-actions"><button type="button" className="button button-light" onClick={() => { onClose(); navigate(`/product/${product.slug}`); }}>{bn ? "বিস্তারিত দেখুন" : "View details"} <ArrowRight size={15} /></button>{!hasVariants && <button type="button" className="button button-primary" disabled={!product.stock} onClick={(event) => { addToCart(product.id, 1, undefined, event.currentTarget); onClose(); }}>{bn ? "কার্টে নিন" : "Add to cart"} <ShoppingCart size={15} /></button>}</div></div></div></div>;
 }
 
-function CartFlight({ item }: { item: { image: string; name: string; fromX: number; fromY: number; toX: number; toY: number } }) {
-  const style = { "--from-x": `${item.fromX}px`, "--from-y": `${item.fromY}px`, "--to-x": `${item.toX}px`, "--to-y": `${item.toY}px` } as React.CSSProperties;
-  return <div className="cart-flight" style={style} aria-hidden="true"><span className="cart-flight-spark">✦</span><span className="cart-flight-rocket"><Rocket size={38} strokeWidth={2.1} /><i /></span><img src={item.image} alt="" /><span className="cart-flight-label">{item.name}</span></div>;
+function CartFlight({ item }: { item: { image: string; name: string; fromX: number; fromY: number; toX: number; toY: number; durationMs: number } }) {
+  const style = { "--from-x": `${item.fromX}px`, "--from-y": `${item.fromY}px`, "--to-x": `${item.toX}px`, "--to-y": `${item.toY}px`, "--cart-flight-duration": `${item.durationMs}ms` } as React.CSSProperties;
+  return <div className="cart-flight" style={style} aria-hidden="true"><span className="cart-flight-spark">✦</span><span className="cart-flight-rocket"><Rocket size={54} strokeWidth={2.1} /><i /></span><img src={item.image} alt="" /><span className="cart-flight-label">{item.name}</span></div>;
 }
 
 function ProductsPage({ products, navigate, addToCart }: { products: Product[]; navigate: (path: string) => void; addToCart: (id: string, qty?: number) => void }) {
