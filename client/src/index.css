@@ -1450,3 +1450,7 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .project-bundle-toolbar { align-items: stretch; flex-direction: column; }
   .project-bundle-toolbar .button { width: 100%; }
 }
+
+/* Keep homepage product shelves compact: descriptions remain available on detail/shop pages only. */
+.reference-shelf .product-short { display: none; }
+.reference-shelf .product-bottom { margin-top: 12px; }
