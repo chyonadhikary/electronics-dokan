@@ -3,6 +3,7 @@ import { FormEvent, ReactNode, useEffect, useMemo, useRef, useState } from "reac
 	  ArrowLeft,
 	  ArrowRight,
 	  BadgeCheck,
+	  Camera,
 	  CheckCircle2,
 	  ChevronDown,
 	  ChevronLeft,
@@ -41,6 +42,7 @@ import { toast, Toaster } from "sonner";
 import { ESPLoader, Transport } from "esptool-js";
 import "./index.css";
 import { submitOrderToAppsScript, trackOrder, type OrderPayload, type OrderTrackingResult } from "./orderIntegration";
+import { ImageSearchModal } from "./ImageSearchModal";
 
 type Variant = {
   variantId: string;
@@ -235,8 +237,9 @@ function App() {
     try { return JSON.parse(localStorage.getItem("electronics-dokan-cart") || "[]"); } catch { return []; }
   });
   const [ready, setReady] = useState(false);
-  const [routeLoading, setRouteLoading] = useState(true);
-  const [cartFlight, setCartFlight] = useState<{ image: string; name: string; fromX: number; fromY: number; toX: number; toY: number; durationMs: number } | null>(null);
+	  const [routeLoading, setRouteLoading] = useState(true);
+	  const [cartFlight, setCartFlight] = useState<{ image: string; name: string; fromX: number; fromY: number; toX: number; toY: number; durationMs: number } | null>(null);
+	  const [imageSearchOpen, setImageSearchOpen] = useState(false);
 
   useEffect(() => {
     setRouteLoading(true);
@@ -369,17 +372,18 @@ function App() {
   return <>
     <Toaster position="bottom-right" toastOptions={{ className: "toast-card" }} />
     {(routeLoading || !ready) && <SitePreloader site={site} />}
-    <Header site={site} cartCount={cartCount} path={path} navigate={navigate} products={products} language={language} setLanguage={setLanguage} />
+	    <Header site={site} cartCount={cartCount} path={path} navigate={navigate} products={products} language={language} setLanguage={setLanguage} onOpenImageSearch={() => setImageSearchOpen(true)} />
     {cartFlight && <CartFlight item={cartFlight} />}
     <main>{renderPage()}</main>
     <Footer site={site} navigate={navigate} />
     <WhatsAppFloat site={site} language={language} />
     <ScrollControls productPage={path.startsWith("/product/")} />
-    <StickyFooterNav site={site} cartCount={cartCount} navigate={navigate} language={language} />
-  </>;
+	    <StickyFooterNav site={site} cartCount={cartCount} navigate={navigate} language={language} />
+	    <ImageSearchModal open={imageSearchOpen} products={products} language={language} onClose={() => setImageSearchOpen(false)} navigate={navigate} addToCart={(productId, variantId, source) => addToCart(productId, 1, variantId, source)} />
+	  </>;
 }
 
-function Header({ site, cartCount, path, navigate, products, language, setLanguage }: { site: SiteConfig; cartCount: number; path: string; navigate: (path: string) => void; products: Product[]; language: Language; setLanguage: (language: Language) => void }) {
+function Header({ site, cartCount, path, navigate, products, language, setLanguage, onOpenImageSearch }: { site: SiteConfig; cartCount: number; path: string; navigate: (path: string) => void; products: Product[]; language: Language; setLanguage: (language: Language) => void; onOpenImageSearch: () => void }) {
   const [searchValue, setSearchValue] = useState(() => new URLSearchParams(window.location.search).get("search") || "");
   const [searchCategory, setSearchCategory] = useState(() => new URLSearchParams(window.location.search).get("category") || "");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -426,7 +430,7 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
           <Search size={19} />
           <input aria-label="Search products" value={searchValue} onFocus={() => setSearchOpen(true)} onKeyDown={(event) => { if (event.key === "ArrowDown") { event.preventDefault(); setSearchOpen(true); setActiveSuggestion((index) => Math.min(index + 1, suggestions.length - 1)); } else if (event.key === "ArrowUp") { event.preventDefault(); setActiveSuggestion((index) => Math.max(index - 1, -1)); } else if (event.key === "Escape") { setSearchOpen(false); setActiveSuggestion(-1); } }} onChange={(event) => { setSearchValue(event.target.value); setSearchOpen(true); setActiveSuggestion(-1); }} placeholder="Search products, brands, categories..." />
           <select className="search-category-select" aria-label="Filter search by category" value={searchCategory} onChange={(event) => { const value = event.target.value; setSearchCategory(value); const params = new URLSearchParams(); if (searchValue.trim()) params.set("search", searchValue.trim()); if (value) params.set("category", value); navigate(`/products${params.toString() ? `?${params.toString()}` : ""}`); }}><option value="">All</option>{categories.map((category) => <option key={category} value={category}>{category}</option>)}</select>
-          <kbd>⌘ K</kbd><button type="submit" aria-label="Search"><ArrowRight size={19} /></button>
+	          <kbd>⌘ K</kbd><button type="button" className="image-search-trigger" aria-label={language === "bn" ? "ছবি দিয়ে খুঁজুন" : "Search by image"} onMouseDown={(event) => event.preventDefault()} onClick={onOpenImageSearch}><Camera size={17} /></button><button type="submit" aria-label="Search"><ArrowRight size={19} /></button>
           {searchOpen && searchValue.trim() && <div className="search-suggestions" role="listbox" aria-label={language === "bn" ? "সম্পর্কিত পণ্য" : "Related products"}>
             {suggestions.length ? <>
               <div className="search-suggestions-heading">{language === "bn" ? "আপনার জন্য মিলেছে" : "Related products"}<span>{suggestions.length}</span></div>
