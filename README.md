@@ -56,11 +56,11 @@ The Vite output is static and can be served by GitHub Pages or another static ho
 
 ## Order flow
 
-The checkout calculates subtotal, location-aware delivery and total in the browser, validates the guest form, then opens a URL-encoded WhatsApp message addressed to the number in `site.json`. Customer information is not written to localStorage or a database.
+The checkout calculates subtotal, location-aware delivery and total in the browser, validates the guest form, then opens a URL-encoded WhatsApp message addressed to the number in `site.json`. The cart is written to browser localStorage; checkout order details are submitted to the configured Apps Script order receiver and handed off to WhatsApp.
 
 ## Complete catalogue and variant data
 
-The storefront now ships with the complete static catalogue from the supplied specification: **168 catalogue products**, **152 capacitor/resistor variants**, and **12,260 variant stock units**. Product and variant data live in `client/public/data/products.json`; image mappings live in `client/public/data/image-manifest.json`; a machine-readable count and duplicate warning summary lives in `client/public/data/catalogue-summary.json`.
+The storefront now ships with the complete static catalogue from the supplied specification: **177 catalogue products**, **181 selectable variants**, and **33,245 variant stock units**. Product and variant data live in `client/public/data/products.json`; image mappings live in `client/public/data/image-manifest.json`; a machine-readable count and duplicate warning summary lives in `client/public/data/catalogue-summary.json`.
 
 Matched families expose selectable variants on their product pages. The selector updates price, price unit, stock quantity, image fallback, cart line, and WhatsApp order text immediately. Quarter-watt resistors remain priced per two pieces. Duplicate source rows are retained with stable IDs and surfaced in the manifest duplicate warnings rather than silently merged.
 

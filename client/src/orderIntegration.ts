@@ -78,17 +78,21 @@ export async function submitOrderToAppsScript(payload: OrderPayload): Promise<Or
 
   const body = JSON.stringify(payload);
   const submitOpaque = async (): Promise<OrderSubmitResult> => {
-    // Apps Script may follow its redirect to a response that the browser cannot
-    // expose to JavaScript. The receiver is idempotent by clientRequestId, so
-    // this request is safe even when the first request already reached Sheets.
-    await fetch(ORDER_BACKEND_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body,
-      keepalive: true,
-    });
-    return { ok: true, configured: true, opaque: true, orderId: payload.clientRequestId };
+    // Apps Script may follow a redirect that the browser cannot expose to
+    // JavaScript. Send the idempotent request, but never claim that Sheets
+    // accepted it without a verifiable JSON response.
+    try {
+      await fetch(ORDER_BACKEND_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body,
+        keepalive: true,
+      });
+    } catch {
+      // The checkout will still offer the customer a WhatsApp draft.
+    }
+    return { ok: false, configured: true, opaque: true };
   };
 
   try {

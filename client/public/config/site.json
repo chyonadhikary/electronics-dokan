@@ -38,6 +38,11 @@
     "hours": "Every day · 9:00 AM–10:00 PM",
     "email": "hello@electronicsdokan.com"
   },
+  "paymentAccounts": {
+    "bKash": "01576951669",
+    "Nagad": "01576951669",
+    "Rocket": "01576951669"
+  },
   "heroBanners": [
     "/images/home/hero-banner.webp",
     "/images/home/hero-banner-2.webp"

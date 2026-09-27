@@ -9,6 +9,7 @@ const CFG = {
 
 function props_(){ return PropertiesService.getScriptProperties(); }
 function clean_(v){ return String(v == null ? '' : v).replace(/[<>]/g,'').replace(/[\r\n]+/g,' ').trim().slice(0,2000); }
+function html_(v){ return clean_(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 function json_(v){ return ContentService.createTextOutput(JSON.stringify(v)).setMimeType(ContentService.MimeType.JSON); }
 function cols_(s){ return s.getRange(1,1,1,s.getLastColumn()).getValues()[0].map(String); }
 function col_(s,n){ var i=cols_(s).indexOf(n); if(i<0) throw Error('Missing column '+n); return i+1; }
@@ -30,15 +31,31 @@ function find_(s,id){
   return null;
 }
 function next_(s){
-  var d=Utilities.formatDate(new Date(),Session.getScriptTimeZone()||'Asia/Dhaka','yyyyMMdd'), max=0, c=col_(s,'Order ID');
-  if(s.getLastRow()>1) s.getRange(2,c,s.getLastRow()-1,1).getValues().forEach(function(x){ var m=String(x[0]).match(new RegExp('^ED-'+d+'-(\\d+)$')); if(m) max=Math.max(max,Number(m[1])); });
-  return 'ED-'+d+'-'+String(max+1).padStart(4,'0');
+  var d=Utilities.formatDate(new Date(),Session.getScriptTimeZone()||'Asia/Dhaka','yyyyMMdd');
+  return 'ED-'+d+'-'+Utilities.getUuid().replace(/-/g,'').slice(0,10).toUpperCase();
 }
-function doGet(e){ var p=e&&e.parameter||{}; if(p.action==='track') return track_(p.orderId||p.trackingNumber); return HtmlService.createHtmlOutput(dash_()).setTitle('Electronics Dokan Order Desk'); }
+function adminAllowed_(){
+  var email=String(Session.getActiveUser().getEmail()||'').toLowerCase().trim();
+  var allowed=String(props_().getProperty('ADMIN_EMAILS')||'').toLowerCase().split(',').map(function(x){return x.trim();}).filter(Boolean);
+  return Boolean(email && allowed.indexOf(email)>=0);
+}
+function doGet(e){ var p=e&&e.parameter||{}; if(p.action==='track') return track_(p.orderId||p.trackingNumber); if(!adminAllowed_()) return HtmlService.createHtmlOutput('<h1>Unauthorized</h1><p>Order desk access is restricted.</p>').setTitle('Unauthorized'); return HtmlService.createHtmlOutput(dash_()).setTitle('Electronics Dokan Order Desk'); }
+function validatePayload_(p){
+  if(!p || !p.clientRequestId || !/^[A-Za-z0-9_-]{8,80}$/.test(String(p.clientRequestId))) throw Error('Invalid client request id');
+  if(!Array.isArray(p.items) || !p.items.length) throw Error('Order must contain at least one item');
+  var subtotal=0;
+  p.items.forEach(function(x){
+    var q=Number(x.quantity), price=Number(x.unitPrice), line=Number(x.subtotal);
+    if(!x.productId || !Number.isInteger(q) || q<1 || q>999 || !isFinite(price) || price<0 || !isFinite(line) || line<0 || Math.abs(line-(q*price))>0.01) throw Error('Invalid order item');
+    subtotal+=line;
+  });
+  var delivery=Number(p.deliveryCharge)||0, discount=Number(p.discount)||0, total=Number(p.total);
+  if(!isFinite(delivery)||delivery<0||!isFinite(discount)||discount<0||!isFinite(total)||total<0||Math.abs(subtotal+delivery-discount-total)>0.01) throw Error('Invalid order totals');
+  if(['Cash on Delivery','bKash','Nagad','Rocket'].indexOf(String(p.paymentMethod))<0) throw Error('Invalid payment method');
+}
 function doPost(e){
   try{
-    var p=JSON.parse((e.postData&&e.postData.contents)||'{}'), s=sheet_();
-    if(!p.clientRequestId) throw Error('Missing clientRequestId');
+    var p=JSON.parse((e.postData&&e.postData.contents)||'{}'); validatePayload_(p); var s=sheet_();
     var duplicate=find_(s,p.clientRequestId); if(duplicate) return json_({ok:true,duplicate:true,orderId:val_(duplicate.v,s,'Order ID')});
     var c=p.customer||{}, now=new Date(), id=next_(s), r=Array(s.getLastColumn()).fill('');
     function put(n,v){r[col_(s,n)-1]=v;}
@@ -52,11 +69,12 @@ function doPost(e){
 }
 function telegram_(id,p){
   var t=props_().getProperty('TELEGRAM_BOT_TOKEN'), c=props_().getProperty('TELEGRAM_CHAT_ID'); if(!t||!c) throw Error('Telegram is not configured');
-  var customer=p.customer||{}, msg='<b>NEW ORDER</b>\nOrder ID: '+clean_(id)+'\nCustomer: '+clean_(customer.name)+'\nPhone: '+clean_(customer.phone)+'\nTotal: '+(Number(p.total)||0)+'\nPayment: '+clean_(p.paymentMethod)+'\nPayment mobile: '+clean_(p.paymentMobile)+'\nTransaction ID: '+clean_(p.transactionId);
+  var customer=p.customer||{}, msg='<b>NEW ORDER</b>\nOrder ID: '+html_(id)+'\nCustomer: '+html_(customer.name)+'\nPhone: '+html_(customer.phone)+'\nTotal: '+(Number(p.total)||0)+'\nPayment: '+html_(p.paymentMethod)+'\nPayment mobile: '+html_(p.paymentMobile)+'\nTransaction ID: '+html_(p.transactionId);
   var r=UrlFetchApp.fetch('https://api.telegram.org/bot'+encodeURIComponent(t)+'/sendMessage',{method:'post',contentType:'application/json',payload:JSON.stringify({chat_id:c,text:msg,parse_mode:'HTML'}),muteHttpExceptions:true});
   if(!JSON.parse(r.getContentText()||'{}').ok) throw Error('Telegram rejected message');
 }
-function track_(id){ var s=sheet_(), f=find_(s,id); if(!f) return json_({ok:false,error:'Order not found'}); return json_({ok:true,order:row_(f.v,s)}); }
+function track_(id){ var s=sheet_(), f=find_(s,id); if(!f) return json_({ok:false,error:'Order not found'}); return json_({ok:true,order:publicRow_(f.v,s)}); }
+function publicRow_(r,s){ return {orderId:val_(r,s,'Order ID'),dateTime:String(val_(r,s,'Date & Time')),status:val_(r,s,'Order Status')||'Pending',total:Number(val_(r,s,'Total'))||0,paymentStatus:val_(r,s,'Payment Status')||'Pending',deliveryMethod:val_(r,s,'Delivery Method'),carrier:val_(r,s,'Carrier'),trackingNumber:val_(r,s,'Tracking Number'),itemSummary:val_(r,s,'Products'),quantity:val_(r,s,'Quantity')}; }
 function row_(r,s){ return {orderId:val_(r,s,'Order ID'),dateTime:String(val_(r,s,'Date & Time')),customerName:val_(r,s,'Customer Name'),phone:val_(r,s,'Phone'),whatsapp:val_(r,s,'WhatsApp'),email:val_(r,s,'Email'),address:val_(r,s,'Address'),district:val_(r,s,'District'),area:val_(r,s,'Area'),products:val_(r,s,'Products'),quantity:val_(r,s,'Quantity'),subtotal:Number(val_(r,s,'Subtotal'))||0,deliveryCharge:Number(val_(r,s,'Delivery Charge'))||0,total:Number(val_(r,s,'Total'))||0,paymentMethod:val_(r,s,'Payment Method'),customerNote:val_(r,s,'Customer Note'),status:val_(r,s,'Order Status')||'Pending',paymentMobile:val_(r,s,'Payment Mobile'),transactionId:val_(r,s,'Transaction ID'),paymentStatus:val_(r,s,'Payment Status')||'Pending',shippingLabelStatus:val_(r,s,'Shipping Label Status'),carrier:val_(r,s,'Carrier'),trackingNumber:val_(r,s,'Tracking Number'),deliveryMethod:val_(r,s,'Delivery Method')}; }
 function dashboardOrders(){ var s=sheet_(), last=s.getLastRow(); if(last<2) return []; return s.getRange(2,1,last-1,s.getLastColumn()).getValues().reverse().map(function(r){return row_(r,s);}); }
 function update_(id,n,v,allowed){ var s=sheet_(), f=find_(s,id), x=clean_(v); if(!f) throw Error('Order not found'); if(allowed&&allowed.indexOf(x)<0) throw Error('Invalid value'); s.getRange(f.row,col_(s,n)).setValue(x); s.getRange(f.row,col_(s,'Last Updated')).setValue(new Date()); return row_(s.getRange(f.row,1,1,s.getLastColumn()).getValues()[0],s); }

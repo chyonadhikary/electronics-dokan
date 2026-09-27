@@ -1,0 +1,12 @@
+{
+  "name": "Electronics Dokan",
+  "short_name": "Electronics Dokan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7fbfc",
+  "theme_color": "#142c3c",
+  "description": "Boards, sensors, modules, components and tools for builders across Bangladesh.",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
