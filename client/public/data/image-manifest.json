@@ -981,6 +981,11 @@
       "default": "sku-prod-1062.webp",
       "defaultPath": "/images/products/sku-prod-1062.webp",
       "variants": {}
+    },
+    "max98357a-i2s-digital-audio-amplifier-module": {
+      "default": "max98357a-i2s-digital-audio-amplifier-module.webp",
+      "defaultPath": "/images/products/max98357a-i2s-digital-audio-amplifier-module.webp",
+      "variants": {}
     }
   },
   "duplicateWarnings": [

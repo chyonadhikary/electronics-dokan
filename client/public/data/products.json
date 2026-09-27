@@ -8605,5 +8605,58 @@
     "nameBn": "KAWH 900M Series Soldering Iron Tip (Knife / K Tip) | Oxygen-Free Copper Lead-Free Tip",
     "shortDescriptionBn": "KAWH 900M সিরিজের Knife (K) টিপ — Oxygen-Free Copper, Lead-Free টিপ।",
     "descriptionBn": "KAWH 900M সিরিজের সোল্ডারিং আয়রন টিপ (Knife / K Tip)। টিপটি Oxygen-Free Copper নির্মিত এবং Lead-Free ফিনিশ রয়েছে। 900M সিরিজ-compatible আয়রনগুলোর জন্য উপযুক্ত টিপ বিকল্প।"
+  },
+  {
+    "id": "max98357a-i2s-digital-audio-amplifier-module",
+    "slug": "max98357a-i2s-digital-audio-amplifier-module",
+    "name": "MAX98357A I2S Digital Audio Amplifier Module",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "MAX98357A-I2S",
+    "price": 350,
+    "priceDisplay": "৳350",
+    "currency": "BDT",
+    "availability": "in_stock",
+    "stock": true,
+    "stockStatus": "In stock",
+    "preOrder": "—",
+    "description": "MAX98357A I2S Digital Audio Amplifier Module is a compact Class-D digital audio amplifier that accepts I2S digital audio directly and drives a mono speaker without an external DAC. It is suitable for ESP32, Raspberry Pi, STM32 and other I2S-enabled microcontroller projects.",
+    "shortDescription": "Compact mono Class-D I2S amplifier for ESP32, Raspberry Pi, STM32 and smart-speaker projects.",
+    "brand": "Not specified",
+    "specifications": {
+      "Model": "MAX98357A",
+      "Amplifier Type": "Class-D digital audio amplifier",
+      "Audio Interface": "I2S",
+      "Audio Output": "Mono",
+      "Operating Voltage": "2.5V–5.5V",
+      "Output Power": "Up to 3.2W with 4Ω speaker at 5V",
+      "Compatibility": "ESP32, Raspberry Pi, STM32 and Arduino with I2S support",
+      "Applications": "Smart speakers, voice playback, IoT and DIY audio projects"
+    },
+    "keywords": [
+      "MAX98357A",
+      "I2S amplifier",
+      "Class-D amplifier",
+      "ESP32 audio amplifier",
+      "Raspberry Pi audio",
+      "mono speaker driver",
+      "INMP441",
+      "MAX98357A-I2S"
+    ],
+    "sourceUrl": "https://nabatechshop.com/product/max98357a-i2s-digital-audio-amplifier-module/",
+    "image": "max98357a-i2s-digital-audio-amplifier-module.webp",
+    "images": [
+      "/images/products/max98357a-i2s-digital-audio-amplifier-module.webp"
+    ],
+    "featured": false,
+    "newArrival": true,
+    "trending": true,
+    "deal": false,
+    "variants": [],
+    "variantCount": 0,
+    "sourceOrder": 166,
+    "nameBn": "MAX98357A I2S ডিজিটাল অডিও অ্যাম্প্লিফায়ার মডিউল",
+    "shortDescriptionBn": "ESP32, Raspberry Pi, STM32 এবং smart-speaker project-এর জন্য compact mono Class-D I2S amplifier।",
+    "descriptionBn": "MAX98357A হলো একটি compact Class-D digital audio amplifier, যা external DAC ছাড়াই সরাসরি I2S digital audio গ্রহণ করে mono speaker চালাতে পারে। ESP32, Raspberry Pi, STM32 এবং অন্যান্য I2S-enabled microcontroller project-এর জন্য উপযোগী।"
   }
 ]
