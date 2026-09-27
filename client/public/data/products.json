@@ -14475,8 +14475,10 @@
       "stereo line output"
     ],
     "sourceUrl": "https://www.taydaelectronics.com/m28-wireless-bluetooth-audio-receiver-board-module.html",
-    "image": "",
-    "images": [],
+    "image": "mh-m28-bluetooth-receiver.webp",
+    "images": [
+      "/images/products/mh-m28-bluetooth-receiver.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -14490,7 +14492,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 0,
         "availability": "stock_to_confirm",
-        "image": "",
+        "image": "mh-m28-bluetooth-receiver.webp",
         "source_order": 180,
         "model": "MH-M28"
       }
@@ -14557,8 +14559,10 @@
       "Bluetooth speaker module"
     ],
     "sourceUrl": "https://www.dfrobot.com/product-2083.html",
-    "image": "",
-    "images": [],
+    "image": "mh-m38-5w-bluetooth-amplifier.webp",
+    "images": [
+      "/images/products/mh-m38-5w-bluetooth-amplifier.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -14572,7 +14576,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 0,
         "availability": "stock_to_confirm",
-        "image": "",
+        "image": "mh-m38-5w-bluetooth-amplifier.webp",
         "source_order": 181,
         "model": "MH-M38"
       }
@@ -14639,8 +14643,10 @@
       "programmable voltage switch"
     ],
     "sourceUrl": "https://www.lyonscomputer.com.au/Electronic-Modules/PSU-XH-M602-Mains-Relay-Battery-Monitor/PSU-XH-M602-Mains-Relay-Battery-Monitor.html",
-    "image": "",
-    "images": [],
+    "image": "xh-m602-battery-charge-controller.webp",
+    "images": [
+      "/images/products/xh-m602-battery-charge-controller.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -14654,7 +14660,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 0,
         "availability": "stock_to_confirm",
-        "image": "",
+        "image": "xh-m602-battery-charge-controller.webp",
         "source_order": 182,
         "model": "XH-M602"
       }
@@ -14723,8 +14729,10 @@
       "NTC10K probe"
     ],
     "sourceUrl": "https://sah.rs/media/sah/techdocs/w3230-manual.pdf",
-    "image": "",
-    "images": [],
+    "image": "w3230-temperature-controller.webp",
+    "images": [
+      "/images/products/w3230-temperature-controller.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -14738,7 +14746,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 3,
         "availability": "in_stock",
-        "image": "",
+        "image": "w3230-temperature-controller.webp",
         "source_order": 183,
         "model": "220V AC"
       },
@@ -14750,7 +14758,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 3,
         "availability": "in_stock",
-        "image": "",
+        "image": "w3230-temperature-controller.webp",
         "source_order": 183,
         "model": "12V DC"
       }
@@ -14823,8 +14831,10 @@
       "analog audio input"
     ],
     "sourceUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/max9814.pdf",
-    "image": "",
-    "images": [],
+    "image": "max9814-microphone-amplifier.webp",
+    "images": [
+      "/images/products/max9814-microphone-amplifier.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -14838,7 +14848,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 4,
         "availability": "in_stock",
-        "image": "",
+        "image": "max9814-microphone-amplifier.webp",
         "source_order": 184,
         "model": "MAX9814"
       }
@@ -14911,8 +14921,10 @@
       "sound sensor"
     ],
     "sourceUrl": "https://www.analog.com/en/products/max4466.html",
-    "image": "",
-    "images": [],
+    "image": "max4466-microphone-amplifier.webp",
+    "images": [
+      "/images/products/max4466-microphone-amplifier.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -14926,7 +14938,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 5,
         "availability": "in_stock",
-        "image": "",
+        "image": "max4466-microphone-amplifier.webp",
         "source_order": 185,
         "model": "MAX4466"
       }
@@ -14999,8 +15011,10 @@
       "side mounted float switch"
     ],
     "sourceUrl": "https://apgsensors.com/the-basics-of-float-switches-guide/",
-    "image": "",
-    "images": [],
+    "image": "horizontal-liquid-float-switch.webp",
+    "images": [
+      "/images/products/horizontal-liquid-float-switch.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -15014,7 +15028,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 8,
         "availability": "in_stock",
-        "image": "",
+        "image": "horizontal-liquid-float-switch.webp",
         "source_order": 186,
         "model": "Generic"
       }
@@ -15087,8 +15101,10 @@
       "3.7V battery protection"
     ],
     "sourceUrl": "https://www.diymore.cc/products/1s-3-7-v-10-a-li-on-lithium-bms-pcm-battery-protection-board-compatible-with-18650-li-on-lithium-battery",
-    "image": "",
-    "images": [],
+    "image": "1s-10a-bms.webp",
+    "images": [
+      "/images/products/1s-10a-bms.webp"
+    ],
     "featured": false,
     "newArrival": true,
     "trending": false,
@@ -15102,7 +15118,7 @@
         "priceUnit": "per_piece",
         "stockQuantity": 0,
         "availability": "stock_to_confirm",
-        "image": "",
+        "image": "1s-10a-bms.webp",
         "source_order": 187,
         "model": "1S / 3.7V"
       }
