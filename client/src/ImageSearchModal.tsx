@@ -102,6 +102,81 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
   }).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name)).slice(0, 8);
 }
 
+type VisualFeature = { product: ImageSearchProduct; pixels: number[]; histogram: number[] };
+
+function featureFromCanvas(canvas: HTMLCanvasElement): Omit<VisualFeature, "product"> {
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  if (!context) throw new Error("Canvas is unavailable in this browser.");
+  const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+  const grayscale: number[] = [];
+  const histogram = Array.from({ length: 12 }, () => 0);
+  for (let index = 0; index < pixels.length; index += 4) {
+    const red = pixels[index] / 255;
+    const green = pixels[index + 1] / 255;
+    const blue = pixels[index + 2] / 255;
+    grayscale.push(red * 0.299 + green * 0.587 + blue * 0.114);
+    histogram[Math.min(11, Math.floor((red + green + blue) * 4))] += 1;
+  }
+  const total = grayscale.length || 1;
+  return { pixels: grayscale, histogram: histogram.map((value) => value / total) };
+}
+
+async function loadVisualFeature(product: ImageSearchProduct): Promise<VisualFeature | null> {
+  try {
+    const image = new Image();
+    image.decoding = "async";
+    const loaded = new Promise<void>((resolve, reject) => { image.onload = () => resolve(); image.onerror = () => reject(new Error("image")); });
+    image.src = imageFor(product);
+    await loaded;
+    const canvas = document.createElement("canvas");
+    canvas.width = 32;
+    canvas.height = 32;
+    const context = canvas.getContext("2d");
+    if (!context) return null;
+    context.fillStyle = "#fff";
+    context.fillRect(0, 0, 32, 32);
+    const scale = Math.min(32 / image.naturalWidth, 32 / image.naturalHeight);
+    const width = Math.max(1, Math.round(image.naturalWidth * scale));
+    const height = Math.max(1, Math.round(image.naturalHeight * scale));
+    context.drawImage(image, (32 - width) / 2, (32 - height) / 2, width, height);
+    return { product, ...featureFromCanvas(canvas) };
+  } catch {
+    return null;
+  }
+}
+
+function compareFeatures(left: Omit<VisualFeature, "product">, right: Omit<VisualFeature, "product">) {
+  const pixelError = left.pixels.reduce((total, value, index) => total + Math.abs(value - right.pixels[index]), 0) / Math.max(1, left.pixels.length);
+  const histogramError = left.histogram.reduce((total, value, index) => total + Math.abs(value - right.histogram[index]), 0) / 2;
+  return Math.max(0, Math.min(100, Math.round((1 - (pixelError * 0.78 + histogramError * 0.22)) * 100)));
+}
+
+async function visualCatalogueMatch(file: File, products: ImageSearchProduct[], onProgress: (message: string) => void): Promise<SearchResult[]> {
+  const sourceCanvas = await prepareImage(file);
+  const uploadedCanvas = document.createElement("canvas");
+  uploadedCanvas.width = 32;
+  uploadedCanvas.height = 32;
+  const uploadedContext = uploadedCanvas.getContext("2d");
+  if (!uploadedContext) throw new Error("Canvas is unavailable in this browser.");
+  uploadedContext.fillStyle = "#fff";
+  uploadedContext.fillRect(0, 0, 32, 32);
+  const scale = Math.min(32 / sourceCanvas.width, 32 / sourceCanvas.height);
+  const width = Math.max(1, Math.round(sourceCanvas.width * scale));
+  const height = Math.max(1, Math.round(sourceCanvas.height * scale));
+  uploadedContext.drawImage(sourceCanvas, (32 - width) / 2, (32 - height) / 2, width, height);
+  const uploaded = featureFromCanvas(uploadedCanvas);
+  const matches: SearchResult[] = [];
+  for (let index = 0; index < products.length; index += 1) {
+    const feature = await loadVisualFeature(products[index]);
+    if (feature) {
+      const similarity = compareFeatures(uploaded, feature);
+      if (similarity >= 48) matches.push({ product: feature.product, score: similarity, evidence: [`Visual similarity · ${similarity}%`] });
+    }
+    if (index % 12 === 0 || index === products.length - 1) onProgress(`Comparing catalogue photos… ${Math.round(((index + 1) / products.length) * 100)}%`);
+  }
+  return matches.sort((left, right) => right.score - left.score).slice(0, 6);
+}
+
 async function prepareImage(file: File, enhance = false): Promise<HTMLCanvasElement> {
   let source: { width: number; height: number; close?: () => void; draw: (context: CanvasRenderingContext2D, width: number, height: number) => void };
   if (typeof createImageBitmap === "function") {
@@ -186,10 +261,19 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
   const [statusMessage, setStatusMessage] = useState("");
   const [error, setError] = useState("");
   const [dragging, setDragging] = useState(false);
+  const [visualResults, setVisualResults] = useState<SearchResult[]>([]);
   const uploadInputRef = useRef<HTMLInputElement>(null);
   const cameraInputRef = useRef<HTMLInputElement>(null);
   const processingIdRef = useRef(0);
-  const results = useMemo(() => catalogueMatch(products, ocrText, language), [products, ocrText, language]);
+  const textResults = useMemo(() => catalogueMatch(products, ocrText, language), [products, ocrText, language]);
+  const results = useMemo(() => {
+    const byId = new Map(visualResults.map((result) => [result.product.id, result]));
+    textResults.forEach((result) => {
+      const visual = byId.get(result.product.id);
+      byId.set(result.product.id, visual ? { ...result, score: result.score + visual.score, evidence: Array.from(new Set([...result.evidence, ...visual.evidence])) } : result);
+    });
+    return Array.from(byId.values()).sort((left, right) => right.score - left.score).slice(0, 8);
+  }, [textResults, visualResults]);
   const isBn = language === "bn";
 
   useEffect(() => {
@@ -204,6 +288,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
       setStatus("idle");
       setStatusMessage("");
       setError("");
+      setVisualResults([]);
       setDragging(false);
       onClose();
     };
@@ -222,6 +307,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
     setStatus("idle");
     setStatusMessage("");
     setError("");
+    setVisualResults([]);
     setDragging(false);
     onClose();
   };
@@ -245,6 +331,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
     setPreview(URL.createObjectURL(candidate));
     setError("");
     setOcrText("");
+    setVisualResults([]);
     setStatus("processing");
     setStatusMessage(isBn ? "আপনার device-এ image পড়া হচ্ছে…" : "Reading the image on your device…");
     const processingId = ++processingIdRef.current;
@@ -252,6 +339,10 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
       const text = await recognizeLocally(candidate, setStatusMessage);
       if (processingId !== processingIdRef.current) return;
       setOcrText(text);
+      setStatusMessage(isBn ? "ছবির সঙ্গে catalogue মিলানো হচ্ছে…" : "Comparing the photo with catalogue images…");
+      const visualMatches = await visualCatalogueMatch(candidate, products, setStatusMessage);
+      if (processingId !== processingIdRef.current) return;
+      setVisualResults(visualMatches);
       setStatus("done");
       setStatusMessage(text ? (isBn ? "সম্ভাব্য model text পাওয়া গেছে" : "Possible model text found") : (isBn ? "কোনো পরিষ্কার label পাওয়া যায়নি" : "No clear label detected"));
     } catch (recognitionError) {
@@ -264,7 +355,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
   };
   const onInput = (event: ChangeEvent<HTMLInputElement>) => { const selected = event.target.files?.[0]; if (selected) void acceptFile(selected); event.target.value = ""; };
   const onDrop = (event: DragEvent<HTMLDivElement>) => { event.preventDefault(); setDragging(false); const dropped = event.dataTransfer.files?.[0]; if (dropped) void acceptFile(dropped); };
-  const reset = () => { processingIdRef.current += 1; if (preview) URL.revokeObjectURL(preview); setFile(null); setPreview(""); setOcrText(""); setStatus("idle"); setStatusMessage(""); setError(""); setDragging(false); };
+  const reset = () => { processingIdRef.current += 1; if (preview) URL.revokeObjectURL(preview); setFile(null); setPreview(""); setOcrText(""); setVisualResults([]); setStatus("idle"); setStatusMessage(""); setError(""); setDragging(false); };
 
   return <div className="image-search-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) closeModal(); }}>
     <section className="image-search-modal" role="dialog" aria-modal="true" aria-labelledby="image-search-title">
@@ -277,12 +368,12 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
         </div><input ref={uploadInputRef} className="visually-hidden" type="file" accept="image/*" onChange={onInput} /><input ref={cameraInputRef} className="visually-hidden" type="file" accept="image/*" capture="environment" onChange={onInput} />
       </div> : <div className="image-search-workspace">
         <div className="image-search-preview-wrap"><img src={preview} alt={isBn ? "আপলোড করা image preview" : "Uploaded image preview"} /><button type="button" className="image-search-reset" onClick={reset}><RefreshCw size={14} />{isBn ? "অন্য image" : "Try another image"}</button></div>
-        <div className="image-search-results-panel"><div className="image-search-status">{status === "processing" && <LoaderCircle className="spin" size={17} />}{status === "done" && <CheckCircle2 size={17} />}{status === "error" && <X size={17} />}{statusMessage || (isBn ? "Processing…" : "Processing…")}</div><p className="image-search-method-note">{isBn ? "এটি label/model text-ভিত্তিক match; পরিষ্কার model text না থাকলে কোনো product-কে নিশ্চিত match হিসেবে দেখানো হবে না।" : "Matches are based on readable label/model text; without a clear model, no product is presented as a certain visual match."}</p>
+        <div className="image-search-results-panel"><div className="image-search-status">{status === "processing" && <LoaderCircle className="spin" size={17} />}{status === "done" && <CheckCircle2 size={17} />}{status === "error" && <X size={17} />}{statusMessage || (isBn ? "Processing…" : "Processing…")}</div><p className="image-search-method-note">{isBn ? "লেখা পাওয়া গেলে OCR/model match এবং না পাওয়া গেলে catalogue photo similarity—দুইভাবে সম্ভাব্য product খোঁজা হয়।" : "The search combines readable label OCR with real catalogue-photo similarity when no model text is available."}</p>
           <label className="image-search-field-label" htmlFor="ocr-text">{isBn ? "Detected text (প্রয়োজনে ঠিক করুন)" : "Detected text (edit if needed)"}</label><textarea id="ocr-text" value={ocrText} onChange={(event) => setOcrText(event.target.value)} placeholder={isBn ? "যেমন: L298N, TP4056, ESP32…" : "For example: L298N, TP4056, ESP32…"} rows={2} />
           {error && <div className="image-search-error">{error}</div>}
-          {status !== "processing" && ocrText.trim() && results.length > 0 && <><div className="image-search-results-heading"><div><span className="eyebrow"><span className="eyebrow-line" />{isBn ? "Possible matches" : "Possible matches"}</span><h3>{isBn ? "সম্ভাব্য পণ্য" : "Possible products"}</h3></div><span>{results.length}</span></div><div className="image-search-result-grid">{results.map(({ product, evidence }) => <article className="image-search-result-card" key={product.id}><img src={imageFor(product)} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} /><div className="image-search-result-copy"><small>{product.brand || "No Brand"} · {product.category}</small><h4>{isBn ? (product.nameBn || product.name) : product.name}</h4><b>{priceLabel(product)}</b><span className="image-search-evidence">{evidence.join(" · ")}</span><div className="image-search-result-actions"><button className="button button-secondary" onClick={() => { onClose(); navigate(`/product/${product.slug}`); }}>{isBn ? "দেখুন" : "View product"}</button>{(product.variants || []).length <= 1 && product.stock !== false && <button className="button button-primary" onClick={(event) => addToCart(product.id, product.variants?.[0]?.variantId, event.currentTarget)}>{isBn ? "Cart-এ দিন" : "Add to cart"}</button>}</div></div></article>)}</div></>}
-          {status !== "processing" && ocrText.trim() && !results.length && <div className="image-search-empty"><strong>{isBn ? "Exact product শনাক্ত করা যায়নি" : "We couldn’t identify an exact product."}</strong><p>{isBn ? "Detected text পরিবর্তন করে আবার চেষ্টা করুন, অথবা normal search ব্যবহার করুন।" : "Edit the detected text and try again, or use the normal product search."}</p></div>}
-          {status === "done" && !ocrText.trim() && <div className="image-search-empty"><strong>{isBn ? "কোনো পরিষ্কার model label পাওয়া যায়নি" : "No clear model label was found."}</strong><p>{isBn ? "ছবিতে লেখা model number থাকলে নিচের box-এ লিখে Possible matches দেখুন।" : "If you can read a model number in the photo, enter it above to see catalogue matches."}</p></div>}
+          {status !== "processing" && (ocrText.trim() || visualResults.length > 0) && results.length > 0 && <><div className="image-search-results-heading"><div><span className="eyebrow"><span className="eyebrow-line" />{isBn ? "Possible matches" : "Possible matches"}</span><h3>{isBn ? "সম্ভাব্য পণ্য" : "Possible products"}</h3></div><span>{results.length}</span></div><div className="image-search-result-grid">{results.map(({ product, evidence }) => <article className="image-search-result-card" key={product.id}><img src={imageFor(product)} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} /><div className="image-search-result-copy"><small>{product.brand || "No Brand"} · {product.category}</small><h4>{isBn ? (product.nameBn || product.name) : product.name}</h4><b>{priceLabel(product)}</b><span className="image-search-evidence">{evidence.join(" · ")}</span><div className="image-search-result-actions"><button type="button" className="button button-secondary" onClick={() => { closeModal(); navigate(`/product/${product.slug}`); }}>{isBn ? "দেখুন" : "View product"}</button>{(product.variants || []).length <= 1 && product.stock !== false && <button type="button" className="button button-primary" onClick={(event) => addToCart(product.id, product.variants?.[0]?.variantId, event.currentTarget)}>{isBn ? "Cart-এ দিন" : "Add to cart"}</button>}</div></div></article>)}</div></>}
+          {status !== "processing" && (ocrText.trim() || visualResults.length > 0) && !results.length && <div className="image-search-empty"><strong>{isBn ? "Exact product শনাক্ত করা যায়নি" : "We couldn’t identify an exact product."}</strong><p>{isBn ? "Detected text পরিবর্তন করে আবার চেষ্টা করুন, অথবা normal search ব্যবহার করুন।" : "Edit the detected text and try again, or use the normal product search."}</p></div>}
+          {status === "done" && !ocrText.trim() && !visualResults.length && <div className="image-search-empty"><strong>{isBn ? "কোনো পরিষ্কার model label বা visual match পাওয়া যায়নি" : "No clear model label or visual match was found."}</strong><p>{isBn ? "আরও পরিষ্কার, কাছ থেকে component-এর ছবি দিয়ে আবার চেষ্টা করুন।" : "Try a clearer, closer photo of the component."}</p></div>}
         </div>
       </div>}
       <footer className="image-search-footer"><span><CheckCircle2 size={14} />{isBn ? "লোকাল browser processing · API key নেই · paid service নেই" : "Local browser processing · no API key · no paid service"}</span>{file && <button type="button" onClick={() => uploadInputRef.current?.click()}>{isBn ? "নতুন ছবি" : "Choose another"}</button>}</footer>

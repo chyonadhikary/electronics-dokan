@@ -1753,3 +1753,62 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .announcement-inner > .top-whatsapp-contact { padding: 3px 5px; font-size: 8px; }
   .announcement-inner > .language-select { width: 67px; min-width: 67px; font-size: 9px; }
 }
+
+/* Final responsive announcement layout: desktop message-left / controls-right, mobile social-left / WhatsApp-center / language-right. */
+.announcement-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+}
+.announcement-message { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.announcement-social { display: inline-flex !important; align-items: center; justify-self: end; gap: 8px !important; }
+.announcement-social .social-links { display: inline-flex; align-items: center; gap: 7px !important; }
+.announcement-social .social-links a { width: 29px; height: 29px; border-radius: 50%; }
+.top-whatsapp-contact { width: 29px; height: 29px; display: inline-flex; justify-content: center; padding: 0; border-radius: 50%; }
+.top-whatsapp-contact img { width: 21px; height: 21px; }
+.top-whatsapp-label { display: inline-flex; }
+.top-whatsapp-desktop-label { display: none; }
+.top-whatsapp-mobile-label { display: none; }
+.announcement > .announcement-inner > .language-select { justify-self: end; }
+@media (max-width: 700px) {
+  .announcement-inner {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    min-height: 42px;
+    padding: 0 6px;
+    gap: 6px;
+  }
+  .announcement-message { display: none !important; }
+  .announcement-social { justify-self: start; gap: 0 !important; }
+  .announcement-social .social-links { gap: 4px !important; }
+  .announcement-social .social-links a { width: 24px; height: 24px; }
+  .announcement-inner > .top-whatsapp-contact {
+    justify-self: center;
+    width: auto;
+    min-width: 108px;
+    height: 28px;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 9px;
+  }
+  .top-whatsapp-contact img { width: 20px; height: 20px; }
+  .top-whatsapp-mobile-label { display: inline; white-space: nowrap; }
+  .announcement-inner > .language-select {
+    justify-self: end;
+    width: 68px;
+    min-width: 68px;
+    height: 25px;
+    margin-right: -6px;
+    padding: 0 3px;
+    font-size: 9px;
+  }
+}
+@media (max-width: 390px) {
+  .announcement-inner { padding-left: 4px; gap: 3px; }
+  .announcement-social .social-links { gap: 2px !important; }
+  .announcement-social .social-links a { width: 22px; height: 22px; }
+  .announcement-inner > .top-whatsapp-contact { min-width: 101px; padding-left: 5px; padding-right: 5px; font-size: 8px; }
+  .announcement-inner > .language-select { margin-right: -4px; width: 65px; min-width: 65px; font-size: 8px; }
+}
