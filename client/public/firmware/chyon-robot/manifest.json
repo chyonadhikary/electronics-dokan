@@ -7,8 +7,24 @@
       "chipFamily": "ESP32-S3",
       "parts": [
         {
-          "path": "chyon-ai-4wheel-robot-v2.5.0-esp32s3-n16r8.bin",
+          "path": "bootloader.bin",
           "offset": 0
+        },
+        {
+          "path": "partition-table.bin",
+          "offset": 32768
+        },
+        {
+          "path": "ota_data_initial.bin",
+          "offset": 53248
+        },
+        {
+          "path": "xiaozhi.bin",
+          "offset": 131072
+        },
+        {
+          "path": "generated_assets.bin",
+          "offset": 8388608
         }
       ]
     }
@@ -17,5 +33,5 @@
   "flashFreq": "80m",
   "flashSize": "16MB",
   "monitorBaud": 115200,
-  "description": "Complete merged image built from the Chyon AI ESP32-S3 N16R8 UVC OLED four-wheel robot source project."
+  "description": "Exact ESP-IDF flash map from build/flasher_args.json. This project must be written as five parts at their original offsets; do not flash xiaozhi.bin alone."
 }
