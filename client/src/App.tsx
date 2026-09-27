@@ -331,7 +331,7 @@ function App() {
       const target = document.querySelector(".cart-button") as HTMLElement | null;
       const targetRect = target?.getBoundingClientRect();
       setCartFlight({ image: imageFor(product, variantId), name: localizedProductName(product), fromX: sourceRect.left + sourceRect.width / 2, fromY: sourceRect.top + sourceRect.height / 2, toX: targetRect ? targetRect.left + targetRect.width / 2 : window.innerWidth - 42, toY: targetRect ? targetRect.top + targetRect.height / 2 : 28 });
-      window.setTimeout(() => setCartFlight(null), 760);
+      window.setTimeout(() => setCartFlight(null), 2250);
     }
     toast.success(`${product ? localizedProductName(product) : "Item"}${variant ? ` — ${variant.displayName}` : ""} added to cart`);
   };
