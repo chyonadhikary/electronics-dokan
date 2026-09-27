@@ -158,6 +158,7 @@ type CheckoutForm = {
 
 const COUPONS = [{ code: "ED10", label: "৳10 off", amount: 10 }, { code: "ED20", label: "৳20 off", amount: 20 }, { code: "ED30", label: "৳30 off", amount: 30 }, { code: "ED50", label: "৳50 off", amount: 50 }, { code: "ED75", label: "৳75 off", amount: 75 }, { code: "ED100", label: "৳100 off", amount: 100 }, { code: "EDFREESHIP", label: "Free shipping", freeShipping: true }];
 const PAYMENT_METHODS = ["Cash on Delivery", "bKash", "Nagad", "Rocket"];
+const CATALOGUE_VERSION = "2026-09-27-brand-seo";
 
 const FALLBACK_SITE: SiteConfig = {
   storeName: "Electronics Dokan",
@@ -245,11 +246,11 @@ function App() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/data/products.json").then((r) => r.json()),
+      fetch(`/data/products.json?v=${CATALOGUE_VERSION}`).then((r) => r.json()),
       fetch("/config/site.json").then((r) => r.json()),
       fetch("/data/bangladesh-locations.json").then((r) => r.json()),
       fetch("/data/image-manifest.json").then((r) => r.json()),
-      fetch("/data/brands.json").then((r) => r.json()),
+      fetch(`/data/brands.json?v=${CATALOGUE_VERSION}`).then((r) => r.json()),
     ]).then(([productData, siteData, locationData, manifest, brandData]) => {
       setProducts(productData);
       setSite(siteData);
