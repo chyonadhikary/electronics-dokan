@@ -8657,7 +8657,13 @@
     "sourceOrder": 166,
     "nameBn": "MAX98357A I2S ডিজিটাল অডিও অ্যাম্প্লিফায়ার মডিউল",
     "shortDescriptionBn": "ESP32, Raspberry Pi, STM32 এবং smart-speaker project-এর জন্য compact mono Class-D I2S amplifier।",
-    "descriptionBn": "MAX98357A হলো একটি compact Class-D digital audio amplifier, যা external DAC ছাড়াই সরাসরি I2S digital audio গ্রহণ করে mono speaker চালাতে পারে। ESP32, Raspberry Pi, STM32 এবং অন্যান্য I2S-enabled microcontroller project-এর জন্য উপযোগী।"
+    "descriptionBn": "MAX98357A হলো একটি compact Class-D digital audio amplifier, যা external DAC ছাড়াই সরাসরি I2S digital audio গ্রহণ করে mono speaker চালাতে পারে। ESP32, Raspberry Pi, STM32 এবং অন্যান্য I2S-enabled microcontroller project-এর জন্য উপযোগী।",
+    "projects": [
+      {
+        "title": "XiaoZhi AI voice assistant",
+        "url": "/projects/xiaozhi-ai"
+      }
+    ]
   },
   {
     "id": "chyon-esp32-s3-n16r8-uvc-oled-custom-board",
@@ -8757,6 +8763,10 @@
     "descriptionBn": "Required for the Chyon AI robot voice input path.",
     "projects": [
       {
+        "title": "XiaoZhi AI voice assistant",
+        "url": "/projects/xiaozhi-ai"
+      },
+      {
         "title": "Chyon AI 4-wheel robot",
         "url": "/projects/chyon-ai-4wheel-robot"
       }
@@ -8808,6 +8818,10 @@
     "shortDescriptionBn": "Compact 128×64 I2C OLED display for status, pairing code and assistant face output.",
     "descriptionBn": "Required for the Chyon AI robot display and pairing information.",
     "projects": [
+      {
+        "title": "XiaoZhi AI voice assistant",
+        "url": "/projects/xiaozhi-ai"
+      },
       {
         "title": "Chyon AI 4-wheel robot",
         "url": "/projects/chyon-ai-4wheel-robot"
@@ -9073,63 +9087,12 @@
     "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
   },
   {
-    "id": "10k-20k-echo-voltage-divider-resistor-set",
-    "slug": "10k-20k-echo-voltage-divider-resistor-set",
-    "name": "10kΩ + 20kΩ Echo Voltage Divider Resistor Set",
-    "category": "Resistors",
-    "sourceCategory": "RESISTORS",
-    "sku": "10K-20K-ECHO-VOLTAGE-DIVIDER-RESISTOR-SET",
-    "price": 0,
-    "priceDisplay": "Out of stock",
-    "currency": "BDT",
-    "availability": "out_of_stock",
-    "stock": false,
-    "stockStatus": "Out of stock · Request restock",
-    "preOrder": "Request restock",
-    "description": "Required safety parts for the CS100A sensor connection.",
-    "shortDescription": "Matched 10kΩ and 20kΩ resistors for safely reducing the CS100A Echo voltage before ESP32-S3 GPIO2.",
-    "brand": "Not specified",
-    "specifications": {
-      "Values": "10kΩ and 20kΩ",
-      "Connection": "Echo → 10kΩ → GPIO2; GPIO2 → 20kΩ → GND",
-      "Warning": "Never connect a 5V Echo signal directly to ESP32-S3 GPIO2",
-      "Status": "Out of stock · Request restock"
-    },
-    "keywords": [
-      "10kΩ + 20kΩ Echo Voltage Divider Resistor Set",
-      "Chyon AI 4-wheel robot",
-      "voice control robot",
-      "out of stock",
-      "request restock"
-    ],
-    "sourceUrl": "Not specified",
-    "image": "",
-    "images": [],
-    "featured": false,
-    "newArrival": false,
-    "trending": false,
-    "deal": false,
-    "variants": [],
-    "variantCount": 0,
-    "sourceOrder": 175,
-    "nameBn": "10kΩ + 20kΩ Echo Voltage Divider Resistor Set",
-    "shortDescriptionBn": "Matched 10kΩ and 20kΩ resistors for safely reducing the CS100A Echo voltage before ESP32-S3 GPIO2.",
-    "descriptionBn": "Required safety parts for the CS100A sensor connection.",
-    "projects": [
-      {
-        "title": "Chyon AI 4-wheel robot",
-        "url": "/projects/chyon-ai-4wheel-robot"
-      }
-    ],
-    "attention": "This item is currently out of stock. Contact us to request restock before planning your build."
-  },
-  {
-    "id": "2w-4-ohm-mono-speaker",
-    "slug": "2w-4-ohm-mono-speaker",
-    "name": "2W 4Ω Mono Speaker",
+    "id": "3w-4-ohm-mono-speaker",
+    "slug": "3w-4-ohm-mono-speaker",
+    "name": "3W 4Ω Mono Speaker",
     "category": "Audio",
     "sourceCategory": "AUDIO",
-    "sku": "2W-4-OHM-MONO-SPEAKER",
+    "sku": "3W-4-OHM-MONO-SPEAKER",
     "price": 0,
     "priceDisplay": "Out of stock",
     "currency": "BDT",
@@ -9137,22 +9100,22 @@
     "stock": false,
     "stockStatus": "Out of stock · Request restock",
     "preOrder": "Request restock",
-    "description": "Required for the Chyon AI robot voice output.",
-    "shortDescription": "Small 2W 4Ω speaker for the MAX98357A mono I2S amplifier output.",
+    "description": "Required for XiaoZhi AI and Chyon AI robot voice output.",
+    "shortDescription": "Small 3W 4Ω speaker for the MAX98357A mono I2S amplifier output.",
     "brand": "Not specified",
     "specifications": {
-      "Power": "2W",
+      "Power": "3W",
       "Impedance": "4Ω",
       "Output": "Mono",
       "Amplifier": "MAX98357A",
       "Status": "Out of stock · Request restock"
     },
     "keywords": [
-      "2W 4Ω Mono Speaker",
+      "3W 4Ω Mono Speaker",
+      "XiaoZhi AI",
       "Chyon AI 4-wheel robot",
-      "voice control robot",
-      "out of stock",
-      "request restock"
+      "voice assistant",
+      "MAX98357A"
     ],
     "sourceUrl": "Not specified",
     "image": "",
@@ -9164,10 +9127,14 @@
     "variants": [],
     "variantCount": 0,
     "sourceOrder": 176,
-    "nameBn": "2W 4Ω Mono Speaker",
-    "shortDescriptionBn": "Small 2W 4Ω speaker for the MAX98357A mono I2S amplifier output.",
-    "descriptionBn": "Required for the Chyon AI robot voice output.",
+    "nameBn": "3W 4Ω Mono Speaker",
+    "shortDescriptionBn": "MAX98357A mono I2S amplifier-এর জন্য ছোট 3W 4Ω speaker।",
+    "descriptionBn": "XiaoZhi AI এবং Chyon AI robot-এর voice output-এর জন্য উপযোগী।",
     "projects": [
+      {
+        "title": "XiaoZhi AI voice assistant",
+        "url": "/projects/xiaozhi-ai"
+      },
       {
         "title": "Chyon AI 4-wheel robot",
         "url": "/projects/chyon-ai-4wheel-robot"
