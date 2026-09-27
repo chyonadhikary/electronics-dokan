@@ -1,21 +1,21 @@
 flowchart LR
-  MCU["ESP32-S3 N16R8\nChyon AI board"]
-  CAM["USB-UVC camera\nNative host Type-C\nD− GPIO19 · D+ GPIO20"]
-  OLED["SSD1306 OLED\n128×64 · I2C 0x3C\nSDA GPIO40 · SCL GPIO42"]
-  MIC["INMP441 microphone\nWS GPIO4 · SCK GPIO5\nDIN GPIO6"]
-  AMP["MAX98357A + speaker\nDOUT GPIO7 · BCLK GPIO15\nLRCK GPIO18"]
-  US["CS100A ultrasonic\nTrig GPIO1\nEcho GPIO2 via divider"]
-  LED["WS2812 ×8\nDIN GPIO3\nExternal 5V"]
-  L298["L298N motor driver\nENA GPIO8 · ENB GPIO13\nIN1/2/3/4 GPIO9/10/11/12"]
-  MOT["Four BO motors\n2 left in parallel\n2 right in parallel"]
-  LOGIC["Regulated 5V logic\nESP32 + camera + audio + LED"]
-  BAT["Separate motor battery\nL298N Vmotor"]
-  GND["COMMON GROUND\nlogic · sensors · L298N · audio"]
+  MCU["ESP32-S3 N16R8\n16MB Flash · 8MB PSRAM"]
+  CAM["USB-UVC camera\nNative host/camera Type-C\nD− GPIO19 · D+ GPIO20"]
+  OLED["0.96in SSD1306 OLED\nVCC 3.3V · GND common\nSDA GPIO40 · SCL GPIO42\nI2C address 0x3C"]
+  MIC["INMP441 microphone\n3.3V · L/R → GND\nWS GPIO4 · SCK GPIO5\nSD GPIO6"]
+  AMP["MAX98357A + speaker\nVIN 5V · GND common\nDIN GPIO7 · BCLK GPIO15\nLRC GPIO18 · SPK+/SPK− only"]
+  US["CS100A ultrasonic\nVCC 5V · Trig GPIO1\nEcho → 10kΩ → GPIO2\nGPIO2 → 20kΩ → GND"]
+  LED["WS2812 ×8\nExternal regulated 5V\nDIN GPIO3 via 330–470Ω\n470–1000µF across 5V/GND"]
+  L298["L298N motor driver\nENA GPIO8 · ENB GPIO13\nIN1/2/3/4 GPIO9/10/11/12\nGND → common ground"]
+  MOT["Four BO motors\nLeft pair → OUT1/OUT2\nRight pair → OUT3/OUT4\nEach side wired in parallel"]
+  LOGIC["Regulated 5V logic supply\nESP32 host · camera · amplifier\nExternal 5V LED supply"]
+  BAT["Separate motor battery\n+ → L298N VMOTOR/12V\n− → L298N GND"]
+  GND["COMMON GROUND\nESP32 · OLED · mic · amp\nCS100A · WS2812 · L298N\nMotor battery negative"]
 
   MCU -->|USB host| CAM
-  MCU -->|I2C| OLED
-  MCU -->|I2S input| MIC
-  MCU -->|I2S output| AMP
+  MCU -->|I2C GPIO40/42| OLED
+  MCU -->|I2S GPIO4/5/6| MIC
+  MCU -->|I2S GPIO7/15/18| AMP
   MCU -->|GPIO1/2| US
   MCU -->|GPIO3| LED
   MCU -->|GPIO8–13| L298
@@ -25,8 +25,10 @@ flowchart LR
   LOGIC --> AMP
   LOGIC --> OLED
   LOGIC --> LED
-  BAT -->|Vmotor only| L298
+  BAT -->|VMOTOR only| L298
   GND --- MCU
+  GND --- OLED
+  GND --- MIC
   GND --- US
   GND --- LED
   GND --- L298
