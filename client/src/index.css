@@ -1833,3 +1833,18 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .announcement-actions > .top-whatsapp-contact { grid-column: 2; justify-self: center; }
   .announcement-actions > .language-select { grid-column: 3; justify-self: end; }
 }
+
+/* Hard desktop guard: older theme rules must not re-expand the mobile WhatsApp pill or collapse the right controls. */
+@media (min-width: 701px) {
+  .announcement-inner { grid-template-columns: minmax(0, 1fr) auto !important; }
+  .announcement-actions { display: flex !important; flex: 0 0 auto; align-items: center; gap: 14px !important; }
+  .announcement-actions > .announcement-social { display: inline-flex !important; flex: 0 0 auto; }
+  .announcement-actions > .announcement-social .social-links { display: inline-flex !important; gap: 8px !important; }
+  .announcement-actions > .announcement-social .social-links a { width: 30px !important; height: 30px !important; flex: 0 0 30px; }
+  .announcement-actions > .top-whatsapp-contact { display: inline-flex !important; width: 30px !important; min-width: 30px !important; height: 30px !important; flex: 0 0 30px; padding: 0 !important; gap: 0 !important; border-radius: 50% !important; }
+  .announcement-actions > .top-whatsapp-contact img { width: 21px !important; height: 21px !important; }
+  .announcement-actions .top-whatsapp-label,
+  .announcement-actions .top-whatsapp-desktop-label,
+  .announcement-actions .top-whatsapp-mobile-label { display: none !important; }
+  .announcement-actions > .language-select { display: block !important; width: 78px !important; min-width: 78px !important; height: 28px !important; margin: 0 !important; }
+}
