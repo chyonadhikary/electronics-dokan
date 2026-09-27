@@ -1,17 +1,20 @@
 import { FormEvent, ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  BadgeCheck,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  CircleHelp,
-  Clock3,
-  Facebook,
-  Filter,
-  Headphones,
-  Heart,
+	import {
+	  ArrowLeft,
+	  ArrowRight,
+	  BadgeCheck,
+	  CheckCircle2,
+	  ChevronDown,
+	  ChevronLeft,
+	  ChevronRight,
+	  CircleHelp,
+	  Clock3,
+	  Cpu,
+	  Facebook,
+	  Filter,
+	  FileUp,
+	  Headphones,
+	  Heart,
   Instagram,
   MapPin,
   Menu,
@@ -26,10 +29,11 @@ import {
   SlidersHorizontal,
   Sparkles,
   Star,
-  Truck,
-  X,
-  Youtube,
-  Zap,
+	  Truck,
+	  Usb,
+	  X,
+	  Youtube,
+	  Zap,
 } from "lucide-react";
 import { toast, Toaster } from "sonner";
 import "./index.css";
@@ -256,9 +260,10 @@ function App() {
     if (path === "/" || path === "") return <HomePage products={products} site={site} brands={brands} navigate={navigate} addToCart={addToCart} />;
     if (path === "/categories") return <CategoriesPage products={products} navigate={navigate} />;
     if (path === "/brands") return <BrandsPage brands={brands} products={products} navigate={navigate} />;
-    if (path === "/tracking") return <TrackingPage site={site} navigate={navigate} />;
-    if (path === "/offers") return <OffersPage navigate={navigate} />;
-    if (["/projects", "/pre-order", "/blog", "/corporate"].includes(path)) return <ResourcePage path={path} navigate={navigate} />;
+	    if (path === "/tracking") return <TrackingPage site={site} navigate={navigate} />;
+	    if (path === "/offers") return <OffersPage navigate={navigate} />;
+	    if (path === "/projects/xiaozhi-ai") return <XiaozhiProjectPage navigate={navigate} />;
+	    if (["/projects", "/pre-order", "/blog", "/corporate"].includes(path)) return <ResourcePage path={path} navigate={navigate} />;
     if (path.startsWith("/products")) return <ProductsPage products={products} navigate={navigate} addToCart={addToCart} />;
     if (path.startsWith("/product/")) return <ProductPage products={products} navigate={navigate} addToCart={addToCart} />;
     if (path === "/cart") return <CartPage products={products} cart={cart} site={site} navigate={navigate} updateQty={updateQty} removeFromCart={removeFromCart} />;
@@ -379,7 +384,34 @@ function OffersPage({ navigate }: { navigate: (path: string) => void }) {
   return <div className="page-wrap"><div className="container breadcrumb"><button onClick={() => navigate("/")}>{bn ? "হোম" : "Home"}</button><ChevronRight size={14} /><span>{bn ? "বিশেষ অফার" : "Special offers"}</span></div><div className="container page-intro"><div><div className="eyebrow"><span className="eyebrow-line" /> {bn ? "আজকের catalogue highlights" : "Catalogue highlights"}</div><h1>{bn ? "বিশেষ অফার" : "Special offers"}</h1><p>{bn ? "আপনার পরের project-এর জন্য বেছে নেওয়া কিছু special picks।" : "A few special picks for your next project."}</p></div></div><section className="container offer-grid">{offers.map((offer, index) => <article className={`offer-card offer-card-${index}`} key={offer.title}><span>{offer.tag}</span><h2>{offer.title}</h2><p>{offer.copy}</p><button className="button button-light" onClick={() => navigate(index === 2 ? "/categories" : "/products")}>{offer.action} <ArrowRight size={16} /></button></article>)}</section></div>;
 }
 
-function ResourcePage({ path, navigate }: { path: string; navigate: (path: string) => void }) { const pages: Record<string, { eyebrow: string; title: string; intro: string; cards: Array<[string, string, string]> }> = { "/projects": { eyebrow: "Build with a clear starting point", title: "Projects", intro: "Practical project ideas, parts lists and guidance for your next electronics build.", cards: [["Smart home starter", "Build a simple sensor-led room monitor with an ESP board, display and reliable power.", "Explore modules"], ["Bench power toolkit", "Put together the essential tools and measurement parts for a safer, cleaner workbench.", "Shop tools"], ["Maker weekend", "A compact weekend build using sensors, LEDs and a microcontroller—great for learning by doing.", "Browse components"]] }, "/pre-order": { eyebrow: "Reserve upcoming stock", title: "Pre-order products", intro: "Reserve selected items before the next stock arrival. Our team confirms availability and timing with you.", cards: [["How pre-order works", "Choose a product marked Pre-order and send your enquiry through checkout. We confirm the advance, arrival and delivery details.", "View pre-order"], ["Clear confirmation", "No order is final until our team confirms the product, price, expected arrival and delivery charge with you.", "Ask on WhatsApp"], ["Need a specific part?", "Send us the model, board or component you need and we will check the next available shipment.", "Request a part"]] }, "/blog": { eyebrow: "Notes from the workbench", title: "Blog", intro: "Useful guides, build notes and practical electronics ideas for curious builders.", cards: [["Choosing the right module", "A quick way to compare voltage, current, interface and project fit before you buy.", "Read the guide"], ["From sketch to prototype", "A simple workflow for planning components, testing early and avoiding expensive rework.", "Read the guide"], ["Tools that earn their place", "The small set of tools that makes soldering, testing and repairs more comfortable.", "Read the guide"]] }, "/corporate": { eyebrow: "Reliable supply for teams", title: "Corporate", intro: "Need repeat supply, project components or a practical sourcing partner? Talk to Electronics Dokan.", cards: [["Project supply", "We can help prepare component lists for education, prototyping, repair and maker programmes.", "Start an enquiry"], ["Bulk requirements", "Share your part numbers, quantities and timeline so our team can check availability and pricing.", "Request a quote"], ["Human support", "Speak with a real person about delivery, substitutions and the best way to complete your order.", "Contact our team"]] } }; const page = pages[path]; return <div className="page-wrap resource-page"><div className="container breadcrumb"><button onClick={() => navigate("/")}>Home</button><ChevronRight size={14} /><span>{page.title}</span></div><div className="container resource-hero"><div className="eyebrow"><span className="eyebrow-line" /> {page.eyebrow}</div><h1>{page.title}</h1><p>{page.intro}</p></div><section className="container resource-grid">{page.cards.map(([title, copy, action], index) => <article className={`resource-card resource-card-${index}`} key={title}><span className="resource-number">0{index + 1}</span><h2>{title}</h2><p>{copy}</p><button className="button button-primary" onClick={() => navigate(path === "/pre-order" && index === 0 ? "/products?sort=preorder" : path === "/projects" && index === 1 ? "/products?category=Tools" : "/contact")}>{action} <ArrowRight size={16} /></button></article>)}</section></div>; }
+function ResourcePage({ path, navigate }: { path: string; navigate: (path: string) => void }) { const pages: Record<string, { eyebrow: string; title: string; intro: string; cards: Array<[string, string, string]> }> = { "/projects": { eyebrow: "Build with a clear starting point", title: "Projects", intro: "Practical project ideas, parts lists and guidance for your next electronics build.", cards: [["Smart home starter", "Build a simple sensor-led room monitor with an ESP board, display and reliable power.", "Explore modules"], ["Bench power toolkit", "Put together the essential tools and measurement parts for a safer, cleaner workbench.", "Shop tools"], ["Maker weekend", "A compact weekend build using sensors, LEDs and a microcontroller—great for learning by doing.", "Browse components"], ["XiaoZhi AI voice assistant", "Build an ESP32-S3 voice chatbot with an animated OLED face and browser-based firmware installation.", "Open project"]] }, "/pre-order": { eyebrow: "Reserve upcoming stock", title: "Pre-order products", intro: "Reserve selected items before the next stock arrival. Our team confirms availability and timing with you.", cards: [["How pre-order works", "Choose a product marked Pre-order and send your enquiry through checkout. We confirm the advance, arrival and delivery details.", "View pre-order"], ["Clear confirmation", "No order is final until our team confirms the product, price, expected arrival and delivery charge with you.", "Ask on WhatsApp"], ["Need a specific part?", "Send us the model, board or component you need and we will check the next available shipment.", "Request a part"]] }, "/blog": { eyebrow: "Notes from the workbench", title: "Blog", intro: "Useful guides, build notes and practical electronics ideas for curious builders.", cards: [["Choosing the right module", "A quick way to compare voltage, current, interface and project fit before you buy.", "Read the guide"], ["From sketch to prototype", "A simple workflow for planning components, testing early and avoiding expensive rework.", "Read the guide"], ["Tools that earn their place", "The small set of tools that makes soldering, testing and repairs more comfortable.", "Read the guide"]] }, "/corporate": { eyebrow: "Reliable supply for teams", title: "Corporate", intro: "Need repeat supply, project components or a practical sourcing partner? Talk to Electronics Dokan.", cards: [["Project supply", "We can help prepare component lists for education, prototyping, repair and maker programmes.", "Start an enquiry"], ["Bulk requirements", "Share your part numbers, quantities and timeline so our team can check availability and pricing.", "Request a quote"], ["Human support", "Speak with a real person about delivery, substitutions and the best way to complete your order.", "Contact our team"]] } }; const page = pages[path]; return <div className="page-wrap resource-page"><div className="container breadcrumb"><button onClick={() => navigate("/")}>Home</button><ChevronRight size={14} /><span>{page.title}</span></div><div className="container resource-hero"><div className="eyebrow"><span className="eyebrow-line" /> {page.eyebrow}</div><h1>{page.title}</h1><p>{page.intro}</p></div><section className="container resource-grid">{page.cards.map(([title, copy, action], index) => <article className={`resource-card resource-card-${index % 3}`} key={title}><span className="resource-number">0{index + 1}</span><h2>{title}</h2><p>{copy}</p><button className="button button-primary" onClick={() => navigate(path === "/pre-order" && index === 0 ? "/products?sort=preorder" : path === "/projects" && index === 1 ? "/products?category=Tools" : path === "/projects" && index === 3 ? "/projects/xiaozhi-ai" : "/contact")}>{action} <ArrowRight size={16} /></button></article>)}</section></div>; }
+
+function XiaozhiFlasher() {
+  const mountRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const mount = mountRef.current;
+    if (!mount) return;
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = "https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module";
+    document.head.appendChild(script);
+    const button = document.createElement("esp-web-install-button");
+    button.setAttribute("manifest", "https://skrelectronicslab.com/wp-content/uploads/firmware/xiaozhi-ai-pro-esp32/manifest.json");
+    const activate = document.createElement("button");
+    activate.setAttribute("slot", "activate");
+    activate.className = "button button-primary flasher-activate";
+    activate.innerHTML = "<span>Flash official firmware</span>";
+    button.appendChild(activate);
+    mount.appendChild(button);
+    return () => { mount.replaceChildren(); script.remove(); };
+  }, []);
+  return <div ref={mountRef} className="flasher-mount" />;
+}
+
+	function XiaozhiProjectPage({ navigate }: { navigate: (path: string) => void }) {
+  const bn = document.documentElement.lang === "bn";
+  return <div className="page-wrap project-detail-page"><div className="container breadcrumb"><button onClick={() => navigate("/")}>{bn ? "হোম" : "Home"}</button><ChevronRight size={14} /><button onClick={() => navigate("/projects")}>{bn ? "প্রজেক্ট" : "Projects"}</button><ChevronRight size={14} /><span>XiaoZhi AI</span></div><section className="container project-hero"><div className="project-hero-copy"><div className="eyebrow"><span className="eyebrow-line" /> {bn ? "Build beyond ordinary" : "Build beyond ordinary"}</div><h1>XiaoZhi AI <em>voice assistant.</em></h1><p>{bn ? "ESP32-S3, OLED face এবং custom wake word দিয়ে নিজের voice chatbot বানান—Electronics Dokan-এর project guide ও browser flasher সহ।" : "Build your own voice chatbot with an ESP32-S3, animated OLED face and custom wake word—complete with a practical guide and browser flasher from Electronics Dokan."}</p><div className="project-hero-actions"><a className="button button-primary" href="https://skrelectronicslab.com/build-your-own-xiaozhi-ai-voice-chatbot-with-custom-wake-word-detection/" target="_blank" rel="noreferrer">Read the build guide <ArrowRight size={16} className="arrow-diagonal" /></a><button className="button button-ghost-dark" onClick={() => document.getElementById("project-flasher")?.scrollIntoView({ behavior: "smooth" })}>Flash firmware <ArrowRight size={16} /></button></div></div><div className="project-hero-art"><div className="project-orbit project-orbit-one" /><div className="project-orbit project-orbit-two" /><div className="project-chip"><Cpu size={44} /><span>ESP32-S3</span><small>VOICE / WIFI / AI</small></div><div className="project-art-label project-art-label-one">OLED face</div><div className="project-art-label project-art-label-two">2.4 GHz Wi‑Fi</div></div></section><section className="container project-stat-grid"><div><Cpu size={18} /><span><b>ESP32-S3</b><small>Hardware wake word support</small></span></div><div><Usb size={18} /><span><b>USB flashing</b><small>No IDE or driver setup</small></span></div><div><Zap size={18} /><span><b>Custom wake word</b><small>Personalise the experience</small></span></div><div><CheckCircle2 size={18} /><span><b>Open guide</b><small>Parts, wiring and setup</small></span></div></section><section className="container project-content-grid"><article className="project-panel"><div className="panel-heading"><h2>{bn ? "যা যা বানাবেন" : "What you will build"}</h2><span>Project overview</span></div><p>{bn ? "এই project-এ ESP32-S3-এর সঙ্গে INMP441 microphone, MAX98357A amplifier, speaker এবং 128×64 OLED display যুক্ত করে একটি cloud-connected AI voice assistant তৈরি করা হয়।" : "This project combines an ESP32-S3 with an INMP441 microphone, MAX98357A amplifier, speaker and a 128×64 OLED display to create a cloud-connected AI voice assistant."}</p><div className="project-feature-list"><span><CheckCircle2 size={15} /> Animated OLED face</span><span><CheckCircle2 size={15} /> Multilingual voice conversations</span><span><CheckCircle2 size={15} /> NTP time and Wi‑Fi diagnostics</span><span><CheckCircle2 size={15} /> OTA themes and MCP controls</span></div></article><article className="project-panel project-parts-panel"><div className="panel-heading"><h2>{bn ? "যা লাগবে" : "Required parts"}</h2><span>BOM starter list</span></div><ul><li>ESP32-S3 development board</li><li>INMP441 I2S microphone</li><li>MAX98357A amplifier + 2W speaker</li><li>0.96-inch 128×64 OLED</li><li>Breadboard, jumper wires and USB data cable</li></ul><button className="text-link" onClick={() => navigate("/products?search=ESP32-S3")}>Find compatible parts <ArrowRight size={15} /></button></article></section><section id="project-flasher" className="container project-flasher"><div className="project-flasher-copy"><div className="eyebrow"><span className="eyebrow-line" /> Browser-based installation</div><h2>Flash your XiaoZhi firmware.</h2><p>Use a desktop Chrome or Edge browser, connect your ESP32 board with a data cable, then install the official merged firmware directly from this page.</p><div className="flasher-notes"><span><Usb size={15} /> Desktop Chromium browser</span><span><CheckCircle2 size={15} /> 2.4 GHz Wi‑Fi after setup</span><span><FileUp size={15} /> Erase recommended for a clean install</span></div></div><div className="flasher-card"><XiaozhiFlasher /><small>Official XiaoZhi Pro manifest · firmware source: SKR Electronics Lab</small></div></section><section className="container project-next-steps"><div><div className="eyebrow"><span className="eyebrow-line" /> After flashing</div><h2>Connect, configure, start talking.</h2></div><div className="project-step-list"><span><b>01</b> Connect to the XiaoZhi-XXXX hotspot</span><span><b>02</b> Open <code>192.168.4.1</code> and set Wi‑Fi</span><span><b>03</b> Pair your device on the XiaoZhi platform</span></div></section></div>;
+}
 
 function CategoriesPage({ products, navigate }: { products: Product[]; navigate: (path: string) => void }) {
   const categories = Array.from(new Set(products.map((product) => product.category))).sort();
