@@ -1961,7 +1961,7 @@
   {
     "id": "item-xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display",
     "slug": "xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display",
-    "name": "XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay & Display",
+    "name": "XH-M604 Digital Battery Charge Control Module, 6–60V DC",
     "category": "Battery",
     "sourceCategory": "BATTERY",
     "sku": "EDP-BAT-0028",
@@ -1972,21 +1972,26 @@
     "stock": true,
     "stockStatus": "Available to order",
     "preOrder": "—",
-    "description": "XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay & Display is a battery product for electronics projects, repair work and prototyping. Review the listed specifications and variant information before ordering, and verify voltage, pinout, dimensions and compatibility with your circuit before applying power.",
-    "shortDescription": "XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay & Display for battery projects, repairs and practical electronics prototyping.",
+    "description": "The XH-M604 is a digital battery voltage-threshold controller/switch. Its display shows voltage and onboard buttons set charge-start and charge-stop thresholds for switching an external charging circuit. It is a control module, not a documented standalone charger: no verified chemistry-specific charging profile or universal output-current rating is asserted. Published listings give a DC 6–60V operating range. Match the battery chemistry and thresholds, check polarity and wiring, and use a suitably rated external charging source.",
+    "shortDescription": "Digital voltage-threshold controller for battery charging: view voltage and set charge-start and charge-stop thresholds to switch an external charging circuit.",
     "brand": "Generic / Unbranded",
-    "specifications": {},
+    "specifications": {
+      "Model": "XH-M604",
+      "Operating range": "DC 6–60V (published)",
+      "Display/control precision": "0.1V (vendor-listed)",
+      "Function": "Digital charge-start / charge-stop threshold switching",
+      "Dimensions": "Approx. 81 × 54 × 18mm (published)",
+      "Output rating": "Verify the exact board revision; no universal rating asserted"
+    },
     "keywords": [
-      "XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay & Display",
-      "Not specified",
-      "BATTERY",
-      "Arduino IDE",
-      "ESP-IDF",
-      "PlatformIO",
-      "Sensor and IoT projects",
-      "Sensor ও IoT project"
+      "XH-M604",
+      "battery charge control module",
+      "6–60V DC",
+      "voltage threshold switch",
+      "digital battery display",
+      "charging start and stop thresholds"
     ],
-    "sourceUrl": "Not specified",
+    "sourceUrl": "https://www.icstation.com/mobile/m604-charge-control-module-battery-protection-board-controller-lithiumlead-acid-battery-solar-panel-p-11314.html",
     "image": "xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display.webp",
     "images": [
       "/images/products/xh-m604-battery-charge-discharge-controller-module-voltage-protection-board-with-relay-and-display.webp"
@@ -2004,9 +2009,14 @@
     "backInStock": true,
     "documentation": [
       {
-        "title": "External component reference search",
-        "titleBn": "বাহ্যিক component reference search",
-        "url": "https://www.lcsc.com/search?q=XH-M604+Battery+Charge%2FDischarge+Controller+Module+%7C+Voltage+Protection+Board+with+Relay+%26+Display"
+        "title": "ICStation XH-M604 reference",
+        "titleBn": "ICStation XH-M604 reference",
+        "url": "https://www.icstation.com/mobile/m604-charge-control-module-battery-protection-board-controller-lithiumlead-acid-battery-solar-panel-p-11314.html"
+      },
+      {
+        "title": "ElectroPeak XH-M604 reference",
+        "titleBn": "ElectroPeak XH-M604 reference",
+        "url": "https://electropeak.com/xh-m604-6-60v-lithium-battery-charging-control-module"
       }
     ],
     "applications": [
@@ -2023,7 +2033,7 @@
     ],
     "attention": "Check the product photo, listed specifications, voltage, polarity, dimensions and compatibility before ordering or applying power. Match the battery chemistry and cell count; never exceed the rated input/output current or voltage.",
     "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, listed specification, voltage, polarity, মাপ এবং compatibility যাচাই করুন। Battery chemistry ও cell count মিলিয়ে নিন; rated input/output current বা voltage অতিক্রম করবেন না।",
-    "metadataStatus": "catalogued",
+    "metadataStatus": "catalogued_enriched",
     "metadataReviewedAt": "2026-09-27",
     "inventoryId": "EDP-BAT-0028",
     "imageAlt": "XH-M604 Battery Charge/Discharge Controller Module | Voltage Protection Board with Relay & Display"
@@ -14100,5 +14110,1124 @@
     "metadataReviewedAt": "2026-09-27",
     "inventoryId": "EDP-AUD-0165",
     "imageAlt": "3W 4Ω Mono Speaker"
+  },
+  {
+    "id": "item-mq-gas-sensor-family",
+    "slug": "mq-135-mq-2-mq-3-mq-7-mq-8-mq-9-gas-sensor-modules",
+    "name": "MQ-135 / MQ-2 / MQ-3 / MQ-7 / MQ-8 / MQ-9 Gas Sensor Module Family",
+    "category": "Sensors",
+    "sourceCategory": "SENSORS",
+    "sku": "EDP-SEN-0177",
+    "price": 195,
+    "priceDisplay": "৳195",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "An MQ-family heated semiconductor gas-sensor module for electronics experiments and microcontroller projects. MQ-135 is a broad air-quality-related sensor, MQ-2 responds to flammable gas and smoke, MQ-3 to alcohol vapour, MQ-7 to carbon monoxide, MQ-8 to hydrogen and MQ-9 to carbon monoxide and combustible gases. These are broad-response devices, not certified safety detectors; board pinout and heater circuitry can vary, so verify the actual module before wiring.",
+    "shortDescription": "Choose an MQ-series metal-oxide gas-sensor module for electronics prototyping. Select the model for the gas response you need; warm-up, calibration and model-specific wiring matter.",
+    "brand": "Generic / Unbranded",
+    "specifications": {
+      "Family": "MQ-135, MQ-2, MQ-3, MQ-7, MQ-8 and MQ-9",
+      "Sensor type": "Heated metal-oxide semiconductor gas sensor",
+      "Use": "Electronics prototyping, gas-response demonstrations and microcontroller projects",
+      "Important": "Conditioning and calibration are required for meaningful readings; module board ratings vary"
+    },
+    "keywords": [
+      "MQ-135",
+      "MQ-2",
+      "MQ-3",
+      "MQ-7",
+      "MQ-8",
+      "MQ-9",
+      "gas sensor module",
+      "air quality sensor",
+      "flammable gas sensor",
+      "carbon monoxide sensor",
+      "hydrogen sensor"
+    ],
+    "sourceUrl": "https://www.winsen-sensor.com/d/files/PDF/Semiconductor%20Gas%20Sensor/MQ135%20(Ver1.4)%20-%20Manual.pdf",
+    "image": "mq-135-gas-sensor-module.webp",
+    "images": [
+      "/images/products/mq-135-gas-sensor-module.webp",
+      "/images/products/mq-2-gas-sensor-module.webp",
+      "/images/products/mq-3-gas-sensor-module.webp",
+      "/images/products/mq-7-gas-sensor-module.webp",
+      "/images/products/mq-8-gas-sensor-module.webp"
+    ],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "mq135",
+        "productFamily": "MQ gas sensor family",
+        "displayName": "MQ-135 Gas Sensor Module",
+        "price": 195,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "mq-135-gas-sensor-module.webp",
+        "source_order": 177,
+        "model": "MQ-135"
+      },
+      {
+        "variantId": "mq2",
+        "productFamily": "MQ gas sensor family",
+        "displayName": "MQ-2 Gas Sensor Module",
+        "price": 180,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "mq-2-gas-sensor-module.webp",
+        "source_order": 177,
+        "model": "MQ-2"
+      },
+      {
+        "variantId": "mq3",
+        "productFamily": "MQ gas sensor family",
+        "displayName": "MQ-3 Gas Sensor Module",
+        "price": 165,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "mq-3-gas-sensor-module.webp",
+        "source_order": 177,
+        "model": "MQ-3"
+      },
+      {
+        "variantId": "mq7",
+        "productFamily": "MQ gas sensor family",
+        "displayName": "MQ-7 Gas Sensor Module",
+        "price": 210,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "mq-7-gas-sensor-module.webp",
+        "source_order": 177,
+        "model": "MQ-7"
+      },
+      {
+        "variantId": "mq8",
+        "productFamily": "MQ gas sensor family",
+        "displayName": "MQ-8 Gas Sensor Module",
+        "price": 160,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "mq-8-gas-sensor-module.webp",
+        "source_order": 177,
+        "model": "MQ-8"
+      },
+      {
+        "variantId": "mq9",
+        "productFamily": "MQ gas sensor family",
+        "displayName": "MQ-9 Gas Sensor Module",
+        "price": 210,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "",
+        "source_order": 177,
+        "model": "MQ-9"
+      }
+    ],
+    "variantCount": 6,
+    "sourceOrder": 178,
+    "nameBn": "MQ-series gas sensor module family",
+    "shortDescriptionBn": "Choose an MQ-series metal-oxide gas-sensor module for electronics prototyping. Select the model for the gas response you need; warm-up, calibration and model-specific wiring matter.",
+    "descriptionBn": "An MQ-family heated semiconductor gas-sensor module for electronics experiments and microcontroller projects. MQ-135 is a broad air-quality-related sensor, MQ-2 responds to flammable gas and smoke, MQ-3 to alcohol vapour, MQ-7 to carbon monoxide, MQ-8 to hydrogen and MQ-9 to carbon monoxide and combustible gases. These are broad-response devices, not certified safety detectors; board pinout and heater circuitry can vary, so verify the actual module before wiring.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Winsen MQ-135 reference",
+        "url": "https://www.winsen-sensor.com/d/files/PDF/Semiconductor%20Gas%20Sensor/MQ135%20(Ver1.4)%20-%20Manual.pdf"
+      },
+      {
+        "title": "Winsen MQ-2 reference",
+        "url": "https://www.winsen-sensor.com/d/files/PDF/Semiconductor%20Gas%20Sensor/MQ-2%20(Ver1.4)%20-%20Manual.pdf"
+      },
+      {
+        "title": "SparkFun MQ-7 reference",
+        "url": "https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-7.pdf"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "These sensors are not certified life-safety detectors. Verify heater cycle, board voltage, pinout and calibration before use.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-SEN-0177",
+    "imageAlt": "MQ-135 / MQ-2 / MQ-3 / MQ-7 / MQ-8 / MQ-9 Gas Sensor Module Family"
+  },
+  {
+    "id": "item-xh-m603",
+    "slug": "xh-m603-battery-charging-control-module-led-voltage-display",
+    "name": "XH-M603 Battery Charging Control Module with LED Voltage Display",
+    "category": "Battery",
+    "sourceCategory": "BATTERY",
+    "sku": "EDP-BAT-0178",
+    "price": 460,
+    "priceDisplay": "৳460",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "The XH-M603 monitors battery voltage and switches a compatible external charger at adjustable charge-start and charge-stop thresholds. Use a charger matched to the battery chemistry and nominal voltage; verify the board wiring and relay rating before loading.",
+    "shortDescription": "Adjustable relay controller that switches an external battery charger on or off and displays battery voltage. This module controls charging; it is not a battery charger.",
+    "brand": "XH-M603 battery charging control module with adjustable threshold switching and LED voltage display.",
+    "specifications": {
+      "Model": "XH-M603",
+      "Input": "10–30V DC as listed by vendor",
+      "Function": "Relay-based start/stop control for an external charger",
+      "Marketed systems": "12V/24V battery systems; verify exact board",
+      "Dimensions": "Approx. 82 × 58 × 18mm (vendor-listed)"
+    },
+    "keywords": [
+      "XH-M603",
+      "battery charging control module",
+      "relay voltage controller",
+      "LED voltage display"
+    ],
+    "sourceUrl": "https://electropeak.com/xh-m603-battery-charge-control-module",
+    "image": "xh-m603-battery-charging-control-module.webp",
+    "images": [
+      "/images/products/xh-m603-battery-charging-control-module.webp"
+    ],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "item-xh-m603",
+        "productFamily": "XH-M603",
+        "displayName": "XH-M603 Battery Charging Control Module with LED Voltage Display",
+        "price": 460,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "xh-m603-battery-charging-control-module.webp",
+        "source_order": 178,
+        "model": "XH-M603"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 179,
+    "nameBn": "XH-M603 Battery Charging Control Module",
+    "shortDescriptionBn": "Adjustable relay controller that switches an external battery charger on or off and displays battery voltage. This module controls charging; it is not a battery charger.",
+    "descriptionBn": "The XH-M603 monitors battery voltage and switches a compatible external charger at adjustable charge-start and charge-stop thresholds. Use a charger matched to the battery chemistry and nominal voltage; verify the board wiring and relay rating before loading.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Technical reference",
+        "titleBn": "Technical reference",
+        "url": "https://electropeak.com/xh-m603-battery-charge-control-module"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-BAT-0178",
+    "imageAlt": "XH-M603 Battery Charging Control Module with LED Voltage Display"
+  },
+  {
+    "id": "item-xy-l10a",
+    "slug": "xy-l10a-6-60v-10a-automatic-battery-charge-controller-module",
+    "name": "XY-L10A 6–60V / 10A Automatic Battery Charge Controller Module with LCD",
+    "category": "Battery",
+    "sourceCategory": "BATTERY",
+    "sku": "EDP-BAT-0179",
+    "price": 500,
+    "priceDisplay": "৳500",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "The XY-L10A monitors battery voltage and uses its onboard relay to control a separate charger. Set lower and upper thresholds for charging. References also describe an optional timer and TTL interface; verify the actual board revision before wiring.",
+    "shortDescription": "LCD-equipped 6–60V battery charge-control module. It switches a suitably matched external charger at user-set voltage thresholds; it is not a charger or current limiter.",
+    "brand": "XY-L10A automatic battery charge controller with LCD and relay.",
+    "specifications": {
+      "Model": "XY-L10A",
+      "Control voltage": "DC 6–60V (published)",
+      "Relay/control current": "Up to 10A as published; verify actual board",
+      "Display": "Battery voltage, percentage and charging time",
+      "Function": "External charger on/off control at set thresholds"
+    },
+    "keywords": [
+      "XY-L10A",
+      "automatic charge cutoff",
+      "battery charge controller",
+      "6-60V",
+      "LCD battery monitor"
+    ],
+    "sourceUrl": "https://www.robofactory.co.za/charging-modules/526-xy-l10a-6-60v-10a-battery-charge-control-display.html",
+    "image": "xy-l10a-battery-charge-controller.webp",
+    "images": [
+      "/images/products/xy-l10a-battery-charge-controller.webp"
+    ],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "item-xy-l10a",
+        "productFamily": "XY-L10A",
+        "displayName": "XY-L10A 6–60V / 10A Automatic Battery Charge Controller Module with LCD",
+        "price": 500,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "xy-l10a-battery-charge-controller.webp",
+        "source_order": 179,
+        "model": "XY-L10A"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 180,
+    "nameBn": "XY-L10A Automatic Battery Charge Controller",
+    "shortDescriptionBn": "LCD-equipped 6–60V battery charge-control module. It switches a suitably matched external charger at user-set voltage thresholds; it is not a charger or current limiter.",
+    "descriptionBn": "The XY-L10A monitors battery voltage and uses its onboard relay to control a separate charger. Set lower and upper thresholds for charging. References also describe an optional timer and TTL interface; verify the actual board revision before wiring.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Technical reference",
+        "titleBn": "Technical reference",
+        "url": "https://www.robofactory.co.za/charging-modules/526-xy-l10a-6-60v-10a-battery-charge-control-display.html"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-BAT-0179",
+    "imageAlt": "XY-L10A 6–60V / 10A Automatic Battery Charge Controller Module with LCD"
+  },
+  {
+    "id": "item-xh-m28",
+    "slug": "mh-m28-bluetooth-audio-receiver-module",
+    "name": "MH-M28 Bluetooth Audio Receiver Module",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "EDP-AUD-0180",
+    "price": 165,
+    "priceDisplay": "৳165",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "Add wireless stereo audio reception to an amplifier or powered audio setup with the MH-M28. It provides left and right analog outputs; versions may use 5V or a 3.7–4.2V VBAT input. This is a receiver/line-output module, not a speaker power amplifier.",
+    "shortDescription": "Compact Bluetooth stereo audio receiver board with left/right analog output for an amplifier or powered audio system. Check the board revision and printed power-input labels before wiring.",
+    "brand": "MH-M28 Bluetooth audio receiver module.",
+    "specifications": {
+      "Function": "Bluetooth stereo audio reception",
+      "Output": "Analog L/R/AGND line output",
+      "Power": "5V or 3.7–4.2V VBAT depending on board input",
+      "Range": "Up to 20m open environment claimed by references"
+    },
+    "keywords": [
+      "MH-M28",
+      "M28",
+      "XH-M28",
+      "Bluetooth audio receiver",
+      "stereo line output"
+    ],
+    "sourceUrl": "https://www.taydaelectronics.com/m28-wireless-bluetooth-audio-receiver-board-module.html",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "item-xh-m28",
+        "productFamily": "MH-M28",
+        "displayName": "MH-M28 Bluetooth Audio Receiver Module",
+        "price": 165,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "",
+        "source_order": 180,
+        "model": "MH-M28"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 181,
+    "nameBn": "MH-M28 Bluetooth Audio Receiver Module",
+    "shortDescriptionBn": "Compact Bluetooth stereo audio receiver board with left/right analog output for an amplifier or powered audio system. Check the board revision and printed power-input labels before wiring.",
+    "descriptionBn": "Add wireless stereo audio reception to an amplifier or powered audio setup with the MH-M28. It provides left and right analog outputs; versions may use 5V or a 3.7–4.2V VBAT input. This is a receiver/line-output module, not a speaker power amplifier.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Technical reference",
+        "titleBn": "Technical reference",
+        "url": "https://www.taydaelectronics.com/m28-wireless-bluetooth-audio-receiver-board-module.html"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-AUD-0180",
+    "imageAlt": "MH-M28 Bluetooth Audio Receiver Module"
+  },
+  {
+    "id": "item-xh-m38",
+    "slug": "mh-m38-5w-5w-bluetooth-stereo-audio-amplifier-module",
+    "name": "MH-M38 5W+5W Bluetooth Stereo Audio Receiver/Amplifier Module",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "EDP-AUD-0181",
+    "price": 165,
+    "priceDisplay": "৳165",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "The MH-M38 receives Bluetooth audio and drives two suitable passive speakers directly through its integrated dual-channel amplifier. References describe 5V DC or 3.7–4.2V lithium input and 2–8Ω speaker loads. Do not connect its speaker outputs to another amplifier or join negative outputs.",
+    "shortDescription": "Compact Bluetooth audio receiver with an integrated 5W+5W stereo amplifier for DIY speaker projects. Connect compatible left and right speakers directly; keep amplifier outputs isolated.",
+    "brand": "MH-M38 5W+5W Bluetooth stereo amplifier module.",
+    "specifications": {
+      "Bluetooth": "Version 4.2 per family datasheet",
+      "Amplifier": "5W + 5W stereo",
+      "Power": "5V DC or 3.7–4.2V lithium input",
+      "Speaker load": "Two 2–8Ω speakers; verify exact board"
+    },
+    "keywords": [
+      "MH-M38",
+      "XH-M38",
+      "5W stereo amplifier",
+      "Bluetooth speaker module"
+    ],
+    "sourceUrl": "https://www.dfrobot.com/product-2083.html",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "item-xh-m38",
+        "productFamily": "MH-M38",
+        "displayName": "MH-M38 5W+5W Bluetooth Stereo Audio Receiver/Amplifier Module",
+        "price": 165,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "",
+        "source_order": 181,
+        "model": "MH-M38"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 182,
+    "nameBn": "MH-M38 5W+5W Bluetooth Stereo Amplifier Module",
+    "shortDescriptionBn": "Compact Bluetooth audio receiver with an integrated 5W+5W stereo amplifier for DIY speaker projects. Connect compatible left and right speakers directly; keep amplifier outputs isolated.",
+    "descriptionBn": "The MH-M38 receives Bluetooth audio and drives two suitable passive speakers directly through its integrated dual-channel amplifier. References describe 5V DC or 3.7–4.2V lithium input and 2–8Ω speaker loads. Do not connect its speaker outputs to another amplifier or join negative outputs.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Technical reference",
+        "titleBn": "Technical reference",
+        "url": "https://www.dfrobot.com/product-2083.html"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-AUD-0181",
+    "imageAlt": "MH-M38 5W+5W Bluetooth Stereo Audio Receiver/Amplifier Module"
+  },
+  {
+    "id": "item-xh-m602",
+    "slug": "xh-m602-programmable-battery-charge-controller-module-ac-relay",
+    "name": "XH-M602 Programmable Battery Charge Controller Module (AC-Powered Relay Switch)",
+    "category": "Battery",
+    "sourceCategory": "BATTERY",
+    "sku": "EDP-BAT-0182",
+    "price": 490,
+    "priceDisplay": "৳490",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "The XH-M602 is a programmable battery-voltage monitor and charger-control switch. Published listings generally describe an AC-powered relay version, but input and operating-range claims vary by seller and revision. Confirm markings, wiring diagram and ratings of the supplied unit before energizing it.",
+    "shortDescription": "The XH-M602 monitors battery voltage and switches an external charger at adjustable thresholds. It has a digital voltage display; verify the exact revision and ratings before connecting it.",
+    "brand": "XH-M602 programmable battery charge controller.",
+    "specifications": {
+      "Function": "Battery voltage monitoring and charger start/stop relay switching",
+      "Supply": "Commonly listed as AC 220V; verify exact unit",
+      "Display precision": "0.1V seller-listed",
+      "Output": "Relay-switched; verify load rating"
+    },
+    "keywords": [
+      "XH-M602",
+      "battery voltage monitor",
+      "automatic charger cutoff",
+      "programmable voltage switch"
+    ],
+    "sourceUrl": "https://www.lyonscomputer.com.au/Electronic-Modules/PSU-XH-M602-Mains-Relay-Battery-Monitor/PSU-XH-M602-Mains-Relay-Battery-Monitor.html",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "item-xh-m602",
+        "productFamily": "XH-M602",
+        "displayName": "XH-M602 Programmable Battery Charge Controller Module (AC-Powered Relay Switch)",
+        "price": 490,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "",
+        "source_order": 182,
+        "model": "XH-M602"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 183,
+    "nameBn": "XH-M602 Programmable Battery Charge Controller",
+    "shortDescriptionBn": "The XH-M602 monitors battery voltage and switches an external charger at adjustable thresholds. It has a digital voltage display; verify the exact revision and ratings before connecting it.",
+    "descriptionBn": "The XH-M602 is a programmable battery-voltage monitor and charger-control switch. Published listings generally describe an AC-powered relay version, but input and operating-range claims vary by seller and revision. Confirm markings, wiring diagram and ratings of the supplied unit before energizing it.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Technical reference",
+        "titleBn": "Technical reference",
+        "url": "https://www.lyonscomputer.com.au/Electronic-Modules/PSU-XH-M602-Mains-Relay-Battery-Monitor/PSU-XH-M602-Mains-Relay-Battery-Monitor.html"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-BAT-0182",
+    "imageAlt": "XH-M602 Programmable Battery Charge Controller Module (AC-Powered Relay Switch)"
+  },
+  {
+    "id": "item-w3230",
+    "slug": "w3230-digital-temperature-controller-220v-ac-12v-dc",
+    "name": "W3230 Digital Temperature Controller – 220V AC / 12V DC Versions",
+    "category": "Modules > Temperature Controllers",
+    "sourceCategory": "MODULES_>_TEMPERATURE_CONTROLLERS",
+    "sku": "EDP-MOD-0183",
+    "price": 455,
+    "priceDisplay": "৳455",
+    "currency": "BDT",
+    "availability": "in_stock",
+    "stock": true,
+    "stockStatus": "220V: 3 pcs · 12V: 3 pcs",
+    "preOrder": "—",
+    "description": "The W3230 is a compact digital thermostat controller. Select the correct supply variant before wiring; set a target temperature and choose heating or cooling operation. Probe, temperature range and relay ratings vary by version, so check the supplied unit manual and wiring diagram.",
+    "shortDescription": "W3230 digital temperature controller with selectable 220V AC or 12V DC supply. Its adjustable thermostat switches a connected heater or cooling device according to the measured temperature.",
+    "brand": "Generic / Unbranded",
+    "specifications": {
+      "Model": "W3230",
+      "Supply variants": "220V AC and 12V DC",
+      "Control": "Adjustable setpoint with heating/cooling relay mode",
+      "Probe": "Common versions use NTC10K waterproof probe; confirm inclusion",
+      "Temperature range": "Published sources differ; verify batch manual"
+    },
+    "keywords": [
+      "W3230",
+      "digital temperature controller",
+      "220V thermostat",
+      "12V thermostat",
+      "NTC10K probe"
+    ],
+    "sourceUrl": "https://sah.rs/media/sah/techdocs/w3230-manual.pdf",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "w3230-220v",
+        "productFamily": "W3230",
+        "displayName": "W3230 – 220V AC",
+        "price": 455,
+        "priceUnit": "per_piece",
+        "stockQuantity": 3,
+        "availability": "in_stock",
+        "image": "",
+        "source_order": 183,
+        "model": "220V AC"
+      },
+      {
+        "variantId": "w3230-12v",
+        "productFamily": "W3230",
+        "displayName": "W3230 – 12V DC",
+        "price": 455,
+        "priceUnit": "per_piece",
+        "stockQuantity": 3,
+        "availability": "in_stock",
+        "image": "",
+        "source_order": 183,
+        "model": "12V DC"
+      }
+    ],
+    "variantCount": 2,
+    "sourceOrder": 184,
+    "nameBn": "W3230 Digital Temperature Controller",
+    "shortDescriptionBn": "W3230 digital temperature controller with selectable 220V AC or 12V DC supply. Its adjustable thermostat switches a connected heater or cooling device according to the measured temperature.",
+    "descriptionBn": "The W3230 is a compact digital thermostat controller. Select the correct supply variant before wiring; set a target temperature and choose heating or cooling operation. Probe, temperature range and relay ratings vary by version, so check the supplied unit manual and wiring diagram.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "W3230 manual reference",
+        "titleBn": "W3230 manual reference",
+        "url": "https://sah.rs/media/sah/techdocs/w3230-manual.pdf"
+      },
+      {
+        "title": "OMCH W3230 reference",
+        "titleBn": "OMCH W3230 reference",
+        "url": "https://www.omchsmps.com/w3230-temperature-controllers/"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Never connect 220V to the 12V variant. Verify relay/load ratings and use an external contactor when required.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-MOD-0183",
+    "imageAlt": "W3230 Digital Temperature Controller – 220V AC / 12V DC Versions"
+  },
+  {
+    "id": "item-max9814",
+    "slug": "max9814-electret-microphone-amplifier-module-agc",
+    "name": "MAX9814 Electret Microphone Amplifier Module with AGC",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "EDP-AUD-0184",
+    "price": 340,
+    "priceDisplay": "৳340",
+    "currency": "BDT",
+    "availability": "in_stock",
+    "stock": true,
+    "stockStatus": "In stock · 4 pcs",
+    "preOrder": "—",
+    "description": "Add electret-microphone input to an audio or microcontroller project with this MAX9814-based amplifier. The IC includes a low-noise preamplifier, variable-gain stage and AGC. Exact breakout layout, fitted microphone, pin labels and gain configuration vary; confirm the actual board before wiring.",
+    "shortDescription": "Electret microphone preamplifier module based on MAX9814, with automatic gain control for audio capture where sound levels vary.",
+    "brand": "Generic / Unbranded module; MAX9814 IC by Maxim Integrated / Analog Devices",
+    "specifications": {
+      "IC": "MAX9814 microphone amplifier with AGC",
+      "IC supply": "2.7–5.5V recommended operating supply",
+      "Gain": "Selectable 40dB, 50dB or 60dB maximum no-compression gain",
+      "Input": "Electret microphone; board inclusion unconfirmed"
+    },
+    "keywords": [
+      "MAX9814",
+      "microphone amplifier",
+      "electret preamp",
+      "AGC microphone module",
+      "analog audio input"
+    ],
+    "sourceUrl": "https://www.analog.com/media/en/technical-documentation/data-sheets/max9814.pdf",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "max9814",
+        "productFamily": "MAX9814",
+        "displayName": "MAX9814 Microphone Amplifier Module",
+        "price": 340,
+        "priceUnit": "per_piece",
+        "stockQuantity": 4,
+        "availability": "in_stock",
+        "image": "",
+        "source_order": 184,
+        "model": "MAX9814"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 185,
+    "nameBn": "MAX9814 Electret Microphone Amplifier Module",
+    "shortDescriptionBn": "Electret microphone preamplifier module based on MAX9814, with automatic gain control for audio capture where sound levels vary.",
+    "descriptionBn": "Add electret-microphone input to an audio or microcontroller project with this MAX9814-based amplifier. The IC includes a low-noise preamplifier, variable-gain stage and AGC. Exact breakout layout, fitted microphone, pin labels and gain configuration vary; confirm the actual board before wiring.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Analog Devices MAX9814 datasheet",
+        "titleBn": "Analog Devices MAX9814 datasheet",
+        "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max9814.pdf"
+      },
+      {
+        "title": "Adafruit MAX9814 reference",
+        "titleBn": "Adafruit MAX9814 reference",
+        "url": "https://www.adafruit.com/product/1713"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-AUD-0184",
+    "imageAlt": "MAX9814 Electret Microphone Amplifier Module with AGC"
+  },
+  {
+    "id": "item-max4466",
+    "slug": "max4466-electret-microphone-amplifier-module-adjustable-gain",
+    "name": "MAX4466 Electret Microphone Amplifier Module (Adjustable Gain)",
+    "category": "Audio",
+    "sourceCategory": "AUDIO",
+    "sku": "EDP-AUD-0185",
+    "price": 180,
+    "priceDisplay": "৳180",
+    "currency": "BDT",
+    "availability": "in_stock",
+    "stock": true,
+    "stockStatus": "In stock · 5 pcs",
+    "preOrder": "—",
+    "description": "Add analog sound input to a microcontroller or audio project with this MAX4466-based electret microphone amplifier. Connect the analog OUT signal to a suitable ADC or audio input; it is a preamplifier output, not a speaker driver. Board layouts and ratings vary, so confirm the supplied module markings before wiring.",
+    "shortDescription": "Analog electret microphone amplifier module based on MAX4466, with an onboard trimmer for adjustable gain and analog output for audio and sound-reactive projects.",
+    "brand": "Generic / Unbranded module; MAX4466 IC by Maxim Integrated / Analog Devices",
+    "specifications": {
+      "IC": "MAX4466 analog microphone preamplifier",
+      "Gain": "Adjustable approximately 25×–125× on reference breakout designs",
+      "Supply": "2.4–5V on reference Adafruit board; verify exact board",
+      "Output": "Analog audio waveform; not a speaker driver"
+    },
+    "keywords": [
+      "MAX4466",
+      "electret microphone amplifier",
+      "adjustable gain",
+      "analog microphone module",
+      "sound sensor"
+    ],
+    "sourceUrl": "https://www.analog.com/en/products/max4466.html",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "max4466",
+        "productFamily": "MAX4466",
+        "displayName": "MAX4466 Adjustable-Gain Electret Microphone Amplifier Module",
+        "price": 180,
+        "priceUnit": "per_piece",
+        "stockQuantity": 5,
+        "availability": "in_stock",
+        "image": "",
+        "source_order": 185,
+        "model": "MAX4466"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 186,
+    "nameBn": "MAX4466 Adjustable-Gain Electret Microphone Amplifier",
+    "shortDescriptionBn": "Analog electret microphone amplifier module based on MAX4466, with an onboard trimmer for adjustable gain and analog output for audio and sound-reactive projects.",
+    "descriptionBn": "Add analog sound input to a microcontroller or audio project with this MAX4466-based electret microphone amplifier. Connect the analog OUT signal to a suitable ADC or audio input; it is a preamplifier output, not a speaker driver. Board layouts and ratings vary, so confirm the supplied module markings before wiring.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Analog Devices MAX4466 reference",
+        "titleBn": "Analog Devices MAX4466 reference",
+        "url": "https://www.analog.com/en/products/max4466.html"
+      },
+      {
+        "title": "Adafruit MAX4466 guide",
+        "titleBn": "Adafruit MAX4466 guide",
+        "url": "https://learn.adafruit.com/adafruit-microphone-amplifier-breakout/overview"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-AUD-0185",
+    "imageAlt": "MAX4466 Electret Microphone Amplifier Module (Adjustable Gain)"
+  },
+  {
+    "id": "item-horizontal-float-switch",
+    "slug": "horizontal-liquid-water-level-float-switch",
+    "name": "Horizontal Liquid Water Level Float Switch",
+    "category": "Components",
+    "sourceCategory": "COMPONENTS",
+    "sku": "EDP-CMP-0186",
+    "price": 95,
+    "priceDisplay": "৳95",
+    "currency": "BDT",
+    "availability": "in_stock",
+    "stock": true,
+    "stockStatus": "In stock · 8 pcs",
+    "preOrder": "—",
+    "description": "This horizontal liquid-level float switch is intended for side mounting through a tank wall. As the water level changes, the float actuates a switch at its set point. Check mounting dimensions, sealing, contact orientation, wiring and electrical limits before installation; do not assume it can directly switch a pump.",
+    "shortDescription": "Horizontal, tank-side float switch for detecting a liquid level at a single point and signalling a compatible alarm or control circuit.",
+    "brand": "Generic / Unbranded",
+    "specifications": {
+      "Type": "Horizontal, side-mounted float level switch",
+      "Function": "Discrete single-point liquid-level switching",
+      "Mounting": "Tank-side; confirm fitting and seal dimensions",
+      "Contact mode and rating": "Not specified for this supplied item; verify before use"
+    },
+    "keywords": [
+      "horizontal float switch",
+      "water level switch",
+      "liquid level sensor",
+      "tank level switch",
+      "side mounted float switch"
+    ],
+    "sourceUrl": "https://apgsensors.com/the-basics-of-float-switches-guide/",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "float-switch",
+        "productFamily": "Horizontal float switch",
+        "displayName": "Horizontal Liquid Water Level Float Switch",
+        "price": 95,
+        "priceUnit": "per_piece",
+        "stockQuantity": 8,
+        "availability": "in_stock",
+        "image": "",
+        "source_order": 186,
+        "model": "Generic"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 187,
+    "nameBn": "Horizontal Liquid Water Level Float Switch",
+    "shortDescriptionBn": "Horizontal, tank-side float switch for detecting a liquid level at a single point and signalling a compatible alarm or control circuit.",
+    "descriptionBn": "This horizontal liquid-level float switch is intended for side mounting through a tank wall. As the water level changes, the float actuates a switch at its set point. Check mounting dimensions, sealing, contact orientation, wiring and electrical limits before installation; do not assume it can directly switch a pump.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "Float switch basics",
+        "titleBn": "Float switch basics",
+        "url": "https://apgsensors.com/the-basics-of-float-switches-guide/"
+      },
+      {
+        "title": "Horizontal float switch reference",
+        "titleBn": "Horizontal float switch reference",
+        "url": "https://www.fluidswitch.com/product/fh08-plastic-horizontal-float-switch-copy/"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-CMP-0186",
+    "imageAlt": "Horizontal Liquid Water Level Float Switch"
+  },
+  {
+    "id": "item-1s-bms-10a",
+    "slug": "1s-3-7v-10a-li-ion-lipo-battery-bms-protection-board",
+    "name": "1S 3.7V 10A Li-ion/LiPo Battery BMS Protection Board",
+    "category": "Battery",
+    "sourceCategory": "BATTERY",
+    "sku": "EDP-BAT-0187",
+    "price": 55,
+    "priceDisplay": "৳55",
+    "currency": "BDT",
+    "availability": "stock_to_confirm",
+    "stock": false,
+    "stockStatus": "Stock quantity to confirm",
+    "preOrder": "—",
+    "description": "A compact protection module for a single-series-cell (1S) Li-ion or Li-polymer pack. Use only with a compatible 1S cell and charger, observe marked terminals and polarity, and verify the actual board revision and current limits. This protection board is not a substitute for an appropriate battery charger.",
+    "shortDescription": "Single-cell 3.7V nominal Li-ion/LiPo battery protection board, designated 10A maximum. Check the board wiring and verified continuous-current rating before use.",
+    "brand": "Generic / Unbranded",
+    "specifications": {
+      "Configuration": "1S / one cell or series group",
+      "Nominal pack voltage": "3.7V",
+      "Current class": "10A maximum designation supplied; continuous rating unverified",
+      "Chemistry": "Li-ion or Li-polymer as described; verify actual board"
+    },
+    "keywords": [
+      "1S BMS",
+      "single-cell battery protection",
+      "1S Li-ion BMS",
+      "1S LiPo protection",
+      "3.7V battery protection"
+    ],
+    "sourceUrl": "https://www.diymore.cc/products/1s-3-7-v-10-a-li-on-lithium-bms-pcm-battery-protection-board-compatible-with-18650-li-on-lithium-battery",
+    "image": "",
+    "images": [],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "1s-bms-10a",
+        "productFamily": "1S BMS",
+        "displayName": "1S 3.7V 10A max Li-ion/LiPo BMS",
+        "price": 55,
+        "priceUnit": "per_piece",
+        "stockQuantity": 0,
+        "availability": "stock_to_confirm",
+        "image": "",
+        "source_order": 187,
+        "model": "1S / 3.7V"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 188,
+    "nameBn": "1S 3.7V 10A Li-ion/LiPo BMS Protection Board",
+    "shortDescriptionBn": "Single-cell 3.7V nominal Li-ion/LiPo battery protection board, designated 10A maximum. Check the board wiring and verified continuous-current rating before use.",
+    "descriptionBn": "A compact protection module for a single-series-cell (1S) Li-ion or Li-polymer pack. Use only with a compatible 1S cell and charger, observe marked terminals and polarity, and verify the actual board revision and current limits. This protection board is not a substitute for an appropriate battery charger.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "DIYMore 1S 10A BMS reference",
+        "titleBn": "DIYMore 1S 10A BMS reference",
+        "url": "https://www.diymore.cc/products/1s-3-7-v-10-a-li-on-lithium-bms-pcm-battery-protection-board-compatible-with-18650-li-on-lithium-battery"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Check the product photo, voltage, polarity, pinout, dimensions and compatibility before ordering or applying power.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-BAT-0187",
+    "imageAlt": "1S 3.7V 10A Li-ion/LiPo Battery BMS Protection Board"
+  },
+  {
+    "id": "item-3s-bms-25a",
+    "slug": "3s-25a-li-ion-lipo-battery-bms-protection-board-11-1v-12-6v",
+    "name": "3S 25A Li-ion/LiPo Battery BMS Protection Board",
+    "category": "Battery",
+    "sourceCategory": "BATTERY",
+    "sku": "EDP-BAT-0188",
+    "price": 280,
+    "priceDisplay": "৳280",
+    "currency": "BDT",
+    "availability": "in_stock",
+    "stock": true,
+    "stockStatus": "In stock · 3 pcs",
+    "preOrder": "—",
+    "description": "A 3S battery management/protection board for compatible Li-ion or Li-polymer cells. For standard 4.2V-per-cell chemistry, a 3S pack is approximately 10.8–11.1V nominal and 12.6V fully charged. This is a protection board, not a cell pack or charger; use an appropriate 3S charger and confirm balance/tap wiring.",
+    "shortDescription": "3S 25A-class lithium battery protection board for compatible three-cell-series Li-ion or LiPo packs. Verify board markings, wiring and current limits before use.",
+    "brand": "Generic / Unbranded",
+    "specifications": {
+      "Configuration": "3S / three cells in series",
+      "Pack voltage": "10.8–11.1V nominal; 12.6V full charge for standard 4.2V cells",
+      "Current class": "25A as supplied; continuous capability unverified",
+      "Product type": "Battery protection/BMS PCB; not a charger"
+    },
+    "keywords": [
+      "3S BMS",
+      "25A battery protection board",
+      "3S lithium-ion BMS",
+      "3S LiPo BMS",
+      "11.1V battery BMS",
+      "12.6V battery protection"
+    ],
+    "sourceUrl": "https://shillehtek.com/products/3s-12v-18650-lithium-battery-protection-board-11-1v-12-6v-balanced-25a",
+    "image": "3s-25a-li-ion-lipo-bms.webp",
+    "images": [
+      "/images/products/3s-25a-li-ion-lipo-bms.webp"
+    ],
+    "featured": false,
+    "newArrival": true,
+    "trending": false,
+    "deal": false,
+    "variants": [
+      {
+        "variantId": "3s-bms-25a",
+        "productFamily": "3S BMS",
+        "displayName": "3S 25A Li-ion/LiPo BMS Protection Board",
+        "price": 280,
+        "priceUnit": "per_piece",
+        "stockQuantity": 3,
+        "availability": "in_stock",
+        "image": "3s-25a-li-ion-lipo-bms.webp",
+        "source_order": 188,
+        "model": "3S / 11.1V"
+      }
+    ],
+    "variantCount": 1,
+    "sourceOrder": 189,
+    "nameBn": "3S 25A Li-ion/LiPo Battery BMS Protection Board",
+    "shortDescriptionBn": "3S 25A-class lithium battery protection board for compatible three-cell-series Li-ion or LiPo packs. Verify board markings, wiring and current limits before use.",
+    "descriptionBn": "A 3S battery management/protection board for compatible Li-ion or Li-polymer cells. For standard 4.2V-per-cell chemistry, a 3S pack is approximately 10.8–11.1V nominal and 12.6V fully charged. This is a protection board, not a cell pack or charger; use an appropriate 3S charger and confirm balance/tap wiring.",
+    "backInStock": false,
+    "documentation": [
+      {
+        "title": "3S 25A BMS reference",
+        "titleBn": "3S 25A BMS reference",
+        "url": "https://shillehtek.com/products/3s-12v-18650-lithium-battery-protection-board-11-1v-12-6v-balanced-25a"
+      },
+      {
+        "title": "3S BMS manual reference",
+        "titleBn": "3S BMS manual reference",
+        "url": "https://shillehtek.com/blogs/shillehtek-product-manuals/3s-12v-18650-lithium-battery-protection-board-11-1v-12-6v-balanced-25a-manual"
+      }
+    ],
+    "applications": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor and IoT projects"
+    ],
+    "applicationsBn": [
+      "Arduino IDE",
+      "ESP-IDF",
+      "PlatformIO",
+      "Sensor ও IoT project"
+    ],
+    "attention": "Use only with compatible cells and charger. Confirm PCB revision, pad labels, protection cutoffs and current limits before installation.",
+    "attentionBn": "অর্ডার বা power দেওয়ার আগে product photo, voltage, polarity, pinout, মাপ ও compatibility যাচাই করুন।",
+    "metadataStatus": "catalogued",
+    "metadataReviewedAt": "2026-09-27",
+    "inventoryId": "EDP-BAT-0188",
+    "imageAlt": "3S 25A Li-ion/LiPo Battery BMS Protection Board"
   }
 ]
