@@ -385,9 +385,30 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchSticky, setSearchSticky] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [activeSuggestion, setActiveSuggestion] = useState(-1);
   const categories = Array.from(new Set(products.map((product) => product.category))).sort();
-  useEffect(() => { const params = new URLSearchParams(window.location.search); setSearchValue(params.get("search") || ""); setSearchCategory(params.get("category") || ""); }, [path]);
+  const suggestions = useMemo(() => {
+    const query = searchValue.trim().toLocaleLowerCase();
+    if (!query) return [];
+    return products.map((product) => {
+      const nameText = `${product.name} ${product.nameBn || ""}`.toLocaleLowerCase();
+      const searchText = productSearchText(product);
+      const startsInName = nameText.startsWith(query);
+      const nameMatch = nameText.includes(query);
+      const score = startsInName ? 100 : nameMatch ? 80 : searchText.includes(query) ? 45 : 0;
+      return { product, score };
+    }).filter(({ score }) => score > 0).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name)).slice(0, 7);
+  }, [products, searchValue]);
+  const chooseSuggestion = (product: Product) => {
+    setSearchValue(language === "bn" ? (product.nameBn || product.name) : product.name);
+    setSearchOpen(false);
+    setActiveSuggestion(-1);
+    navigate(`/product/${product.slug}`);
+  };
+  useEffect(() => { const params = new URLSearchParams(window.location.search); setSearchValue(params.get("search") || ""); setSearchCategory(params.get("category") || ""); setSearchOpen(false); setActiveSuggestion(-1); }, [path]);
   useEffect(() => { const onScroll = () => setSearchSticky(window.scrollY > 80); onScroll(); window.addEventListener("scroll", onScroll, { passive: true }); return () => window.removeEventListener("scroll", onScroll); }, []);
+  useEffect(() => { const onPointerDown = (event: PointerEvent) => { if (!(event.target as HTMLElement).closest(".search-form")) { setSearchOpen(false); setActiveSuggestion(-1); } }; document.addEventListener("pointerdown", onPointerDown); return () => document.removeEventListener("pointerdown", onPointerDown); }, []);
   const submitSearch = (event: FormEvent) => {
     event.preventDefault();
     const params = new URLSearchParams();
@@ -401,7 +422,22 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
     <header className="site-header">
       <div className="container header-main">
         <button className={`brand ${site.logo ? "has-custom-logo" : ""}`} onClick={() => navigate("/")} aria-label="Go to Electronics Dokan home">{site.logo && <img className="custom-brand-logo" src={site.logo} alt="" onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.remove("has-custom-logo"); }} />}<span className="brand-mark"><Zap size={20} fill="currentColor" /></span><span><strong>electronics</strong><b>dokan</b><small>Build beyond ordinary</small></span></button>
-        <form className={`search-form ${searchSticky ? "is-sticky" : ""}`} onSubmit={submitSearch}><Search size={19} /><input aria-label="Search products" value={searchValue} onChange={(event) => { const value = event.target.value; setSearchValue(value); if (path.startsWith("/products")) { const params = new URLSearchParams(); if (value.trim()) params.set("search", value.trim()); if (searchCategory) params.set("category", searchCategory); navigate(`/products${params.toString() ? `?${params.toString()}` : ""}`); } }} placeholder="Search products, brands, categories..." /><select className="search-category-select" aria-label="Filter search by category" value={searchCategory} onChange={(event) => { const value = event.target.value; setSearchCategory(value); const params = new URLSearchParams(); if (searchValue.trim()) params.set("search", searchValue.trim()); if (value) params.set("category", value); navigate(`/products${params.toString() ? `?${params.toString()}` : ""}`); }}><option value="">All</option>{categories.map((category) => <option key={category} value={category}>{category}</option>)}</select><kbd>⌘ K</kbd><button type="submit" aria-label="Search"><ArrowRight size={19} /></button></form>
+        <form className={`search-form ${searchSticky ? "is-sticky" : ""}`} onSubmit={(event) => { if (activeSuggestion >= 0 && suggestions[activeSuggestion]) { event.preventDefault(); chooseSuggestion(suggestions[activeSuggestion].product); return; } submitSearch(event); setSearchOpen(false); }}>
+          <Search size={19} />
+          <input aria-label="Search products" value={searchValue} onFocus={() => setSearchOpen(true)} onKeyDown={(event) => { if (event.key === "ArrowDown") { event.preventDefault(); setSearchOpen(true); setActiveSuggestion((index) => Math.min(index + 1, suggestions.length - 1)); } else if (event.key === "ArrowUp") { event.preventDefault(); setActiveSuggestion((index) => Math.max(index - 1, -1)); } else if (event.key === "Escape") { setSearchOpen(false); setActiveSuggestion(-1); } }} onChange={(event) => { setSearchValue(event.target.value); setSearchOpen(true); setActiveSuggestion(-1); }} placeholder="Search products, brands, categories..." />
+          <select className="search-category-select" aria-label="Filter search by category" value={searchCategory} onChange={(event) => { const value = event.target.value; setSearchCategory(value); const params = new URLSearchParams(); if (searchValue.trim()) params.set("search", searchValue.trim()); if (value) params.set("category", value); navigate(`/products${params.toString() ? `?${params.toString()}` : ""}`); }}><option value="">All</option>{categories.map((category) => <option key={category} value={category}>{category}</option>)}</select>
+          <kbd>⌘ K</kbd><button type="submit" aria-label="Search"><ArrowRight size={19} /></button>
+          {searchOpen && searchValue.trim() && <div className="search-suggestions" role="listbox" aria-label={language === "bn" ? "সম্পর্কিত পণ্য" : "Related products"}>
+            {suggestions.length ? <>
+              <div className="search-suggestions-heading">{language === "bn" ? "আপনার জন্য মিলেছে" : "Related products"}<span>{suggestions.length}</span></div>
+              {suggestions.map(({ product }, index) => <button type="button" role="option" aria-selected={activeSuggestion === index} className={`search-suggestion ${activeSuggestion === index ? "is-active" : ""}`} key={product.id} onMouseDown={(event) => event.preventDefault()} onClick={() => chooseSuggestion(product)}>
+                <span className="search-suggestion-image"><img src={imageFor(product)} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} /></span>
+                <span className="search-suggestion-copy"><strong>{language === "bn" ? (product.nameBn || product.name) : product.name}</strong><small>{product.brand || "No Brand"} · {product.category} · {product.stock ? formatBDT(productPrice(product)) : (product.priceDisplay || (language === "bn" ? "স্টকে নেই" : "Out of stock"))}</small></span><ArrowRight size={15} />
+              </button>)}
+            </> : <div className="search-suggestions-empty">{language === "bn" ? "মিল পাওয়া যায়নি—অন্য model বা keyword চেষ্টা করুন।" : "No matching product yet — try another model or keyword."}</div>}
+            <button type="submit" className="search-suggestions-all" onMouseDown={(event) => event.preventDefault()}>{language === "bn" ? "সব search result দেখুন" : "See all search results"}<ArrowRight size={15} /></button>
+          </div>}
+        </form>
         <div className="header-actions">
           <div className="category-menu-wrap"><button className="icon-button category-trigger" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}><Menu size={20} /><span className="hide-mobile">Categories</span><ChevronDown size={15} /></button>{menuOpen && <div className="category-menu"><button onClick={() => { navigate("/products"); setMenuOpen(false); }}>All products <span>{products.length}</span></button>{categories.map((category) => <button key={category} onClick={() => { navigate(`/products?category=${encodeURIComponent(category)}`); setMenuOpen(false); }}>{category}<span>{products.filter((product) => product.category === category).length}</span></button>)}</div>}</div>
           <button className="cart-button" onClick={() => navigate("/cart")} aria-label={`Cart with ${cartCount} items`}><ShoppingCart size={21} /><span className="hide-mobile">Cart</span>{cartCount > 0 && <b>{cartCount}</b>}</button>

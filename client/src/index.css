@@ -1568,3 +1568,28 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
 @keyframes cart-rocket-flame { 0%,100% { opacity: 0; transform: scale(.45) rotate(-4deg); } 14%,72% { opacity: 1; transform: scale(1.2) rotate(4deg); } }
 @media (max-width: 700px) { .cart-flight { width: 84px; height: 84px; } .cart-flight-rocket { transform: rotate(42deg) scale(.88); } .cart-flight img { width: 40px; height: 40px; } }
 @media (prefers-reduced-motion: reduce) { .cart-flight-rocket, .cart-flight-rocket i { animation: none; } }
+
+/* Header product autocomplete */
+.search-form { overflow: visible; }
+.search-suggestions { position: absolute; z-index: 80; top: calc(100% + 9px); left: 0; right: 0; overflow: hidden; border: 1px solid #cfe4e5; border-radius: 12px; background: rgba(255,255,255,.98); box-shadow: 0 18px 42px rgba(20,44,60,.18); backdrop-filter: blur(14px); animation: search-suggestions-in .16s ease-out; }
+.search-suggestions-heading { display: flex; justify-content: space-between; align-items: center; padding: 10px 13px 8px; color: var(--muted); font: 700 9px var(--mono); letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid #e5eff0; }
+.search-suggestions-heading span { display: grid; place-items: center; min-width: 19px; height: 19px; border-radius: 50%; background: var(--teal-wash); color: var(--teal); font-size: 9px; }
+.search-form .search-suggestions button.search-suggestion { width: 100%; height: auto; min-height: 62px; display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 10px; padding: 8px 12px; border: 0; border-bottom: 1px solid #edf3f3; border-radius: 0; background: transparent; color: var(--ink); text-align: left; transform: none; }
+.search-form .search-suggestions button.search-suggestion:hover, .search-form .search-suggestions button.search-suggestion.is-active { background: #f0fbfa; color: var(--ink); }
+.search-suggestion-image { width: 42px; height: 42px; display: grid; place-items: center; overflow: hidden; border: 1px solid #dcebec; border-radius: 8px; background: #f5faf9; }
+.search-suggestion-image img { width: 100%; height: 100%; object-fit: contain; }
+.search-suggestion-copy { min-width: 0; display: grid; gap: 4px; }
+.search-suggestion-copy strong { overflow: hidden; color: var(--navy); font: 600 12px/1.25 var(--display); text-overflow: ellipsis; white-space: nowrap; }
+.search-suggestion-copy small { overflow: hidden; color: var(--muted); font: 9px var(--mono); text-overflow: ellipsis; white-space: nowrap; }
+.search-suggestion > svg { color: var(--teal); }
+.search-suggestions-empty { padding: 18px 14px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.search-form .search-suggestions button.search-suggestions-all { width: 100%; height: 38px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 0; background: #f7fbfb; color: var(--teal); font: 700 10px var(--mono); }
+.search-form .search-suggestions button.search-suggestions-all:hover { background: var(--teal-wash); color: var(--navy); }
+@keyframes search-suggestions-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 700px) {
+  .search-suggestions { top: calc(100% + 7px); max-height: min(66vh, 455px); overflow-y: auto; }
+  .search-form .search-suggestions button.search-suggestion { min-height: 58px; grid-template-columns: 36px 1fr auto; padding: 8px 10px; }
+  .search-suggestion-image { width: 36px; height: 36px; }
+  .search-suggestion-copy strong { font-size: 11px; }
+  .search-suggestion-copy small { font-size: 8px; }
+}
