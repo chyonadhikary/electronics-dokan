@@ -104,7 +104,8 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
 
 async function prepareImage(file: File, enhance = false): Promise<HTMLCanvasElement> {
   const bitmap = await createImageBitmap(file);
-  const scale = Math.min(1, MAX_PROCESSING_DIMENSION / Math.max(bitmap.width, bitmap.height));
+  const maxDimension = typeof window !== "undefined" && window.innerWidth <= 720 ? 1050 : MAX_PROCESSING_DIMENSION;
+  const scale = Math.min(1, maxDimension / Math.max(bitmap.width, bitmap.height));
   const canvas = document.createElement("canvas");
   canvas.width = Math.max(1, Math.round(bitmap.width * scale));
   canvas.height = Math.max(1, Math.round(bitmap.height * scale));
@@ -129,7 +130,8 @@ async function prepareImage(file: File, enhance = false): Promise<HTMLCanvasElem
 }
 
 async function recognizeLocally(file: File, onProgress: (message: string) => void): Promise<string> {
-  const canvases = [await prepareImage(file), await prepareImage(file, true)];
+  const isSmallScreen = typeof window !== "undefined" && window.innerWidth <= 720;
+  const canvases = isSmallScreen ? [await prepareImage(file)] : [await prepareImage(file), await prepareImage(file, true)];
   onProgress("Loading on-device OCR…");
   const { createWorker } = await import("tesseract.js");
   const worker = await createWorker("eng", 1, {
@@ -166,7 +168,8 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
   const [statusMessage, setStatusMessage] = useState("");
   const [error, setError] = useState("");
   const [dragging, setDragging] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const uploadInputRef = useRef<HTMLInputElement>(null);
+  const cameraInputRef = useRef<HTMLInputElement>(null);
   const results = useMemo(() => catalogueMatch(products, ocrText, language), [products, ocrText, language]);
   const isBn = language === "bn";
 
@@ -182,8 +185,10 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
   if (!open) return null;
 
   const acceptFile = async (candidate: File) => {
-    if (!candidate.type.match(/^image\/(jpeg|png|webp)$/i)) {
-      setError(isBn ? "JPG, PNG অথবা WEBP image দিন।" : "Please choose a JPG, PNG, or WEBP image.");
+    const extension = candidate.name.split(".").pop()?.toLowerCase() || "";
+    const acceptedExtension = ["jpg", "jpeg", "png", "webp", "heic", "heif"].includes(extension);
+    if (!(candidate.type.startsWith("image/") || acceptedExtension)) {
+      setError(isBn ? "JPG, PNG, WEBP অথবা ফোনের camera image দিন।" : "Please choose a JPG, PNG, WEBP, or phone-camera image.");
       return;
     }
     if (candidate.size > MAX_IMAGE_BYTES) {
@@ -219,9 +224,9 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
       {!file ? <div className="image-search-picker">
         <div className={`image-dropzone ${dragging ? "is-dragging" : ""}`} onDragOver={(event) => { event.preventDefault(); setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={onDrop}>
           <span className="image-dropzone-icon"><Search size={24} /></span><strong>{isBn ? "Electronics component-এর ছবি দিন" : "Add an electronics component photo"}</strong><small>{isBn ? "JPG, PNG, WEBP · সর্বোচ্চ 15 MB" : "JPG, PNG, WEBP · up to 15 MB"}</small>
-          <div className="image-search-actions"><button className="button button-primary" onClick={() => inputRef.current?.click()}><Upload size={16} />{isBn ? "Upload image" : "Upload image"}</button><button className="button button-secondary" onClick={() => { if (inputRef.current) { inputRef.current.setAttribute("capture", "environment"); inputRef.current.click(); } }}><Camera size={16} />{isBn ? "ছবি তুলুন" : "Take photo"}</button></div>
+          <div className="image-search-actions"><button type="button" className="button button-primary" onClick={() => uploadInputRef.current?.click()}><Upload size={16} />{isBn ? "Upload image" : "Upload image"}</button><button type="button" className="button button-secondary" onClick={() => cameraInputRef.current?.click()}><Camera size={16} />{isBn ? "ছবি তুলুন" : "Take photo"}</button></div>
           <span className="image-dropzone-hint"><FileUp size={14} />{isBn ? "অথবা এখানে drag & drop করুন" : "or drag & drop here"}</span>
-        </div><input ref={inputRef} className="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp" onChange={onInput} />
+        </div><input ref={uploadInputRef} className="visually-hidden" type="file" accept="image/*" onChange={onInput} /><input ref={cameraInputRef} className="visually-hidden" type="file" accept="image/*" capture="environment" onChange={onInput} />
       </div> : <div className="image-search-workspace">
         <div className="image-search-preview-wrap"><img src={preview} alt={isBn ? "আপলোড করা image preview" : "Uploaded image preview"} /><button className="image-search-reset" onClick={reset}><RefreshCw size={14} />{isBn ? "অন্য image" : "Try another image"}</button></div>
         <div className="image-search-results-panel"><div className="image-search-status">{status === "processing" && <LoaderCircle className="spin" size={17} />}{status === "done" && <CheckCircle2 size={17} />}{status === "error" && <X size={17} />}{statusMessage || (isBn ? "Processing…" : "Processing…")}</div><p className="image-search-method-note">{isBn ? "এটি label/model text-ভিত্তিক match; পরিষ্কার model text না থাকলে কোনো product-কে নিশ্চিত match হিসেবে দেখানো হবে না।" : "Matches are based on readable label/model text; without a clear model, no product is presented as a certain visual match."}</p>
@@ -232,7 +237,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
           {status === "done" && !ocrText.trim() && <div className="image-search-empty"><strong>{isBn ? "কোনো পরিষ্কার model label পাওয়া যায়নি" : "No clear model label was found."}</strong><p>{isBn ? "ছবিতে লেখা model number থাকলে নিচের box-এ লিখে Possible matches দেখুন।" : "If you can read a model number in the photo, enter it above to see catalogue matches."}</p></div>}
         </div>
       </div>}
-      <footer className="image-search-footer"><span><CheckCircle2 size={14} />{isBn ? "লোকাল browser processing · API key নেই · paid service নেই" : "Local browser processing · no API key · no paid service"}</span>{file && <button onClick={() => inputRef.current?.click()}>{isBn ? "নতুন ছবি" : "Choose another"}</button>}</footer>
+      <footer className="image-search-footer"><span><CheckCircle2 size={14} />{isBn ? "লোকাল browser processing · API key নেই · paid service নেই" : "Local browser processing · no API key · no paid service"}</span>{file && <button onClick={() => uploadInputRef.current?.click()}>{isBn ? "নতুন ছবি" : "Choose another"}</button>}</footer>
     </section>
   </div>;
 }
