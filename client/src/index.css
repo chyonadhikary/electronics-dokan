@@ -1904,3 +1904,115 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .announcement-actions > .top-whatsapp-contact { min-width: 103px !important; padding-left: 4px !important; padding-right: 4px !important; font-size: 8px !important; }
   .announcement-actions > .language-select { width: 62px !important; min-width: 62px !important; font-size: 8px !important; }
 }
+
+/* Rebuilt site topbar: isolated classes intentionally avoid the legacy announcement cascade. */
+.site-topbar {
+  position: relative;
+  z-index: 25;
+  background: #0b2432;
+  color: #d9eeee;
+  border-bottom: 1px solid rgba(124,229,223,.22);
+  font: 500 10px var(--mono);
+}
+.site-topbar-inner {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-topbar-message {
+  min-width: 0;
+  overflow: hidden;
+  color: #d9eeee;
+  letter-spacing: .01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.site-topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+.site-topbar-social .social-links { display: flex; align-items: center; gap: 7px; }
+.site-topbar-social .social-links a {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(124,229,223,.5);
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  color: #7ce5df;
+}
+.site-topbar-social .social-links a:hover { background: #7ce5df; color: #0b2432; transform: translateY(-1px); }
+.site-topbar-social .social-links img { inset: 3px; width: calc(100% - 6px); height: calc(100% - 6px); object-fit: contain; border-radius: 50%; }
+.site-topbar-whatsapp {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(124,229,223,.65);
+  border-radius: 50%;
+  background: #168a63;
+  color: #fff !important;
+}
+.site-topbar-whatsapp img { width: 21px; height: 21px; object-fit: contain; }
+.site-topbar-whatsapp-name, .site-topbar-whatsapp-number { display: none; }
+.site-topbar-language {
+  width: 78px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid rgba(124,229,223,.5);
+  border-radius: 6px;
+  outline: 0;
+  background: rgba(255,255,255,.06);
+  color: #d9eeee;
+  font: 500 9px var(--mono);
+}
+.site-topbar-language option { color: #0b2432; background: #fff; }
+@media (max-width: 700px) {
+  .site-topbar-inner {
+    min-height: 46px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 7px;
+    padding: 0 7px;
+  }
+  .site-topbar-message { display: none; }
+  .site-topbar-actions { display: contents; }
+  .site-topbar-social { grid-column: 1; justify-self: start; }
+  .site-topbar-social .social-links { gap: 4px; }
+  .site-topbar-social .social-links a { width: 24px; height: 24px; }
+  .site-topbar-social .social-links img { inset: 2px; width: calc(100% - 4px); height: calc(100% - 4px); }
+  .site-topbar-whatsapp {
+    grid-column: 2;
+    justify-self: center;
+    width: auto;
+    min-width: 112px;
+    max-width: calc(100vw - 150px);
+    height: 29px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .site-topbar-whatsapp img { width: 20px; height: 20px; flex: 0 0 20px; }
+  .site-topbar-whatsapp-name { display: none; }
+  .site-topbar-whatsapp-number { display: inline; overflow: hidden; font: 600 9px var(--mono); text-overflow: ellipsis; }
+  .site-topbar-language { grid-column: 3; justify-self: end; width: 67px; height: 25px; margin-right: -7px; padding: 0 3px; font-size: 9px; }
+}
+@media (max-width: 390px) {
+  .site-topbar-inner { gap: 4px; padding-left: 4px; }
+  .site-topbar-social .social-links { gap: 2px; }
+  .site-topbar-social .social-links a { width: 22px; height: 22px; }
+  .site-topbar-whatsapp { min-width: 104px; padding: 3px 5px; }
+  .site-topbar-whatsapp-number { font-size: 8px; }
+  .site-topbar-language { width: 63px; margin-right: -4px; font-size: 8px; }
+}
