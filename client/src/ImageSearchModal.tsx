@@ -102,23 +102,31 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
   }).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name)).slice(0, 8);
 }
 
-type VisualFeature = { product: ImageSearchProduct; pixels: number[]; histogram: number[] };
+type VisualFeature = { product: ImageSearchProduct; pixels: number[]; edges: number[] };
 
 function featureFromCanvas(canvas: HTMLCanvasElement): Omit<VisualFeature, "product"> {
   const context = canvas.getContext("2d", { willReadFrequently: true });
   if (!context) throw new Error("Canvas is unavailable in this browser.");
   const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
   const grayscale: number[] = [];
-  const histogram = Array.from({ length: 12 }, () => 0);
   for (let index = 0; index < pixels.length; index += 4) {
     const red = pixels[index] / 255;
     const green = pixels[index + 1] / 255;
     const blue = pixels[index + 2] / 255;
     grayscale.push(red * 0.299 + green * 0.587 + blue * 0.114);
-    histogram[Math.min(11, Math.floor((red + green + blue) * 4))] += 1;
   }
-  const total = grayscale.length || 1;
-  return { pixels: grayscale, histogram: histogram.map((value) => value / total) };
+  const mean = grayscale.reduce((sum, value) => sum + value, 0) / Math.max(1, grayscale.length);
+  const deviation = Math.sqrt(grayscale.reduce((sum, value) => sum + ((value - mean) ** 2), 0) / Math.max(1, grayscale.length)) || 0.25;
+  const normalized = grayscale.map((value) => Math.max(0, Math.min(1, ((value - mean) / (deviation * 2)) + 0.5)));
+  const width = canvas.width;
+  const edges = normalized.map((value, index) => {
+    const x = index % width;
+    const y = Math.floor(index / width);
+    const right = x < width - 1 ? normalized[index + 1] : value;
+    const below = y < canvas.height - 1 ? normalized[index + width] : value;
+    return Math.min(1, Math.abs(right - value) + Math.abs(below - value));
+  });
+  return { pixels: normalized, edges };
 }
 
 async function loadVisualFeature(product: ImageSearchProduct): Promise<VisualFeature | null> {
@@ -147,8 +155,8 @@ async function loadVisualFeature(product: ImageSearchProduct): Promise<VisualFea
 
 function compareFeatures(left: Omit<VisualFeature, "product">, right: Omit<VisualFeature, "product">) {
   const pixelError = left.pixels.reduce((total, value, index) => total + Math.abs(value - right.pixels[index]), 0) / Math.max(1, left.pixels.length);
-  const histogramError = left.histogram.reduce((total, value, index) => total + Math.abs(value - right.histogram[index]), 0) / 2;
-  return Math.max(0, Math.min(100, Math.round((1 - (pixelError * 0.78 + histogramError * 0.22)) * 100)));
+  const edgeError = left.edges.reduce((total, value, index) => total + Math.abs(value - right.edges[index]), 0) / Math.max(1, left.edges.length);
+  return Math.max(0, Math.min(100, Math.round((1 - (pixelError * 0.55 + edgeError * 0.45)) * 100)));
 }
 
 async function visualCatalogueMatch(file: File, products: ImageSearchProduct[], onProgress: (message: string) => void): Promise<SearchResult[]> {
@@ -170,11 +178,17 @@ async function visualCatalogueMatch(file: File, products: ImageSearchProduct[], 
     const feature = await loadVisualFeature(products[index]);
     if (feature) {
       const similarity = compareFeatures(uploaded, feature);
-      if (similarity >= 48) matches.push({ product: feature.product, score: similarity, evidence: [`Visual similarity · ${similarity}%`] });
+      matches.push({ product: feature.product, score: similarity, evidence: [`Visual similarity · ${similarity}%`] });
     }
     if (index % 12 === 0 || index === products.length - 1) onProgress(`Comparing catalogue photos… ${Math.round(((index + 1) / products.length) * 100)}%`);
   }
-  return matches.sort((left, right) => right.score - left.score).slice(0, 6);
+  const ranked = matches.sort((left, right) => right.score - left.score);
+  const best = ranked[0];
+  const runnerUp = ranked[1];
+  const minimumScore = 82;
+  const minimumMargin = 7;
+  if (!best || best.score < minimumScore || (runnerUp && best.score - runnerUp.score < minimumMargin && best.score < 92)) return [];
+  return ranked.slice(0, 3);
 }
 
 async function prepareImage(file: File, enhance = false): Promise<HTMLCanvasElement> {
