@@ -1,0 +1,17 @@
+{
+  "name": "Electronics Dokan XiaoZhi AI Pro ESP32-S3",
+  "version": "1.0.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "xiaozhi-pro-esp32-s3-v1.0.0.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ],
+  "description": "Official XiaoZhi Pro merged firmware for the ESP32-S3 voice assistant project."
+}

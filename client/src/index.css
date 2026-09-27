@@ -880,6 +880,30 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .project-step-list span { display: flex; align-items: center; gap: 12px; padding: 11px 13px; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); font-size: 11px; }
 .project-step-list b { color: var(--teal); font: 10px var(--mono); }
 .project-step-list code { padding: 2px 5px; border-radius: 4px; background: var(--teal-pale); color: var(--navy); font: 10px var(--mono); }
+.project-guide { margin-top: 74px; padding: 40px 0 0; border-top: 1px solid var(--line); }
+.project-guide-heading { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 25px; }
+.project-guide-heading h2 { max-width: 620px; margin: 14px 0 9px; color: var(--navy); font: 600 clamp(31px, 4vw, 49px)/1.03 var(--display); letter-spacing: -.075em; }
+.project-guide-heading p { max-width: 650px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.guide-badge { padding: 8px 10px; border: 1px solid #a9dddd; border-radius: 5px; color: var(--teal); font: 10px var(--mono); white-space: nowrap; }
+.guide-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.guide-section { padding: 23px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.guide-wide { grid-column: 1 / -1; }
+.guide-section h3 { margin: 13px 0 10px; color: var(--navy); font: 600 22px/1.1 var(--display); letter-spacing: -.05em; }
+.guide-section p, .guide-section li { color: var(--muted); font-size: 11px; line-height: 1.7; }
+.guide-section p { margin: 8px 0; }
+.guide-section ul, .guide-section ol { display: grid; gap: 6px; margin: 0; padding-left: 18px; }
+.guide-table { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; margin: 18px 0 13px; }
+.guide-table > div { display: grid; align-content: start; gap: 8px; min-height: 92px; padding: 12px 10px; border: 1px solid #d8eeee; border-radius: 7px; background: var(--teal-wash); }
+.guide-table b { color: var(--navy); font: 600 10px var(--display); }
+.guide-table span { color: var(--muted); font-size: 9px; line-height: 1.45; }
+.guide-callout { padding: 11px 13px !important; border-left: 3px solid var(--teal); background: #f0fbfb; color: #3f6b73 !important; }
+.guide-section code { padding: 2px 5px; border-radius: 4px; background: var(--teal-pale); color: var(--navy); font: 10px var(--mono); }
+.command-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 16px 0 15px; }
+.command-grid span { display: grid; gap: 4px; padding: 12px; border-radius: 7px; background: var(--navy); color: #e4faf7; font: 10px var(--mono); }
+.command-grid small { color: #8ac8c7; font-size: 9px; }
+.troubleshooting-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin-top: 16px; }
+.troubleshooting-grid span { display: grid; gap: 6px; padding: 13px 11px; border: 1px solid #f0d5ce; border-radius: 7px; background: #fff8f6; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.troubleshooting-grid b { color: var(--coral); font: 600 10px var(--display); }
 .reference-about { padding: 42px 0; }
 .reference-about-grid { gap: 38px; }
 .reference-about h2 { margin-top: 10px; font-size: 34px; }
@@ -887,7 +911,7 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .reference-service-grid > div { padding: 14px 13px; }
 .reference-service-grid strong { font-size: 11px; }
 .reference-service-grid span { font-size: 9px; }
-@media (max-width: 700px) { .header-quick-links { gap: 10px; overflow-x: auto; max-width: 100%; } .header-quick-links button { font-size: 8px; white-space: nowrap; } .resource-hero { padding-top: 42px; } .resource-grid { grid-template-columns: 1fr; padding-bottom: 50px; } .resource-card { min-height: 220px; } .project-hero { grid-template-columns: 1fr; padding-top: 25px; } .project-hero-copy h1 { font-size: 49px; } .project-hero-copy p { font-size: 12px; } .project-hero-art { min-height: 270px; } .project-stat-grid { grid-template-columns: 1fr 1fr; } .project-stat-grid > div:nth-child(2) { border-right: 0; } .project-stat-grid > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); } .project-content-grid, .project-flasher, .project-next-steps { grid-template-columns: 1fr; } .project-flasher { margin-top: 40px; padding: 25px 18px; } .project-feature-list { grid-template-columns: 1fr; } .project-next-steps { gap: 24px; padding-top: 45px; } .project-next-steps h2 { font-size: 29px; } .reference-about { padding: 30px 0; } .reference-about-grid { gap: 18px; } .reference-about h2 { font-size: 29px; } .reference-service-grid > div { padding: 10px 7px; } }
+@media (max-width: 700px) { .header-quick-links { gap: 10px; overflow-x: auto; max-width: 100%; } .header-quick-links button { font-size: 8px; white-space: nowrap; } .resource-hero { padding-top: 42px; } .resource-grid { grid-template-columns: 1fr; padding-bottom: 50px; } .resource-card { min-height: 220px; } .project-hero { grid-template-columns: 1fr; padding-top: 25px; } .project-hero-copy h1 { font-size: 49px; } .project-hero-copy p { font-size: 12px; } .project-hero-art { min-height: 270px; } .project-stat-grid { grid-template-columns: 1fr 1fr; } .project-stat-grid > div:nth-child(2) { border-right: 0; } .project-stat-grid > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); } .project-content-grid, .project-flasher, .project-next-steps { grid-template-columns: 1fr; } .project-flasher { margin-top: 40px; padding: 25px 18px; } .project-feature-list { grid-template-columns: 1fr; } .project-next-steps { gap: 24px; padding-top: 45px; } .project-next-steps h2 { font-size: 29px; } .project-guide { margin-top: 48px; padding-top: 30px; } .project-guide-heading { display: grid; gap: 16px; } .guide-badge { justify-self: start; } .guide-section-grid { grid-template-columns: 1fr; } .guide-wide { grid-column: auto; } .guide-section { padding: 18px; } .guide-table { grid-template-columns: 1fr 1fr; } .guide-table > div:last-child { grid-column: 1 / -1; } .command-grid { grid-template-columns: 1fr 1fr; } .troubleshooting-grid { grid-template-columns: 1fr 1fr; } .reference-about { padding: 30px 0; } .reference-about-grid { gap: 18px; } .reference-about h2 { font-size: 29px; } .reference-service-grid > div { padding: 10px 7px; } }
 
 /* Final visual polish and commerce controls */
 .announcement { background: #083f4b; color: #d8f4f1; border-bottom-color: rgba(117,224,215,.22); }
