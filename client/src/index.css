@@ -1732,3 +1732,24 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .announcement-social .top-whatsapp-contact { padding: 3px 5px; font-size: 8px; }
   .announcement-social .language-select { width: 68px; min-width: 68px; font-size: 9px; }
 }
+
+/* Explicit three-column mobile announcement layout */
+.announcement-message { display: inline-flex; }
+.announcement .announcement-social a[aria-label="WhatsApp"], .announcement .announcement-social a:nth-child(4) { display: none !important; }
+@media (max-width: 700px) {
+  .announcement-inner { display: grid !important; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; justify-content: initial; min-height: 42px; padding: 0 9px; gap: 5px; }
+  .announcement-message { display: none !important; }
+  .announcement-social { grid-column: 1; justify-self: start; display: flex !important; width: auto !important; order: initial !important; gap: 5px !important; }
+  .announcement-social .social-links { display: flex !important; gap: 5px !important; }
+  .announcement-social .social-links a { display: grid !important; width: 24px; height: 24px; }
+  .announcement-social .social-links a[aria-label="WhatsApp"], .announcement-social .social-links a:nth-child(4) { display: none !important; }
+  .announcement-inner > .top-whatsapp-contact { grid-column: 2; justify-self: center; order: initial !important; margin: 0 !important; display: inline-flex !important; gap: 4px; padding: 4px 7px; font-size: 9px; }
+  .announcement-inner > .language-select { grid-column: 3; justify-self: end; order: initial !important; width: 72px; min-width: 72px; height: 25px; font-size: 10px; color: #fff; }
+}
+@media (max-width: 390px) {
+  .announcement-inner { padding: 0 6px; gap: 3px; }
+  .announcement-social .social-links, .announcement-social .social-links a { gap: 3px !important; }
+  .announcement-social .social-links a { width: 22px; height: 22px; }
+  .announcement-inner > .top-whatsapp-contact { padding: 3px 5px; font-size: 8px; }
+  .announcement-inner > .language-select { width: 67px; min-width: 67px; font-size: 9px; }
+}

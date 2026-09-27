@@ -422,7 +422,7 @@ function Header({ site, cartCount, path, navigate, products, language, setLangua
     setMenuOpen(false);
   };
   return <>
-    <div className="announcement"><div className="container announcement-inner"><span>{language === "bn" ? "Electronics Dokan-এর সঙ্গে ভবিষ্যৎ তৈরি করুন" : "Build the future with Electronics Dokan"}</span><span className="announcement-social"><SocialLinks site={site} /><span className="top-divider">|</span><a className="top-whatsapp-contact" href={`https://wa.me/${site.whatsappInternational}`} aria-label="Chat on WhatsApp" target="_blank" rel="noreferrer"><img src={site.socialIcons?.whatsapp || "/images/social/whatsapp.webp"} alt="WhatsApp" /><span>WhatsApp</span></a><select className="language-select" value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option></select></span></div></div>
+    <div className="announcement"><div className="container announcement-inner"><span className="announcement-message">{language === "bn" ? "Electronics Dokan-এর সঙ্গে ভবিষ্যৎ তৈরি করুন" : "Build the future with Electronics Dokan"}</span><span className="announcement-social"><SocialLinks site={site} /></span><a className="top-whatsapp-contact" href={`https://wa.me/${site.whatsappInternational}`} aria-label="Chat on WhatsApp" target="_blank" rel="noreferrer"><img src={site.socialIcons?.whatsapp || "/images/social/whatsapp.webp"} alt="WhatsApp" /><span>WhatsApp</span></a><select className="language-select" value={language} onChange={(event) => setLanguage(event.target.value as Language)} aria-label="Language"><option value="en">English</option><option value="bn">বাংলা</option></select></div></div>
     <header className="site-header">
       <div className="container header-main">
         <button className={`brand ${site.logo ? "has-custom-logo" : ""}`} onClick={() => navigate("/")} aria-label="Go to Electronics Dokan home">{site.logo && <img className="custom-brand-logo" src={site.logo} alt="" onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement?.classList.remove("has-custom-logo"); }} />}<span className="brand-mark"><Zap size={20} fill="currentColor" /></span><span><strong>electronics</strong><b>dokan</b><small>Build beyond ordinary</small></span></button>
@@ -760,14 +760,20 @@ function BrandsPage({ brands, products, navigate }: { brands: Brand[]; products:
   return <div className="page-wrap"><div className="container breadcrumb"><button onClick={() => navigate("/")}>Home</button><ChevronRight size={14} /><span>All brands</span></div><div className="container page-intro"><div><div className="eyebrow"><span className="eyebrow-line" /> Trusted manufacturers</div><h1>All brands</h1><p>Browse brands available for future product assignment and catalogue filtering.</p></div><span className="result-count">{brands.length} brands</span></div><section className="container brand-catalogue-grid">{brands.map((brand) => { const count = products.filter((product) => product.brand === brand.name).length; return <button key={brand.slug} className="brand-catalogue-card" onClick={() => navigate(`/products?brand=${encodeURIComponent(brand.name)}`)}><span className="brand-logo-slot"><img src={brand.image} alt="" onError={(event) => { event.currentTarget.style.display = "none"; }} /></span><strong>{brand.name}</strong><small>{count ? `${count} products` : "No products assigned"} <ArrowRight size={13} /></small></button>; })}</section></div>;
 }
 
+function lightlyRotateProducts(items: Product[], seed: number, salt = 0) {
+  if (items.length < 2) return items;
+  const offset = Math.floor(Math.abs(Math.sin(seed * 1000 + salt * 17)) * items.length) % items.length;
+  return [...items.slice(offset), ...items.slice(0, offset)];
+}
 function HomePage({ products, site, brands, navigate, addToCart }: { products: Product[]; site: SiteConfig; brands: Brand[]; navigate: (path: string) => void; addToCart: (id: string, qty?: number) => void }) {
   const categories = Array.from(new Set(products.map((product) => product.category))).sort();
-  const topSelling = useMemo(() => products.filter((product) => product.featured), [products]);
-  const preOrder = products.filter(isPreOrderProduct);
-  const newArrivals = products.filter((product) => product.newArrival);
-  const trending = products.filter((product) => product.trending);
-  const backInStock = products.filter(isBackInStockProduct);
-  const seasonal = products.filter(isSeasonalProduct);
+  const shelfSeed = useRef(Math.random()).current;
+  const topSelling = useMemo(() => lightlyRotateProducts(products.filter((product) => product.featured), shelfSeed, 1), [products, shelfSeed]);
+  const preOrder = useMemo(() => lightlyRotateProducts(products.filter(isPreOrderProduct), shelfSeed, 2), [products, shelfSeed]);
+  const newArrivals = useMemo(() => [...products.filter((product) => product.newArrival)].sort((a, b) => (b.sourceOrder ?? -1) - (a.sourceOrder ?? -1)), [products]);
+  const trending = useMemo(() => lightlyRotateProducts(products.filter((product) => product.trending), shelfSeed, 3), [products, shelfSeed]);
+  const backInStock = useMemo(() => lightlyRotateProducts(products.filter(isBackInStockProduct), shelfSeed, 4), [products, shelfSeed]);
+  const seasonal = useMemo(() => lightlyRotateProducts(products.filter(isSeasonalProduct), shelfSeed, 5), [products, shelfSeed]);
   const productBrands = Array.from(new Set(products.map((product) => product.brand).filter((brand) => brand && brand !== "Not specified"))).slice(0, 8);
   const shelf = (eyebrow: string, title: string, items: Product[], action: string, query: string) => <section className="reference-shelf container"><SectionHeading eyebrow={eyebrow} title={title} action={action} onAction={() => navigate(`/products?${query}`)} /><div className="shelf-track">{items.map((product) => <ProductCard key={product.id} product={product} navigate={navigate} addToCart={addToCart} />)}</div></section>;
   const banners = site.heroBanners?.length ? site.heroBanners : ["/images/home/hero-banner.webp"];
