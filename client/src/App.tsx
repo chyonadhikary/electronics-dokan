@@ -393,14 +393,23 @@ function XiaozhiFlasher() {
   const [busy, setBusy] = useState(false);
   const [chip, setChip] = useState("");
   const [error, setError] = useState("");
+  const authorizedPortRef = useRef<any>(null);
   const flash = async () => {
     if (busy) return;
     setBusy(true); setError(""); setProgress(0); setChip("");
     let transport: Transport | null = null;
     try {
       if (!("serial" in navigator)) throw new Error("Web Serial is not available. Use desktop Chrome or Edge over HTTPS.");
-      const serial = (navigator as Navigator & { serial: { requestPort: () => Promise<any> } }).serial;
-      const port = await serial.requestPort();
+      const serial = (navigator as Navigator & { serial: { requestPort: () => Promise<any>; getPorts: () => Promise<any[]> } }).serial;
+      let port = authorizedPortRef.current;
+      if (!port) {
+        const authorizedPorts = await serial.getPorts();
+        port = authorizedPorts[0] || await serial.requestPort();
+        authorizedPortRef.current = port;
+      }
+      if (port.readable || port.writable) {
+        try { await port.close(); } catch { /* the browser may already be closing it */ }
+      }
       transport = new Transport(port, false);
       setStatus("Connecting to board…");
       const loader = new ESPLoader({
