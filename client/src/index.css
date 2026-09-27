@@ -1812,3 +1812,24 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .announcement-inner > .top-whatsapp-contact { min-width: 101px; padding-left: 5px; padding-right: 5px; font-size: 8px; }
   .announcement-inner > .language-select { margin-right: -4px; width: 65px; min-width: 65px; font-size: 8px; }
 }
+
+/* Desktop header correction: keep all right-side controls in one non-overlapping action group. */
+.announcement-inner {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+}
+.announcement-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: max-content;
+}
+.announcement-actions .announcement-social { justify-self: auto; }
+.announcement-actions > .language-select { justify-self: auto; }
+@media (max-width: 700px) {
+  .announcement-inner { grid-template-columns: minmax(0, 1fr) auto auto !important; }
+  .announcement-actions { display: contents; }
+  .announcement-actions > .announcement-social { grid-column: 1; justify-self: start; }
+  .announcement-actions > .top-whatsapp-contact { grid-column: 2; justify-self: center; }
+  .announcement-actions > .language-select { grid-column: 3; justify-self: end; }
+}
