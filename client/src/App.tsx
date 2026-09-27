@@ -391,61 +391,124 @@ function XiaozhiFlasher() {
   const [status, setStatus] = useState("Ready to connect");
   const [progress, setProgress] = useState(0);
   const [busy, setBusy] = useState(false);
+  const [monitoring, setMonitoring] = useState(false);
   const [chip, setChip] = useState("");
   const [error, setError] = useState("");
+  const [eraseAll, setEraseAll] = useState(true);
+  const [openAfterFlash, setOpenAfterFlash] = useState(true);
+  const [logs, setLogs] = useState<string[]>([]);
   const authorizedPortRef = useRef<any>(null);
+  const monitorReaderRef = useRef<any>(null);
+  const monitorPortRef = useRef<any>(null);
+  const logRef = useRef<HTMLDivElement>(null);
+  const addLog = (message: string) => {
+    const clean = message.replace(/\r/g, "").trim();
+    if (!clean) return;
+    setLogs((current) => [...current.slice(-199), clean]);
+  };
+  useEffect(() => {
+    if (logRef.current) logRef.current.scrollTop = logRef.current.scrollHeight;
+  }, [logs]);
+  const getPort = async () => {
+    if (authorizedPortRef.current) return authorizedPortRef.current;
+    if (!("serial" in navigator)) throw new Error("Web Serial is not available. Use desktop Chrome or Edge over HTTPS.");
+    const serial = (navigator as Navigator & { serial: { requestPort: () => Promise<any>; getPorts: () => Promise<any[]> } }).serial;
+    const authorizedPorts = await serial.getPorts();
+    const port = authorizedPorts[0] || await serial.requestPort();
+    authorizedPortRef.current = port;
+    addLog(`Port selected: ${port.getInfo?.().usbVendorId ? "USB serial device" : "authorized serial port"}`);
+    return port;
+  };
+  const stopMonitor = async () => {
+    const reader = monitorReaderRef.current;
+    monitorReaderRef.current = null;
+    if (reader) { try { await reader.cancel(); } catch { /* already closed */ } try { reader.releaseLock(); } catch { /* released */ } }
+    const port = monitorPortRef.current;
+    monitorPortRef.current = null;
+    if (port && !port.readable && !port.writable) { try { await port.close(); } catch { /* already closed */ } }
+    setMonitoring(false);
+  };
+  const startMonitor = async (port: any) => {
+    if (!port.readable && !port.writable) await port.open({ baudRate: 115200 });
+    if (!port.readable) throw new Error("The serial monitor could not open this port.");
+    monitorPortRef.current = port;
+    setMonitoring(true); setStatus("Serial monitor connected"); addLog("--- Serial monitor connected at 115200 baud ---");
+    const reader = port.readable.getReader();
+    monitorReaderRef.current = reader;
+    const decoder = new TextDecoder();
+    (async () => {
+      try {
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          if (value) addLog(decoder.decode(value, { stream: true }));
+        }
+      } catch (caught) {
+        if (monitorReaderRef.current === reader) addLog(`Monitor stopped: ${caught instanceof Error ? caught.message : "connection closed"}`);
+      } finally {
+        try { reader.releaseLock(); } catch { /* released */ }
+        if (monitorReaderRef.current === reader) { monitorReaderRef.current = null; setMonitoring(false); }
+      }
+    })();
+  };
+  const connectMonitor = async () => {
+    if (busy) return;
+    setError("");
+    try {
+      const port = await getPort();
+      await startMonitor(port);
+    } catch (caught) {
+      const message = caught instanceof Error ? caught.message : "The serial monitor could not connect.";
+      setError(message); setStatus("Monitor stopped"); addLog(`ERROR: ${message}`);
+    }
+  };
   const flash = async () => {
     if (busy) return;
     setBusy(true); setError(""); setProgress(0); setChip("");
     let transport: Transport | null = null;
     try {
-      if (!("serial" in navigator)) throw new Error("Web Serial is not available. Use desktop Chrome or Edge over HTTPS.");
-      const serial = (navigator as Navigator & { serial: { requestPort: () => Promise<any>; getPorts: () => Promise<any[]> } }).serial;
-      let port = authorizedPortRef.current;
-      if (!port) {
-        const authorizedPorts = await serial.getPorts();
-        port = authorizedPorts[0] || await serial.requestPort();
-        authorizedPortRef.current = port;
-      }
-      if (port.readable || port.writable) {
-        try { await port.close(); } catch { /* the browser may already be closing it */ }
-      }
+      const port = await getPort();
+      await stopMonitor();
+      if (port.readable || port.writable) { try { await port.close(); } catch { /* loader will report a locked port */ } }
       transport = new Transport(port, false);
-      setStatus("Connecting to board…");
+      setStatus("Connecting to ESP32-S3 bootloader…"); addLog("Connecting to ESP32-S3 bootloader…");
       const loader = new ESPLoader({
         transport,
         baudrate: 460800,
         romBaudrate: 115200,
-        terminal: { clean: () => undefined, writeLine: (data: string) => setStatus(data), write: (data: string) => setStatus(data), } as never,
+        terminal: { clean: () => undefined, writeLine: (data: string) => { setStatus(data); addLog(data); }, write: (data: string) => { setStatus(data); addLog(data); }, } as never,
       });
       const detected = await loader.main();
-      setChip(detected);
-      setStatus(`Detected ${detected}. Downloading local firmware…`);
+      setChip(detected); addLog(`Detected chip: ${detected}`);
+      setStatus("Downloading local firmware…"); addLog("Downloading local firmware from Electronics Dokan…");
       const response = await fetch("/firmware/xiaozhi/xiaozhi-pro-esp32-s3-v1.0.0.bin");
       if (!response.ok) throw new Error(`Firmware download failed (${response.status}).`);
       const data = new Uint8Array(await response.arrayBuffer());
-      setStatus("Erasing flash…");
-      const result = await loader.writeFlash({
+      addLog(`Firmware ready: ${(data.byteLength / 1024 / 1024).toFixed(2)} MB`);
+      if (eraseAll) { setStatus("Erasing complete flash…"); addLog("Erase enabled: erasing the complete flash before writing…"); } else { setStatus("Preparing flash…"); addLog("Erase disabled: preserving existing flash data where possible…"); }
+      await loader.writeFlash({
         fileArray: [{ data, address: 0 }],
         flashMode: "dio" as never,
         flashFreq: "40m" as never,
         flashSize: "keep" as never,
-        eraseAll: true,
+        eraseAll,
         compress: true,
-        reportProgress: (_fileIndex, written, total) => setProgress(Math.round((written / total) * 100)),
+        reportProgress: (_fileIndex, written, total) => { const percent = Math.round((written / total) * 100); setProgress(percent); setStatus(`Writing firmware… ${percent}%`); },
       });
-      void result;
       await loader.after("hard_reset");
-      setProgress(100); setStatus("Flash complete. The board is rebooting.");
+      try { await transport.disconnect(); } catch { /* already closed */ }
+      transport = null;
+      setProgress(100); setStatus("Flash complete; board rebooted"); addLog("Flash complete. ESP32-S3 rebooted successfully.");
+      if (openAfterFlash) { await new Promise((resolve) => setTimeout(resolve, 700)); await startMonitor(port); addLog("Serial monitor opened after flash."); }
     } catch (caught) {
       const message = caught instanceof Error ? caught.message : "The board could not be flashed.";
-      setError(message); setStatus("Flash stopped");
+      setError(message); setStatus("Flash stopped"); addLog(`ERROR: ${message}`);
+      try { if (transport) await transport.disconnect(); } catch { /* cleanup */ }
     } finally {
-      if (transport) { try { await transport.disconnect(); } catch { /* already closed */ } }
       setBusy(false);
     }
   };
-  return <div className="custom-flasher"><button className="button button-primary flasher-activate" onClick={flash} disabled={busy}>{busy ? "Flashing…" : "Flash local firmware"}</button><div className="custom-flasher-status"><span>{status}</span>{chip && <b>{chip}</b>}</div>{busy && <div className="flasher-progress"><i style={{ width: `${progress}%` }} /></div>}{error && <p className="flasher-error">{error}</p>}</div>;
+  return <div className="custom-flasher"><div className="flasher-controls"><button className="button button-primary flasher-activate" onClick={flash} disabled={busy || monitoring}>{busy ? "Flashing…" : "Flash local firmware"}</button><button className="button button-flasher-secondary" onClick={monitoring ? stopMonitor : connectMonitor} disabled={busy}>{monitoring ? "Disconnect monitor" : "Connect serial monitor"}</button></div><div className="flasher-options"><label><input type="checkbox" checked={eraseAll} onChange={(event) => setEraseAll(event.target.checked)} disabled={busy} /> Erase complete flash before install</label><label><input type="checkbox" checked={openAfterFlash} onChange={(event) => setOpenAfterFlash(event.target.checked)} disabled={busy} /> Open serial monitor after flash</label></div><div className="custom-flasher-status"><span>{status}</span>{chip && <b>{chip}</b>}</div>{(busy || progress > 0) && <div className="flasher-progress"><i style={{ width: `${progress}%` }} /></div>}<div className="serial-monitor"><div className="serial-monitor-heading"><b>Serial monitor</b><button type="button" onClick={() => setLogs([])}>Clear</button><small>115200 baud · UTF-8</small></div><div ref={logRef} className="serial-monitor-log">{logs.length ? logs.map((line, index) => <div key={`${index}-${line}`}>{line}</div>) : <span className="serial-monitor-empty">Connect the monitor to see boot logs, erase progress and XiaoZhi messages.</span>}</div></div>{error && <p className="flasher-error">{error}</p>}</div>;
 }
 
 function XiaozhiProjectPage({ navigate }: { navigate: (path: string) => void }) {

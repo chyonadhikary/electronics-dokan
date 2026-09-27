@@ -874,6 +874,25 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .flasher-card { display: grid; justify-items: center; gap: 13px; padding: 27px 20px; border: 1px solid rgba(148,236,229,.31); border-radius: 12px; background: rgba(255,255,255,.07); text-align: center; }
 .flasher-card small { max-width: 250px; color: #a9c9ca; font: 9px/1.55 var(--mono); }
 .flasher-activate { min-width: 190px; }
+.custom-flasher { width: 100%; display: grid; gap: 12px; }
+.flasher-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.button-flasher-secondary { min-height: 42px; padding: 0 15px; border: 1px solid rgba(148,236,229,.42); border-radius: 5px; background: rgba(255,255,255,.08); color: #dff7f5; font: 600 10px var(--mono); cursor: pointer; }
+.button-flasher-secondary:disabled, .flasher-activate:disabled { opacity: .55; cursor: wait; }
+.flasher-options { display: grid; gap: 7px; padding: 10px 12px; border: 1px solid rgba(148,236,229,.22); border-radius: 7px; background: rgba(0,0,0,.12); text-align: left; }
+.flasher-options label { display: flex; align-items: center; gap: 7px; color: #c8e0df; font: 9px/1.35 var(--mono); }
+.flasher-options input { accent-color: var(--teal); }
+.custom-flasher-status { display: flex; justify-content: space-between; gap: 10px; min-height: 17px; color: #d6eceb; font: 9px/1.4 var(--mono); }
+.custom-flasher-status b { color: #80e0d8; white-space: nowrap; }
+.flasher-progress { height: 5px; overflow: hidden; border-radius: 5px; background: rgba(255,255,255,.18); }
+.flasher-progress i { display: block; height: 100%; border-radius: inherit; background: var(--teal); transition: width .25s ease; }
+.serial-monitor { overflow: hidden; border: 1px solid rgba(148,236,229,.28); border-radius: 8px; background: #071f2b; text-align: left; }
+.serial-monitor-heading { display: flex; align-items: center; gap: 9px; padding: 9px 10px; border-bottom: 1px solid rgba(148,236,229,.2); color: #dff7f5; font: 10px var(--mono); }
+.serial-monitor-heading button { margin-left: auto; padding: 2px 6px; border: 0; border-radius: 3px; background: rgba(255,255,255,.12); color: #b9d7d7; font: 9px var(--mono); cursor: pointer; }
+.serial-monitor-heading small { color: #7eafb0; font-size: 8px; }
+.serial-monitor-log { height: 155px; overflow: auto; padding: 10px; color: #a8d8d3; font: 9px/1.55 var(--mono); white-space: pre-wrap; word-break: break-word; }
+.serial-monitor-log > div { padding-bottom: 2px; }
+.serial-monitor-empty { color: #658e91; }
+.flasher-error { margin: 0; color: #ffb6aa; font: 9px/1.5 var(--mono); text-align: left; }
 .project-next-steps { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; align-items: center; padding-top: 65px; }
 .project-next-steps h2 { margin: 14px 0 0; color: var(--navy); font: 600 35px/1.05 var(--display); letter-spacing: -.07em; }
 .project-step-list { display: grid; gap: 10px; }
