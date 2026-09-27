@@ -181,9 +181,17 @@ const percentOff = (product: Product) => product.oldPrice ? Math.round((1 - prod
 const slugToTitle = (slug: string) => slug.split("-").map((part) => part[0]?.toUpperCase() + part.slice(1)).join(" ");
 
 function usePath() {
-  const [path, setPath] = useState(() => window.location.pathname + window.location.search);
+  const readPath = () => {
+    const redirected = new URLSearchParams(window.location.search).get("__route");
+    if (redirected && redirected.startsWith("/")) {
+      window.history.replaceState({}, "", redirected);
+      return redirected;
+    }
+    return window.location.pathname + window.location.search;
+  };
+  const [path, setPath] = useState(readPath);
   useEffect(() => {
-    const handler = () => setPath(window.location.pathname + window.location.search);
+    const handler = () => setPath(readPath());
     window.addEventListener("popstate", handler);
     return () => window.removeEventListener("popstate", handler);
   }, []);
