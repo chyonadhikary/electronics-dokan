@@ -975,10 +975,10 @@ function CheckoutPage({ products, cart, site, locations, navigate, clearCart }: 
     });
     const payload: OrderPayload = {
       clientRequestId: orderNumber,
-      customer: { name: form.fullName.trim(), phone: form.mobile.trim(), whatsapp: form.altMobile.trim() || form.mobile.trim(), email: form.email.trim(), address: (form.fullAddress.trim() || form.area.trim()), district: form.district.trim(), area: form.area.trim(), division: form.division.trim(), postOffice: form.postOffice.trim(), postCode: form.postCode.trim() },
+      customer: { name: form.fullName.trim(), phone: form.mobile.trim(), whatsapp: form.altMobile.trim() || form.mobile.trim(), email: form.email.trim(), address: (form.fullAddress.trim() || form.area.trim()), district: form.district.trim(), upazila: form.upazila.trim(), area: form.area.trim(), division: form.division.trim(), postOffice: form.postOffice.trim(), postCode: form.postCode.trim() },
       items: itemPayload,
       subtotal, deliveryCharge: delivery, discount, total,
-      courier: selectedCourier?.name || "", paymentMethod: form.paymentMethod, paymentMobile: form.paymentMobile.trim(), transactionId: form.transactionId.trim(), customerNote: form.note.trim(), couponCode: form.couponCode.trim().toUpperCase(), source: window.location.origin,
+      courier: selectedCourier?.name || "", paymentMethod: form.paymentMethod, paymentNumber: form.paymentMethod === "Cash on Delivery" ? "—" : (site.paymentAccounts?.[form.paymentMethod] || "Contact us"), paymentMobile: form.paymentMobile.trim(), transactionId: form.transactionId.trim(), customerNote: form.note.trim(), couponCode: form.couponCode.trim().toUpperCase(), source: window.location.origin,
     };
     const linesText = itemPayload.map((item, index) => `${index + 1}. ${item.productName} — ${item.sku}\nQty: ${item.quantity}\nPrice: ${formatBDT(item.unitPrice)}\nSubtotal: ${formatBDT(item.subtotal)}`).join("\n\n");
     const paymentNumber = form.paymentMethod === "Cash on Delivery" ? "—" : (site.paymentAccounts?.[form.paymentMethod] || "Contact us");

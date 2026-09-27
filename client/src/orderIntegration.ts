@@ -16,6 +16,7 @@ export type OrderPayload = {
     email: string;
     address: string;
     district: string;
+    upazila: string;
     area: string;
     division: string;
     postOffice: string;
@@ -28,6 +29,7 @@ export type OrderPayload = {
   total: number;
   courier: string;
   paymentMethod: string;
+  paymentNumber: string;
   paymentMobile: string;
   transactionId: string;
   customerNote: string;
