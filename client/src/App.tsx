@@ -403,7 +403,6 @@ function XiaozhiFlasher() {
       const port = await serial.requestPort();
       transport = new Transport(port, false);
       setStatus("Connecting to board…");
-      await transport.connect(115200);
       const loader = new ESPLoader({
         transport,
         baudrate: 460800,
