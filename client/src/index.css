@@ -916,6 +916,8 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .guide-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 .guide-section { padding: 23px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
 .guide-wide { grid-column: 1 / -1; }
+.robot-diagram-section { overflow: hidden; }
+.robot-wiring-diagram { display: block; width: 100%; height: auto; margin: 18px 0; border: 1px solid var(--line); border-radius: 10px; background: #10252b; }
 .guide-section h3 { margin: 13px 0 10px; color: var(--navy); font: 600 22px/1.1 var(--display); letter-spacing: -.05em; }
 .guide-section p, .guide-section li { color: var(--muted); font-size: 11px; line-height: 1.7; }
 .guide-section p { margin: 8px 0; }

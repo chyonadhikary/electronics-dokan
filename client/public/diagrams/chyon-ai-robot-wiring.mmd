@@ -1,0 +1,40 @@
+flowchart LR
+  MCU["ESP32-S3 N16R8\nChyon AI board"]
+  CAM["USB-UVC camera\nNative host Type-C\nD− GPIO19 · D+ GPIO20"]
+  OLED["SSD1306 OLED\n128×64 · I2C 0x3C\nSDA GPIO40 · SCL GPIO42"]
+  MIC["INMP441 microphone\nWS GPIO4 · SCK GPIO5\nDIN GPIO6"]
+  AMP["MAX98357A + speaker\nDOUT GPIO7 · BCLK GPIO15\nLRCK GPIO18"]
+  US["CS100A ultrasonic\nTrig GPIO1\nEcho GPIO2 via divider"]
+  LED["WS2812 ×8\nDIN GPIO3\nExternal 5V"]
+  L298["L298N motor driver\nENA GPIO8 · ENB GPIO13\nIN1/2/3/4 GPIO9/10/11/12"]
+  MOT["Four BO motors\n2 left in parallel\n2 right in parallel"]
+  LOGIC["Regulated 5V logic\nESP32 + camera + audio + LED"]
+  BAT["Separate motor battery\nL298N Vmotor"]
+  GND["COMMON GROUND\nlogic · sensors · L298N · audio"]
+
+  MCU -->|USB host| CAM
+  MCU -->|I2C| OLED
+  MCU -->|I2S input| MIC
+  MCU -->|I2S output| AMP
+  MCU -->|GPIO1/2| US
+  MCU -->|GPIO3| LED
+  MCU -->|GPIO8–13| L298
+  L298 --> MOT
+  LOGIC --> MCU
+  LOGIC --> CAM
+  LOGIC --> AMP
+  LOGIC --> OLED
+  LOGIC --> LED
+  BAT -->|Vmotor only| L298
+  GND --- MCU
+  GND --- US
+  GND --- LED
+  GND --- L298
+  GND --- AMP
+
+  classDef controller fill:#153c43,stroke:#9de5df,color:#fff,stroke-width:2px;
+  classDef module fill:#14252c,stroke:#82bfc0,color:#e9ffff;
+  classDef power fill:#493126,stroke:#e9a86f,color:#fff;
+  class MCU controller;
+  class CAM,OLED,MIC,AMP,US,LED,L298,MOT module;
+  class LOGIC,BAT,GND power;
