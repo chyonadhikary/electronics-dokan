@@ -1685,3 +1685,11 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
   .image-search-result-card { grid-template-columns: 68px minmax(0, 1fr); gap: 9px; }
   .image-search-result-card > img { width: 68px; height: 68px; }
 }
+
+/* Final search-bar compacting: reclaim width for the query field */
+.search-form .search-category-select { flex-basis: 74px; width: 74px; max-width: 74px; margin-left: -3px; margin-right: -3px; padding-left: 2px; padding-right: 2px; }
+.search-form > button[type="submit"] { background: var(--navy); color: #fff; }
+.search-form > button[type="submit"]:hover { background: var(--teal); }
+@media (max-width: 700px) {
+  .search-form .search-category-select { flex-basis: 58px; width: 58px; max-width: 58px; margin-left: -2px; margin-right: -2px; }
+}
