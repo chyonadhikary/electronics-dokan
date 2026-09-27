@@ -637,7 +637,7 @@ del { color: #9caeb1; font: 10px var(--mono); }
 .social-icon-fallback { display: grid; place-items: center; }
 .social-links img + .social-icon-fallback { visibility: hidden; }
 .social-fallback-text { font: 700 14px Arial; }
-.sticky-footer-nav { position: fixed; z-index: 35; left: 50%; bottom: 12px; width: min(680px, calc(100% - 30px)); min-height: 58px; display: grid; grid-template-columns: repeat(5, 1fr); align-items: stretch; transform: translateX(-50%); padding: 5px; border: 1px solid rgba(223,234,236,.9); border-radius: 16px; background: rgba(255,255,255,.96); box-shadow: 0 12px 35px rgba(20,44,60,.16); backdrop-filter: blur(14px); }
+.sticky-footer-nav { display: none; position: fixed; z-index: 35; left: 50%; bottom: 12px; width: min(680px, calc(100% - 30px)); min-height: 58px; grid-template-columns: repeat(5, 1fr); align-items: stretch; transform: translateX(-50%); padding: 5px; border: 1px solid rgba(223,234,236,.9); border-radius: 16px; background: rgba(255,255,255,.96); box-shadow: 0 12px 35px rgba(20,44,60,.16); backdrop-filter: blur(14px); }
 .sticky-footer-nav button, .sticky-footer-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; border-radius: 11px; background: transparent; color: var(--muted); }
 .sticky-footer-nav button:hover, .sticky-footer-nav a:hover { background: var(--teal-pale); color: var(--teal); }
 .sticky-footer-nav span { min-height: 21px; position: relative; display: grid; place-items: center; }
@@ -657,7 +657,7 @@ del { color: #9caeb1; font: 10px var(--mono); }
   .announcement-social { gap: 5px !important; }
   .social-links { gap: 4px; }
   .social-links a { width: 21px; height: 21px; }
-  .sticky-footer-nav { bottom: 7px; width: calc(100% - 20px); min-height: 55px; }
+  .sticky-footer-nav { display: grid; bottom: 7px; width: calc(100% - 20px); min-height: 55px; }
   .sticky-footer-nav small { font-size: 8px; }
   .scroll-controls { right: 13px; bottom: 75px; }
   .scroll-controls button { width: 33px; height: 33px; }
@@ -1555,3 +1555,16 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
 .quick-view-image img { object-fit: contain; padding: 8px; }
 @media (max-width: 700px) { .quick-view-image { height: 235px; padding: 9px; } .quick-view-image img { padding: 5px; } .preloader-card strong { font-size: 19px; } }
 @media (prefers-reduced-motion: reduce) { .preloader-screen, .preloader-mark, .preloader-progress::after { animation: none; } }
+
+/* Site-wide cart motion: every add-to-cart call uses the active button as a launch point. */
+.cart-flight { width: 72px; height: 72px; animation-duration: 1.65s; animation-timing-function: cubic-bezier(.18,.78,.2,1); }
+.cart-flight-rocket { position: absolute; z-index: 3; left: 2px; top: 7px; display: grid; place-items: center; color: #ff744f; filter: drop-shadow(0 7px 8px rgba(8,63,75,.24)); transform: rotate(42deg); animation: cart-rocket-launch 1.65s cubic-bezier(.18,.78,.2,1) forwards; }
+.cart-flight-rocket svg { fill: #fff5e9; stroke: currentColor; }
+.cart-flight-rocket i { position: absolute; z-index: -1; left: 7px; top: 32px; width: 9px; height: 20px; border-radius: 50% 50% 65% 65%; background: linear-gradient(#ffd166 0 30%, #ff744f 55%, transparent 100%); transform: rotate(-4deg); filter: blur(.2px); animation: cart-rocket-flame 1.65s ease-out forwards; }
+.cart-flight img { position: absolute; z-index: 2; right: 0; bottom: 0; width: 31px; height: 31px; border-width: 2px; border-radius: 9px; animation-duration: 1.65s; }
+.cart-flight-spark { top: -5px; right: 2px; font-size: 21px; animation-duration: 1.65s; }
+.cart-flight-label { top: calc(100% + 7px); animation-duration: 1.65s; }
+@keyframes cart-rocket-launch { 0% { opacity: 0; transform: translate(-20px, 32px) rotate(30deg) scale(.55); } 13% { opacity: 1; transform: translate(-4px, 18px) rotate(42deg) scale(.82); } 34% { transform: translate(2px, -2px) rotate(42deg) scale(1); } 66% { transform: translate(7px, -14px) rotate(40deg) scale(1.04); } 100% { opacity: .1; transform: translate(14px, -24px) rotate(38deg) scale(.72); } }
+@keyframes cart-rocket-flame { 0%,100% { opacity: 0; transform: scale(.45) rotate(-4deg); } 16%,62% { opacity: 1; transform: scale(1.2) rotate(4deg); } }
+@media (max-width: 700px) { .cart-flight { width: 62px; height: 62px; } .cart-flight-rocket { transform: rotate(42deg) scale(.9); } .cart-flight img { width: 27px; height: 27px; } }
+@media (prefers-reduced-motion: reduce) { .cart-flight-rocket, .cart-flight-rocket i { animation: none; } }
