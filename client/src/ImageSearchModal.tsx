@@ -103,17 +103,35 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
 }
 
 async function prepareImage(file: File, enhance = false): Promise<HTMLCanvasElement> {
-  const bitmap = await createImageBitmap(file);
+  let source: { width: number; height: number; close?: () => void; draw: (context: CanvasRenderingContext2D, width: number, height: number) => void };
+  if (typeof createImageBitmap === "function") {
+    const bitmap = await createImageBitmap(file);
+    source = { width: bitmap.width, height: bitmap.height, close: () => bitmap.close(), draw: (context, width, height) => context.drawImage(bitmap, 0, 0, width, height) };
+  } else {
+    const objectUrl = URL.createObjectURL(file);
+    const image = new Image();
+    try {
+      await new Promise<void>((resolve, reject) => {
+        image.onload = () => resolve();
+        image.onerror = () => reject(new Error("This image could not be decoded by the browser."));
+        image.src = objectUrl;
+      });
+      source = { width: image.naturalWidth, height: image.naturalHeight, close: () => URL.revokeObjectURL(objectUrl), draw: (context, width, height) => context.drawImage(image, 0, 0, width, height) };
+    } catch (error) {
+      URL.revokeObjectURL(objectUrl);
+      throw error;
+    }
+  }
   const maxDimension = typeof window !== "undefined" && window.innerWidth <= 720 ? 1050 : MAX_PROCESSING_DIMENSION;
-  const scale = Math.min(1, maxDimension / Math.max(bitmap.width, bitmap.height));
+  const scale = Math.min(1, maxDimension / Math.max(source.width, source.height));
   const canvas = document.createElement("canvas");
-  canvas.width = Math.max(1, Math.round(bitmap.width * scale));
-  canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+  canvas.width = Math.max(1, Math.round(source.width * scale));
+  canvas.height = Math.max(1, Math.round(source.height * scale));
   const context = canvas.getContext("2d");
   if (!context) throw new Error("Canvas is unavailable in this browser.");
   context.fillStyle = "#ffffff";
   context.fillRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  source.draw(context, canvas.width, canvas.height);
   if (enhance) {
     const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
     for (let index = 0; index < pixels.data.length; index += 4) {
@@ -125,7 +143,7 @@ async function prepareImage(file: File, enhance = false): Promise<HTMLCanvasElem
     }
     context.putImageData(pixels, 0, 0);
   }
-  bitmap.close();
+  source.close?.();
   return canvas;
 }
 
@@ -170,24 +188,51 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
   const [dragging, setDragging] = useState(false);
   const uploadInputRef = useRef<HTMLInputElement>(null);
   const cameraInputRef = useRef<HTMLInputElement>(null);
+  const processingIdRef = useRef(0);
   const results = useMemo(() => catalogueMatch(products, ocrText, language), [products, ocrText, language]);
   const isBn = language === "bn";
 
   useEffect(() => {
     if (!open) return;
-    const onKeyDown = (event: KeyboardEvent) => { if (event.key === "Escape") onClose(); };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      processingIdRef.current += 1;
+      if (preview) URL.revokeObjectURL(preview);
+      setFile(null);
+      setPreview("");
+      setOcrText("");
+      setStatus("idle");
+      setStatusMessage("");
+      setError("");
+      setDragging(false);
+      onClose();
+    };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [open, onClose]);
+  }, [open, onClose, preview]);
 
   useEffect(() => () => { if (preview) URL.revokeObjectURL(preview); }, [preview]);
+
+  const closeModal = () => {
+    processingIdRef.current += 1;
+    if (preview) URL.revokeObjectURL(preview);
+    setFile(null);
+    setPreview("");
+    setOcrText("");
+    setStatus("idle");
+    setStatusMessage("");
+    setError("");
+    setDragging(false);
+    onClose();
+  };
 
   if (!open) return null;
 
   const acceptFile = async (candidate: File) => {
     const extension = candidate.name.split(".").pop()?.toLowerCase() || "";
-    const acceptedExtension = ["jpg", "jpeg", "png", "webp", "heic", "heif"].includes(extension);
-    if (!(candidate.type.startsWith("image/") || acceptedExtension)) {
+    const acceptedExtension = ["jpg", "jpeg", "png", "webp"].includes(extension);
+    const acceptedMime = ["image/jpeg", "image/png", "image/webp"].includes(candidate.type.toLowerCase());
+    if (!(acceptedMime || acceptedExtension)) {
       setError(isBn ? "JPG, PNG, WEBP অথবা ফোনের camera image দিন।" : "Please choose a JPG, PNG, WEBP, or phone-camera image.");
       return;
     }
@@ -202,12 +247,15 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
     setOcrText("");
     setStatus("processing");
     setStatusMessage(isBn ? "আপনার device-এ image পড়া হচ্ছে…" : "Reading the image on your device…");
+    const processingId = ++processingIdRef.current;
     try {
       const text = await recognizeLocally(candidate, setStatusMessage);
+      if (processingId !== processingIdRef.current) return;
       setOcrText(text);
       setStatus("done");
       setStatusMessage(text ? (isBn ? "সম্ভাব্য model text পাওয়া গেছে" : "Possible model text found") : (isBn ? "কোনো পরিষ্কার label পাওয়া যায়নি" : "No clear label detected"));
     } catch (recognitionError) {
+      if (processingId !== processingIdRef.current) return;
       console.error(recognitionError);
       setStatus("error");
       setStatusMessage("");
@@ -216,11 +264,11 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
   };
   const onInput = (event: ChangeEvent<HTMLInputElement>) => { const selected = event.target.files?.[0]; if (selected) void acceptFile(selected); event.target.value = ""; };
   const onDrop = (event: DragEvent<HTMLDivElement>) => { event.preventDefault(); setDragging(false); const dropped = event.dataTransfer.files?.[0]; if (dropped) void acceptFile(dropped); };
-  const reset = () => { if (preview) URL.revokeObjectURL(preview); setFile(null); setPreview(""); setOcrText(""); setStatus("idle"); setStatusMessage(""); setError(""); };
+  const reset = () => { processingIdRef.current += 1; if (preview) URL.revokeObjectURL(preview); setFile(null); setPreview(""); setOcrText(""); setStatus("idle"); setStatusMessage(""); setError(""); setDragging(false); };
 
-  return <div className="image-search-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
+  return <div className="image-search-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) closeModal(); }}>
     <section className="image-search-modal" role="dialog" aria-modal="true" aria-labelledby="image-search-title">
-      <div className="image-search-header"><div><span className="eyebrow"><span className="eyebrow-line" />{isBn ? "Privacy-first tool" : "Privacy-first tool"}</span><h2 id="image-search-title">{isBn ? "ছবি দিয়ে খুঁজুন" : "Search by Image"}</h2><p>{isBn ? "আপনার image এই device-এই process হবে—কোনো server-এ upload হবে না।" : "Your image is processed on your device and is not uploaded to our server."}</p></div><button className="image-search-close" onClick={onClose} aria-label={isBn ? "বন্ধ করুন" : "Close"}><X size={19} /></button></div>
+      <div className="image-search-header"><div><span className="eyebrow"><span className="eyebrow-line" />{isBn ? "Privacy-first tool" : "Privacy-first tool"}</span><h2 id="image-search-title">{isBn ? "ছবি দিয়ে খুঁজুন" : "Search by Image"}</h2><p>{isBn ? "আপনার image এই device-এই process হবে—কোনো server-এ upload হবে না।" : "Your image is processed on your device and is not uploaded to our server."}</p></div><button type="button" className="image-search-close" onClick={closeModal} aria-label={isBn ? "বন্ধ করুন" : "Close"}><X size={19} /></button></div>
       {!file ? <div className="image-search-picker">
         <div className={`image-dropzone ${dragging ? "is-dragging" : ""}`} onDragOver={(event) => { event.preventDefault(); setDragging(true); }} onDragLeave={() => setDragging(false)} onDrop={onDrop}>
           <span className="image-dropzone-icon"><Search size={24} /></span><strong>{isBn ? "Electronics component-এর ছবি দিন" : "Add an electronics component photo"}</strong><small>{isBn ? "JPG, PNG, WEBP · সর্বোচ্চ 15 MB" : "JPG, PNG, WEBP · up to 15 MB"}</small>
@@ -228,7 +276,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
           <span className="image-dropzone-hint"><FileUp size={14} />{isBn ? "অথবা এখানে drag & drop করুন" : "or drag & drop here"}</span>
         </div><input ref={uploadInputRef} className="visually-hidden" type="file" accept="image/*" onChange={onInput} /><input ref={cameraInputRef} className="visually-hidden" type="file" accept="image/*" capture="environment" onChange={onInput} />
       </div> : <div className="image-search-workspace">
-        <div className="image-search-preview-wrap"><img src={preview} alt={isBn ? "আপলোড করা image preview" : "Uploaded image preview"} /><button className="image-search-reset" onClick={reset}><RefreshCw size={14} />{isBn ? "অন্য image" : "Try another image"}</button></div>
+        <div className="image-search-preview-wrap"><img src={preview} alt={isBn ? "আপলোড করা image preview" : "Uploaded image preview"} /><button type="button" className="image-search-reset" onClick={reset}><RefreshCw size={14} />{isBn ? "অন্য image" : "Try another image"}</button></div>
         <div className="image-search-results-panel"><div className="image-search-status">{status === "processing" && <LoaderCircle className="spin" size={17} />}{status === "done" && <CheckCircle2 size={17} />}{status === "error" && <X size={17} />}{statusMessage || (isBn ? "Processing…" : "Processing…")}</div><p className="image-search-method-note">{isBn ? "এটি label/model text-ভিত্তিক match; পরিষ্কার model text না থাকলে কোনো product-কে নিশ্চিত match হিসেবে দেখানো হবে না।" : "Matches are based on readable label/model text; without a clear model, no product is presented as a certain visual match."}</p>
           <label className="image-search-field-label" htmlFor="ocr-text">{isBn ? "Detected text (প্রয়োজনে ঠিক করুন)" : "Detected text (edit if needed)"}</label><textarea id="ocr-text" value={ocrText} onChange={(event) => setOcrText(event.target.value)} placeholder={isBn ? "যেমন: L298N, TP4056, ESP32…" : "For example: L298N, TP4056, ESP32…"} rows={2} />
           {error && <div className="image-search-error">{error}</div>}
@@ -237,7 +285,7 @@ export function ImageSearchModal({ open, products, language, onClose, navigate, 
           {status === "done" && !ocrText.trim() && <div className="image-search-empty"><strong>{isBn ? "কোনো পরিষ্কার model label পাওয়া যায়নি" : "No clear model label was found."}</strong><p>{isBn ? "ছবিতে লেখা model number থাকলে নিচের box-এ লিখে Possible matches দেখুন।" : "If you can read a model number in the photo, enter it above to see catalogue matches."}</p></div>}
         </div>
       </div>}
-      <footer className="image-search-footer"><span><CheckCircle2 size={14} />{isBn ? "লোকাল browser processing · API key নেই · paid service নেই" : "Local browser processing · no API key · no paid service"}</span>{file && <button onClick={() => uploadInputRef.current?.click()}>{isBn ? "নতুন ছবি" : "Choose another"}</button>}</footer>
+      <footer className="image-search-footer"><span><CheckCircle2 size={14} />{isBn ? "লোকাল browser processing · API key নেই · paid service নেই" : "Local browser processing · no API key · no paid service"}</span>{file && <button type="button" onClick={() => uploadInputRef.current?.click()}>{isBn ? "নতুন ছবি" : "Choose another"}</button>}</footer>
     </section>
   </div>;
 }
