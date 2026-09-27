@@ -200,7 +200,9 @@
 ## What was fixed
 
 - Every product now has a deterministic serial SKU and inventory ID.
-- Product and variant image fields are normalized to `/images/products/...` or the valid product placeholder.
+- Every product image URL now uses the product slug/name, for example `/images/products/camel-gg-5-hot-melt-glue-gun-100-240v-electric-heat-glue-gun-for-craft-and-diy-repairs.webp`.
+- Product and variant image fields are normalized to `/images/products/...`; legacy files remain as compatibility aliases but are no longer used by the catalogue.
+- A complete old-to-new image URL map is available in `/data/product-image-url-map.csv`.
 - Variant image records with no physical asset now safely use the parent product image instead of a broken URL.
 - Sitemap now covers core routes and every product detail URL; image sitemap is also provided.
 - Cart, checkout and tracking are excluded from crawling because they are transactional/session routes.
