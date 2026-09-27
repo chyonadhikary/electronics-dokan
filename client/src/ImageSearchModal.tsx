@@ -40,6 +40,7 @@ const englishStopWords = new Set(["the", "and", "with", "for", "module", "board"
 
 const normalize = (value: string) => value.toLocaleLowerCase().normalize("NFKC").replace(/[–—−]/g, "-").replace(/[^a-z0-9\u0980-\u09ff]+/g, " ").replace(/\s+/g, " ").trim();
 const tokens = (value: string) => normalize(value).split(" ").filter((token) => token.length > 1 && !englishStopWords.has(token));
+const compactModel = (value: string) => normalize(value).replace(/[^a-z0-9]+/g, "");
 const imageFor = (product: ImageSearchProduct) => {
   const image = product.images?.[0] || product.image;
   if (!image) return "/images/placeholders/product-placeholder.webp";
@@ -60,6 +61,7 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
       ...Object.entries(product.specifications || {}).flatMap(([key, value]) => [key, value]),
       ...(product.variants || []).flatMap((variant) => [variant.displayName, variant.productFamily, variant.marking, variant.voltage, variant.capacitance]),
     ].filter(Boolean).join(" "));
+    const compactSearchable = compactModel(searchable);
     const nameText = normalize(`${product.name} ${product.nameBn || ""}`);
     const skuText = normalize(product.sku || "");
     const categoryText = normalize(product.category);
@@ -72,6 +74,11 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
     if (queryNormalized.length >= 3 && nameText.includes(queryNormalized)) {
       score += nameText.startsWith(queryNormalized) ? 90 : 65;
       evidence.push(language === "bn" ? "নামে মিল" : "Name match");
+    }
+    const compactQuery = compactModel(queryNormalized);
+    if (compactQuery.length >= 4 && compactSearchable.includes(compactQuery) && !nameText.includes(queryNormalized)) {
+      score += 115;
+      evidence.push(language === "bn" ? "মডেল text মিল" : "Model text match");
     }
     let matchedTokens = 0;
     for (const token of queryTokens) {
@@ -89,7 +96,7 @@ function catalogueMatch(products: ImageSearchProduct[], query: string, language:
     return { product, score, evidence: Array.from(new Set(evidence)) };
   }).filter((result) => {
     // Do not turn one noisy OCR word such as “battery” into a misleading product match.
-    const hasDirectIdentity = result.evidence.some((item) => item.includes("SKU") || item.includes("Name match") || item.includes("নামে"));
+    const hasDirectIdentity = result.evidence.some((item) => item.includes("SKU") || item.includes("Name match") || item.includes("Model text") || item.includes("মডেল text") || item.includes("নামে"));
     const hasMultipleSignals = result.score >= 36 && result.evidence.some((item) => item.includes("keyword") || item.includes("মিল"));
     return hasDirectIdentity || hasMultipleSignals;
   }).sort((a, b) => b.score - a.score || a.product.name.localeCompare(b.product.name)).slice(0, 8);

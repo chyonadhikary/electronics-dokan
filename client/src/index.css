@@ -1693,3 +1693,19 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
 @media (max-width: 700px) {
   .search-form .search-category-select { flex-basis: 58px; width: 58px; max-width: 58px; margin-left: -2px; margin-right: -2px; }
 }
+
+/* Branded WhatsApp contact in the announcement bar */
+.announcement { background: var(--navy); color: #d7eeee; border-bottom-color: rgba(117,224,215,.22); }
+.announcement-social { gap: 10px; }
+.top-whatsapp-contact { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid rgba(124,229,223,.38); border-radius: 999px; background: var(--teal); color: #fff !important; font-weight: 800; box-shadow: 0 2px 0 rgba(0,0,0,.12); white-space: nowrap; }
+.top-whatsapp-contact:hover { background: #0b8f91 !important; color: #fff !important; transform: translateY(-1px); }
+.top-whatsapp-contact svg { flex: 0 0 auto; }
+@media (max-width: 700px) {
+  .announcement-inner { gap: 8px; }
+  .announcement-social { gap: 5px !important; }
+  .top-whatsapp-contact { gap: 4px; padding: 4px 7px; font-size: 8px; }
+  .top-whatsapp-contact svg { width: 13px; height: 13px; }
+}
+@media (max-width: 390px) {
+  .top-whatsapp-contact span { max-width: 88px; overflow: hidden; text-overflow: ellipsis; }
+}
