@@ -94,6 +94,7 @@ type Product = {
   projects?: Array<{ title: string; url: string }>;
   keywords?: string[];
   stock: boolean;
+  backInStock?: boolean;
   shipping?: { available: boolean; courier: string };
 };
 
@@ -180,7 +181,7 @@ const imageFor = (product: Product, variantId?: string) => {
 const percentOff = (product: Product) => product.oldPrice ? Math.round((1 - product.price / product.oldPrice) * 100) : 0;
 const slugToTitle = (slug: string) => slug.split("-").map((part) => part[0]?.toUpperCase() + part.slice(1)).join(" ");
 const isPreOrderProduct = (product: Product) => product.stock && product.availability === "in_stock" && /^pre-order/i.test((product.preOrder || "").trim());
-const isBackInStockProduct = (product: Product) => product.stock && !product.featured && !product.newArrival;
+const isBackInStockProduct = (product: Product) => Boolean(product.backInStock);
 const isSeasonalProduct = (product: Product) => /season|festival|gift|light|led|decor|christmas|eid/i.test(`${product.name} ${product.nameBn || ""} ${(product.keywords || []).join(" ")}`);
 const productSearchText = (product: Product) => [product.name, product.nameBn, product.id, product.slug, product.sku, product.category, product.sourceCategory, product.brand, product.shortDescription, product.shortDescriptionBn, product.description, product.descriptionBn, product.attention, ...(product.keywords || []), ...(product.projects || []).flatMap((project) => [project.title, project.url]), ...(product.variants || []).flatMap((variant) => [variant.displayName, variant.productFamily, variant.resistance, variant.capacitance, variant.voltage, variant.powerRating, variant.tolerance, variant.marking])].filter(Boolean).join(" ").toLocaleLowerCase();
 

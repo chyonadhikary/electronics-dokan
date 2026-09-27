@@ -80,6 +80,11 @@
     "image": "/images/brands/fnirsi.webp"
   },
   {
+    "name": "Generic / Unbranded",
+    "slug": "generic-unbranded",
+    "image": ""
+  },
+  {
     "name": "GoAT",
     "slug": "goat",
     "image": ""

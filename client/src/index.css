@@ -1397,3 +1397,32 @@ html, body, #root { max-width: 100%; overflow-x: hidden; }
 .search-category-select { max-width: 132px; min-height: 32px; padding: 0 7px; border: 1px solid var(--line); border-radius: 5px; background: #f7fbfb; color: var(--navy); font: 10px var(--mono); outline: none; }
 .search-category-select:focus { border-color: var(--teal); }
 @media (max-width: 700px) { .project-directory-hero { padding-top: 42px; } .project-directory-grid { grid-template-columns: 1fr; gap: 12px; padding-bottom: 50px; } .project-directory-card { min-height: 250px; padding: 19px; } .project-directory-card h2 { font-size: 26px; } .project-directory-footer { align-items: flex-start; flex-direction: column; } .search-category-select { max-width: 94px; font-size: 8px; } }
+
+/* Shared project detail polish: the same colored border language used by products and the project directory. */
+.project-detail-page .project-panel,
+.project-detail-page .guide-section,
+.project-detail-page .project-shop-card,
+.project-detail-page .project-step-list span {
+  border-color: #b9dfe0;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.project-detail-page .project-panel:hover,
+.project-detail-page .guide-section:hover,
+.project-detail-page .project-shop-card:hover {
+  transform: translateY(-2px);
+  border-color: #8edbd7;
+  box-shadow: var(--shadow-md);
+}
+.robot-project-page .project-panel,
+.robot-project-page .guide-section,
+.robot-project-page .project-shop-card {
+  border-color: #cbb9df;
+}
+.robot-project-page .project-panel:hover,
+.robot-project-page .guide-section:hover,
+.robot-project-page .project-shop-card:hover {
+  border-color: #a98dc6;
+}
+.xiaozhi-project-page .guide-badge { border-color: #8edbd7; }
+.robot-project-page .guide-badge { border-color: #cbb9df; color: #765a96; }

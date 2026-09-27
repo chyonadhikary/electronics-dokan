@@ -1,6 +1,6 @@
 {
-  "productCount": 166,
-  "variantCount": 170,
+  "productCount": 165,
+  "variantCount": 171,
   "variantStockTotal": 12260,
   "duplicateWarnings": [
     {
@@ -176,6 +176,6 @@
       "message": "Quality variants merged into one selectable product."
     }
   ],
-  "brandCount": 62,
+  "brandCount": 63,
   "categoryCount": 16
 }
